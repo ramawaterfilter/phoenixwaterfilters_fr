@@ -1,0 +1,948 @@
+{% doc %}
+  @prompt
+    
+    DESKTOP:
+    - All video cards must be visible in ONE row at all times
+    - Cards must NOT be equal height
+    - ONLY the active video card is tall
+    - Inactive cards must be visibly shorter
+    - Clicking a different card:
+      - Shrinks the currently active card
+      - Expands the clicked card
+      - Transition must animate height smoothly
+    - This is NOT a slider on desktop (no snapping, no scrolling)
+    
+    HEIGHT RULES:
+    - Inactive card height: ~260–300px
+    - Active card height: ~480–520px
+    - Height change must animate using CSS transition
+    
+    VIDEO BEHAVIOR:
+    - Only the active video may play
+    - All inactive videos must be paused
+    - Default state: muted autoplay
+    - Custom overlay controls only:
+      - Center play/pause button
+      - Bottom corner mute/unmute button
+    - Do NOT use default iframe controls
+    
+    WISTIA:
+    - Each block must have a textarea field for Wistia embed code
+    - Render embed using raw Liquid output
+    - Videos must be replaceable without code edits
+    
+    MOBILE (VERY IMPORTANT):
+    - Layout changes to ONE video per row
+    - Videos stack vertically
+    - ONLY one video visible at a time
+    - Active video expands in height
+    - Other videos are hidden
+    - User navigates using dot navigation
+    - This must visually match a vertical video feed, 
+    DOT NAVIGATION:
+    - Dots must be centered below videos
+    - One dot per video block
+    - Active dot updates when video changes
+    - Clicking a dot switches active video
+    - Dots must work on both desktop and mobile
+    
+    TECHNICAL REQUIREMENTS:
+    - NO external libraries
+    - NO slider libraries
+    - Vanilla JavaScript only
+    - Use CSS Grid or Flexbox
+    - Use an `.is-active` class to control expanded state
+    - Fully responsive
+    - Clean, modern ecommerce styling
+    - Rounded corners and smooth animations
+    
+    THIS SECTION MUST LOOK AND BEHAVE LIKE A PREMIUM PRODUCT LANDING PAGE VIDEO GALLERY WITH EXPANDABLE CARDS, NOT A STANDARD SLIDER.
+    
+    Please rewrite the section code accordingl, its not 3 i need to add 4 video , The active video card is expanding FAR too much.
+    
+    Please adjust ONLY the size behavior with these exact rules:
+    
+    DESKTOP:
+    - All video cards stay in one row
+    - Inactive card height: 280px
+    - Active card height: 340px
+    - Height change must be subtle
+    - Same width for all cards
+    - NO full-height expansion
+    - NO 100vh, min-height, flex-grow, or auto stretching
+    
+    MOBILE:
+    - One video per row
+    - Inactive height: 360px
+    - Active height: 420px
+    - Only a small size increase, not a hero section
+    , 
+    ANIMATION:
+    - Smooth height transition (0.3–0.4s ease)
+    - Optional slight lift (translateY -4px to -6px)
+    
+    IMPORTANT:
+    This should feel like a highlighted card, NOT a large expanding section.
+    Do not change layout logic, slider logic, or video logic — ONLY fix sizing., that size change when active -- in both top and button and small size changes and i need the add the heading in the top for every indivial video , i need when the not active the size 280px when turn active size 340px that increase size will 30 in top 30 in button and  need to add the sound button icon and play icon maully i add the image, remove the video block below space in the mobile view and in desctop view size only increatre in topp i need both tp and button 30px increare, i need both top of the video block and buttton also now if active the button will equal to other blaock i need if active the button likke more heght compare to not active one and i so give top 20px and button 20px if i select to increase the size .. in mobile view remove the buttonand top space in mobile view only, example : in desctop view i need to if the video is active  that active block size increase and button 20px increase and top also 20px ..it look like i i select the active section the size will increase top 20px and button 20px so compare to other block the active block size will button size 20pc more apsce also top 20px mor space is there  this change not for mobile view this is only for the desctop view in  moble view i need to replve the active video block button and top extra space just video and  button 10px space and below that dot button simple inn mbile view, The active video card must NOT create extra space at the top or bottom.
+    
+    Fix the active state to behave like a CENTERED ZOOM, not a height push.
+    
+    REQUIRED BEHAVIOR:
+    - All cards have the same base height
+    - Active card appears larger by scaling from the CENTER
+    - Increase size equally on top and bottom
+    - No empty space above or below the active card
+    - No layou, 
+    Do not change layout structure, slider logic, or video logic — only fix the active visual behavior.
+    , REQUIRED ACTIVE VIDEO BEHAVIOR:
+    - Active video must use a 9:16 aspect ratio (1080x1920 style)
+    - It should look like a Reel / Shorts video
+    - Increase size from the CENTER (top and bottom equally)
+    - Same width as other cards
+    - No extra empty space above or below
+    - No layout jump
+    
+    INACTIVE VIDEOS:
+    - Smaller preview cards
+    - Shorter height
+    - Do NOT use 9:16 ratio
+    
+    IMPLEMENTATION RULES:
+    - Use CSS aspect-ratio to control sizing
+    - Inactive cards: aspect-ratio around 16:9 or 4:5
+    - Active card: aspect-ratio MUST be 9 / 16
+    - Use smooth transition (0.35–0.45s ease)
+    - Optional subtle scale (max 1.05)
+    
+    STRICT RULES:
+    - Do NOT use 100vh or full screen height
+    - Do NOT stretch the parent container
+    - Do NOT push layout down
+    , REQUIRED STYLING CHANGES:
+    - Wrap all video cards inside a single container
+    - Container background color: light gray or white (#f6f7f8 or similar)
+    - Container padding: EXACTLY 8px on all sides
+    - Rounded container corners (12px–16px)
+    - Cards must sit fully inside the container with spacing
+    - No card should touch the page edge
+    
+    CARD SPACING:
+    - Maintain consistent gap between cards
+    - Cards should feel placed inside a tray, not floating
+    
+    IMPORTANT:
+    - Do NOT change video behavior or sizing logic
+    - Do NOT change reel / aspect-ratio logic
+    - This is a visual container + padding fix only
+    , 
+    VISUAL GOAL:
+    Match the clean padded background look shown in the original reference image., i need to add the paddin both size of the every indualy video block , remove the shadow and i need manully changeable gap between in th eevery indivial video block , in desctop video i need to edit the desctop i need add the border color and i need to edit everthing in the text and i need to remove the dot buttin in only desctop view , CURRENT ISSUE:
+    - Only one video is visible on mobile
+    - Next videos are completely hidden
+    
+    REQUIRED MOBILE BEHAVIOR:
+    - Active video is fully visible
+    - NEXT video must be partially visible (peek effect)
+    - User must see a portion of the next card on the right
+    - This visually indicates more videos are available
+    - Only one video plays at a time
+    
+    
+    IMPLEMENTATION RULES:
+    - Use horizontal scrolling on mobile
+    - Container should NOT be overflow hidden
+    - Each video card width: ~85–90% on mobile
+    - Gap between cards: 8–12px
+    - Allow swipe gestures
+    - Keep dot navigation below
+    
+    STRICT RULES:
+    - Do NOT hide other videos entirely
+    - Do NOT show only a single card
+    - Desktop layout must remain unchanged
+    
+    VISUAL GOAL:
+    Match a mobile “reels preview” style where the next video is partially visible at page load.
+    , in mobile view i need the like slide using the touch in mobile view , i need to reduct the height of the video block its 1080x1350, REMOVE THE PLAY ICONA ND MUTE ICON AND UNMOTE ICON AND I NEED THE 6 VIEWO IN ROW AND  I NEED CSS BAR I WANT TO PASTE THE CUSTOM CSS, I NEED THE VIDEO WILL HEIGHT 100% AND I NEED TH EHEADIN TOP THE VIDEO NOT ON THE VIDEO, IF VIDEO IS ACTION I NEED THAT ACTIVE VIDEO WIL ZOOM IN , in mobile view the slider not work i need to toch slide and if i click the pagination button to change the vide, if the place is empty i  dont give the space if i dont hve to paste the embed code for the 5 and 6 i need to remove that if  code is ther use it show the video same like heading and 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-video-gallery-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 40px 20px;
+  }
+
+  .ai-video-gallery__outer-container-{{ ai_gen_id }} {
+    background-color: {{ block.settings.container_background }};
+    border-radius: {{ block.settings.container_radius }}px;
+    padding: {{ block.settings.container_padding }}px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .ai-video-gallery__container-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: {{ block.settings.card_gap }}px;
+    width: 100%;
+  }
+
+  .ai-video-gallery__card-{{ ai_gen_id }} {
+    position: relative;
+    cursor: pointer;
+    border-radius: {{ block.settings.border_radius }}px;
+    overflow: visible;
+    background-color: {{ block.settings.card_background }};
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: {{ block.settings.card_padding }}px;
+    border: {{ block.settings.border_width }}px solid {{ block.settings.border_color }};
+    display: flex;
+    flex-direction: column;
+    transform: scale(1);
+    z-index: 1;
+  }
+
+  .ai-video-gallery__card-{{ ai_gen_id }}.is-active {
+    transform: scale({{ block.settings.active_zoom_scale }});
+    z-index: 10;
+  }
+
+  .ai-video-gallery__heading-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    font-weight: {{ block.settings.heading_weight }};
+    margin: 0 0 12px 0;
+    z-index: 15;
+    line-height: {{ block.settings.heading_line_height }};
+    letter-spacing: {{ block.settings.heading_letter_spacing }}px;
+    text-transform: {{ block.settings.heading_transform }};
+    padding: 0 4px;
+  }
+
+  .ai-video-gallery__card-inner-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    flex: 1;
+    border-radius: {{ block.settings.inner_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .ai-video-gallery__video-wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+  }
+
+  .ai-video-gallery__video-wrapper-{{ ai_gen_id }} iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .ai-video-gallery__dots-{{ ai_gen_id }} {
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .ai-video-gallery__dot-{{ ai_gen_id }} {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: {{ block.settings.dot_inactive_color }};
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+
+  .ai-video-gallery__dot-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.dot_active_color }};
+    opacity: 0.7;
+  }
+
+  .ai-video-gallery__dot-{{ ai_gen_id }}.is-active {
+    background-color: {{ block.settings.dot_active_color }};
+    transform: scale(1.3);
+  }
+
+  {{ block.settings.custom_css }}
+
+  @media screen and (max-width: 989px) {
+    .ai-video-gallery__container-{{ ai_gen_id }} {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-video-gallery-{{ ai_gen_id }} {
+      padding: 20px 0 10px;
+    }
+
+    .ai-video-gallery__outer-container-{{ ai_gen_id }} {
+      padding: {{ block.settings.mobile_container_padding }}px;
+      border-radius: 0;
+    }
+
+    .ai-video-gallery__container-{{ ai_gen_id }} {
+      display: flex;
+      gap: {{ block.settings.mobile_card_gap }}px;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      padding: 0 {{ block.settings.mobile_side_padding }}px;
+      scrollbar-width: none;
+    }
+
+    .ai-video-gallery__container-{{ ai_gen_id }}::-webkit-scrollbar {
+      display: none;
+    }
+
+    .ai-video-gallery__card-{{ ai_gen_id }} {
+      flex: 0 0 {{ block.settings.mobile_card_width }}%;
+      scroll-snap-align: center;
+      padding: 0;
+      border: none;
+    }
+
+    .ai-video-gallery__card-{{ ai_gen_id }}.is-active {
+      transform: scale({{ block.settings.mobile_zoom_scale }});
+    }
+
+    .ai-video-gallery__dots-{{ ai_gen_id }} {
+      display: flex;
+      margin-top: 16px;
+    }
+
+    .ai-video-gallery__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_heading_size }}px;
+      margin-bottom: 8px;
+    }
+  }
+{% endstyle %}
+
+<video-gallery-{{ ai_gen_id }}
+  class="ai-video-gallery-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-video-gallery__outer-container-{{ ai_gen_id }}">
+    <div class="ai-video-gallery__container-{{ ai_gen_id }}">
+      {% assign video_count = 0 %}
+      {% for i in (1..6) %}
+        {% liquid
+          assign video_key = 'video_' | append: i
+          assign heading_key = 'heading_' | append: i
+          
+          assign video_embed = block.settings[video_key]
+          assign heading = block.settings[heading_key]
+        %}
+
+        {% if video_embed != blank %}
+          {% assign video_count = video_count | plus: 1 %}
+          <div
+            class="ai-video-gallery__card-{{ ai_gen_id }} {% if video_count == 1 %}is-active{% endif %}"
+            data-video-index="{{ video_count | minus: 1 }}"
+          >
+            {% if heading != blank %}
+              <h3 class="ai-video-gallery__heading-{{ ai_gen_id }}">{{ heading }}</h3>
+            {% endif %}
+
+            <div class="ai-video-gallery__card-inner-{{ ai_gen_id }}">
+              <div class="ai-video-gallery__video-wrapper-{{ ai_gen_id }}">
+                {{ video_embed }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if video_count > 1 %}
+      <div class="ai-video-gallery__dots-{{ ai_gen_id }}">
+        {% for i in (1..video_count) %}
+          <button
+            class="ai-video-gallery__dot-{{ ai_gen_id }} {% if forloop.first %}is-active{% endif %}"
+            data-dot-index="{{ forloop.index | minus: 1 }}"
+            aria-label="View video {{ forloop.index }}"
+          ></button>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</video-gallery-{{ ai_gen_id }}>
+
+<script>
+  (function () {
+    class VideoGallery{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.cards = [];
+        this.videos = [];
+        this.activeIndex = 0;
+        this.isMobile = window.innerWidth <= 749;
+        this.isScrolling = false;
+        this.scrollTimeout = null;
+      }
+
+      connectedCallback() {
+        this.cards = Array.from(this.querySelectorAll('.ai-video-gallery__card-{{ ai_gen_id }}'));
+        this.dots = Array.from(this.querySelectorAll('.ai-video-gallery__dot-{{ ai_gen_id }}'));
+        this.container = this.querySelector('.ai-video-gallery__container-{{ ai_gen_id }}');
+
+        if (this.cards.length === 0) return;
+
+        this.initializeVideos();
+        this.setupEventListeners();
+
+        if (this.isMobile) {
+          this.setupMobileScroll();
+        }
+      }
+
+      initializeVideos() {
+        this.cards.forEach((card, index) => {
+          const iframe = card.querySelector('iframe');
+          if (!iframe) return;
+
+          const videoData = {
+            iframe: iframe,
+            card: card,
+            isPlaying: false,
+            isMuted: true,
+          };
+
+          this.videos.push(videoData);
+
+          if (index === 0) {
+            this.playVideo(videoData);
+          }
+        });
+      }
+
+      setupEventListeners() {
+        this.cards.forEach((card, index) => {
+          card.addEventListener('click', () => {
+            this.activateCard(index);
+          });
+        });
+
+        this.dots.forEach((dot, index) => {
+          dot.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.activateCard(index);
+            if (this.isMobile) {
+              this.scrollToCard(index);
+            }
+          });
+        });
+      }
+
+      setupMobileScroll() {
+        this.container.addEventListener('scroll', () => {
+          if (this.isScrolling) {
+            clearTimeout(this.scrollTimeout);
+          }
+          
+          this.isScrolling = true;
+          
+          this.scrollTimeout = setTimeout(() => {
+            this.updateActiveCardFromScroll();
+            this.isScrolling = false;
+          }, 150);
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        this.container.addEventListener('touchstart', (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        this.container.addEventListener('touchend', (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          this.handleSwipe(touchStartX, touchEndX);
+        }, { passive: true });
+      }
+
+      handleSwipe(startX, endX) {
+        const swipeThreshold = 50;
+        const diff = startX - endX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+          if (diff > 0 && this.activeIndex < this.cards.length - 1) {
+            this.activateCard(this.activeIndex + 1);
+            this.scrollToCard(this.activeIndex);
+          } else if (diff < 0 && this.activeIndex > 0) {
+            this.activateCard(this.activeIndex - 1);
+            this.scrollToCard(this.activeIndex);
+          }
+        }
+      }
+
+      updateActiveCardFromScroll() {
+        const containerRect = this.container.getBoundingClientRect();
+        const containerCenter = containerRect.left + containerRect.width / 2;
+
+        let closestIndex = 0;
+        let closestDistance = Infinity;
+
+        this.cards.forEach((card, index) => {
+          const cardRect = card.getBoundingClientRect();
+          const cardCenter = cardRect.left + cardRect.width / 2;
+          const distance = Math.abs(cardCenter - containerCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = index;
+          }
+        });
+
+        if (closestIndex !== this.activeIndex) {
+          this.activateCard(closestIndex);
+        }
+      }
+
+      scrollToCard(index) {
+        const card = this.cards[index];
+        if (!card) return;
+
+        const containerRect = this.container.getBoundingClientRect();
+        const cardRect = card.getBoundingClientRect();
+        const scrollLeft = this.container.scrollLeft;
+        const offset = cardRect.left - containerRect.left;
+        const targetScroll = scrollLeft + offset - (containerRect.width - cardRect.width) / 2;
+
+        this.container.scrollTo({
+          left: targetScroll,
+          behavior: 'smooth'
+        });
+      }
+
+      activateCard(index) {
+        if (index === this.activeIndex) return;
+
+        this.cards.forEach((card, i) => {
+          if (i === index) {
+            card.classList.add('is-active');
+          } else {
+            card.classList.remove('is-active');
+          }
+        });
+
+        this.dots.forEach((dot, i) => {
+          if (i === index) {
+            dot.classList.add('is-active');
+          } else {
+            dot.classList.remove('is-active');
+          }
+        });
+
+        this.videos.forEach((videoData, i) => {
+          if (i === index) {
+            this.playVideo(videoData);
+          } else {
+            this.pauseVideo(videoData);
+          }
+        });
+
+        this.activeIndex = index;
+      }
+
+      playVideo(videoData) {
+        const iframe = videoData.iframe;
+        iframe.contentWindow.postMessage(
+          JSON.stringify({ method: 'play' }),
+          '*'
+        );
+        videoData.isPlaying = true;
+      }
+
+      pauseVideo(videoData) {
+        const iframe = videoData.iframe;
+        iframe.contentWindow.postMessage(
+          JSON.stringify({ method: 'pause' }),
+          '*'
+        );
+        videoData.isPlaying = false;
+      }
+    }
+
+    customElements.define('video-gallery-{{ ai_gen_id }}', VideoGallery{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Video gallery",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Video 1"
+    },
+    {
+      "type": "textarea",
+      "id": "video_1",
+      "label": "Embed code"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Video 2"
+    },
+    {
+      "type": "textarea",
+      "id": "video_2",
+      "label": "Embed code"
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Video 3"
+    },
+    {
+      "type": "textarea",
+      "id": "video_3",
+      "label": "Embed code"
+    },
+    {
+      "type": "text",
+      "id": "heading_3",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Video 4"
+    },
+    {
+      "type": "textarea",
+      "id": "video_4",
+      "label": "Embed code"
+    },
+    {
+      "type": "text",
+      "id": "heading_4",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Video 5"
+    },
+    {
+      "type": "textarea",
+      "id": "video_5",
+      "label": "Embed code"
+    },
+    {
+      "type": "text",
+      "id": "heading_5",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Video 6"
+    },
+    {
+      "type": "textarea",
+      "id": "video_6",
+      "label": "Embed code"
+    },
+    {
+      "type": "text",
+      "id": "heading_6",
+      "label": "Heading"
+    },
+    {
+      "type": "header",
+      "content": "Container style"
+    },
+    {
+      "type": "color",
+      "id": "container_background",
+      "label": "Background",
+      "default": "#f6f7f8"
+    },
+    {
+      "type": "range",
+      "id": "container_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "container_padding",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Card style"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "min": 4,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between cards",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Card padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Border radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "inner_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Inner border radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 2
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Active zoom effect"
+    },
+    {
+      "type": "range",
+      "id": "active_zoom_scale",
+      "min": 1,
+      "max": 1.5,
+      "step": 0.1,
+      "label": "Desktop zoom scale",
+      "default": 1.1
+    },
+    {
+      "type": "range",
+      "id": "mobile_zoom_scale",
+      "min": 1,
+      "max": 1.3,
+      "step": 0.1,
+      "label": "Mobile zoom scale",
+      "default": 1
+    },
+    {
+      "type": "header",
+      "content": "Heading style"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "heading_weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "label": "Weight",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "min": 1,
+      "max": 2,
+      "step": 0.1,
+      "label": "Line height",
+      "default": 1.2
+    },
+    {
+      "type": "range",
+      "id": "heading_letter_spacing",
+      "min": -2,
+      "max": 4,
+      "step": 0.5,
+      "label": "Letter spacing",
+      "default": 0
+    },
+    {
+      "type": "select",
+      "id": "heading_transform",
+      "label": "Text transform",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "uppercase",
+          "label": "Uppercase"
+        },
+        {
+          "value": "lowercase",
+          "label": "Lowercase"
+        },
+        {
+          "value": "capitalize",
+          "label": "Capitalize"
+        }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "Custom CSS"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS",
+      "info": "Add your custom CSS here"
+    },
+    {
+      "type": "header",
+      "content": "Mobile settings"
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_width",
+      "min": 75,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "label": "Card width",
+      "default": 85
+    },
+    {
+      "type": "range",
+      "id": "mobile_card_gap",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Gap between cards",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_side_padding",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Side padding",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_container_padding",
+      "min": 4,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Container padding",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_size",
+      "min": 10,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Dot navigation"
+    },
+    {
+      "type": "color",
+      "id": "dot_active_color",
+      "label": "Active dot",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "dot_inactive_color",
+      "label": "Inactive dot",
+      "default": "#cccccc"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video gallery"
+    }
+  ]
+}
+{% endschema %}

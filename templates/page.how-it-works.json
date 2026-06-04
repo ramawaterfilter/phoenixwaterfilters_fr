@@ -1,0 +1,674 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_fGiC9Y": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Comment ça marche",
+        "content": "",
+        "sideimage": "shopify://shop_images/about-phoenix-water-filters_4.webp",
+        "section_video_bg": "",
+        "buttonlink": "",
+        "buttontext": ""
+      }
+    },
+    "cards_7Hbppn": {
+      "type": "cards",
+      "blocks": {
+        "text_VtREUj": {
+          "type": "text",
+          "settings": {
+            "heading": "PFAS",
+            "copy": "<p>Peut pénétrer dans l’eau par les égouts et les déchets animaux et provoquer des maladies.</p>",
+            "icon": "shopify://shop_images/icon-virus.webp",
+            "video_id": ""
+          }
+        },
+        "text_qtcF6P": {
+          "type": "text",
+          "settings": {
+            "heading": "Chlore",
+            "copy": "<p>Affecte le goût et l’odeur de votre eau potable.</p>",
+            "icon": "shopify://shop_images/icon-chlorine.png",
+            "video_id": ""
+          }
+        },
+        "text_6w8KE6": {
+          "type": "text",
+          "settings": {
+            "heading": "Contaminants",
+            "copy": "<p>Peut contaminer l’eau par les fosses septiques et les égouts.</p>",
+            "icon": "shopify://shop_images/icon-bacteria.webp",
+            "video_id": ""
+          }
+        },
+        "text_UACReW": {
+          "type": "text",
+          "settings": {
+            "heading": "Métaux lourds",
+            "copy": "<p>Les canb pénètrent dans les sources d'eau par le biais de la plomberie vieillissante et de la pollution industrielle et agricole.</p>",
+            "icon": "shopify://shop_images/icon-metals.png",
+            "video_id": ""
+          }
+        },
+        "text_C84ri6": {
+          "type": "text",
+          "settings": {
+            "heading": "Toxines",
+            "copy": "<p>Peut contaminer l'eau par les déchets animaux et provoquer de graves maladies</p>",
+            "icon": "shopify://shop_images/icon-parasites.png",
+            "video_id": ""
+          }
+        },
+        "text_FadN6B": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>Et bien plus encore...</p>",
+            "icon": "shopify://shop_images/icon-more.svg",
+            "video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_VtREUj",
+        "text_qtcF6P",
+        "text_6w8KE6",
+        "text_UACReW",
+        "text_C84ri6",
+        "text_FadN6B"
+      ],
+      "custom_css": [
+        ".section-cards {margin-top: 30px;}"
+      ],
+      "settings": {
+        "style": "white-cards",
+        "heading": "Nous éliminons 99,99 % des contaminants nocifs",
+        "paragraph": "",
+        "section_bgimg": "shopify://shop_images/filter-background-white_1.jpg",
+        "buttontext": "",
+        "buttonlink": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "social_proof_PwDbfY": {
+      "type": "social-proof",
+      "blocks": {
+        "logo_xLT3gG": {
+          "type": "logo",
+          "settings": {
+            "title": "LABORATOIRE PFOA PFOSRAPPORT D'ESSAI",
+            "logo": "shopify://shop_images/water_quality_2.png",
+            "link": "https://cdn.shopify.com/s/files/1/2644/2852/files/Phoenix_gravity_contaminants_lab_report_USA_Aug2024.pdf?v=1724757203"
+          }
+        },
+        "logo_heMkkt": {
+          "type": "logo",
+          "settings": {
+            "title": "MÉDICAMENTSRAPPORT D'ESSAI",
+            "logo": "shopify://shop_images/pharma.png",
+            "link": "https://cdn.shopify.com/s/files/1/2644/2852/files/20231120-Atom-Lab-Phoenix_Carbon-Filte_-Pharmaceuticals-VOCs.pdf?v=1713508930"
+          }
+        },
+        "logo_qAPXHa": {
+          "type": "logo",
+          "settings": {
+            "title": "MÉTAUX LOURDSRAPPORT D'ESSAI",
+            "logo": "shopify://shop_images/heavy_metal.png",
+            "link": "https://cdn.shopify.com/s/files/1/2644/2852/files/20231120_Atom_Lab_-_Phoenix_Carbon_Filter_-_Heavy_Metals.pdf?v=1713736816"
+          }
+        }
+      },
+      "block_order": [
+        "logo_xLT3gG",
+        "logo_heMkkt",
+        "logo_qAPXHa"
+      ],
+      "custom_css": [
+        "@media (min-width: 786px) {.row.justify-content-center a {width: 220px !important; } .section-socialproof .social-proof .social-card {gap: 20px !important; }}"
+      ],
+      "settings": {
+        "intro": "Notre eau a été testée par des organismes tiers réputésRéussi avec brio"
+      }
+    },
+    "copy_image_AB77Kd": {
+      "type": "copy-image",
+      "blocks": {
+        "text_bnxaCj": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Aide à renforcer les os et les dents."
+          }
+        },
+        "text_x6W8xH": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Améliore le sommeil et peut aider à renforcer les muscles."
+          }
+        },
+        "text_rTtpJh": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Peut réguler les signaux nerveux et améliorer la santé cardiaque."
+          }
+        },
+        "text_e6mY63": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Aide à réguler et à nourrir les cellules."
+          }
+        },
+        "text_QUBRbN": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Peut équilibrer l'eau et les minéraux."
+          }
+        }
+      },
+      "block_order": [
+        "text_bnxaCj",
+        "text_x6W8xH",
+        "text_rTtpJh",
+        "text_e6mY63",
+        "text_QUBRbN"
+      ],
+      "custom_css": [
+        "@media (min-width: 1200px) {.section-copy-image .mo-pad {padding-bottom: 2rem; padding-top: 2rem; }}"
+      ],
+      "settings": {
+        "style": "bg-light",
+        "layout": "copy-image",
+        "vertical_align": "align-items-center",
+        "heading": "Protéger les nutriments importants",
+        "content": "",
+        "column_img": "shopify://shop_images/carbon-filter-cutout_1.webp",
+        "video_id": "",
+        "large_image": "img-lrg",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "video_image_z6EFiC": {
+      "type": "video-image",
+      "blocks": {
+        "text_qkjNqr": {
+          "type": "text",
+          "settings": {
+            "video_id": ""
+          }
+        },
+        "text_Ma3Bkr": {
+          "type": "text",
+          "settings": {
+            "video_id": ""
+          }
+        },
+        "text_JjdxYr": {
+          "type": "text",
+          "settings": {
+            "video_id": ""
+          }
+        },
+        "text_aGrLwH": {
+          "type": "text",
+          "settings": {
+            "video_id": ""
+          }
+        },
+        "text_M3h7LY": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom_5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_qkjNqr",
+        "text_Ma3Bkr",
+        "text_JjdxYr",
+        "text_aGrLwH",
+        "text_M3h7LY"
+      ],
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "features_Y97Ek8": {
+      "type": "features",
+      "blocks": {
+        "feature_col_1_c7bhHT": {
+          "type": "feature_col_1",
+          "settings": {
+            "title": "Il est exposé à des contaminants, notamment des métaux lourds, des toxines, des déchets chimiques, des microplastiques, etc."
+          }
+        },
+        "feature_col_1_meK6Ah": {
+          "type": "feature_col_1",
+          "settings": {
+            "title": "L’eau douce et riche en nutriments s’écoule des cours d’eau vers les réseaux d’eau publics"
+          }
+        },
+        "feature_col_1_NaFLiP": {
+          "type": "feature_col_1",
+          "settings": {
+            "title": "Vous et vos proches profitez d'une eau fraîche et riche en nutriments en toute simplicité, comme la nature l'a voulu"
+          }
+        },
+        "feature_col_2_YNrhCw": {
+          "type": "feature_col_2",
+          "settings": {
+            "title": "La paroi dense et poreuse élimine 99,99 % des contaminants, sans altérer la teneur en oxygène ou en minéraux de votre eau"
+          }
+        },
+        "feature_col_2_V6pQER": {
+          "type": "feature_col_2",
+          "settings": {
+            "title": "Le filtre à Phoenix Gravity purifie l'eau du robinet grâce à des éléments en charbon actif fabriqués à partir de coques de noix de coco de la plus haute qualité"
+          }
+        }
+      },
+      "block_order": [
+        "feature_col_1_c7bhHT",
+        "feature_col_1_meK6Ah",
+        "feature_col_1_NaFLiP",
+        "feature_col_2_YNrhCw",
+        "feature_col_2_V6pQER"
+      ],
+      "custom_css": [
+        "@media (min-width: 1200px) {.row.justify-content-center.mb-5 {margin-top: 3rem !important; }}"
+      ],
+      "settings": {
+        "heading": "Nous éliminons 99,99 % descontaminants nocifs",
+        "content": "",
+        "section_video_bg": "gshkwot1gv",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "copy_image_Pc9rJF": {
+      "type": "copy-image",
+      "blocks": {
+        "text_KyYxFR": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Ralentit le processus de vieillissement en favorisant la régénération cellulaire"
+          }
+        },
+        "text_YaE8Fz": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Favorise un meilleur sommeil en optimisant la régulation de la température"
+          }
+        },
+        "text_YWgkHJ": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Améliore la peau, les cheveux et les ongles en éliminant les toxines"
+          }
+        },
+        "text_7PefBb": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Améliore la fonction cognitive en transportant des nutriments importants vers votre cerveau"
+          }
+        },
+        "text_WXzK3y": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Réduit les maladies en améliorant la circulation sanguine"
+          }
+        }
+      },
+      "block_order": [
+        "text_KyYxFR",
+        "text_YaE8Fz",
+        "text_YWgkHJ",
+        "text_7PefBb",
+        "text_WXzK3y"
+      ],
+      "settings": {
+        "style": "bg-light",
+        "layout": "image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Vous laissant avec une hydratation plus saine",
+        "content": "",
+        "video_id": "",
+        "large_image": "img-lrg",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "section_bgimg": "shopify://shop_images/healthy-hydration-bg_2.jpg",
+        "bg_image_style": "cover",
+        "section_randoimg_position": "top"
+      }
+    },
+    "copy_image_MHx7p9": {
+      "type": "copy-image",
+      "custom_css": [
+        "@media (min-width: 992px) {.col-lg-12 {width: 85% !important; }}"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "centered-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Aller plus loin dans l’élimination du fluor:",
+        "content": "<p>Notre filtre POSTreat supplémentaire élimine plus de 95 % du fluorure pour une filtration hautement ciblée.<br/><br/>Fonctionne en synergie avec les filtres à gravité Phoenix en acier inoxydable AISI 304.<br/><br/>Conçu pour une réutilisation optimale, le premier sur le marché à utiliser des matériaux rechargeables respectueux de l'environnement.</p>",
+        "column_img": "shopify://shop_images/Postreat-6_14.jpg",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "comparison_table_mkdPyD": {
+      "type": "comparison-table",
+      "blocks": {
+        "12071b99-c9cf-44f0-8f90-f17e668827de": {
+          "type": "text",
+          "settings": {
+            "feature": "Affordable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "yes"
+          }
+        },
+        "ff105aa8-88b6-413f-8760-39ae19b9c412": {
+          "type": "text",
+          "settings": {
+            "feature": "Portable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "64a5c03c-787f-4ebc-8ed9-74874085b166": {
+          "type": "text",
+          "settings": {
+            "feature": "Acier Inoxydable Durable",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "d350ab4a-9aaf-49d4-9384-374210afd2e5": {
+          "type": "text",
+          "settings": {
+            "feature": "Essai Sans Risque de 100 Jours",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "30fa03b0-29b6-4d12-afa4-2c65ba827c48": {
+          "type": "text",
+          "settings": {
+            "feature": "Facile à Entretenir",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_VbAUDk": {
+          "type": "text",
+          "settings": {
+            "feature": "Grande Capacité",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_U7Yanr": {
+          "type": "text",
+          "settings": {
+            "feature": "Aucune Plomberie Requise",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        }
+      },
+      "block_order": [
+        "12071b99-c9cf-44f0-8f90-f17e668827de",
+        "ff105aa8-88b6-413f-8760-39ae19b9c412",
+        "64a5c03c-787f-4ebc-8ed9-74874085b166",
+        "d350ab4a-9aaf-49d4-9384-374210afd2e5",
+        "30fa03b0-29b6-4d12-afa4-2c65ba827c48",
+        "text_VbAUDk",
+        "text_U7Yanr"
+      ],
+      "settings": {
+        "heading": "Le moyen le plus pratique etle plus abordable de savourerune eau pure et saine chez vous",
+        "number_of_comparisons": "3",
+        "style": "style-2",
+        "feature_header": "Features",
+        "company_name": "CaractéristiqueFiltre à Eau Phoenix",
+        "comparison_1": "Autres systèmes de filtrage",
+        "comparison_2": "Eau en Bouteille",
+        "comparison_3": "Pichets Filtrants",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "cards_YrPxAE": {
+      "type": "cards",
+      "blocks": {
+        "text_M4tjUK": {
+          "type": "text",
+          "settings": {
+            "heading": "Assemblez Votre Filtre",
+            "copy": "<p>Suivez simplement les instructions incluses dans la boîte pour assembler votre filtre — la configuration est super facile et ne prend que 5 minutes.</p>",
+            "image": "shopify://shop_images/stainless-steel.webp",
+            "video_id": ""
+          }
+        },
+        "text_X8yFGH": {
+          "type": "text",
+          "settings": {
+            "heading": "Ajoutez l'Eau du Robinet",
+            "copy": "<p>Retirez le couvercle et versez l'eau du robinet. Les doubles filtres utilisent la filtration naturelle au carbone provenant de la province du sud de l'Espagne pour éliminer les toxines.</p>",
+            "image": "shopify://shop_images/activated-coconut-carbon.webp",
+            "video_id": ""
+          }
+        },
+        "text_PNXwbf": {
+          "type": "text",
+          "settings": {
+            "heading": "C'est Prêt à Boire !",
+            "copy": "<p>Servez-vous un verre — vous remarquerez un goût propre et vif que vous n'obtenez qu'avec de l'eau filtrée dont tous les mauvais contaminants ont été absorbés !</p>",
+            "image": "shopify://shop_images/2x-power.webp",
+            "video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_M4tjUK",
+        "text_X8yFGH",
+        "text_PNXwbf"
+      ],
+      "settings": {
+        "style": "white-cards",
+        "heading": "",
+        "paragraph": "",
+        "buttontext": "",
+        "buttonlink": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "custom_html_reBzBb": {
+      "type": "custom-html",
+      "custom_css": [
+        "/* Ensure the wistia player fills its container */wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none;}"
+      ],
+      "name": "Custom Embed Video",
+      "settings": {
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
+      }
+    },
+    "video_image_Bj4fB9": {
+      "type": "video-image",
+      "blocks": {
+        "text_yUqCJV": {
+          "type": "text",
+          "settings": {
+            "video_id": "jr37r9792m"
+          }
+        }
+      },
+      "block_order": [
+        "text_yUqCJV"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "copy_image_BpTWcm": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Essai Gratuit de 100 Jours",
+        "content": "<p>Vous craignez que le Filtre à Eau par Gravité Phoenix semble trop beau pour être vrai ? Vous n'êtes pas sûr qu'il éliminera vraiment autant de contaminants que nous le promettons ?</p><p>Nous soutenons notre produit à 100 % — vous pouvez donc l'essayer chez vous pendant 100 jours avec notre garantie de remboursement.</p><p>Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, retournez-le simplement dans les 100 jours pour un remboursement complet, sans poser de questions.</p><p><em>*Voir les conditions générales d'application.</em></p>",
+        "column_img": "shopify://shop_images/phoenix-guarantee.v1_copy_1.avif",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "icon_row_L44bJz": {
+      "type": "icon-row",
+      "blocks": {
+        "text_icRMWG": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-recycle.svg",
+            "heading": "Service de surveillance environnemental"
+          }
+        },
+        "text_b4xeL9": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-flask.svg",
+            "heading": "Laboratoires CVR limités"
+          }
+        },
+        "text_m3FWEB": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-quality.svg",
+            "heading": "Association pour la qualité de l'eau"
+          }
+        },
+        "text_d9GUy7": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-removal.svg",
+            "heading": "Contaminantséliminés"
+          }
+        }
+      },
+      "block_order": [
+        "text_icRMWG",
+        "text_b4xeL9",
+        "text_m3FWEB",
+        "text_d9GUy7"
+      ],
+      "custom_css": [
+        "@media (min-width: 992px) {.section-icon-row .icon-padding {padding: 3rem 1rem !important; }}"
+      ],
+      "settings": {
+        "style": "none",
+        "styles": "standard",
+        "heading": "Nous prenons nos performances au sérieux",
+        "paragraph": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "wisita_videos_QkwJdq": {
+      "type": "wisita-videos",
+      "blocks": {
+        "video_x7j9ni": {
+          "type": "video",
+          "settings": {
+            "title": "",
+            "wistia_id": "jr37r9792m"
+          }
+        }
+      },
+      "block_order": [
+        "video_x7j9ni"
+      ],
+      "disabled": true,
+      "name": "Wistia Video Grid",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_fGiC9Y",
+    "cards_7Hbppn",
+    "social_proof_PwDbfY",
+    "copy_image_AB77Kd",
+    "video_image_z6EFiC",
+    "features_Y97Ek8",
+    "copy_image_Pc9rJF",
+    "copy_image_MHx7p9",
+    "comparison_table_mkdPyD",
+    "cards_YrPxAE",
+    "custom_html_reBzBb",
+    "video_image_Bj4fB9",
+    "copy_image_BpTWcm",
+    "icon_row_L44bJz",
+    "wisita_videos_QkwJdq"
+  ]
+}

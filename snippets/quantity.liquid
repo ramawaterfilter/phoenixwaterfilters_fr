@@ -1,0 +1,189 @@
+{% assign variant = product.selected_or_first_available_variant %}
+
+{% if product.available %}
+<div class="qty-wrapper"
+     data-stock="{{ variant.inventory_quantity }}"
+     data-managed="{{ variant.inventory_management }}">
+
+  <button type="button" class="qty-btn minus">−</button>
+
+  <span class="qty-value">1</span>
+
+  <input
+    type="hidden"
+    name="quantity"
+    value="1"
+    min="1"
+    data-price="{{ variant.price }}"
+  >
+
+  <button type="button" class="qty-btn plus">+</button>
+
+</div>
+{% endif %}
+
+<!-- ===== MODAL POPUP ===== -->
+<div id="stock-modal" class="stock-modal">
+  <div class="stock-modal-box">
+    <div class="stock-icon">✕</div>
+    <p class="stock-text">
+      We don't have enough stock for the quantity you selected.
+      Please try again.
+    </p>
+    <!-- 🔑 FIX: type="button" -->
+    <button type="button" class="stock-ok-btn">OK</button>
+  </div>
+</div>
+
+<style>
+.qty-wrapper {
+  display: inline-flex;
+  align-items: center;
+  width: 160px;
+  height: 56px;
+  border: 2px solid #2d2f36;
+  border-radius: 12px;
+  background: #f3f6f8;
+  margin-bottom: 12px;
+}
+button.qty-btn.plus:hover {
+    background-color: none;
+}
+button.qty-btn.minus:hover{
+    background-color: none;
+}
+.qty-btn {
+  width: 50px;
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qty-value {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===== MODAL ===== */
+.stock-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.stock-modal.show {
+  display: flex;
+}
+
+.stock-modal-box {
+  background: #ffffff;
+  width: 90%;
+  max-width: 520px;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.stock-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border: 4px solid #f87171;
+  border-radius: 50%;
+  color: #f87171;
+  font-size: 46px;
+  line-height: 72px;
+  font-weight: bold;
+}
+
+.stock-text {
+  font-size: 18px;
+  color: #111827;
+  margin-bottom: 30px;
+}
+
+.stock-ok-btn {
+  background: #6b2d00;
+  color: #ffffff;
+  border: none;
+  padding: 12px 32px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  color: #111827;
+    background:none;
+}
+button:active {
+  color: #111827;
+    background:none;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const wrapper = document.querySelector('.qty-wrapper');
+  if (!wrapper) return;
+
+  const input = wrapper.querySelector('input[name="quantity"]');
+  const valueEl = wrapper.querySelector('.qty-value');
+  const plusBtn = wrapper.querySelector('.plus');
+  const minusBtn = wrapper.querySelector('.minus');
+  const priceEl = document.getElementById('product-price');
+
+  const modal = document.getElementById('stock-modal');
+  const okBtn = modal.querySelector('.stock-ok-btn');
+
+  const stock = parseInt(wrapper.dataset.stock, 10);
+  const managed = wrapper.dataset.managed === 'shopify';
+
+  function formatMoney(cents) {
+    return '€' + (cents / 100).toFixed(2);
+  }
+
+  function updateUI(qty) {
+    valueEl.textContent = qty;
+    input.value = qty;
+
+    if (priceEl) {
+      const unitPrice = parseInt(input.dataset.price, 10);
+      priceEl.textContent = formatMoney(unitPrice * qty);
+    }
+  }
+
+  plusBtn.addEventListener('click', function () {
+    let qty = parseInt(input.value, 10);
+
+    if (managed && stock > 0 && qty >= stock) {
+      modal.classList.add('show');
+      return;
+    }
+
+    qty++;
+    updateUI(qty);
+  });
+
+  minusBtn.addEventListener('click', function () {
+    let qty = parseInt(input.value, 10);
+    if (qty <= 1) return;
+    qty--;
+    updateUI(qty);
+  });
+
+  okBtn.addEventListener('click', function () {
+    modal.classList.remove('show');
+  });
+
+  updateUI(1);
+});
+</script>

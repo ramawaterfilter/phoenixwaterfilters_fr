@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Footer",
+  "type": "footer",
+  "sections": {
+    "817ca831-c432-47df-b994-812f7b308112": {
+      "type": "footer",
+      "custom_css": [
+        ".img {max-width: 80px !important;}"
+      ],
+      "settings": {
+        "footer-logo": "shopify://shop_images/Logo_with_Register_Mark.png",
+        "col1_text": "<p>Le moyen le plus simple, le plus sûr et le plus abordable de profiter d’une eau potable pure, exempte de contaminants à 99 %</p>",
+        "col2_text": "<p><strong>Home</strong></p><ul><li><a href=\"/products/the-phoenix-gravity-filtre-a-eau\" title=\"/products/the-phoenix-gravity-filtre-a-eau\">Boutique</a></li><li><a href=\"/pages/comment-ca-marche\" title=\"/pages/comment-ca-marche\">Comment ça marche</a></li><li><a href=\"/pages/about-us\" title=\"/pages/about-us\">À propos de nous</a></li><li><a href=\"/pages/nous-contacter\" title=\"/pages/nous-contacter\">Nous contacter</a></li><li><a href=\"/pages/comment-configurer\" title=\"/pages/comment-configurer\">comment installer</a></li><li><a href=\"/pages/faq\" title=\"/pages/faq\">FAQ</a></li><li><a href=\"https://calendly.com/phoenixgravity/dealership-uk-clone\" title=\"https://calendly.com/phoenixgravity/dealership-uk-clone\">Devenez un concessionnaire</a></li></ul>",
+        "col3_text": "<p><strong>Liens utiles</strong></p><ul><li><a href=\"/pages/livraisons-et-retours\" title=\"/pages/livraisons-et-retours\">Livraison et retours</a></li><li><a href=\"/pages/politique-de-confidentialite\" title=\"/pages/politique-de-confidentialite\">Politique de confidentialité</a></li><li><a href=\"https://phoenixwaterfilters.fr/pages/recommande-a-un-ami\" title=\"https://phoenixwaterfilters.fr/pages/recommande-a-un-ami\">Parrainez Un Ami Et Gagnez</a></li><li><a href=\"/pages/conditions-generales\" title=\"/pages/conditions-generales\">Conditions générales d'utilisation</a></li><li><a href=\"https://cdn.shopify.com/s/files/1/0656/9898/8085/files/Lap_Report_v3_Translation.pdf?v=1751265278\" title=\"https://cdn.shopify.com/s/files/1/0656/9898/8085/files/Lap_Report_v3_Translation.pdf?v=1751265278\">Rapports de tests de laboratoire</a></li><li><a href=\"/pages/enregistrement-des-produits\" title=\"/pages/enregistrement-des-produits\">Enregistrez votre produit</a></li><li><a href=\"/pages/mentions-legales\" title=\"/pages/mentions-legales\">Mentions Légales</a></li><li><a href=\"https://phoenixwaterfilters.fr/blogs/qualite-de-leau-1\" title=\"https://phoenixwaterfilters.fr/blogs/qualite-de-leau-1\">Blog</a></li></ul>",
+        "socials_title": "",
+        "socials_fb": "https://www.facebook.com/Phoenixgravityfiltersfr",
+        "socials_tw": "",
+        "socials_ig": "https://www.instagram.com/phoenixgravityfilters_fr",
+        "socials_yt": "https://www.youtube.com/channel/UCKVaBmFfZAVExybu2t86edQ",
+        "contact_title": "Vous avez une question ? Discutons !",
+        "phone": "+4420 8058 5660",
+        "email": "soutien@phoenixwaterfilters.fr",
+        "terms": "<p><strong>Conditions générales: </strong>Applicable uniquement pour l'achat de systèmes de gravité Phoenix. Les clients doivent supporter les frais de retour vers les entrepôts de Phoenix gravity en France.</p>",
+        "disclaimer": "<p>Copyright © Phoenix Gravity [dyn-year] | All Rights Reserved</p>"
+      }
+    }
+  },
+  "order": [
+    "817ca831-c432-47df-b994-812f7b308112"
+  ]
+}

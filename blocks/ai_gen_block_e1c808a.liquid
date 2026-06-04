@@ -1,0 +1,674 @@
+{% doc %}
+  @prompt
+    Section layout requirements:
+    
+    Light background color
+    
+    Centered section heading at the top
+    
+    Two content cards displayed side-by-side on desktop
+    
+    Cards should have rounded corners, white background, and soft spacing
+    
+    Section structure:
+    
+    Heading (section-level)
+    
+    Large, bold heading text
+    
+    Editable font size, color, and spacing
+    
+    Card blocks (repeatable)
+    
+    Each card must be a block
+    
+    Card contains:
+    
+    Card heading
+    
+    Short description text
+    
+    Image aligned to the right inside the card
+    
+    Allow adding or removing cards
+    
+    Call-to-action text
+    
+    Single line text centered below the cards
+    
+    Editable text and color
+    
+    Button block
+    
+    Centered button below the text
+    
+    Editable button label, background color, and text color
+    
+    Button link must support anchor links (example: #contact-section)
+    
+    Interaction requirement:
+    
+    When the button is clicked, the page should smoothly scroll to the section whose ID is provided in the button link
+    
+    The section ID should be editable in the button settings
+    
+    Responsive behavior:
+    
+    Desktop: cards displayed in two columns
+    
+    Mobile: cards stack vertically
+    
+    Button and text remain centered on all screen sizes
+    
+    Customization requirements:
+    
+    Allow manual control of:
+    
+    Background color
+    
+    Heading font size and color
+    
+    Card background color
+    
+    Card text font size and color
+    
+    Button colors and border radius
+    
+    Code quality requirements:
+    
+    Use custom class names (do not use multicolumn, image-banner, or Dawn-specific classes)
+    
+    Do not reference external CSS files
+    
+    Include scoped CSS inside the section
+    
+    Clean, readable HTML, CSS, and schema
+    
+    The section should look professionally hand-coded and easy to maintain., Do NOT use any ai class classes, i need to add the button to section id not url
+{% enddoc %}
+{% assign block_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .info-cards-wrapper-{{ block_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.section_padding_top }}px 20px {{ block.settings.section_padding_bottom }}px;
+    width: 100%;
+    display: block;
+  }
+
+  .info-cards-container-{{ block_id }} {
+    max-width: {{ block.settings.max_width }}px;
+    margin: 0 auto;
+  }
+
+  .info-cards-heading-{{ block_id }} {
+    text-align: center;
+    font-size: {{ block.settings.heading_font_size }}px;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    font-weight: 700;
+  }
+
+  .info-cards-grid-{{ block_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: {{ block.settings.card_gap }}px;
+    margin-bottom: {{ block.settings.cta_spacing }}px;
+  }
+
+  .info-card-{{ block_id }} {
+    background-color: {{ block.settings.card_background_color }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: {{ block.settings.card_padding }}px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .info-card-content-{{ block_id }} {
+    flex: 1;
+  }
+
+  .info-card-title-{{ block_id }} {
+    font-size: {{ block.settings.card_title_font_size }}px;
+    color: {{ block.settings.card_title_color }};
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+
+  .info-card-description-{{ block_id }} {
+    font-size: {{ block.settings.card_text_font_size }}px;
+    color: {{ block.settings.card_text_color }};
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .info-card-image-{{ block_id }} {
+    flex-shrink: 0;
+    width: {{ block.settings.card_image_width }}px;
+    height: {{ block.settings.card_image_width }}px;
+    border-radius: {{ block.settings.card_image_border_radius }}px;
+    overflow: hidden;
+  }
+
+  .info-card-image-{{ block_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .info-card-image-placeholder-{{ block_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-card-image-placeholder-{{ block_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  .info-cards-cta-text-{{ block_id }} {
+    text-align: center;
+    font-size: {{ block.settings.cta_text_font_size }}px;
+    color: {{ block.settings.cta_text_color }};
+    margin: 0 0 {{ block.settings.cta_button_spacing }}px;
+  }
+
+  .info-cards-button-wrapper-{{ block_id }} {
+    text-align: center;
+  }
+
+  .info-cards-button-{{ block_id }} {
+    display: inline-block;
+    padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_font_size }}px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .info-cards-button-{{ block_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+  }
+
+  @media screen and (max-width: 768px) {
+    .info-cards-grid-{{ block_id }} {
+      grid-template-columns: 1fr;
+    }
+
+    .info-card-{{ block_id }} {
+      flex-direction: column;
+    }
+
+    .info-card-image-{{ block_id }} {
+      width: 100%;
+      height: 200px;
+    }
+
+    .info-cards-heading-{{ block_id }} {
+      font-size: {{ block.settings.heading_font_size | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<smooth-scroll-block-{{ block_id }} class="info-cards-wrapper-{{ block_id }}" {{ block.shopify_attributes }}>
+  <div class="info-cards-container-{{ block_id }}">
+    {% if block.settings.section_heading != blank %}
+      <h2 class="info-cards-heading-{{ block_id }}">{{ block.settings.section_heading }}</h2>
+    {% endif %}
+
+    <div class="info-cards-grid-{{ block_id }}">
+      <div class="info-card-{{ block_id }}">
+        <div class="info-card-content-{{ block_id }}">
+          {% if block.settings.card_1_heading != blank %}
+            <h3 class="info-card-title-{{ block_id }}">{{ block.settings.card_1_heading }}</h3>
+          {% endif %}
+          {% if block.settings.card_1_description != blank %}
+            <p class="info-card-description-{{ block_id }}">{{ block.settings.card_1_description }}</p>
+          {% endif %}
+        </div>
+        <div class="info-card-image-{{ block_id }}">
+          {% if block.settings.card_1_image %}
+            <img
+              src="{{ block.settings.card_1_image | image_url: width: 400 }}"
+              alt="{{ block.settings.card_1_image.alt | escape }}"
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          {% else %}
+            <div class="info-card-image-placeholder-{{ block_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="info-card-{{ block_id }}">
+        <div class="info-card-content-{{ block_id }}">
+          {% if block.settings.card_2_heading != blank %}
+            <h3 class="info-card-title-{{ block_id }}">{{ block.settings.card_2_heading }}</h3>
+          {% endif %}
+          {% if block.settings.card_2_description != blank %}
+            <p class="info-card-description-{{ block_id }}">{{ block.settings.card_2_description }}</p>
+          {% endif %}
+        </div>
+        <div class="info-card-image-{{ block_id }}">
+          {% if block.settings.card_2_image %}
+            <img
+              src="{{ block.settings.card_2_image | image_url: width: 400 }}"
+              alt="{{ block.settings.card_2_image.alt | escape }}"
+              loading="lazy"
+              width="400"
+              height="400"
+            >
+          {% else %}
+            <div class="info-card-image-placeholder-{{ block_id }}">
+              {{ 'image' | placeholder_svg_tag }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% if block.settings.cta_text != blank %}
+      <p class="info-cards-cta-text-{{ block_id }}">{{ block.settings.cta_text }}</p>
+    {% endif %}
+
+    {% if block.settings.button_label != blank %}
+      <div class="info-cards-button-wrapper-{{ block_id }}">
+        <button
+          class="info-cards-button-{{ block_id }}"
+          data-scroll-target="{{ block.settings.scroll_target_id }}"
+        >
+          {{ block.settings.button_label }}
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</smooth-scroll-block-{{ block_id }}>
+
+<script>
+  (function() {
+    class SmoothScrollBlock{{ block_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.button = this.querySelector('.info-cards-button-{{ block_id }}');
+        if (this.button) {
+          this.button.addEventListener('click', this.handleClick.bind(this));
+        }
+      }
+
+      handleClick(event) {
+        const targetId = this.button.getAttribute('data-scroll-target');
+        
+        if (targetId) {
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        }
+      }
+    }
+
+    customElements.define('smooth-scroll-block-{{ block_id }}', SmoothScrollBlock{{ block_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Info cards with CTA",
+  "tag": null,
+  "class": "info-cards-block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading",
+      "default": "Why choose us"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Heading font size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Heading bottom spacing",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 800,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "header",
+      "content": "Cards style"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 15,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap between cards",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "label": "Card title font size",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card title color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "card_text_font_size",
+      "label": "Card text font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 15
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "card_image_width",
+      "label": "Card image width",
+      "min": 60,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "range",
+      "id": "card_image_border_radius",
+      "label": "Card image border radius",
+      "min": 0,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "text",
+      "id": "card_1_heading",
+      "label": "Heading",
+      "default": "Expert guidance"
+    },
+    {
+      "type": "textarea",
+      "id": "card_1_description",
+      "label": "Description",
+      "default": "Our team brings decades of experience to help you succeed."
+    },
+    {
+      "type": "image_picker",
+      "id": "card_1_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "text",
+      "id": "card_2_heading",
+      "label": "Heading",
+      "default": "Proven results"
+    },
+    {
+      "type": "textarea",
+      "id": "card_2_description",
+      "label": "Description",
+      "default": "Join hundreds of satisfied customers who trust our solutions."
+    },
+    {
+      "type": "image_picker",
+      "id": "card_2_image",
+      "label": "Image"
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA text",
+      "default": "Ready to get started?"
+    },
+    {
+      "type": "range",
+      "id": "cta_text_font_size",
+      "label": "CTA text font size",
+      "min": 14,
+      "max": 28,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "color",
+      "id": "cta_text_color",
+      "label": "CTA text color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "cta_spacing",
+      "label": "Space above CTA",
+      "min": 20,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "cta_button_spacing",
+      "label": "Space between text and button",
+      "min": 10,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "scroll_target_id",
+      "label": "Scroll target section ID",
+      "info": "Enter the ID of the section to scroll to (without #)"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "button_font_size",
+      "label": "Button font size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "label": "Button vertical padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "label": "Button horizontal padding",
+      "min": 20,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Info cards with CTA"
+    }
+  ]
+}
+{% endschema %}

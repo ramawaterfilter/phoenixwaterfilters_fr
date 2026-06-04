@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "copy_image_rUyHJ6": {
+      "type": "copy-image",
+      "disabled": true,
+      "name": "Copy Image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "centered-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "content": "",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "support_cNgXx8": {
+      "type": "support",
+      "disabled": true,
+      "name": "Support Section",
+      "settings": {
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "button_link": "shopify://pages/warranty-registration",
+        "button_text": "Register Here"
+      }
+    },
+    "1746437444c5b604dc": {
+      "type": "apps",
+      "settings": {}
+    },
+    "custom_code_section_meYg6w": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<div class=\"return-policy\">\n\n<h1>\n<strong>Remboursements (le cas échéant)</strong> </h1>\n<p>Nous offrons une politique de retour de 30 jours pour tous les produits, à condition qu'ils soient inutilisés et en état de revente. Une fois votre retour reçu et inspecté, nous vous enverrons un e-mail pour vous confirmer sa réception. Nous vous informerons également de l'approbation ou du rejet de votre remboursement. Si votre remboursement est approuvé, nous procéderons à votre remboursement dans les 5 jours ouvrables et il sera automatiquement crédité sur votre mode de paiement d'origine dans les 10 jours ouvrables. Pour un remboursement complet, veuillez retourner le produit original complet tel qu'il a été acheté. Si seulement une partie du produit est retournée, un remboursement partiel sera émis en fonction des articles reçus.</p>\n<p><strong>Remboursements en retard ou manquants (le cas échéant)</strong> </p>\n<p>Si vous n'avez pas encore reçu de remboursement, vérifiez à nouveau votre compte bancaire. Ensuite, contactez votre banque en utilisant les informations de transaction fournies. Un délai peut être nécessaire avant que votre remboursement ne soit officiellement traité. Si vous avez effectué toutes ces étapes et que vous n’avez toujours pas reçu votre remboursement, contactez-nous à l’adresse <strong>soutien@phoenixwaterfilters.fr</strong></p>\n<p><strong>Échanges (le cas échéant)</strong> </p>\n<p>Nous remplaçons uniquement les articles présentant des défauts matériels ou de fabrication, ou si le produit est défectueux. Pour échanger un article contre le même produit, envoyez-nous un email à <strong>soutien@phoenixwaterfilters.fr </strong>et expédiez votre article à : <strong>9 Rue de la Gare, 78640 Villiers-Saint-Frédéric, Île-de-France, </strong></p>\n<p><strong>Expédition</strong></p>\n<p>Pour retourner votre produit, veuillez l'envoyer à l'adresse suivante : <strong>9 Rue de la Gare, 78640 Villiers-St-Fréderic, Île-de-France,</strong>  Vous êtes responsable des frais d'expédition pour le retour de votre article. Les frais d'expédition ne sont pas remboursables. Si les frais de retour ne sont pas réglés, leur montant sera déduit de votre remboursement.<br>Selon votre lieu de résidence, le délai de réception de votre produit échangé peut varier.<br>Pour les articles d’une valeur supérieure à <strong>99 €</strong>, nous vous conseillons d’utiliser un service d’expédition avec suivi ou de souscrire une assurance d’expédition. Nous déclinons toute responsabilité pour les envois perdus ou mal acheminés par le transporteur.</p>\n<hr>\n<p><strong>Essai de 100 jours</strong></p>\n<p>Une période d’essai de <strong>100 jours</strong> s’applique aux achats de systèmes de filtres à eau (filtres avec carters en acier inoxydable) effectués sur notre site Web. Pour être éligibles à un retour, les filtres doivent être intacts, dans leur emballage d’origine, et exempts de dommages ou de bosses sur les carters en acier inoxydable. Votre demande de retour doit être reçue dans la période d’essai de 100 jours pour être éligible à un remboursement ou un échange.</p>\n<p>Pour tous les autres produits, une période de retour standard de <strong>30 jours</strong> s’applique. Passé ce délai de 30 jours après votre achat, nous ne pourrons malheureusement pas vous offrir de remboursement ou d’échange.</p>\n<p>Pour effectuer un retour, nous exigeons un reçu ou une preuve d'achat effectué sur notre site Web. Vous pouvez toujours nous contacter pour toute question concernant les retours à <strong>soutien@phoenixwaterfilters.fr</strong></p>\n<p>Pour initier un retour, contactez-nous à <strong>soutien@phoenixwaterfilters.fr</strong>Si votre retour est accepté, nous vous fournirons des instructions sur la manière et l'endroit où envoyer votre colis. Les articles envoyés sans demande de retour préalable ne seront pas acceptés.</p>\n\n</div>",
+        "custom_css": ".return-policy {\n  max-width: 1250px;\n  margin: 40px auto;\n  padding: 20px 30px;\n  font-family: \"Value Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.7;\n  color: #222;\n}\n\n.return-policy p {\n  margin-bottom: 16px;\n  text-align: justify;\n}\n\n.return-policy strong {\n  font-weight: 600;\n}\n\n.return-policy p strong:first-child {\n  display: block;\n  font-size: 18px;\n  margin-top: 25px;\n  text-transform: uppercase;\n}\n\n.return-policy hr {\n  border: none;\n  border-top: 1px solid #ccc;\n  margin: 30px 0;\n}\n\n@media (max-width: 768px) {\n  .return-policy {\n    padding: 15px 20px;\n    font-size: 15px;\n  }\n\n  .return-policy p strong:first-child {\n    font-size: 17px;\n    margin-top: 20px;\n  }\n}",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    }
+  },
+  "order": [
+    "copy_image_rUyHJ6",
+    "support_cNgXx8",
+    "1746437444c5b604dc",
+    "custom_code_section_meYg6w"
+  ]
+}
