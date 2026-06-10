@@ -13,7 +13,7 @@
       "type": "hero",
       "settings": {
         "eyebrow": "",
-        "heading": "Envie de nous contacter ? Envoyez-nous un message ici.",
+        "heading": "Contactez-nous",
         "content": "",
         "sideimage": "shopify://shop_images/water-filter-blog_2.webp",
         "section_video_bg": "",
@@ -24,7 +24,7 @@
     "b74c754b-5cda-41d7-924f-0d9b99a91ca1": {
       "type": "map",
       "settings": {
-        "banner_text": "Vous avez encore une question brûlante ? Nous serions ravis de vous entendre.",
+        "banner_text": "Vous avez encore une question en tête ? Nous serons ravis d’échanger avec vous.",
         "show_form": true,
         "form_title": "Remplissez le formulaire ci-dessous et nous vous contacterons dans les 48 heures.",
         "klavyio_id": "klaviyo-form-S3NH8u",
@@ -32,7 +32,6 @@
         "show_map": true,
         "map_image": "shopify://shop_images/location-map_1.jpg",
         "col1_heading": "Numéro de téléphone",
-        "col1_icon": "shopify://shop_images/phone.svg",
         "col1_content": "<p>+4420 8058 5660</p>",
         "col2_heading": "Adresse courriel",
         "col2_icon": "shopify://shop_images/email_1.svg",
@@ -218,7 +217,7 @@
           "type": "question_answer",
           "settings": {
             "question": "Mon article est arrivé endommagé ou incorrect, que puis-je faire ?",
-            "answer": "<p>Veuillez envoyer une photographie de votre commande complète, y compris l'emballage, ainsi que votre numéro de commande à notre équipe de support à <strong>hello@phoenixwaterfilters.com</strong>. Nous vous répondrons dans les <strong>24 heures</strong> en priorité.</p>"
+            "answer": "<p>Veuillez envoyer une photographie de votre commande complète, y compris l'emballage, ainsi que votre numéro de commande à notre équipe de support à <a href=\"mailto:soutien@phoenixwaterfilters.fr\">soutien@phoenixwaterfilters.fr</a> Nous vous répondrons dans les <strong>24 heures</strong> en priorité.</p>"
           }
         },
         "tab_qN3B4Y": {

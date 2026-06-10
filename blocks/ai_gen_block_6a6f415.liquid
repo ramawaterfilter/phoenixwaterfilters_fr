@@ -100,6 +100,69 @@
     color: {{ block.settings.product_price_color }};
   }
 
+  .ai-collection-grid__rating-{{ ai_gen_id }} {
+    display: inline-block;
+    max-width: 170px;
+    overflow: visible;
+    color: #002b5c;
+    font-size: 16px;
+    line-height: 1.15;
+  }
+
+  .ai-collection-grid__rating-{{ ai_gen_id }} .jdgm-prev-badge {
+    display: inline-block !important;
+    overflow: visible;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  .ai-collection-grid__rating-{{ ai_gen_id }} .jdgm-prev-badge__stars {
+    display: inline-flex !important;
+    align-items: center;
+    overflow: visible;
+    color: #ffad32;
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 0;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+
+  .ai-collection-grid__rating-{{ ai_gen_id }} .jdgm-star {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 15px !important;
+    height: auto !important;
+    margin: 0 3px 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    color: #ffad32 !important;
+    font-size: 16px !important;
+    line-height: 1 !important;
+    vertical-align: middle;
+  }
+
+  .ai-collection-grid__rating-{{ ai_gen_id }} .jdgm-star:before {
+    color: inherit !important;
+    font-size: inherit !important;
+    line-height: 1 !important;
+  }
+
+  .ai-collection-grid__rating-{{ ai_gen_id }} .jdgm-star:last-child {
+    margin-right: 3px !important;
+  }
+
+  .ai-collection-grid__rating-{{ ai_gen_id }} .jdgm-prev-badge__text {
+    display: inline;
+    color: #002b5c;
+    font-size: 16px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    vertical-align: baseline;
+  }
+
   .ai-collection-grid__empty-state-{{ ai_gen_id }} {
     text-align: center;
     padding: 60px 20px;
@@ -190,6 +253,13 @@
                 <h3 class="ai-collection-grid__product-title-{{ ai_gen_id }}">
                   {{ product.title }}
                 </h3>
+
+            {% comment %} <!-- Start of Judge.me code --> {% endcomment %}
+      <div class='ai-collection-grid__rating-{{ ai_gen_id }} jdgm-widget jdgm-preview-badge' data-id='{{ product.id }}' data-auto-install='false'>
+        {{ product.metafields.judgeme.badge }}
+      </div>
+      <!-- End of Judge.me code -->
+ {% comment %}Modified on June 3, for Appstle      {% endcomment %}
                 <div class="ai-collection-grid__product-price-{{ ai_gen_id }}">
                   {{ product.price | money }}
                 </div>

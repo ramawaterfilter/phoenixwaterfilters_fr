@@ -15,16 +15,10 @@
         "judge_me_reviews_preview_badge_xGfTmh": {
           "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {}
-        },
-        "vitals_reviews_stars_AhwX8e": {
-          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "disabled": true,
-          "settings": {}
         }
       },
       "block_order": [
-        "judge_me_reviews_preview_badge_xGfTmh",
-        "vitals_reviews_stars_AhwX8e"
+        "judge_me_reviews_preview_badge_xGfTmh"
       ],
       "custom_css": [
         "#vitals-end-section {max-width: 1200px; display: none; width: 100%; margin: 0 auto;}"

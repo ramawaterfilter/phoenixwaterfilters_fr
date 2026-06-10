@@ -16,15 +16,6 @@
     },
     "product-hero": {
       "type": "product-hero",
-      "blocks": {
-        "vitals_reviews_stars_UpfNBc": {
-          "type": "shopify://apps/vitals/blocks/reviews-stars/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "vitals_reviews_stars_UpfNBc"
-      ],
       "settings": {
         "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
         "countdown_time": "",
@@ -726,15 +717,6 @@
     },
     "product_reviews_J4aYbK": {
       "type": "product-reviews",
-      "blocks": {
-        "vitals_product_reviews_tNaVX8": {
-          "type": "shopify://apps/vitals/blocks/product-reviews/aeb48102-2a5a-4f39-bdbd-d8d49f4e20b8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "vitals_product_reviews_tNaVX8"
-      ],
       "settings": {
         "section_heading": "Customer Reviews"
       }

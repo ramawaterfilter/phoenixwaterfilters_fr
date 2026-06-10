@@ -16,8 +16,7 @@
       ],
       "settings": {
         "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
-        "countdown_time": "",
-        "countdown_products": []
+        "countdown_time": ""
       }
     },
     "9600faf5-31b8-4d01-817d-b44b276a1d60": {

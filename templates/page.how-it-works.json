@@ -55,7 +55,7 @@
           "type": "text",
           "settings": {
             "heading": "Métaux lourds",
-            "copy": "<p>Les canb pénètrent dans les sources d'eau par le biais de la plomberie vieillissante et de la pollution industrielle et agricole.</p>",
+            "copy": "<p>Les contaminants peuvent s’infiltrer dans l’eau potable via des canalisations vieillissantes, ainsi que par la pollution industrielle et agricole.</p>",
             "icon": "shopify://shop_images/icon-metals.png",
             "video_id": ""
           }
@@ -92,7 +92,7 @@
       ],
       "settings": {
         "style": "white-cards",
-        "heading": "Nous éliminons 99,99 % des contaminants nocifs",
+        "heading": "Nous éliminons jusqu’à 99,99 % des contaminants nocifs.",
         "paragraph": "",
         "section_bgimg": "shopify://shop_images/filter-background-white_1.jpg",
         "buttontext": "",
@@ -139,7 +139,7 @@
         "@media (min-width: 786px) {.row.justify-content-center a {width: 220px !important; } .section-socialproof .social-proof .social-card {gap: 20px !important; }}"
       ],
       "settings": {
-        "intro": "Notre eau a été testée par des organismes tiers réputésRéussi avec brio"
+        "intro": "Notre eau a été testée par des organismes tiers réputés. Test validé avec succès."
       }
     },
     "copy_image_AB77Kd": {
@@ -148,31 +148,31 @@
         "text_bnxaCj": {
           "type": "text",
           "settings": {
-            "feature_text": "Aide à renforcer les os et les dents."
+            "feature_text": "Aider à renforcer les os et les dents"
           }
         },
         "text_x6W8xH": {
           "type": "text",
           "settings": {
-            "feature_text": "Améliore le sommeil et peut aider à renforcer les muscles."
+            "feature_text": "Favoriser un meilleur sommeil et contribuer au renforcement musculaire"
           }
         },
         "text_rTtpJh": {
           "type": "text",
           "settings": {
-            "feature_text": "Peut réguler les signaux nerveux et améliorer la santé cardiaque."
+            "feature_text": "Contribuer à la régulation des signaux nerveux et à la santé cardiaque"
           }
         },
         "text_e6mY63": {
           "type": "text",
           "settings": {
-            "feature_text": "Aide à réguler et à nourrir les cellules."
+            "feature_text": "Aider à la régulation et à la nutrition des cellules"
           }
         },
         "text_QUBRbN": {
           "type": "text",
           "settings": {
-            "feature_text": "Peut équilibrer l'eau et les minéraux."
+            "feature_text": "Contribuer à l’équilibre de l’eau et des minéraux"
           }
         }
       },
@@ -190,7 +190,7 @@
         "style": "bg-light",
         "layout": "copy-image",
         "vertical_align": "align-items-center",
-        "heading": "Protéger les nutriments importants",
+        "heading": "Protéger les mineraux essentiels",
         "content": "",
         "column_img": "shopify://shop_images/carbon-filter-cutout_1.webp",
         "video_id": "",
@@ -263,13 +263,13 @@
         "feature_col_1_meK6Ah": {
           "type": "feature_col_1",
           "settings": {
-            "title": "L’eau douce et riche en nutriments s’écoule des cours d’eau vers les réseaux d’eau publics"
+            "title": "Une eau fraîche, pure et naturellement riche en minéraux suit son parcours depuis la source jusqu’à votre foyer."
           }
         },
         "feature_col_1_NaFLiP": {
           "type": "feature_col_1",
           "settings": {
-            "title": "Vous et vos proches profitez d'une eau fraîche et riche en nutriments en toute simplicité, comme la nature l'a voulu"
+            "title": "Offrez à votre famille une eau de qualité, naturellement riche en minéraux et au goût authentique, comme la nature l’a prévue."
           }
         },
         "feature_col_2_YNrhCw": {
@@ -281,7 +281,7 @@
         "feature_col_2_V6pQER": {
           "type": "feature_col_2",
           "settings": {
-            "title": "Le filtre à Phoenix Gravity purifie l'eau du robinet grâce à des éléments en charbon actif fabriqués à partir de coques de noix de coco de la plus haute qualité"
+            "title": "Le filtre Phoenix Gravity purifie l'eau du robinet grâce à des éléments en charbon actif fabriqués à partir d’issue de coques de noix de coco de la plus haute qualité."
           }
         }
       },
@@ -296,7 +296,7 @@
         "@media (min-width: 1200px) {.row.justify-content-center.mb-5 {margin-top: 3rem !important; }}"
       ],
       "settings": {
-        "heading": "Nous éliminons 99,99 % descontaminants nocifs",
+        "heading": "Nous éliminons jusqu’à 99,99 % des contaminants nocifs.",
         "content": "",
         "section_video_bg": "gshkwot1gv",
         "buttonlink": "",
@@ -312,31 +312,31 @@
         "text_KyYxFR": {
           "type": "text",
           "settings": {
-            "feature_text": "Ralentit le processus de vieillissement en favorisant la régénération cellulaire"
+            "feature_text": "Ralentir le processus de vieillissement en favorisant la régénération cellulaire"
           }
         },
         "text_YaE8Fz": {
           "type": "text",
           "settings": {
-            "feature_text": "Favorise un meilleur sommeil en optimisant la régulation de la température"
+            "feature_text": "Favouriser un meilleur sommeil en optimisant la régulation de la température"
           }
         },
         "text_YWgkHJ": {
           "type": "text",
           "settings": {
-            "feature_text": "Améliore la peau, les cheveux et les ongles en éliminant les toxines"
+            "feature_text": "Améliorer la peau, les cheveux et les ongles en éliminant les toxines"
           }
         },
         "text_7PefBb": {
           "type": "text",
           "settings": {
-            "feature_text": "Améliore la fonction cognitive en transportant des nutriments importants vers votre cerveau"
+            "feature_text": "Améliorer la fonction cognitive en transportant des nutriments importants vers votre cerveau"
           }
         },
         "text_WXzK3y": {
           "type": "text",
           "settings": {
-            "feature_text": "Réduit les maladies en améliorant la circulation sanguine"
+            "feature_text": "Reduire les maladies en améliorant la circulation sanguine"
           }
         }
       },
@@ -351,7 +351,7 @@
         "style": "bg-light",
         "layout": "image-copy",
         "vertical_align": "align-items-center",
-        "heading": "Vous laissant avec une hydratation plus saine",
+        "heading": "Pour une hydratation de meilleure qualité",
         "content": "",
         "video_id": "",
         "large_image": "img-lrg",
@@ -375,8 +375,8 @@
         "style": "bg-white",
         "layout": "centered-copy",
         "vertical_align": "align-items-center",
-        "heading": "Aller plus loin dans l’élimination du fluor:",
-        "content": "<p>Notre filtre POSTreat supplémentaire élimine plus de 95 % du fluorure pour une filtration hautement ciblée.<br/><br/>Fonctionne en synergie avec les filtres à gravité Phoenix en acier inoxydable AISI 304.<br/><br/>Conçu pour une réutilisation optimale, le premier sur le marché à utiliser des matériaux rechargeables respectueux de l'environnement.</p>",
+        "heading": "Une protection renforcée contre le fluor",
+        "content": "<p>Le filtre POSTreat réduit plus de 95 % du fluorure pour une filtration encore plus complète.<br/><br/>Conçu pour s’intégrer parfaitement aux filtres à gravité Phoenix en acier inoxydable AISI 304, il renforce les performances de votre système de filtration.<br/><br/>Innovant et durable, il est le premier de sa catégorie à utiliser un média filtrant rechargeable, afin de limiter les déchets et de favoriser une consommation plus responsable.<br/></p>",
         "column_img": "shopify://shop_images/Postreat-6_14.jpg",
         "video_id": "",
         "large_image": "img-standard",
@@ -426,7 +426,7 @@
         "d350ab4a-9aaf-49d4-9384-374210afd2e5": {
           "type": "text",
           "settings": {
-            "feature": "Essai Sans Risque de 100 Jours",
+            "feature": "Garantie de remboursement de 100 jours",
             "column_1": "yes",
             "column_2": "no",
             "column_3": "no",
@@ -474,7 +474,7 @@
         "text_U7Yanr"
       ],
       "settings": {
-        "heading": "Le moyen le plus pratique etle plus abordable de savourerune eau pure et saine chez vous",
+        "heading": "La façon la plus simple et la plus économique de profiterd’une eau pure à la maison",
         "number_of_comparisons": "3",
         "style": "style-2",
         "feature_header": "Features",
@@ -570,8 +570,8 @@
         "style": "bg-white",
         "layout": "copy",
         "vertical_align": "align-items-center",
-        "heading": "Essai Gratuit de 100 Jours",
-        "content": "<p>Vous craignez que le Filtre à Eau par Gravité Phoenix semble trop beau pour être vrai ? Vous n'êtes pas sûr qu'il éliminera vraiment autant de contaminants que nous le promettons ?</p><p>Nous soutenons notre produit à 100 % — vous pouvez donc l'essayer chez vous pendant 100 jours avec notre garantie de remboursement.</p><p>Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, retournez-le simplement dans les 100 jours pour un remboursement complet, sans poser de questions.</p><p><em>*Voir les conditions générales d'application.</em></p>",
+        "heading": "Essayez-le pendant 100jours, en toute sérénité",
+        "content": "<p>Vous hésitez encore ? Testez le filtre à eau par gravité Phoenix chez vous et découvrez par vous-même ses performances en matière de filtration et de réduction des contaminants.</p><p>Nous soutenons notre produit à 100 % — vous pouvez donc l'essayer chez vous pendant 100 jours avec notre garantie de remboursement.</p><p>Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, retournez-le simplement dans les 100 jours pour un remboursement complet, sans poser de questions.</p><p><em>*Voir les conditions générales d'application.</em></p>",
         "column_img": "shopify://shop_images/phoenix-guarantee.v1_copy_1.avif",
         "video_id": "",
         "large_image": "img-standard",

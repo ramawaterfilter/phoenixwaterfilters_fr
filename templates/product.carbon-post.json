@@ -84,7 +84,7 @@
           "type": "text",
           "settings": {
             "question": "Description",
-            "answer": "<p>Nos cartouches KokoCarb sont fabriquées à partir de charbon actif issu de coques de noix de coco de la plus haute qualité (CTC 60), ce qui leur confère une structure dense et poreuse capable d'éliminer 99,99 % des parasites, métaux lourds, produits chimiques et autres contaminants, sans pour autant éliminer les minéraux dont votre corps a besoin.</p><p>Retient les contaminants physiques jusqu’à 20 fois plus petits que les filtres à carafe. Imprégné d’argent pour empêcher la prolifération bactérienne et garantir une eau plus sûre plus longtemps. Fonctionne grâce à la force naturelle de la gravité avec des matériaux écologiques de la plus haute qualité pour offrir la filtration la plus efficace, la plus durable et la plus résistante du marché.</p>"
+            "answer": "<p>Nos cartouches KokoCarb sont fabriquées à partir de charbon actif issu de coques de noix de coco de très haute qualité (CTC 60). Leur structure dense et poreuse permet de réduire jusqu’à 99,99 % des parasites, métaux lourds, produits chimiques et autres contaminants, tout en préservant les minéraux essentiels à votre organisme.<br/><br/>Elles retiennent les particules jusqu’à 20 fois plus fines que celles captées par les filtres à carafe.<br/><br/>Imprégnées d’argent, elles limitent la prolifération bactérienne et contribuent à maintenir une eau plus sûre plus longtemps.<br/><br/>Fonctionnant uniquement grâce à la gravité, elles associent des matériaux écologiques de haute qualité pour offrir une filtration efficace, durable et fiable.</p>"
           }
         },
         "text_ydDqwG": {
@@ -99,14 +99,14 @@
           "type": "text",
           "settings": {
             "question": "Garantie",
-            "answer": "<p>Les éléments de filtre à charbon Phoenix Gravity sont couverts par une garantie de 3 mois, couvrant les dommages survenus pendant l'expédition.</p>"
+            "answer": "<p>Les cartouches à charbon Phoenix Gravity bénéficient d’une garantie de 3 mois couvrant les éventuels dommages survenus lors du transport.</p>"
           }
         },
         "text_iiWYkD": {
           "type": "text",
           "settings": {
             "question": "Compatibilité",
-            "answer": "<p>Les éléments de filtre à charbon Phoenix Gravity sont conçus pour s'adapter parfaitement aux systèmes Weeplow, Berkey® et autres systèmes similaires à alimentation par gravité, garantissant une filtration optimale et une compatibilité aisée.</p>"
+            "answer": "<p>Les cartouches à charbon Phoenix Gravity sont compatibles avec les systèmes Weeplow®, Berkey® et autres systèmes similaires à gravité. Elles assurent une filtration optimale et une parfaite simplicité d’installation.</p>"
           }
         },
         "text_yPJN8A": {

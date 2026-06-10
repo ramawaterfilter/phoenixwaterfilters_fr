@@ -99,14 +99,14 @@
           "type": "text",
           "settings": {
             "question": "Garantie",
-            "answer": "<p>Les éléments filtrants pour l'élimination du fluorure et de l'arsenic POSTreat sont livrés avec une garantie d'un an sur les boîtiers en acier inoxydable, couvrant les dommages survenus pendant le transport.</p>"
+            "answer": "<p>Les éléments filtrants POSTreat Fluoride & Arsenic Removal bénéficient d’une garantie d’un an sur les cuves en acier inoxydable, couvrant les dommages survenus lors du transport. </p>"
           }
         },
         "text_yPJN8A": {
           "type": "text",
           "settings": {
             "question": "Compatibilité",
-            "answer": "<p>Les filtres POSTreat™ pour l'élimination du fluorure sont conçus spécifiquement pour fonctionner avec nos cartouches de charbon actif intelligentes. Attention : ils ne sont pas compatibles avec les autres marques.</p>"
+            "answer": "<p>Les filtres POSTreat™ pour l'élimination du fluorure sont conçus spécifiquement pour fonctionner avec nos cartouches de charbon actif intelligentes. Attention : ils ne sont pas compatibles avec les autres marques. </p>"
           }
         }
       },
