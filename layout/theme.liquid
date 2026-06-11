@@ -99,15 +99,40 @@
   <meta name="robots" content="index, follow">
 
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-PWMJT6PK');</script>
+  <script>
+    (() => {
+      let requested = false;
+
+      const loadTagManager = () => {
+        if (requested) return;
+        requested = true;
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PWMJT6PK';
+        document.head.appendChild(script);
+      };
+
+      ['pointerdown', 'keydown', 'touchstart'].forEach((eventName) => {
+        window.addEventListener(eventName, loadTagManager, { once: true, passive: true });
+      });
+
+      window.addEventListener(
+        'load',
+        () => {
+          if ('requestIdleCallback' in window) {
+            window.requestIdleCallback(loadTagManager, { timeout: 2500 });
+          } else {
+            window.setTimeout(loadTagManager, 1500);
+          }
+        },
+        { once: true }
+      );
+    })();
+  </script>
   <!-- End Google Tag Manager -->
 
   <title>
@@ -162,7 +187,7 @@
   {{ 'customer_area.js' | shopify_asset_url | script_tag }}
   {% endif %}
 
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+  <script defer src="{{ 'option_selection.js' | shopify_asset_url }}"></script>
 
   {{ 'main.css' | asset_url | stylesheet_tag }}
 
@@ -196,11 +221,14 @@
   <!-- CrazyEgg REMOVED -->
 
 
-  <link rel="preload" as="image" href="{{ 'fr2_1.webp' | file_url }}" imagesrcset="
-{{ 'fr2_1.webp' | file_url }}&width=352 352w,
-{{ 'fr2_1.webp' | file_url }}&width=832 832w,
-{{ 'fr2_1.webp' | file_url }}&width=1200 1200w
-" imagesizes="100vw">
+  {% if template.name == 'index' %}
+    <link
+      rel="preload"
+      as="image"
+      href="https://cdn.shopify.com/s/files/1/0656/9898/8085/files/France_New_mobile_size.jpg"
+      fetchpriority="high"
+    >
+  {% endif %}
   <style>
     @media (min-width: 1025px) {
       #zoom-controls {
@@ -214,11 +242,6 @@
       }
     }
   </style>
-
-  {{ 'custom-fonts.css' | asset_url | stylesheet_tag }}
-
-
-
 
 </head>
 
@@ -271,13 +294,15 @@
 
   {{ 'main.js' | asset_url | script_tag }}
 
-  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+  {% render 'wistia_lazy_core' %}
 
-  {% include 'klaviyo-back-in-stock' %}
+  {% if template.name == 'product' %}
+    {% render 'klaviyo-back-in-stock' %}
+  {% endif %}
 
 
-  {{ 'custom-customer-referral.js' | asset_url | script_tag }}
-  {{ 'render.js' | asset_url | script_tag }}
+  <script defer src="{{ 'custom-customer-referral.js' | asset_url }}"></script>
+  <script defer src="{{ 'render.js' | asset_url }}"></script>
 
 
    

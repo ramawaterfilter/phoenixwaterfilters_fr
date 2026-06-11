@@ -130,6 +130,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const activeFlag = document.getElementById("active-flag");
   const activeLang = document.getElementById("active-lang");
 
+  if (!menu || !btn || !activeFlag || !activeLang) return;
+
   // Detect saved language
   let savedCode  = localStorage.getItem("lang-code");
   let savedPath  = localStorage.getItem("lang-path");

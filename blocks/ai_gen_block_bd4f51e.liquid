@@ -115,9 +115,17 @@
         <div class="ai-banner-slider__slide-{{ ai_gen_id }}" data-slide="{{ i }}">
           {% if image %}
             <img
-              src="{{ image | image_url: width: 2000 }}"
+              src="{{ image | image_url: width: 40 }}"
+              data-src="{{ image | image_url: width: 1600 }}"
+              data-srcset="
+                {{ image | image_url: width: 480 }} 480w,
+                {{ image | image_url: width: 750 }} 750w,
+                {{ image | image_url: width: 1100 }} 1100w,
+                {{ image | image_url: width: 1600 }} 1600w
+              "
+              sizes="100vw"
               alt="{{ image.alt | escape }}"
-              loading="{% if i == 1 %}eager{% else %}lazy{% endif %}"
+              loading="lazy"
               width="{{ image.width }}"
               height="{{ image.height }}"
               class="ai-banner-slider__image-{{ ai_gen_id }}"
@@ -160,10 +168,55 @@
         this.autoplaySpeed = {{ block.settings.autoplay_speed | times: 1000 }};
 
         this.setupEventListeners();
-        
-        if (this.autoplayEnabled) {
-          this.startAutoplay();
+        this.observeSlider();
+      }
+
+      observeSlider() {
+        if (!('IntersectionObserver' in window)) {
+          this.loadSlide(1);
+          if (this.autoplayEnabled) this.startAutoplay();
+          return;
         }
+
+        this.preloadObserver = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((entry) => entry.isIntersecting)) {
+              this.preloadObserver.disconnect();
+              this.loadSlide(1);
+            }
+          },
+          { rootMargin: '600px 0px' }
+        );
+
+        this.preloadObserver.observe(this);
+
+        if (this.autoplayEnabled) {
+          this.visibilityObserver = new IntersectionObserver(
+            (entries) => {
+              if (entries.some((entry) => entry.isIntersecting)) {
+                this.startAutoplay();
+              } else if (this.autoplayInterval) {
+                clearInterval(this.autoplayInterval);
+                this.autoplayInterval = null;
+              }
+            },
+            { threshold: 0.1 }
+          );
+
+          this.visibilityObserver.observe(this);
+        }
+      }
+
+      loadSlide(slideNumber) {
+        const slide = this.querySelector(`[data-slide="${slideNumber}"]`);
+        const image = slide?.querySelector('img[data-src]');
+
+        if (!image) return;
+
+        image.src = image.dataset.src;
+        image.srcset = image.dataset.srcset;
+        image.removeAttribute('data-src');
+        image.removeAttribute('data-srcset');
       }
 
       setupEventListeners() {
@@ -208,6 +261,8 @@
 
       goToSlide(slideNumber) {
         this.currentSlide = slideNumber;
+        this.loadSlide(slideNumber);
+        this.loadSlide(slideNumber >= this.totalSlides ? 1 : slideNumber + 1);
         const offset = (slideNumber - 1) * -100;
         this.track.style.transform = `translateX(${offset}%)`;
 
@@ -231,6 +286,7 @@
       }
 
       startAutoplay() {
+        if (this.autoplayInterval) return;
         this.autoplayInterval = setInterval(() => {
           this.nextSlide();
         }, this.autoplaySpeed);
@@ -242,6 +298,8 @@
       }
 
       disconnectedCallback() {
+        if (this.preloadObserver) this.preloadObserver.disconnect();
+        if (this.visibilityObserver) this.visibilityObserver.disconnect();
         if (this.autoplayInterval) {
           clearInterval(this.autoplayInterval);
         }

@@ -37,7 +37,16 @@
     {% endif %}
 
     {% if block.settings.custom_html != blank %}
-      {{ block.settings.custom_html }}
+      {% liquid
+        assign rendered_custom_html = block.settings.custom_html
+
+        if block.settings.defer_background_video
+          assign video_opening = '<video class="phxg-video" src="'
+          assign optimized_video_opening = '<video class="phxg-video" preload="none" fetchpriority="high" poster="' | append: block.settings.video_poster_url | append: '" data-deferred-background-video data-src="'
+          assign rendered_custom_html = rendered_custom_html | replace: video_opening, optimized_video_opening
+        endif
+      %}
+      {{ rendered_custom_html }}
     {% endif %}
   </div>
 </custom-code-block-{{ ai_gen_id }}>
@@ -52,6 +61,47 @@
   <script>
     (function() {
       {{ block.settings.custom_js }}
+    })();
+  </script>
+{% endif %}
+
+{% if block.settings.defer_background_video %}
+  <script>
+    (() => {
+      const root = document.querySelector('custom-code-block-{{ ai_gen_id }}');
+      const video = root?.querySelector('[data-deferred-background-video]');
+
+      if (!video) return;
+
+      video.removeAttribute('autoplay');
+
+      const loadVideo = () => {
+        if (video.src || !video.dataset.src) return;
+        video.src = video.dataset.src;
+        video.addEventListener('canplay', () => video.play().catch(() => {}), { once: true });
+        video.load();
+      };
+
+      const canLoadVideo =
+        !window.matchMedia('(max-width: 749px)').matches &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+        !navigator.connection?.saveData;
+
+      if (!canLoadVideo) return;
+
+      const scheduleLoad = () => {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadVideo, { timeout: 2500 });
+        } else {
+          window.setTimeout(loadVideo, 1200);
+        }
+      };
+
+      if (document.readyState === 'complete') {
+        scheduleLoad();
+      } else {
+        window.addEventListener('load', scheduleLoad, { once: true });
+      }
     })();
   </script>
 {% endif %}
@@ -106,6 +156,17 @@
       "type": "textarea",
       "id": "custom_js",
       "label": "JavaScript code"
+    },
+    {
+      "type": "checkbox",
+      "id": "defer_background_video",
+      "label": "Defer background video",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "video_poster_url",
+      "label": "Background video poster URL"
     },
     {
       "type": "header",

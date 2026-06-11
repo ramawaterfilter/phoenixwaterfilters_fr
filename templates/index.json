@@ -51,6 +51,7 @@
     },
     "177787638213a68afb": {
       "type": "_blocks",
+      "disabled": true,
       "blocks": {
         "ai_gen_block_db25917_zWkXPH": {
           "type": "ai_gen_block_db25917",
@@ -60,6 +61,8 @@
             "custom_html": "<section class=\"phxg-hero\" aria-label=\"Hero\">\n\n  <!-- ── VIDEO BACKGROUND ──\n       Replace YOUR_VIDEO_URL_HERE with a direct .mp4 link.\n       To disable video, delete the <video> and <div class=\"phxg-voverlay\"> tags below. -->\n  <video class=\"phxg-video\" src=\"https://cdn.shopify.com/videos/c/o/v/a45ee002798d4e069b28162e1d4b4e87.mp4\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" aria-hidden=\"true\"></video>\n  <div class=\"phxg-voverlay\" aria-hidden=\"true\"></div>\n\n  <div class=\"phxg-content\">\n\n    <!-- ── EYEBROW ── -->\n    <div class=\"phxg-eyebrow\">Plus de 50 ans d'expertise</div>\n\n    <!-- ── TITLE ── Use <br> for line breaks, <em> for italic accent -->\n    <h1 class=\"phxg-title\">\n      L'eau pure,<br><em>naturellement.</em>\n    </h1>\n\n    <!-- ── SUBTITLE ── -->\n    <p class=\"phxg-sub\">\n      Sans plomberie. Sans électricité.<br>\n      800 000 foyers nous font confiance.\n    </p>\n\n    <!-- ── STAR RATING ──\n         full_stars: repeat the <span class=\"phxg-star\"> block for each full star (max 5)\n         half star:  keep or remove the <span class=\"phxg-starhalf\"> block\n         stars_url:  replace #reviews with your reviews page URL -->\n    <a href=\"https://phoenixwaterfilters.fr/pages/review\" class=\"phxg-stars\" aria-label=\"Customer rating: 4.4/5 · 345 verified reviews. Click to read reviews.\">\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-starhalf\" aria-hidden=\"true\"></span>\n      <span class=\"phxg-ratingtxt\">4.64/5  </span>\n    </a>\n\n    <!-- ── PRICE BLOCK ── -->\n    <div class=\"phxg-pricerow\" aria-label=\"Price\">\n      <span class=\"phxg-pricenow\">163,17 €</span>\n      <div class=\"phxg-pricesec\">\n        <span class=\"phxg-pricewas\">217 €</span>\n        <span class=\"phxg-pricettc\">(TTC)</span>\n        <span class=\"phxg-pricebdg\">–25%</span>\n      </div>\n    </div>\n\n    <!-- ── CTA BUTTON ──\n         Replace href=\"#\" with your product or cart URL -->\n    <div class=\"phxg-ctawrap\">\n      <a href=\"https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau\" class=\"phxg-cta\">\n        Commander maintenant\n        <span class=\"phxg-arrow\" aria-hidden=\"true\">→</span>\n      </a>\n    </div>\n\n    <!-- ── REASSURANCE ROW ── -->\n    <div class=\"phxg-reassure\" aria-label=\"Guarantees\">\n      <span><span class=\"phxg-check\" aria-hidden=\"true\">✓</span>  Satisfait ou remboursé 100 jours</span>\n      <span><span class=\"phxg-check\" aria-hidden=\"true\">✓</span>  Certifié NSF</span>\n      <span><span class=\"phxg-check\" aria-hidden=\"true\">✓</span>  Livraison gratuite</span>\n    </div>\n\n  </div>\n</section>",
             "custom_css": "/* ══ LINK-BLEED RESET ══ */\n    .phxg-content,\n    .phxg-content h1,\n    .phxg-content p,\n    .phxg-content div,\n    .phxg-content span {\n      text-decoration: none !important;\n    }\n    .phxg-content a:not(.phxg-cta):not(.phxg-stars) {\n      text-decoration: none !important;\n      color: inherit !important;\n      pointer-events: none !important;\n      cursor: default !important;\n    }\n@media (min-width: 901px) {\n    .phxg-content {\n        max-width: 100%;\n        left: 10.5vw;\n    }\n}\n\n    /* ══ STRIKETHROUGH EXCEPTION ══ */\n    .phxg-pricerow .phxg-pricewas,\n    .phxg-pricesec .phxg-pricewas,\n    span.phxg-pricewas {\n      text-decoration: line-through !important;\n      -webkit-text-decoration: line-through !important;\n      text-decoration-thickness: 2px !important;\n      text-decoration-color: rgba(21, 58, 91, 1) !important;\n    }\n\n    /* ══ HERO WRAPPER ══ */\n    .phxg-hero {\n      position: relative;\n      min-height: 540px;\n      display: flex;\n      align-items: center;\n      padding: 64px 48px;\n      overflow: hidden;\n      font-family: 'DM Sans', sans-serif;\n    }\n\n    /* ══ VIDEO BACKGROUND ══ */\n    .phxg-video {\n      position: absolute; inset: 0;\n      width: 100%; height: 100%;\n      object-fit: cover;\n      z-index: 0; pointer-events: none;\n    }\n    .phxg-voverlay {\n      position: absolute; inset: 0;\n      background: linear-gradient(53deg,rgba(255, 255, 255, 0.49) 0%,rgba(14, 26, 52, 0) 45%,rgba(14, 26, 52, 0) 100%);\n      z-index: 1; pointer-events: none;\n    }\n\n    /* ══ CONTENT COLUMN ══ */\n    .phxg-content {\n      max-width: 560px;\n      position: relative; z-index: 2;\n    }\n\n    /* ── Eyebrow ── */\n    .phxg-eyebrow {\n      font-size: 11px; font-weight: 600;\n      letter-spacing: .13em; text-transform: uppercase;\n      color: rgba(21, 58, 91, 1);\n      margin-bottom: 14px;\n      display: flex; align-items: center; gap: 8px;\n      pointer-events: none; cursor: default;\n      text-decoration: none !important;\n    }\n    .phxg-eyebrow::before {\n      content: ''; display: block;\n      width: 24px; height: 2px;\n      background: rgba(21, 58, 91, 1); border-radius: 1px; flex-shrink: 0;\n    }\n\n    /* ── Title ── */\n    .phxg-title {\n      font-family: 'DM Serif Display', serif;\n      font-size: clamp(38px,5vw,58px);\n      line-height: 1.08; color: rgba(21, 58, 91, 1);\n      margin-bottom: 14px;\n    \n      pointer-events: none; cursor: default;\n      text-decoration: none !important;\n    }\n    .phxg-title em {\n      font-style: italic;\n      color: rgba(21, 58, 91, 1);\n      text-decoration: none !important;\n    }\n\n    /* ── Subtitle ── */\n    .phxg-sub {\n      font-size: 16px; color: rgba(0, 0, 0, 0.87);\n      line-height: 1.6; margin-bottom: 22px;\n      pointer-events: none; cursor: default;\n      text-decoration: none !important;\n    }\n\n    /* ══ STAR RATING ══ */\n    .phxg-stars {\n      display: inline-flex;\n      align-items: center;\n      gap: 4px;\n      margin-bottom: 18px;\n      text-decoration: none !important;\n      cursor: pointer;\n      pointer-events: auto;\n      transition: opacity .18s ease;\n      width: fit-content;\n    }\n    .phxg-stars:hover { opacity: .8; text-decoration: none !important; }\n    .phxg-stars:hover .phxg-ratingtxt {\n      text-decoration: underline;\n      text-decoration-color: rgba(255,255,255,.5);\n      text-underline-offset: 2px;\n    }\n    .phxg-star {\n      color: #FBBF24;\n      font-size: 22px;\n      line-height: 1;\n      text-decoration: none !important;\n    }\n    .phxg-starhalf {\n      position: relative; display: inline-block;\n      width: 22px; height: 22px;\n      font-size: 22px; line-height: 1;\n    }\n    .phxg-starhalf::before {\n      content: '★'; position: absolute;\n      color: rgba(255,255,255,.25);\n    }\n    .phxg-starhalf::after {\n      content: '★'; position: absolute;\n      color: #FBBF24;\n      clip-path: inset(0 50% 0 0);\n    }\n    .phxg-ratingtxt {\n      font-size: 20px;\n      color: rgba(21, 58, 91, 1);\n      font-weight: 500; margin-left: 4px;\n      font-family: 'DM Sans', sans-serif;\n      text-decoration: none;\n      transition: text-decoration-color .18s;\n    }\n\n    /* ══ PRICE ROW ══ */\n    .phxg-pricerow {\n      display: flex;\n      align-items: center;\n      gap: 12px;\n      margin-bottom: 26px;\n      flex-wrap: wrap;\n      pointer-events: none; cursor: default;\n    }\n    .phxg-pricenow {\n      font-size: clamp(32px,4vw,42px);\n      font-weight: 700; color: rgba(21, 58, 91, 1);\n      letter-spacing: -.01em; line-height: 1;\n      text-decoration: none !important;\n    }\n    .phxg-pricesec {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      gap: 6px; flex-wrap: wrap;\n    }\n    .phxg-pricewas {\n      font-size: 17px;\n      color: rgba(21, 58, 91, 1);\n      line-height: 1.2;\n    }\n    .phxg-pricettc {\n      font-size: 16px; font-weight: 400;\n      letter-spacing: .09em; text-transform: uppercase;\n      color: rgba(0, 0, 0, 1);\n      line-height: 1.2;\n      text-decoration: none !important;\n    }\n    .phxg-pricebdg {\n      background: #EF4444; color: #fff;\n      font-size: 12px; font-weight: 700;\n      padding: 3px 9px; border-radius: 5px;\n      letter-spacing: .03em; line-height: 1.4;\n      white-space: nowrap;\n      text-decoration: none !important;\n    }\n\n    /* ══ CTA BUTTON ══ */\n    .phxg-ctawrap {\n      margin-bottom: 16px;\n      pointer-events: none;\n    }\n    .phxg-cta {\n      display: inline-flex; align-items: center; gap: 10px;\n      background: #fff; color: #1C2A4A;\n      font-size: 15px; font-weight: 700;\n      padding: 15px 32px; border-radius: 50px;\n      text-decoration: none !important;\n      transition: all .2s;\n      box-shadow: 0 4px 24px rgba(0,0,0,.2);\n      font-family: 'DM Sans', sans-serif;\n      pointer-events: auto; cursor: pointer;\n    }\n    .phxg-cta:hover {\n      background: #F8FAFC;\n      transform: translateY(-2px);\n      box-shadow: 0 8px 32px rgba(0,0,0,.25);\n      color: #1C2A4A;\n      text-decoration: none !important;\n    }\n    .phxg-arrow {\n      font-size: 18px; transition: transform .2s; display: inline-block;\n    }\n    .phxg-cta:hover .phxg-arrow { transform: translateX(4px); }\n\n    /* ══ REASSURANCE ROW ══ */\n    .phxg-reassure {\n      display: flex; gap: 18px; flex-wrap: wrap;\n      font-size: 12.5px; color: rgba(21, 58, 91, 1);\n      pointer-events: none; cursor: default;\n    }\n    .phxg-reassure span {\n      display: flex; align-items: center; gap: 5px;\n      text-decoration: none !important;\n    }\n    .phxg-check {\n      color: rgba(21, 58, 91, 1); font-weight: 700;\n      text-decoration: none !important;\n    }\n\n    /* ══ MOBILE TRUST STRIP ══ */\n    .phxg-trust {\n      display: none;\n      background: #F8FAFC; border-bottom: 1px solid #E5EAF0;\n      padding: 14px 20px; justify-content: space-around;\n      font-family: 'DM Sans', sans-serif;\n    }\n    .phxg-trustitem {\n      display: flex; flex-direction: column; align-items: center; gap: 4px;\n      pointer-events: none;\n    }\n    .phxg-ticon { font-size: 20px; }\n    .phxg-tlabel {\n      font-size: 10.5px; color: #64748B;\n      font-weight: 500; text-align: center;\n      text-decoration: none !important;\n    }\n\n    /* ══ RESPONSIVE ══ */\n    @media (max-width: 900px) {\n      .phxg-hero {\n        padding: 44px 20px 48px;\n        min-height: 460px;\n        align-items: flex-end;\n      }\n      .phxg-hero::after { display: none; }\n      .phxg-content    { max-width: 100%; }\n      .phxg-title      { font-size: clamp(32px,9vw,44px); }\n      .phxg-pricenow   { font-size: clamp(28px,8vw,36px); }\n      .phxg-cta        { width: 100%; justify-content: center; font-size: 16px; padding: 16px 24px; }\n      .phxg-reassure   { justify-content: center; gap: 12px; font-size: 12px; }\n      .phxg-trust      { display: flex; }\n    }\n    @media (max-width: 480px) {\n      .phxg-hero          { padding: 36px 16px 40px; min-height: 420px; }\n      .phxg-eyebrow       { font-size: 10px; }\n      .phxg-sub           { font-size: 14.5px; }\n      .phxg-pricerow      { gap: 8px; margin-bottom: 20px; }\n      .phxg-reassure span { font-size: 11.5px; }\n      .phxg-ratingtxt     { font-size: 12px; }\n    }",
             "custom_js": "",
+            "defer_background_video": true,
+            "video_poster_url": "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/France_New_mobile_size.jpg",
             "desktop_width_percent": 100,
             "container_padding": 0
           },
@@ -71,6 +74,132 @@
       ],
       "name": "Hero Banner",
       "settings": {}
+    },
+    "home_optimized_hero": {
+      "type": "custom-hero-banner",
+      "blocks": {
+        "eyebrow_home": {
+          "type": "eyebrow",
+          "settings": {
+            "text": "Plus de 50 ans d'expertise",
+            "desktop_font_size": 11,
+            "mobile_font_size": 10,
+            "spacing": 14
+          }
+        },
+        "heading_home": {
+          "type": "heading",
+          "settings": {
+            "heading": "L'eau pure,",
+            "accent": "naturellement.",
+            "heading_tag": "h1",
+            "desktop_font_size": 58,
+            "mobile_font_size": 40,
+            "spacing": 14
+          }
+        },
+        "text_home": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sans plomberie. Sans électricité.<br>800 000 foyers nous font confiance.</p>",
+            "desktop_font_size": 16,
+            "mobile_font_size": 15,
+            "spacing": 22
+          }
+        },
+        "rating_home": {
+          "type": "rating",
+          "settings": {
+            "rating_text": "4.64/5",
+            "link": "/pages/review",
+            "accessibility_label": "Note client : 4,64 sur 5. Lire les avis.",
+            "desktop_font_size": 20,
+            "mobile_font_size": 12,
+            "spacing": 18
+          }
+        },
+        "price_home": {
+          "type": "price",
+          "settings": {
+            "current_price": 16317,
+            "compare_price": 21700,
+            "tax_text": "(TTC)",
+            "accessibility_label": "Prix promotionnel 163,17 euros TTC, au lieu de 217 euros.",
+            "desktop_font_size": 42,
+            "mobile_font_size": 36,
+            "spacing": 26
+          }
+        },
+        "button_home": {
+          "type": "button",
+          "settings": {
+            "label": "Commander maintenant",
+            "link": "/products/the-phoenix-gravity-filtre-a-eau",
+            "show_arrow": true,
+            "desktop_font_size": 15,
+            "mobile_font_size": 16,
+            "spacing": 16
+          }
+        },
+        "assurance_1": {
+          "type": "assurance",
+          "settings": {
+            "text": "Satisfait ou remboursé 100 jours",
+            "show_check": true,
+            "desktop_font_size": 12,
+            "mobile_font_size": 11,
+            "spacing": 8
+          }
+        },
+        "assurance_2": {
+          "type": "assurance",
+          "settings": {
+            "text": "Certifié NSF",
+            "show_check": true,
+            "desktop_font_size": 12,
+            "mobile_font_size": 11,
+            "spacing": 8
+          }
+        },
+        "assurance_3": {
+          "type": "assurance",
+          "settings": {
+            "text": "Livraison gratuite",
+            "show_check": true,
+            "desktop_font_size": 12,
+            "mobile_font_size": 11,
+            "spacing": 8
+          }
+        }
+      },
+      "block_order": [
+        "eyebrow_home",
+        "heading_home",
+        "text_home",
+        "rating_home",
+        "price_home",
+        "button_home",
+        "assurance_1",
+        "assurance_2",
+        "assurance_3"
+      ],
+      "settings": {
+        "fallback_video_url": "https://cdn.shopify.com/videos/c/o/v/a45ee002798d4e069b28162e1d4b4e87.mp4",
+        "desktop_poster": "shopify://shop_images/France_New_mobile_size.jpg",
+        "mobile_poster": "shopify://shop_images/France_New_mobile_size.jpg",
+        "enable_autoplay": true,
+        "enable_mobile_video": false,
+        "desktop_height": 540,
+        "mobile_height": 520,
+        "desktop_position": "center center",
+        "mobile_position": "center center",
+        "content_color": "#153a5b",
+        "accent_color": "#153a5b",
+        "overlay_color": "#ffffff",
+        "overlay_opacity": 50,
+        "button_background": "#ffffff",
+        "button_color": "#1c2a4a"
+      }
     },
     "09662284-e8a5-4a4d-a1bd-7f26c20ba274": {
       "type": "copy-image",
@@ -768,6 +897,7 @@
   "order": [
     "1769170449d6d55086",
     "177787638213a68afb",
+    "home_optimized_hero",
     "09662284-e8a5-4a4d-a1bd-7f26c20ba274",
     "17703637597301a4c2",
     "video_image_jidGAQ",
