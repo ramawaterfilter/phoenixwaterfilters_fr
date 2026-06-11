@@ -1,0 +1,1184 @@
+{% liquid
+  assign desktop_poster = section.settings.desktop_poster
+  assign mobile_poster = section.settings.mobile_poster
+
+  if desktop_poster == blank and section.settings.video != blank
+    assign desktop_poster = section.settings.video.preview_image
+  endif
+
+  if mobile_poster == blank
+    assign mobile_poster = desktop_poster
+  endif
+
+  if desktop_poster == blank
+    assign desktop_poster = mobile_poster
+  endif
+
+%}
+
+<phx-hero
+  class="phx-hero"
+  data-autoplay="{{ section.settings.enable_autoplay }}"
+  data-mobile-video="{{ section.settings.enable_mobile_video }}"
+  style="
+    --phx-overlay: {{ section.settings.overlay_color }};
+    --phx-overlay-opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    --phx-content-color: {{ section.settings.content_color }};
+    --phx-accent-color: {{ section.settings.accent_color }};
+    --phx-button-background: {{ section.settings.button_background }};
+    --phx-button-color: {{ section.settings.button_color }};
+    --phx-desktop-height: {{ section.settings.desktop_height }}px;
+    --phx-mobile-height: {{ section.settings.mobile_height }}px;
+    --phx-desktop-position: {{ section.settings.desktop_position }};
+    --phx-mobile-position: {{ section.settings.mobile_position }};
+  "
+>
+  <div class="phx-hero__media" aria-hidden="true">
+    {% if desktop_poster != blank %}
+      <picture class="phx-hero__picture" data-hero-poster>
+        {% if mobile_poster != blank %}
+          <source
+            media="(max-width: 749px)"
+            srcset="
+              {{ mobile_poster | image_url: width: 480 }} 480w,
+              {{ mobile_poster | image_url: width: 750 }} 750w,
+              {{ mobile_poster | image_url: width: 900 }} 900w
+            "
+            sizes="100vw"
+          >
+        {% endif %}
+        {{
+          desktop_poster
+          | image_url: width: 2400
+          | image_tag:
+            class: 'phx-hero__poster',
+            widths: '750, 1100, 1500, 1800, 2200, 2400',
+            sizes: '100vw',
+            loading: 'eager',
+            fetchpriority: 'high'
+        }}
+      </picture>
+    {% endif %}
+
+    {% if section.settings.video != blank or section.settings.fallback_video_url != blank %}
+      <video
+        class="phx-hero__video"
+        data-hero-video
+        muted
+        loop
+        playsinline
+        preload="none"
+        tabindex="-1"
+      >
+        {% if section.settings.video != blank %}
+          {% for source in section.settings.video.sources %}
+            {% if source.mime_type == 'video/mp4' %}
+              <source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <source data-src="{{ section.settings.fallback_video_url | escape }}" type="video/mp4">
+        {% endif %}
+      </video>
+    {% endif %}
+
+    <div class="phx-hero__overlay"></div>
+  </div>
+
+  <div class="phx-hero__inner">
+    <div class="phx-hero__content">
+      {% for block in section.blocks %}
+        <div
+          class="phx-hero__block phx-hero__block--{{ block.type }}"
+          style="
+            --phx-block-spacing: {{ block.settings.spacing }}px;
+            --phx-block-font-size: {{ block.settings.desktop_font_size | default: 16 }}px;
+            --phx-block-mobile-font-size: {{ block.settings.mobile_font_size | default: 16 }}px;
+          "
+          {{ block.shopify_attributes }}
+        >
+          {% case block.type %}
+            {% when 'eyebrow' %}
+              {% if block.settings.text != blank %}
+                <p class="phx-hero__eyebrow">{{ block.settings.text | escape }}</p>
+              {% endif %}
+
+            {% when 'heading' %}
+              {% if block.settings.heading != blank or block.settings.accent != blank %}
+                <{{ block.settings.heading_tag }} class="phx-hero__heading">
+                  {% if block.settings.heading != blank %}
+                    <span>{{ block.settings.heading | escape }}</span>
+                  {% endif %}
+                  {% if block.settings.accent != blank %}
+                    <em>{{ block.settings.accent | escape }}</em>
+                  {% endif %}
+                </{{ block.settings.heading_tag }}>
+              {% endif %}
+
+            {% when 'text' %}
+              {% if block.settings.text != blank %}
+                <div class="phx-hero__subheading rte">{{ block.settings.text }}</div>
+              {% endif %}
+
+            {% when 'rating' %}
+              {% assign rating_link = block.settings.link | default: '/pages/review' %}
+              {% if block.settings.rating_text != blank %}
+                {% if rating_link != blank %}
+                  <a
+                    class="phx-hero__rating"
+                    href="{{ rating_link }}"
+                    aria-label="{{ block.settings.accessibility_label | escape }}"
+                  >
+                {% else %}
+                  <div class="phx-hero__rating">
+                {% endif %}
+                  <span class="phx-hero__stars" aria-hidden="true">
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span>&#9733;</span>
+                    <span class="phx-hero__half-star">&#9733;</span>
+                  </span>
+                  <span>{{ block.settings.rating_text | escape }}</span>
+                {% if rating_link != blank %}
+                  </a>
+                {% else %}
+                  </div>
+                {% endif %}
+              {% endif %}
+
+            {% when 'price' %}
+              {% liquid
+                assign current_price_cents = block.settings.current_price | plus: 0
+                assign compare_price_cents = block.settings.compare_price | plus: 0
+                assign current_price_whole = current_price_cents | divided_by: 100
+                assign current_price_decimal = current_price_cents | modulo: 100
+                assign compare_price_whole = compare_price_cents | divided_by: 100
+                assign compare_price_decimal = compare_price_cents | modulo: 100
+                assign discount_percentage = 0
+
+                if compare_price_cents > current_price_cents and compare_price_cents > 0
+                  assign discount_amount = compare_price_cents | minus: current_price_cents
+                  assign discount_percentage = discount_amount | times: 100.0 | divided_by: compare_price_cents | round
+                endif
+              %}
+              {% if current_price_cents > 0 %}
+                <div class="phx-hero__price" aria-label="{{ block.settings.accessibility_label | escape }}">
+                  <strong>
+                    {{- current_price_whole -}}
+                    {%- if current_price_decimal > 0 -%}
+                      ,{% if current_price_decimal < 10 %}0{% endif %}{{ current_price_decimal }}
+                    {%- endif %}
+                    &nbsp;€
+                  </strong>
+                  {% if compare_price_cents > current_price_cents %}
+                    <s>
+                      {{- compare_price_whole -}}
+                      {%- if compare_price_decimal > 0 -%}
+                        ,{% if compare_price_decimal < 10 %}0{% endif %}{{ compare_price_decimal }}
+                      {%- endif %}
+                      &nbsp;€
+                    </s>
+                  {% endif %}
+                  {% if block.settings.tax_text != blank %}
+                    <span>{{ block.settings.tax_text | escape }}</span>
+                  {% endif %}
+                  {% if discount_percentage > 0 %}
+                    <span class="phx-hero__discount">−{{ discount_percentage }}%</span>
+                  {% endif %}
+                </div>
+              {% endif %}
+
+            {% when 'button' %}
+              {% assign button_link = block.settings.link | default: '/products/the-phoenix-gravity-filtre-a-eau' %}
+              {% if block.settings.label != blank and button_link != blank %}
+                <a class="phx-hero__button" href="{{ button_link }}">
+                  <span>{{ block.settings.label | escape }}</span>
+                  {% if block.settings.show_arrow %}
+                    <span aria-hidden="true">&#8594;</span>
+                  {% endif %}
+                </a>
+              {% endif %}
+
+            {% when 'assurance' %}
+              {% if block.settings.text != blank %}
+                <div class="phx-hero__assurance">
+                  {% if block.settings.show_check %}
+                    <span aria-hidden="true">&#10003;</span>
+                  {% endif %}
+                  <span>{{ block.settings.text | escape }}</span>
+                </div>
+              {% endif %}
+          {% endcase %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</phx-hero>
+
+{% stylesheet %}
+  .phx-hero {
+    position: relative;
+    display: block;
+    min-height: var(--phx-desktop-height);
+    overflow: hidden;
+    isolation: isolate;
+    background: #eef0f2;
+    color: var(--phx-content-color);
+  }
+
+  .phx-hero__media,
+  .phx-hero__picture,
+  .phx-hero__poster,
+  .phx-hero__video,
+  .phx-hero__overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .phx-hero__media {
+    z-index: 0;
+  }
+
+  .phx-hero__picture {
+    z-index: 0;
+    transition: opacity 500ms ease;
+  }
+
+  .phx-hero__poster,
+  .phx-hero__video {
+    display: block;
+    object-fit: cover;
+  }
+
+  .phx-hero__poster {
+    object-position: var(--phx-desktop-position);
+  }
+
+  .phx-hero__video {
+    z-index: 1;
+    opacity: 0;
+    object-position: var(--phx-desktop-position);
+    pointer-events: none;
+    transition: opacity 500ms ease;
+  }
+
+  .phx-hero.is-video-playing .phx-hero__video {
+    opacity: 1;
+  }
+
+  .phx-hero.is-video-playing .phx-hero__picture {
+    opacity: 0;
+  }
+
+  .phx-hero__overlay {
+    z-index: 2;
+    opacity: var(--phx-overlay-opacity);
+    background: linear-gradient(90deg, var(--phx-overlay) 0%, var(--phx-overlay) 35%, transparent 72%);
+  }
+
+  .phx-hero__inner {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 1350px);
+    min-height: var(--phx-desktop-height);
+    margin: 0 auto;
+    padding: 46px 52px;
+    display: flex;
+    align-items: center;
+  }
+
+  .phx-hero__content {
+    width: min(100%, 570px);
+  }
+
+  .phx-hero__block {
+    margin-bottom: var(--phx-block-spacing);
+  }
+
+  .phx-hero__block--assurance {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .phx-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: var(--phx-accent-color);
+    font-size: var(--phx-block-font-size);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .phx-hero__eyebrow::before {
+    content: "";
+    width: 26px;
+    height: 2px;
+    flex: 0 0 26px;
+    background: currentColor;
+  }
+
+  .phx-hero__heading {
+    margin: 0;
+    color: var(--phx-content-color);
+    font-family: Value Sans, sans-serif;
+    font-size: var(--phx-block-font-size);
+    font-weight: 500;
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .phx-hero__heading span,
+  .phx-hero__heading em {
+    display: block;
+  }
+
+  .phx-hero__heading em {
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  .phx-hero__subheading {
+    margin: 0;
+    color: #202124;
+    font-size: var(--phx-block-font-size);
+    line-height: 1.55;
+  }
+
+  .phx-hero__subheading > * {
+    margin: 0;
+  }
+
+  .phx-hero__rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    color: var(--phx-content-color);
+    font-size: var(--phx-block-font-size);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .phx-hero__stars {
+    display: inline-flex;
+    gap: 4px;
+    color: #ffb800;
+    font-size: 27px;
+    line-height: 1;
+  }
+
+  .phx-hero__half-star {
+    width: 0.55em;
+    overflow: hidden;
+  }
+
+  .phx-hero__price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    color: #171717;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  .phx-hero__price strong {
+    margin-right: 5px;
+    color: var(--phx-content-color);
+    font-size: var(--phx-block-font-size);
+    letter-spacing: -0.03em;
+  }
+
+  .phx-hero__price s {
+    color: var(--phx-content-color);
+    text-decoration-thickness: 1px;
+  }
+
+  .phx-hero__discount {
+    margin-left: 2px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: #ff414b;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  .phx-hero__button {
+    display: inline-flex;
+    min-width: 290px;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 0;
+    padding: 18px 28px;
+    border-radius: 999px;
+    background: var(--phx-button-background);
+    box-shadow: 0 14px 30px rgba(18, 34, 55, 0.14);
+    color: var(--phx-button-color);
+    font-size: var(--phx-block-font-size);
+    font-weight: 700;
+    line-height: 1.2;
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+  }
+
+  .phx-hero__button:hover {
+    color: var(--phx-button-color);
+    transform: translateY(-2px);
+    box-shadow: 0 18px 34px rgba(18, 34, 55, 0.2);
+  }
+
+  .phx-hero__assurance {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--phx-content-color);
+    font-size: var(--phx-block-font-size);
+    line-height: 1.4;
+  }
+
+  .phx-hero__assurance > span:first-child {
+    font-weight: 700;
+  }
+
+  @media (max-width: 749px) {
+    .phx-hero {
+      min-height: var(--phx-mobile-height);
+    }
+
+    .phx-hero__poster,
+    .phx-hero__video {
+      object-position: var(--phx-mobile-position);
+    }
+
+    .phx-hero__overlay {
+      background: linear-gradient(180deg, var(--phx-overlay) 0%, var(--phx-overlay) 58%, transparent 100%);
+    }
+
+    .phx-hero__inner {
+      min-height: var(--phx-mobile-height);
+      padding: 46px 14px 42px;
+      align-items: flex-start;
+    }
+
+    .phx-hero__content {
+      width: 100%;
+    }
+
+    .phx-hero__eyebrow {
+      font-size: var(--phx-block-mobile-font-size);
+    }
+
+    .phx-hero__heading {
+      max-width: 370px;
+      font-size: var(--phx-block-mobile-font-size);
+      line-height: 1.02;
+    }
+
+    .phx-hero__heading span,
+    .phx-hero__heading em {
+      display: inline;
+    }
+
+    .phx-hero__subheading {
+      font-size: var(--phx-block-mobile-font-size);
+      line-height: 1.5;
+    }
+
+    .phx-hero__rating {
+      gap: 12px;
+      font-size: var(--phx-block-mobile-font-size);
+    }
+
+    .phx-hero__stars {
+      gap: 3px;
+      font-size: 26px;
+    }
+
+    .phx-hero__price {
+      gap: 7px;
+      font-size: 16px;
+    }
+
+    .phx-hero__price strong {
+      margin-right: 0;
+      font-size: var(--phx-block-mobile-font-size);
+    }
+
+    .phx-hero__button {
+      width: 100%;
+      min-width: 0;
+      padding: 20px 24px;
+      font-size: var(--phx-block-mobile-font-size);
+    }
+
+    .phx-hero__block--assurance {
+      margin-right: 16px;
+    }
+
+    .phx-hero__assurance {
+      font-size: var(--phx-block-mobile-font-size);
+      text-align: center;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .phx-hero__picture,
+    .phx-hero__video,
+    .phx-hero__button {
+      transition: none;
+    }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  if (!customElements.get('phx-hero')) {
+    customElements.define(
+      'phx-hero',
+      class extends HTMLElement {
+        connectedCallback() {
+          this.video = this.querySelector('[data-hero-video]');
+          this.sourcesLoaded = false;
+          this.inView = false;
+
+          if (!this.video || this.dataset.autoplay !== 'true') return;
+          if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          if (navigator.connection && navigator.connection.saveData) return;
+          if (this.dataset.mobileVideo !== 'true' && window.matchMedia('(max-width: 749px)').matches) return;
+
+          this.handleVisibility = this.handleVisibility.bind(this);
+          document.addEventListener('visibilitychange', this.handleVisibility);
+
+          this.observer = new IntersectionObserver(
+            (entries) => {
+              this.inView = entries[0].isIntersecting;
+
+              if (this.inView) {
+                this.scheduleLoad();
+                this.play();
+              } else {
+                this.video.pause();
+              }
+            },
+            { rootMargin: '100px 0px', threshold: 0.1 }
+          );
+
+          this.observer.observe(this);
+        }
+
+        disconnectedCallback() {
+          if (this.observer) this.observer.disconnect();
+          document.removeEventListener('visibilitychange', this.handleVisibility);
+        }
+
+        scheduleLoad() {
+          if (this.sourcesLoaded || this.loadScheduled) return;
+          this.loadScheduled = true;
+
+          const queueLoad = () => {
+            const load = () => this.loadSources();
+
+            if ('requestIdleCallback' in window) {
+              window.requestIdleCallback(load, { timeout: 1800 });
+            } else {
+              window.setTimeout(load, 800);
+            }
+          };
+
+          if (document.readyState === 'complete') {
+            queueLoad();
+          } else {
+            window.addEventListener('load', queueLoad, { once: true });
+          }
+        }
+
+        loadSources() {
+          if (this.sourcesLoaded || !this.inView) {
+            this.loadScheduled = false;
+            return;
+          }
+
+          this.video.querySelectorAll('source[data-src]').forEach((source) => {
+            source.src = source.dataset.src;
+          });
+
+          this.sourcesLoaded = true;
+          this.video.addEventListener(
+            'playing',
+            () => this.classList.add('is-video-playing'),
+            { once: true }
+          );
+          this.video.load();
+          this.play();
+        }
+
+        play() {
+          if (!this.sourcesLoaded || !this.inView || document.hidden) return;
+          const promise = this.video.play();
+          if (promise) promise.catch(() => {});
+        }
+
+        handleVisibility() {
+          if (document.hidden) {
+            this.video.pause();
+          } else {
+            this.play();
+          }
+        }
+      }
+    );
+  }
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "Optimized video banner",
+  "tag": "section",
+  "class": "section-custom-hero-banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Shopify video"
+    },
+    {
+      "type": "text",
+      "id": "fallback_video_url",
+      "label": "Fallback MP4 URL",
+      "default": "https://cdn.shopify.com/videos/c/o/v/a45ee002798d4e069b28162e1d4b4e87.mp4",
+      "info": "The Shopify video takes priority when selected."
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_poster",
+      "label": "Desktop poster image",
+      "info": "The Shopify video preview image is used when this is empty."
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_poster",
+      "label": "Mobile poster image",
+      "info": "The desktop poster or video preview is used when this is empty."
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_autoplay",
+      "label": "Enable deferred autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_mobile_video",
+      "label": "Load video on mobile",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "min": 480,
+      "max": 800,
+      "step": 10,
+      "unit": "px",
+      "label": "Desktop height",
+      "default": 590
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "min": 520,
+      "max": 850,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile height",
+      "default": 650
+    },
+    {
+      "type": "text",
+      "id": "desktop_position",
+      "label": "Desktop media position",
+      "default": "center center",
+      "info": "Example: center center or 60% center."
+    },
+    {
+      "type": "text",
+      "id": "mobile_position",
+      "label": "Mobile media position",
+      "default": "center center",
+      "info": "Example: 65% center."
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Main text",
+      "default": "#153a5b"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "default": "#153a5b"
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Readability overlay",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay opacity",
+      "default": 75
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button text",
+      "default": "#172342"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "eyebrow",
+      "name": "Eyebrow",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "PLUS DE 50 ANS D’EXPERTISE"
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 9,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Desktop font size",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 9,
+          "max": 18,
+          "step": 1,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 11
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 22
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "L’eau pure,"
+        },
+        {
+          "type": "text",
+          "id": "accent",
+          "label": "Italic heading",
+          "default": "naturellement."
+        },
+        {
+          "type": "select",
+          "id": "heading_tag",
+          "label": "Heading level",
+          "options": [
+            {
+              "value": "h1",
+              "label": "H1"
+            },
+            {
+              "value": "h2",
+              "label": "H2"
+            },
+            {
+              "value": "h3",
+              "label": "H3"
+            }
+          ],
+          "default": "h1"
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 32,
+          "max": 84,
+          "step": 2,
+          "unit": "px",
+          "label": "Desktop font size",
+          "default": 66
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 28,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 44
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 22
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Sans plomberie. Sans électricité.<br>800 000 foyers nous font confiance.</p>"
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 12,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Desktop font size",
+          "default": 17
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 12,
+          "max": 26,
+          "step": 1,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 24
+        }
+      ]
+    },
+    {
+      "type": "rating",
+      "name": "Rating",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "text",
+          "id": "rating_text",
+          "label": "Displayed rating",
+          "default": "4.64/5"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Reviews link"
+        },
+        {
+          "type": "text",
+          "id": "accessibility_label",
+          "label": "Accessibility label",
+          "default": "Note client : 4,64 sur 5. Lire les avis."
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 12,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Desktop font size",
+          "default": 22
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 11,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 13
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 24
+        }
+      ]
+    },
+    {
+      "type": "price",
+      "name": "Price",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "number",
+          "id": "current_price",
+          "label": "Current price in euro cents",
+          "default": 16317,
+          "info": "Enter 16317 for 163.17."
+        },
+        {
+          "type": "number",
+          "id": "compare_price",
+          "label": "Compare-at price in euro cents",
+          "default": 21700,
+          "info": "Enter 21700 for 217.00."
+        },
+        {
+          "type": "text",
+          "id": "tax_text",
+          "label": "Tax text",
+          "default": "(TTC)"
+        },
+        {
+          "type": "text",
+          "id": "accessibility_label",
+          "label": "Accessibility label",
+          "default": "Prix promotionnel 163,17 euros TTC, au lieu de 217 euros."
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 28,
+          "max": 64,
+          "step": 2,
+          "unit": "px",
+          "label": "Current price desktop size",
+          "default": 48
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 26,
+          "max": 52,
+          "step": 2,
+          "unit": "px",
+          "label": "Current price mobile size",
+          "default": 38
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 30
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Commander maintenant"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_arrow",
+          "label": "Show arrow",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Desktop font size",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 12,
+          "max": 24,
+          "step": 1,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 16
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 24
+        }
+      ]
+    },
+    {
+      "type": "assurance",
+      "name": "Assurance item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Satisfait ou remboursé 100 jours"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_check",
+          "label": "Show checkmark",
+          "default": true
+        },
+        {
+          "type": "range",
+          "id": "desktop_font_size",
+          "min": 10,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Desktop font size",
+          "default": 13
+        },
+        {
+          "type": "range",
+          "id": "mobile_font_size",
+          "min": 10,
+          "max": 18,
+          "step": 1,
+          "unit": "px",
+          "label": "Mobile font size",
+          "default": 12
+        },
+        {
+          "type": "range",
+          "id": "spacing",
+          "min": 0,
+          "max": 40,
+          "step": 2,
+          "unit": "px",
+          "label": "Space below",
+          "default": 10
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "Optimized video banner",
+      "blocks": [
+        {
+          "type": "eyebrow"
+        },
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "rating"
+        },
+        {
+          "type": "price"
+        },
+        {
+          "type": "button"
+        },
+        {
+          "type": "assurance"
+        },
+        {
+          "type": "assurance",
+          "settings": {
+            "text": "Certifié NSF"
+          }
+        },
+        {
+          "type": "assurance",
+          "settings": {
+            "text": "Livraison gratuite"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

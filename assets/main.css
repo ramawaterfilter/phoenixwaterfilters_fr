@@ -1956,6 +1956,20 @@ body {
   line-height: 140%
 }
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
 @media (min-width: 992px) {
 
   html,
@@ -19316,4 +19330,22 @@ ul.payment-methods {
 .site-header__logo img{
     max-width:60px;
     height:auto;
+}
+
+body.template-index- main {
+    margin-top:20px;
+}
+
+@media (max-width: 786px) {
+    body.template-index- {
+        padding-top:0;
+    }
+
+    body.template-index- .site-header {
+        position:sticky;
+    }
+
+    body.template-index- main {
+        margin-top:0;
+    }
 }
