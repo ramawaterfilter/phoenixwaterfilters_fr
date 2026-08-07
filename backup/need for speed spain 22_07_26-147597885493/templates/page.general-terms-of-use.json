@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "copy_image_rUyHJ6": {
+      "type": "copy-image",
+      "disabled": true,
+      "name": "Copy Image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "centered-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "content": "",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "support_cNgXx8": {
+      "type": "support",
+      "disabled": true,
+      "name": "Support Section",
+      "settings": {
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "button_link": "shopify://pages/warranty-registration",
+        "button_text": "Register Here"
+      }
+    },
+    "1746437444c5b604dc": {
+      "type": "apps",
+      "settings": {}
+    },
+    "custom_code_section_meYg6w": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<div class=\"terms-policy\">\n\n<p></p>\n<h1><strong>AVANCE</strong></h1>\n<br>Este sitio web es operado por <strong>Phoenix Gravity Water Filters</strong>. En todo el sitio, los términos “nosotros”, “nos” y “nuestro” se refieren a los filtros de agua por gravedad Phoenix. Phoenix Gravity Water Filters ofrece este sitio web, que incluye toda la información, herramientas y servicios disponibles en este sitio para usted, el usuario, condicionado a la aceptación de todos los términos, condiciones, políticas y avisos aquí establecidos.\n<p>Al visitar nuestro sitio y/o comprarnos algo, usted participa en nuestro “Servicio” y acepta estar sujeto a los siguientes términos y condiciones (“Términos de servicio”, “Términos”), incluidos los términos, condiciones y políticas adicionales a los que se hace referencia en este documento y/o disponibles mediante hipervínculo. Estos Términos de servicio se aplican a todos los usuarios del sitio, incluidos, entre otros, usuarios de navegación, vendedores, clientes, comerciantes y/o contribuyentes de contenido.</p>\n<p>Lea atentamente estos Términos de uso antes de acceder o utilizar nuestro sitio web. Al acceder o utilizar cualquier parte del sitio, usted acepta estar sujeto a estas Condiciones Generales de Uso. Si no está de acuerdo con todos los términos y condiciones de este acuerdo, no podrá acceder al sitio web ni utilizar ningún servicio. Si estos Términos de uso se consideran una oferta, la aceptación se limita expresamente a estos Términos de uso.</p>\n<p>Cualquier característica o herramienta nueva agregada a la tienda actual también estará sujeta a los Términos de servicio. Puede consultar la versión más reciente de las Condiciones Generales de Uso en cualquier momento en esta página. Nos reservamos el derecho de actualizar, cambiar o reemplazar cualquier parte de estos Términos de servicio mediante la publicación de actualizaciones y/o cambios en nuestro sitio web. Es su responsabilidad revisar esta página periódicamente para detectar cambios. Su uso continuo o acceso al sitio web después de la publicación de cualquier cambio constituye la aceptación de dichos cambios.</p>\n<p>Nuestra tienda está alojada en Shopify Inc. Ellos nos proporcionan la plataforma de comercio electrónico en línea que nos permite vender nuestros productos y servicios.</p>\n<hr>\n<h3><strong>SECCIÓN 1 - CONDICIONES DE USO DE LA TIENDA ONLINE</strong></h3>\n<p>Al aceptar estos Términos de servicio, usted declara que tiene al menos la mayoría de edad en su estado o provincia de residencia, o que tiene la mayoría de edad en su estado o provincia de residencia y que nos ha dado su consentimiento para permitir que cualquiera de sus dependientes menores utilice este sitio.<br>No puede utilizar nuestros productos para ningún propósito ilegal o no autorizado ni puede, al utilizar el Servicio, violar ninguna ley en su jurisdicción (incluidas, entre otras, las leyes de derechos de autor).<br>No debe transmitir ningún gusano, virus o código de naturaleza destructiva.<br>Cualquier incumplimiento o violación de los Términos resultará en la terminación inmediata de sus Servicios.</p>\n<hr>\n<h3><strong>SECCIÓN 2 - CONDICIONES GENERALES</strong></h3>\n<p>Nos reservamos el derecho de negar el Servicio a cualquier persona, por cualquier motivo y en cualquier momento.<br>Usted comprende que su contenido (sin incluir la información de la tarjeta de crédito) puede transferirse sin cifrar e implicar (a) transmisiones a través de varias redes; y (b) cambios para ajustarse y adaptarse a los requisitos técnicos de conexión de redes o dispositivos. La información de la tarjeta de crédito siempre está cifrada cuando se transfiere a través de redes.<br>Usted acepta no reproducir, duplicar, copiar, vender, revender o explotar ninguna parte del Servicio, el uso del Servicio o el acceso al Servicio o cualquier contacto en el sitio web a través del cual se proporciona el Servicio, sin nuestro permiso expreso por escrito.</p>\n<hr>\n<h3><strong>SECCIÓN 3 - EXACTITUD, INTEGRIDAD Y ACTUALIDAD DE LA INFORMACIÓN</strong></h3>\n<p>No somos responsables si la información disponible en este sitio no es precisa, completa o actual. El material de este sitio se proporciona únicamente para información general y no se debe confiar en él ni utilizarlo como base única para tomar decisiones sin consultar fuentes de información primarias, más precisas, más completas o más oportunas. Cualquier confianza en el material de este sitio es bajo su propio riesgo.</p>\n<hr>\n<h3><strong>SECCIÓN 4 - CAMBIOS EN EL SERVICIO Y PRECIOS</strong></h3>\n<p>Los precios de nuestros productos están sujetos a cambios sin previo aviso.<br>Nos reservamos el derecho en cualquier momento de modificar o discontinuar el Servicio (o cualquier parte o contenido del mismo) sin previo aviso en cualquier momento.</p>\n<hr>\n<h3><strong>SECCIÓN 5 - PRODUCTOS O SERVICIOS (SI CORRESPONDE)</strong></h3>\n<p>Ciertos productos o servicios pueden estar disponibles exclusivamente en línea a través del sitio web. Estos productos o servicios pueden tener cantidades limitadas y están sujetos a devolución o cambio únicamente de acuerdo con nuestra Política de reembolso.<br>Hemos hecho todo lo posible para mostrar con la mayor precisión posible los colores e imágenes de nuestros productos que aparecen en la tienda. No podemos garantizar que la visualización de cualquier color en el monitor de su computadora sea precisa.</p>\n<hr>\n<h3><strong>SECCIÓN 6 - EXACTITUD DE LA FACTURACIÓN Y LA INFORMACIÓN DE LA CUENTA</strong></h3>\n<p>Nos reservamos el derecho de rechazar cualquier pedido realizado con nosotros. Podemos, a nuestro exclusivo criterio, limitar o cancelar las cantidades compradas por persona, por hogar o por pedido.</p>\n<hr>\n<h3><strong>SECTION 7 - OUTILS OPTIONNELS</strong></h3>\n<p>Podemos brindarle acceso a herramientas de terceros sobre las cuales no tenemos control ni supervisión. Usted reconoce y acepta que brindamos acceso a estas herramientas \"tal cual\" y \"según disponibilidad\".</p>\n<hr>\n<h3><strong>SECCIÓN 8 - ENLACES DE TERCEROS</strong></h3>\n<p>Cierta información, productos y servicios disponibles a través de nuestro Servicio pueden incluir materiales de terceros.<br>No somos responsables de examinar o evaluar el contenido o la precisión y no garantizamos ni tendremos ninguna responsabilidad por ningún contenido o material de terceros.</p>\n<hr>\n<h3><strong>SECCIÓN 9 - COMENTARIOS, RETROALIMENTACIÓN Y OTROS ENVÍOS DE USUARIOS</strong></h3>\n<p>Usted acepta que podemos, sin restricciones, editar, copiar, publicar, distribuir, traducir y utilizar en cualquier medio cualquier comentario que nos envíe.</p>\n<hr>\n<h3><strong>SECCIÓN 10 - POLÍTICA DE DEVOLUCIÓN</strong></h3>\n<p>De conformidad con el artículo L221-18 del Código del Consumo, usted tiene un derecho de desistimiento de 14 días desde la recepción de su pedido, sin tener que indicar los motivos. Para ejercer este derecho, póngase en contacto con nosotros en la siguiente dirección: <strong>soutien@phoenixwaterfilters.fr</strong>. <br><strong>Prueba de 100 días para sistemas de filtrado de agua</strong><br>También ofrecemos una prueba de 100 días con la compra de nuestros sistemas de filtración de agua de acero inoxidable. Los artículos deben devolverse en su embalaje original y sin daños.<br><strong>Periodo de devolución de 30 días para otros productos.</strong><br>Para todos los demás productos, se aplica nuestra política de devolución estándar de 30 días.</p>\n<hr>\n<h3><strong>SECTION 11 - INFORMATIONS DE CONTACT</strong></h3>\n<p>Para cualquier duda relativa a las Condiciones Generales de Uso, póngase en contacto con nosotros en <span>..<strong>soutien@phoenixwaterfilters.fr</strong></span>.<br>Entreprise enregistrée : <strong>Phoenix Water Filters LTD</strong>,</p>\n\n\n</div>",
+        "custom_css": ".terms-policy {\n  max-width: 1200px;\n  margin: 40px auto;\n  padding: 25px 35px;\n  font-family: \"Value Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.7;\n  color: #222;\n}\n\n.terms-policy p {\n  margin-bottom: 18px;\n  text-align: justify;\n}\n\n.terms-policy strong {\n  font-weight: 600;\n}\n\n.terms-policy h3 {\n  margin-top: 35px;\n  margin-bottom: 15px;\n  font-size: 20px;\n  font-weight: 700;\n  text-transform: uppercase;\n}\n\n.terms-policy hr {\n  border: none;\n  border-top: 1px solid #ccc;\n  margin: 35px 0;\n}\n\n.terms-policy span {\n  font-weight: 500;\n}\n\n@media (max-width: 768px) {\n  .terms-policy {\n    padding: 15px 20px;\n    font-size: 15px;\n  }\n\n  .terms-policy h3 {\n    font-size: 18px;\n    margin-top: 25px;\n  }\n}",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    }
+  },
+  "order": [
+    "copy_image_rUyHJ6",
+    "support_cNgXx8",
+    "1746437444c5b604dc",
+    "custom_code_section_meYg6w"
+  ]
+}

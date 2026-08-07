@@ -1,0 +1,85 @@
+<div class="background-image-container bg-light"></div>
+
+{% if section.settings.gallery_heading != blank %}
+  <div class="container">
+    <div class="row d-flex justify-content-center call-out">
+      <div class="col-10 col-md-6  text-center d-flex text-center">
+        <h2>{{ section.settings.gallery_heading }}</h2>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<div class="container-fluid d-flex justify-content-center mt-5 p-0">
+  <div class="grid-container">
+    {% for block in section.blocks %}
+      {% if block.type == "gallery_images_block" %}
+        {% if block.settings.gallery_image != blank %}
+          {% assign index = forloop.index %}
+          {% assign class_name = 'view-animation ' %}
+
+          {% if index == 2 or index == 9 %}
+            {% assign class_name = 'full-width view-animation ' %}
+          {% elsif index >= 11 %}
+            {% assign class_name = 'd-none d-lg-block view-animation ' %}
+          {% endif %}
+
+          {% capture animation_style %}--animation-order: {{ forloop.index }}{% endcapture %}
+          {{
+            block.settings.gallery_image
+            | image_url: width: 1200
+            | image_tag:
+              loading: 'lazy',
+              decoding: 'async',
+              widths: '320, 480, 600, 900, 1200',
+              sizes: '(min-width: 990px) 33vw, 50vw',
+              class: class_name,
+              style: animation_style,
+              alt: block.settings.gallery_image.alt
+          }}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "gallery",
+    "tag": "section",
+    "class": "section-gallery pb-0",
+    "settings": [
+      {
+        "type": "text",
+        "id": "gallery_heading",
+        "label": "Heading"
+      }, {
+        "type": "richtext",
+        "id": "gallery_content",
+        "label": "Copy"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "gallery_images_block",
+        "name": "Image",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "gallery_image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Gallery"
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    }
+  }
+{% endschema %}

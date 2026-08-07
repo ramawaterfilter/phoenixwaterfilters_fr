@@ -1,0 +1,99 @@
+
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <p class="blog-meta">
+  <strong>By {{ article.author }} · {{ article.published_at | date: "%B %d, %Y" }}</strong>
+
+</p>
+      {{ article.content }}
+    </div>
+  </div>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ shop.url | append: article.url }}"
+  },
+  "url": "{{ shop.url | append: article.url }}",
+  "headline": "{{ article.title | strip_newlines | escape }}",
+ "description": "{% if article.metafields.seo.description != blank %}
+  {{ article.metafields.seo.description | strip_newlines | escape }}
+{% else %}
+  {{ article.excerpt_or_content | strip_html | strip_newlines | truncate: 200 | escape }}
+{% endif %}",
+
+
+  "image": [
+    "{{ article.image | img_url: '800x600' | prepend: 'https:' }}"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "{{ article.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Phoenix Gravity Water Filter France",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ shop.logo | img_url: '200x200' | prepend: 'https:' }}"
+    }
+  },
+  "datePublished": "{{ article.published_at | date: "%Y-%m-%dT%H:%M:%S%:z" }}"
+ 
+}
+</script>
+<style>
+  p.blog-meta {
+    color: #c0bfbd;
+}
+</style>
+{% comment %} <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ shop.url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "{{ blog.url }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ article.title | escape }}",
+      "item": "{{ shop.url }}{{ article.url }}"
+    }
+  ]
+}
+</script>  {% endcomment %}
+
+
+{% schema %}
+  {
+    "name": "Article Body",
+    "tag": "section",
+    "class": "section-article pt-0",
+    "presets": [
+      {
+        "name": "Article Body"
+      }
+    ],
+    "enabled_on": {
+      "templates": ["article"]
+    }
+  }
+{% endschema %}

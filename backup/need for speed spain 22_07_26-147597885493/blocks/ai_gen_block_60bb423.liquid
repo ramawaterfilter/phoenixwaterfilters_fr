@@ -1,0 +1,535 @@
+{% doc %}
+  @prompt
+    Create a custom Shopify section named "Styled Hulk Contact Form".
+    
+    Requirements:
+    
+    The section must embed an existing Hulk Form Builder form using its provided embed code.
+    
+    Do NOT recreate the form fields manually.
+    
+    Instead, add a container where I can paste the Hulk embed code.
+    
+    The form submission must be handled entirely by Hulk Form Builder.
+    
+    Layout Design:
+    
+    Full width section
+    
+    Dark background color (editable)
+    
+    Max width container 900px centered
+    
+    Large heading centered at top (editable)
+    
+    Optional subheading text below heading (editable)
+    
+    Hulk form displayed below the heading
+    
+    Centered submit button (styled via CSS)
+    
+    Styling Requirements:
+    
+    Override Hulk form styling using CSS inside this section
+    
+    Input fields:
+    
+    Light grey background
+    
+    Rounded corners (12px–16px)
+    
+    Padding inside
+    
+    No harsh borders
+    
+    Labels:
+    
+    White text
+    
+    Proper spacing
+    
+    Button:
+    
+    Yellow background
+    
+    Rounded corners
+    
+    Bold text
+    
+    Hover effect (slight opacity change)
+    
+    Clean modern spacing
+    
+    Fully responsive
+    
+    2-column layout for first row fields on desktop (if Hulk form supports it)
+    
+    1 column layout on mobile
+    
+    CSS must be inside the section file
+    
+    Do not use external libraries
+    
+    Section Settings:
+    
+    Heading (text)
+    
+    Subheading (text)
+    
+    Background color
+    
+    Top padding (range)
+    
+    Bottom padding (range)
+    
+    Important:
+    
+    Add a Custom Liquid or HTML setting where I can paste the Hulk embed code.
+    
+    The section should render the pasted embed code inside a styled wrapper.
+    
+    Make the code clean and production-ready., i give the hulk for builder id so change to embed code to form id
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-hulk-form-section-{{ ai_gen_id }} {
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+    display: block;
+  }
+
+  .ai-hulk-form-container-{{ ai_gen_id }} {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-hulk-form-heading-{{ ai_gen_id }} {
+    text-align: center;
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 16px;
+    font-weight: 700;
+  }
+
+  .ai-hulk-form-subheading-{{ ai_gen_id }} {
+    text-align: center;
+    color: {{ block.settings.subheading_color }};
+    font-size: {{ block.settings.subheading_size }}px;
+    margin: 0 0 40px;
+    line-height: 1.5;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} {
+    width: 100%;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} form {
+    width: 100%;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} .form-group,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} .field-wrapper,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} .input-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} label {
+    display: block;
+    color: {{ block.settings.label_color }};
+    font-size: 14px;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="text"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="email"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="tel"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="number"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="url"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="date"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} select,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} textarea {
+    width: 100%;
+    background-color: {{ block.settings.input_background }};
+    border: 1px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: {{ block.settings.input_text_color }};
+    transition: border-color 0.3s ease;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input:focus,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} select:focus,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} textarea:focus {
+    outline: none;
+    border-color: {{ block.settings.input_focus_border }};
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} button[type="submit"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="submit"],
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} .submit-button {
+    display: inline-block;
+    background-color: {{ block.settings.button_background }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    margin: 20px auto 0;
+    display: block;
+  }
+
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} button[type="submit"]:hover,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="submit"]:hover,
+  .ai-hulk-form-wrapper-{{ ai_gen_id }} .submit-button:hover {
+    opacity: 0.85;
+  }
+
+  .ai-hulk-form-empty-state-{{ ai_gen_id }} {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 60px 20px;
+    text-align: center;
+    color: {{ block.settings.label_color }};
+  }
+
+  .ai-hulk-form-empty-state-{{ ai_gen_id }} svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 16px;
+    opacity: 0.5;
+  }
+
+  .ai-hulk-form-empty-state-{{ ai_gen_id }} h3 {
+    font-size: 20px;
+    margin: 0 0 8px;
+    color: {{ block.settings.label_color }};
+  }
+
+  .ai-hulk-form-empty-state-{{ ai_gen_id }} p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.8;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-hulk-form-heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.75 }}px;
+    }
+
+    .ai-hulk-form-subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheading_size | times: 0.9 }}px;
+      margin-bottom: 30px;
+    }
+
+    .ai-hulk-form-wrapper-{{ ai_gen_id }} .form-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .ai-hulk-form-wrapper-{{ ai_gen_id }} button[type="submit"],
+    .ai-hulk-form-wrapper-{{ ai_gen_id }} input[type="submit"],
+    .ai-hulk-form-wrapper-{{ ai_gen_id }} .submit-button {
+      width: 100%;
+      padding: 14px 32px;
+    }
+  }
+{% endstyle %}
+
+<hulk-contact-form-{{ ai_gen_id }}
+  class="ai-hulk-form-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-hulk-form-container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-hulk-form-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.subheading != blank %}
+      <div class="ai-hulk-form-subheading-{{ ai_gen_id }}">{{ block.settings.subheading }}</div>
+    {% endif %}
+
+    <div class="ai-hulk-form-wrapper-{{ ai_gen_id }}">
+      {% if block.settings.hulk_form_id != blank %}
+        <div id="hf-form-{{ block.settings.hulk_form_id }}" class="hf-form-container"></div>
+      {% else %}
+        <div class="ai-hulk-form-empty-state-{{ ai_gen_id }}">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
+          <h3>Hulk Form ID Required</h3>
+          <p>Introduce el ID de tu formulario de Hulk Form Builder en la configuración del bloque para mostrarlo.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</hulk-contact-form-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class HulkContactForm{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.initializeForm();
+      }
+
+      initializeForm() {
+        const formWrapper = this.querySelector('.ai-hulk-form-wrapper-{{ ai_gen_id }}');
+        if (!formWrapper) return;
+
+        const form = formWrapper.querySelector('form');
+        if (!form) {
+          setTimeout(() => {
+            this.initializeForm();
+          }, 500);
+          return;
+        }
+
+        this.observeFormChanges(form);
+      }
+
+      observeFormChanges(form) {
+        const observer = new MutationObserver(() => {
+          this.applyFormStructure(form);
+        });
+
+        observer.observe(form, {
+          childList: true,
+          subtree: true
+        });
+
+        this.applyFormStructure(form);
+      }
+
+      applyFormStructure(form) {
+        const inputs = form.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]');
+        
+        if (inputs.length >= 2 && window.innerWidth > 768) {
+          const firstTwo = Array.from(inputs).slice(0, 2);
+          const parent1 = firstTwo[0].closest('.form-group, .field-wrapper, .input-wrapper');
+          const parent2 = firstTwo[1].closest('.form-group, .field-wrapper, .input-wrapper');
+          
+          if (parent1 && parent2 && parent1.parentElement === parent2.parentElement) {
+            const container = parent1.parentElement;
+            
+            if (!container.classList.contains('form-row')) {
+              const row = document.createElement('div');
+              row.className = 'form-row';
+              
+              container.insertBefore(row, parent1);
+              row.appendChild(parent1);
+              row.appendChild(parent2);
+            }
+          }
+        }
+      }
+    }
+
+    customElements.define('hulk-contact-form-{{ ai_gen_id }}', HulkContactForm{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Styled Hulk contact form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Get in touch"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible."
+    },
+    {
+      "type": "text",
+      "id": "hulk_form_id",
+      "label": "Hulk form ID",
+      "info": "Enter your Hulk Form Builder form ID (e.g., 12345)"
+    },
+    {
+      "type": "header",
+      "content": "Heading style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "subheading_size",
+      "label": "Subheading size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "header",
+      "content": "Form style"
+    },
+    {
+      "type": "color",
+      "id": "label_color",
+      "label": "Label color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_background",
+      "label": "Input background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text color",
+      "default": "#333333"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_border",
+      "label": "Input focus border",
+      "default": "#ffd700"
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "label": "Input border radius",
+      "min": 0,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_background",
+      "label": "Button background",
+      "default": "#ffd700"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Section style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    }
+  ],
+  "presets": [
+    {
+      "name": "Styled Hulk contact form"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1192 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero_og_zxMJ8i": {
+      "type": "product-hero-og",
+      "disabled": true,
+      "settings": {}
+    },
+    "product-hero": {
+      "type": "product-hero",
+      "disabled": true,
+      "settings": {
+        "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
+        "countdown_time": "",
+        "countdown_products": [],
+        "product_boost": []
+      }
+    },
+    "custom_nice_product_FCRzcG": {
+      "type": "custom-nice-product",
+      "blocks": {
+        "image_gallery_abAVFf": {
+          "type": "image_gallery",
+          "settings": {
+            "hide_variants": false
+          }
+        },
+        "comparison_table_gX8jVt": {
+          "type": "comparison_table",
+          "disabled": true,
+          "settings": {
+            "col1_title": "Phoenix Gravity",
+            "col2_title": "Filtres RO",
+            "col3_title": "Filtres pour cruches",
+            "feature_1": "Eaux us?es",
+            "col1_row_1": "Pas de gaspillage ?",
+            "col2_row_1": "D?bit ?lev? ?",
+            "col3_row_1": "Pas de gaspillage ?",
+            "feature_2": "Min?raux conserv?s",
+            "col1_row_2": "Conserver les min?raux essentiels ?",
+            "col2_row_2": "?limine tous les min?raux ?",
+            "col3_row_2": "Conserve certains min?raux ?",
+            "feature_3": "Fr?quence d'entretien",
+            "col1_row_3": "Faible (12 mois) ?",
+            "col2_row_3": "?lev? (tous les 3 ? 6 mois) ?",
+            "col3_row_3": "Tr?s ?lev? (1-2 mois) ?",
+            "feature_4": "Rapport co?t-efficacit?",
+            "col1_row_4": "Co?t abordable ?",
+            "col2_row_4": "Co?t annual ?lev? ?",
+            "col3_row_4": "Remplacement fr?quent du filtre ?",
+            "feature_5": "Besoins en ?lectricit?",
+            "col1_row_5": "Pas besoin d'?lectricit? ?",
+            "col2_row_5": "N?cessite de l'?lectricit? ?",
+            "col3_row_5": "Pas besoin d'?lectricit? ?",
+            "feature_6": "Mat?riau Qualit?",
+            "col1_row_6": "Acier inoxydable 304 ?",
+            "col2_row_6": "Variable (souvent le mat?riau standard) ?",
+            "col3_row_6": "Plastique ? faible gradation ?",
+            "feature_7": "Garantie",
+            "col1_row_7": "10 ans ?",
+            "col2_row_7": "6?12 mois ?",
+            "col3_row_7": "Pas de garantie ?",
+            "feature_8": "",
+            "col1_row_8": "",
+            "col2_row_8": "",
+            "col3_row_8": ""
+          }
+        },
+        "countdown_N7QCnb": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {}
+        },
+        "badge_X9Vd3L": {
+          "type": "badge",
+          "settings": {
+            "badge_text": "VENTE PRINTEMPS"
+          }
+        },
+        "title_UzMpbG": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating_jzQpN6": {
+          "type": "rating",
+          "settings": {}
+        },
+        "description_QjGrDx": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker_3zXpgF": {
+          "type": "variant_picker",
+          "settings": {}
+        },
+        "price_BXjmjg": {
+          "type": "price",
+          "settings": {}
+        },
+        "add_to_cart_DqnfnE": {
+          "type": "add_to_cart",
+          "settings": {}
+        },
+        "payment_icons_dD7Kr4": {
+          "type": "payment_icons",
+          "settings": {}
+        },
+        "trust_badges_dY7gXm": {
+          "type": "trust_badges",
+          "settings": {
+            "text_color": "#315879",
+            "icon_size": 34,
+            "badge_1_text": "LIVRAISON GRATUITE DANS TOUTE L'EUROPE",
+            "badge_2_text": "ESSAI DE 100 JOURS",
+            "badge_3_text": "GARANTIE DE 10 ANS",
+            "badge_4_text": "SUPPORT CLIENT",
+            "badge_5_text": "EXP?DITION DEPUIS UN ENTREP?T BAS? EN FRANCE",
+            "badge_6_text": "CERTIFI? NSF 372, ANSI 42"
+          }
+        }
+      },
+      "block_order": [
+        "image_gallery_abAVFf",
+        "comparison_table_gX8jVt",
+        "countdown_N7QCnb",
+        "badge_X9Vd3L",
+        "title_UzMpbG",
+        "rating_jzQpN6",
+        "description_QjGrDx",
+        "variant_picker_3zXpgF",
+        "price_BXjmjg",
+        "add_to_cart_DqnfnE",
+        "payment_icons_dD7Kr4",
+        "trust_badges_dY7gXm"
+      ],
+      "name": "New Product Section",
+      "settings": {
+        "countdown_text": "",
+        "countdown_time": "",
+        "countdown_products": [],
+        "size_guide_product_handles": ""
+      }
+    },
+    "accordion_Nf6H4x": {
+      "type": "accordion",
+      "blocks": {
+        "text_iR7Uny": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Description",
+            "answer": "{{ product.description }}"
+          }
+        },
+        "text_NTcB7B": {
+          "type": "text",
+          "settings": {
+            "question": "Qu'est-ce qu'il y a dans la boîte",
+            "answer": "{{ product.metafields.custom.whattheboxs | metafield_tag }}"
+          }
+        },
+        "text_cTQQfk": {
+          "type": "text",
+          "settings": {
+            "question": "Garantie",
+            "answer": "<p>Le robinet en acier inoxydable Phoenix Gravity est livré avec une garantie de 6 mois, couvrant les dommages survenus pendant le transport.<br/></p>"
+          }
+        },
+        "text_n6bamF": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Expéditions et Retours",
+            "answer": "<p><strong>Remboursement de 100 jours :</strong></p><p>La garantie de remboursement de 100 jours s’applique exclusivement aux systèmes de filtration achetés directement sur https://phoenixwaterfilters.fr/.</p><p><strong>Procédure de Retour</strong></p><p>Pour initier un retour, les clients doivent contacter notre <strong>équipe de support client</strong> et fournir des <strong>détails valides de la commande du site web</strong>. Une fois les détails validés, l'équipe de support approuvera le retour et partagera des <strong>instructions détaillées</strong> sur la manière et l'endroit où envoyer le produit.</p><p><strong>Notes Importantes :</strong></p><ul><li>Les produits retournés sans <strong>autorisation préalable</strong> ne seront pas acceptés.</li><li>Les produits doivent être retournés dans leur <strong>emballage d'origine</strong> et doivent être <strong>exempts de tout dommage</strong>.</li></ul><p><strong>Expédition</strong></p><p><strong>NOTE :</strong> La plupart des commandes seront traitées et expédiées dans un délai de <strong>3 à 7 jours ouvrables</strong>. Nous apprécions votre patience.</p><p><strong>Nous Expédions Partout !</strong> Aux France. L'offre de <strong>livraison gratuite</strong> de Phoenix Gravity s'applique aux commandes des clients de détail avec un <strong>montant minimum de 15 </strong>€ expédiées au niveau national (à l'intérieur des France). Les commandes sont normalement expédiées via <strong>La Poste, Chronopost</strong>.</p><p><strong>Commandes & Marchandises Endommagées</strong></p><p>Si votre commande a été <strong>endommagée ou défectueuse</strong> lors de la livraison, ou s'il y a eu une <strong>erreur dans votre commande</strong> (par exemple, si les filtres sont cassés ou si la taille du système de filtration est incorrecte), veuillez contacter notre <strong>Service Clientèle</strong> dans les <strong>4 jours suivant la réception de la livraison</strong> au +4420 8058 5660 ou nous envoyer un courriel à <strong>soutien@phoenixwaterfilters.fr</strong>. </p><p>Nous ferons tout notre possible pour corriger votre commande. Si un article incorrect vous a été expédié, Phoenix Gravity paiera pour le retour via l'expédition standard à l'adresse enregistrée. Veuillez vous assurer d'inclure votre <strong>numéro de commande</strong> et la <strong>date de la commande</strong>.</p><p><strong>Politique d'Annulation</strong></p><p>Vous ne pouvez <strong>pas annuler la commande</strong> une fois qu'elle a été <strong>expédiée</strong>. Les commandes expédiées seront notifiées via les adresses e-mail enregistrées.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_iR7Uny",
+        "text_NTcB7B",
+        "text_cTQQfk",
+        "text_n6bamF"
+      ],
+      "settings": {
+        "heading": "",
+        "content": "",
+        "show_shipping": true,
+        "accordion_styles": "full-width",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "icon_marquee_rDWxXz": {
+      "type": "icon-marquee",
+      "blocks": {
+        "marquee_item_DFQANR": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/heavy_metals_2_b93c4bc0-10c0-4e65-a834-9d2299c291f0.png",
+            "label": "Métaux Lourds",
+            "sub_label": "99.99%"
+          }
+        },
+        "marquee_item_7b6CJx": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/pfa_1_5a643170-5ef3-4a10-a5bb-28a140d3d4fa.png",
+            "label": "PFAs",
+            "sub_label": "99.99%"
+          }
+        },
+        "marquee_item_nq78nH": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/plastic_1_8f07c144-f556-4019-bb2d-a84540b023a0.png",
+            "label": "Microplastiques",
+            "sub_label": "99.99%"
+          }
+        },
+        "marquee_item_3QYEnz": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/Viruses_1_1.png",
+            "label": "Virus",
+            "sub_label": "99.99%"
+          }
+        },
+        "marquee_item_gyFHXy": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/Bacteria_2_1.png",
+            "label": "Bacteries",
+            "sub_label": "99,99%"
+          }
+        },
+        "marquee_item_m6PJiL": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/parasites_1_1.png",
+            "label": "Parasites",
+            "sub_label": "99,99%"
+          }
+        },
+        "marquee_item_P43X9Y": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/cll_d99c3fd3-062c-4543-8276-0b0a5a636317.png",
+            "label": "Chlore",
+            "sub_label": "99,99%"
+          }
+        },
+        "marquee_item_9VaTLL": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/giardia_1_0e132268-c730-4a30-a8ac-2aa7d03dfd43.png",
+            "label": "Kystes De Giardia",
+            "sub_label": "99,99%"
+          }
+        },
+        "marquee_item_waYg7h": {
+          "type": "marquee_item",
+          "settings": {
+            "icon": "shopify://shop_images/pesticides_icon_9ade4863-b2cb-4df6-bb2c-70503a71572a.png",
+            "label": "Pesticides",
+            "sub_label": "99,99%"
+          }
+        }
+      },
+      "block_order": [
+        "marquee_item_DFQANR",
+        "marquee_item_7b6CJx",
+        "marquee_item_nq78nH",
+        "marquee_item_3QYEnz",
+        "marquee_item_gyFHXy",
+        "marquee_item_m6PJiL",
+        "marquee_item_P43X9Y",
+        "marquee_item_9VaTLL",
+        "marquee_item_waYg7h"
+      ],
+      "settings": {
+        "heading": "Nos filtres éliminent…"
+      }
+    },
+    "custom_html_zXVJJA": {
+      "type": "custom-html",
+      "name": "Custom Embed Video",
+      "settings": {
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
+      }
+    },
+    "secondary_details_qTHLFy": {
+      "type": "secondary-details",
+      "settings": {
+        "style": "bg-white",
+        "heading": "Technologie de Filtration Révolutionnaire ”Nanobactérien”",
+        "content": "<p>Les filtres traditionnels se contentent de piéger les polluants indésirables, ce qui leur permet de s'accumuler et de se multiplier, les transformant en <strong>foyer de contaminants en seulement deux semaines</strong> — polluant instantanément toute eau qui passe. Pour résoudre ce problème crucial, nous avons développé la technologie révolutionnaire <strong>Nanobactérien</strong>.</p><p><strong>Comment ça marche ?</strong> Tout d'abord, nous utilisons du <strong>charbon actif granulaire</strong> provenant de cosses de noix de coco naturelles pour éliminer les produits chimiques, les toxines et les métaux lourds tels que le zinc et le plomb. Ensuite, nous imprégnons chaque filtre avec des <strong>adsorbants de carbone</strong> pour empêcher la croissance des contaminants à l'intérieur du filtre lui-même. Ce processus de filtration <strong>imite la nature</strong> et maintient la teneur en oxygène et en minéraux inchangée, donnant à l'eau une <strong>fraîcheur de source</strong> et un goût sain inégalé.<br/><br/></p>",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": ""
+      }
+    },
+    "video_image_Vm8h49": {
+      "type": "video-image",
+      "blocks": {
+        "text_CRLNDC": {
+          "type": "text",
+          "settings": {
+            "video_id": "jr37r9792m"
+          }
+        }
+      },
+      "block_order": [
+        "text_CRLNDC"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "product_feature_iWUm8G": {
+      "type": "product-feature",
+      "blocks": {
+        "text_xUPEAM": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Avec le système complet, vous pouvez toujours avoir vos remplacements prêts."
+          }
+        },
+        "text_6Bgfpp": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Une eau potable sûre et savoureuse tous les jours de l’année."
+          }
+        },
+        "text_9Jmf7D": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Idéal pour les maisons, les appartements, les bureaux et les camping-cars."
+          }
+        },
+        "text_FzHtRU": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Élimine 99,9 % des toxines et des métaux lourds de votre eau."
+          }
+        },
+        "text_iANgn3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "feature_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_xUPEAM",
+        "text_6Bgfpp",
+        "text_9Jmf7D",
+        "text_FzHtRU",
+        "text_iANgn3"
+      ],
+      "settings": {
+        "style": "bg-light",
+        "heading": "Profitez d'une eau potable saine et délicieuse tous les jours de l'année",
+        "content": "<p>Le procédé de filtration par Phoenix Gravity imite la nature et préserve l'oxygène et les minéraux, ce qui confère à notre eau une fraîcheur printanière et un goût sain incomparable. Aidez les familles à éliminer 99,9 % des toxines nocives et à boire une eau saine et délicieuse toute l'année !</p>",
+        "column_img": "shopify://shop_images/filter_bg.webp",
+        "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "AJOUTER AU PANIER",
+        "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "copy_image_NX7aXk": {
+      "type": "copy-image",
+      "blocks": {
+        "text_eVLyQA": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Garantie de 10 ans sur le système de filtration"
+          }
+        },
+        "text_pQk9ka": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Filtre jusqu'à 12 mois d'eau avant remplacement"
+          }
+        }
+      },
+      "block_order": [
+        "text_eVLyQA",
+        "text_pQk9ka"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Conçu pour durer en utilisant des matériaux de première qualité",
+        "content": "<p>La plupart des filtres sont en plastique, ce qui peut libérer des produits chimiques nocifs dans votre eau potable. Nous utilisons plutôt un système de filtration au charbon naturel chauffé au four, provenant du sud de l'Espagne, ainsi que du charbon actif granulaire issu de coques de noix de coco naturelles, pour éliminer les impuretés et les métaux lourds comme le plomb et le zinc. Cette filtration naturelle avancée est protégée par de l'acier inoxydable AISI 304 de qualité alimentaire. Résultat : un système de filtration raffiné et durable qui garantit une eau potable pure et limpide pendant des années.<br/><br/></p>",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "custom_code_section_kxqfNY": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<div class=\"warranty-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/2644/2852/files/10_years_1.png?v=1758890447\" alt=\"10-year warranty icon\">\n  <span>Garantie de 10 ans</span>\n</div>",
+        "custom_css": ".warranty-section {\n      background-color: #f5f3f1; /* same pink background */\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      padding: 20px;\n      gap: 10px;\nmargin-bottom: 30px;\n    }\n\n    .warranty-section img {\n      width: 50px; /* adjust size of icon */\n      height: auto;\n    }\n\n    .warranty-section span {\n      font-size: 30px;\n      font-weight: bold;\n      color: #153a5b; /* dark text */\n    }",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    },
+    "secondary_details_xEWUJD": {
+      "type": "secondary-details",
+      "name": "Secondary Details",
+      "settings": {
+        "style": "bg-white",
+        "heading": "Élimine > 95 % du fluorure et de l'arsenic grâce à un système de filtration unique en son genre",
+        "content": "<p>La communauté scientifique s'inquiète de plus en plus des risques potentiels d'un excès de fluorure, qui peut être toxique pour le cerveau et même augmenter le risque de développer un cancer rare, l'ostéosarcome*.</p><p>Conçu pour compléter notre système de filtration par gravité, nos scientifiques ont créé un système unique de filtration du fluorure qui élimine plus de 95 % du fluorure de l'eau potable tout en préservant les nutriments essentiels.</p><p>Fabriqués en acier inoxydable AISI 304 résistant à la rouille, les éléments filtrants POSTreat pour l'élimination du fluorure et de l'arsenic ne libèrent pas de polyuréthane ni de microplastiques dans l'eau, contrairement à d'autres systèmes de filtration. Conçus pour résister à un usage quotidien, ils nécessitent un simple remplissage du média filtrant exclusif tous les 4 mois ou jusqu'à 4 200 litres. C'est le système d'élimination du fluorure le plus efficace et le plus durable du marché, contribuant à un mode de vie sain.</p>",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": ""
+      }
+    },
+    "custom_html_jHz9Yq": {
+      "type": "custom-html",
+      "name": "Custom Embed Video",
+      "settings": {
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/c3cghpaqz1.js\" async type=\"module\"></script><style>wistia-player[media-id='c3cghpaqz1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c3cghpaqz1/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"c3cghpaqz1\" aspect=\"1.7777777777777777\"></wistia-player>"
+      }
+    },
+    "copy_image_CerL9y": {
+      "type": "copy-image",
+      "blocks": {
+        "text_Lxg7kt": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Économisez des milliers d'euros sur des bouteilles ou un système à domicile"
+          }
+        },
+        "text_HBBCfa": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Moins de 8 centimes euros par litre"
+          }
+        },
+        "text_TUUnKG": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Aucune plomberie requise"
+          }
+        },
+        "text_3zkUpp": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Portable pour que vous puissiez l'emporter partout !"
+          }
+        }
+      },
+      "block_order": [
+        "text_Lxg7kt",
+        "text_HBBCfa",
+        "text_TUUnKG",
+        "text_3zkUpp"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Économisez des milliers d'euros sur l'eau en bouteille ou un système pour toute la maison",
+        "content": "<p>L'eau en bouteille est peut-être propre, mais elle est aussi coûteuse. Elle vous coûtera plus de 1 000 € par an, générera des déchets, nuira à l'environnement, et prendra énormément de place chez vous.</p><p>Vous pourriez envisager d'installer un système de filtration intégré, mais ces derniers sont chers aussi : l'investissement initial est substantiel, sans compter les frais récurrents d'entretien et de réparations. De plus, il est impossible de l'emporter si vous êtes locataire ou décidez de déménager.</p><p>Les Filtres à Eau par Gravité Phoenix Gravity sont une solution beaucoup plus pratique et abordable, tout en vous donnant accès, chaque jour, à une eau filtrée délicieuse !</p>",
+        "video_id": "",
+        "img_width": 0,
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "bottom"
+      }
+    },
+    "copy_image_aGNcdm": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "France's Invisible Crisis: The \"Forever Chemicals\" Threat to Water",
+        "content": "<p>France is grappling with a hidden public health and environmental crisis: <strong>PFA contamination</strong> in its tap water and rivers. These Per- and Polyfluoroalkyl Substances (PFAS), known as \"forever chemicals,\" are used in countless products from non-stick cookware to industrial foams. Because they do not break down naturally, they accumulate in water sources, soil, wildlife, and human bodies, posing long-term hazards. Recent news of tap water bans in regions like eastern France due to alarmingly high levels has underscored the widespread contamination. This persistence makes cleanup incredibly challenging and threatens entire ecosystems.</p>",
+        "video_id": "",
+        "large_image": "img-lrg",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "section_bgimg": "shopify://shop_images/tap-water.jpg",
+        "bg_image_style": "cover",
+        "section_randoimg_position": "top"
+      }
+    },
+    "copy_image_JHp8RX": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Pourquoi prendre le risque avec l'eau que boit votre famille ?",
+        "content": "<p>Votre eau peut être contaminée sans que vous le sachiez. Des produits chimiques comme les PFAS, le plomb et les nitrates peuvent pénétrer le système à la source ou s'infiltrer à partir de canalisations de distribution vieillissantes, même après traitement de l'eau. Étant donné que les PFAS sont liés à de graves problèmes de santé, ignorer le risque n'est plus une option.</p><p>Pourquoi prendre ce risque quand l'étendue réelle de la contamination dans votre région est souvent inconnue ? Les filtres à eau par Phoenix Gravity vous redonnent le contrôle. Ils nettoient votre eau et sont conçus pour éliminer jusqu'à 99,9 % des contaminants instantanément, y compris les produits chimiques que vous ne pouvez ni voir ni goûter.</p><p>Son goût est excellent et vous obtenez la tranquillité d'esprit de savoir que vous avez pris une mesure proactive pour garantir une eau saine pour la cuisine et la consommation directe de toute la famille !</p>",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "AJOUTER AU PANIER",
+        "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "video_image_kFR9YY": {
+      "type": "video-image",
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "comparison_table_rbpbX9": {
+      "type": "comparison-table",
+      "blocks": {
+        "text_meHykN": {
+          "type": "text",
+          "settings": {
+            "feature": "Abordable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "yes"
+          }
+        },
+        "text_Htmbzq": {
+          "type": "text",
+          "settings": {
+            "feature": "Portable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "text_dntXRV": {
+          "type": "text",
+          "settings": {
+            "feature": "Acier Inoxydable Durable",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_6nbwUn": {
+          "type": "text",
+          "settings": {
+            "feature": "Essai Sans Risque de 100 Jours",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_hMiRBG": {
+          "type": "text",
+          "settings": {
+            "feature": "Facile à Entretenir",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_YynK9L": {
+          "type": "text",
+          "settings": {
+            "feature": "Grande Capacité",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_rF4hTY": {
+          "type": "text",
+          "settings": {
+            "feature": "Aucune Plomberie Requise",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        }
+      },
+      "block_order": [
+        "text_meHykN",
+        "text_Htmbzq",
+        "text_dntXRV",
+        "text_6nbwUn",
+        "text_hMiRBG",
+        "text_YynK9L",
+        "text_rF4hTY"
+      ],
+      "settings": {
+        "heading": "La façon la plus pratique et abordable de profiter d'une eau potable pure et propre chez vous",
+        "number_of_comparisons": "3",
+        "style": "style-2",
+        "feature_header": "Caractéristique",
+        "company_name": "Filtre à Eau Phoenix",
+        "comparison_1": "Système Intégré",
+        "comparison_2": "Eau en Bouteille",
+        "comparison_3": "Pichets Filtrants",
+        "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "AJOUTER AU PANIER",
+        "afterbutton": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "testimonials_QHjBJr": {
+      "type": "testimonials",
+      "blocks": {
+        "text_9w69i3": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Je suis vraiment contente d'avoir fait ce choix. Après m'être renseignée sur la purification et la distillation de l'eau, j'ai étudié les modèles électriques et à vapeur naturelle et j'ai constaté que les deux options étaient très chronophages et énergivores, nécessitant jusqu'à 4 heures de purification d'affilée. J'ai également appris que les matériaux utilisés étaient de piètre qualité !</p>",
+            "reviewer": "Victoria"
+          }
+        },
+        "text_JnFmzX": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Nous recherchions un filtre robuste, facile à entretenir, à construire, durable et efficace. Il répond à tous nos critères !</p>",
+            "reviewer": "Andrew Narduzzi"
+          }
+        },
+        "text_naQRpR": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>J'en ai acheté un sur Amazon et je dois dire que j'en avais un autre, de bonne réputation, d'une autre entreprise, et Phoenix est bien meilleur. L'autre entreprise a un service client déplorable : ils sont impolis et se fichent complètement des problèmes. Par exemple, quand j'ai commandé des articles qui ne sont jamais arrivés, ils ont carrément prétendu que j'avais tort et que j'avais reçu ma commande (ce qui était faux), et ils m'ont même traité de voleur… Un comportement très impoli et non professionnel.</p>",
+            "reviewer": "David"
+          }
+        },
+        "text_BzGtzj": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Excellente qualité du produit et livraison rapide. Le service client a été très réactif pour répondre à mes questions concernant l'installation.</p>",
+            "reviewer": "Sarah Johnson"
+          }
+        },
+        "text_7kgmgh": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Cela a complètement changé notre perception de la filtration de l'eau. Une solution simple, efficace et écologique.</p>",
+            "reviewer": "Michael Chen"
+          }
+        }
+      },
+      "block_order": [
+        "text_9w69i3",
+        "text_JnFmzX",
+        "text_naQRpR",
+        "text_BzGtzj",
+        "text_7kgmgh"
+      ],
+      "settings": {
+        "layout": "style-1",
+        "heading": "Nous faisons confiance à nos filtres à eau depuis plus de 50 ans",
+        "paragraph": "",
+        "sub_header": "Basé sur 7 495 avis",
+        "button_text": "Voir Tous les Avi",
+        "button_url": "shopify://pages/reviews",
+        "button_aftertext": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "cards_ApPHCG": {
+      "type": "cards",
+      "blocks": {
+        "text_JGrMek": {
+          "type": "text",
+          "settings": {
+            "heading": "Filtrer 99,9 % des contaminants",
+            "copy": "<p>L'acier inoxydable AISI 304 est léger, résistant à la rouille et durable</p>",
+            "icon": "shopify://shop_images/icon-clean-water.svg",
+            "video_id": ""
+          }
+        },
+        "text_aPLfMr": {
+          "type": "text",
+          "settings": {
+            "heading": "Économisez une fortune sur les bouteilles ou sur un système pour toute la maison",
+            "copy": "<p>Pourquoi dépenser des milliers d'euros en eau en bouteille ou acheter un système domestique coûteux alors que vous pouvez profiter d'une eau saine et délicieuse pour une fraction du prix ?</p>",
+            "icon": "shopify://shop_images/icon-bottle_793c42bd-a6bf-4978-8769-878059d83793_1.svg",
+            "video_id": ""
+          }
+        },
+        "text_mrPkrz": {
+          "type": "text",
+          "settings": {
+            "heading": "Léger et facile à déplacer ou à transporter",
+            "copy": "<p>Les filtres à eau Phoenix sont légers et portables : vous pouvez les transporter de la maison, au travail, en camping et vice-versa !</p>",
+            "icon": "shopify://shop_images/icon-scales_43cbdd60-fa9d-484a-b138-bd5a62d85515_1.svg",
+            "video_id": ""
+          }
+        },
+        "text_afzPHi": {
+          "type": "text",
+          "settings": {
+            "heading": "Conçu pour durer jusqu'à 10 ans ou plus",
+            "copy": "<p>Fabriqués en acier inoxydable AISI 304 de qualité, les filtres à eau par Phoenix Gravity sont accompagnés d'une garantie de 10 ans pour vous offrir une tranquillité d'esprit supplémentaire !</p>",
+            "icon": "shopify://shop_images/icon-time.svg",
+            "video_id": ""
+          }
+        },
+        "text_qLU3gQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Fort de plus de 50 ans d'expérience",
+            "copy": "<p>Nous fabriquons des filtres à eau de pointe depuis des décennies et tous nos produits sont soutenus par des milliers d'heures de recherche et de développement !</p>",
+            "icon": "shopify://shop_images/icon-experience_da934c37-aaf4-463e-8ff6-378434b3e1c7_1.svg",
+            "video_id": ""
+          }
+        },
+        "text_mNXfUc": {
+          "type": "text",
+          "settings": {
+            "heading": "Profitez d'une eau au goût délicieux chaque jour",
+            "copy": "<p>Marre de l'eau au goût infect ou aux odeurs de chlore et autres produits chimiques ? Profitez d'une eau pure si délicieuse que vous ne voudrez plus rien boire d'autre !</p>",
+            "icon": "shopify://shop_images/icon-glass.svg",
+            "video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_JGrMek",
+        "text_aPLfMr",
+        "text_mrPkrz",
+        "text_afzPHi",
+        "text_qLU3gQ",
+        "text_mNXfUc"
+      ],
+      "settings": {
+        "style": "light-cards",
+        "heading": "Il n’a jamais été aussi facile de profiter d’une eau potable saine et délicieuse tous les jours de l’année !",
+        "paragraph": "",
+        "section_bgimg": "shopify://shop_images/filter-background-light_3.jpg",
+        "buttontext": "",
+        "buttonlink": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "copy_image_E9QxXb": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Essai gratuit de 100 jours",
+        "content": "<p>Vous craignez que le filtre à eau Phoenix par gravité soit trop beau pour être vrai ? Vous n'êtes pas convaincu qu'il élimine autant de contaminants que promis ?</p><p>Nous garantissons notre produit à 100 % : vous pouvez donc l'essayer chez vous pendant 100 jours, sans risque. Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, renvoyez-la dans les 100 jours pour un remboursement complet, sans justification !</p><p>*Conditions générales applicables.</p>",
+        "column_img": "shopify://shop_images/phoenix-guarantee.v1_copy_1.webp",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "product_reviews_J4aYbK": {
+      "type": "product-reviews",
+      "settings": {
+        "section_heading": "Commentaires des clients"
+      }
+    },
+    "accordion_tabs_zxYtpm": {
+      "type": "accordion-tabs",
+      "blocks": {
+        "tab_FBPMYY": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "INSTALLATION ET ENTRETIEN"
+          }
+        },
+        "question_answer_QFHFYa": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Faut-il amorcer les éléments filtrants au charbon ?",
+            "answer": "<p>Oui, c'est <strong>essentiel</strong> ! L'amorçage des éléments filtrants au charbon est la première étape pour s'assurer que vos filtres sont parfaitement <strong>libres de tout résidu</strong> du processus de fabrication. Ces résidus sont tout à fait normaux et sans danger, mais ils peuvent rendre l'eau trouble si les filtres ne sont pas correctement amorcés.</p><p>Nous vous recommandons d'amorcer vos éléments filtrants au charbon pendant au moins <strong>trois minutes</strong>. S'ils ne sont pas suffisamment amorcés, les quatre premières rondes d'eau filtrée pourraient présenter de légères particules blanches troubles, que vous pouvez simplement jeter en toute sécurité.<br/><br/></p>"
+          }
+        },
+        "question_answer_QVgJG3": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Pourquoi mon eau est-elle trouble ?",
+            "answer": "<p>Pas d'inquiétude, une eau trouble juste après l'installation initiale est <strong>normale et totalement inoffensive</strong>.Il s'agit simplement de la <strong>poussière résiduelle</strong> du processus de fabrication, qui est sans danger. Cela se produit si les filtres n'ont pas été amorcés correctement – nous recommandons donc de les amorcer complètement (voir ci-dessus).</p><p>Si vous ne les amorcez pas, il faudra environ <strong>quatre rondes</strong> d'eau filtrée pour que la turbidité disparaisse complètement.<br/><br/></p>"
+          }
+        },
+        "question_answer_ANN8eg": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la durée de vie de mes éléments filtrants au charbon ?",
+            "answer": "<p>Nous vous conseillons de remplacer vos éléments filtrants au charbon tous les <strong>12 mois</strong>.</p>"
+          }
+        },
+        "question_answer_J7KN8G": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la durée de vie des éléments filtrants POSTreat pour l'élimination du fluorure ?",
+            "answer": "<p>Nos éléments filtrants POSTreat pour l'élimination du fluorure sont fabriqués en <strong>acier inoxydable AISI 304</strong> et sont conçus pour durer des années C'est pourquoi ils bénéficient d'une <strong>garantie d'un an</strong> sur nos produits.</p><p>Cependant, le média filtrant propriétaire <strong>FluoRid</strong> a une durée de vie limitée à <strong>1060 gallons</strong> (environ 4000 litres) et doit être remplacé environ tous les <strong>4 mois</strong>.</p><p>Nous proposons également un service d'abonnement pour le média de remplacement — nous vous rappelons quand ils sont dus, pour vous libérer l'esprit !</p>"
+          }
+        },
+        "question_answer_Ykz4QL": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Combien de temps dure le média FluoRid dans le POSTreat ?",
+            "answer": "<p>La durée de vie d'une paire d'éléments filtrants POSTreat pour l'élimination du fluorure est de jusqu'à <strong>1060 gallons</strong> (environ 4000 litres). Il est recommandé de remplacer la \"Recharge de média FluoRid\" <strong>tous les 4 à 6 mois</strong>.</p>"
+          }
+        },
+        "question_answer_cWC9CC": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Serai-je capable d'assembler mon système et de changer mes filtres moi-même ?",
+            "answer": "<p>Absolument ! Nos systèmes sont conçus pour être <strong>extrêmement faciles à assembler</strong>. Tout ce dont vous avez besoin est inclus. Vous pouvez le faire vous-même <strong>simplement avec vos mains</strong> — aucun outil spécialisé, plombier ou électricien n'est requis.</p><p>Nous incluons des <strong>instructions complètes</strong> avec chaque unité et nous sommes toujours là pour vous aider en cas de besoin.</p>"
+          }
+        },
+        "question_answer_WbnTBF": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mon filtre à eau par gravité Phoenix fuit entre les chambres supérieure et inférieure, qu'est-ce que cela signifie ?",
+            "answer": "<p>Cela est dû à un <strong>remplissage excessif</strong> du système de filtration. Une utilisation attentive peut aider à prévenir le débordement : vérifiez toujours le niveau d'eau dans la chambre inférieure avant de remplir la chambre supérieure.</p><p>Une fois que vous connaîtrez vos taux d'utilisation, le processus de remplissage deviendra une seconde nature !</p><p>Nous vendons également un <strong>robinet en acier inoxydable avec jauge de niveau d'eau</strong> qui vous permet de voir le niveau d'eau de l'extérieur.<br/><br/></p>"
+          }
+        },
+        "question_answer_gKiip6": {
+          "type": "question_answer",
+          "settings": {
+            "question": "À quelle fréquence dois-je changer mes filtres ?",
+            "answer": "<p>Cela dépend de votre fréquence d'utilisation et de la qualité de votre eau d'entrée. À titre indicatif, nous vous recommandons de les remplacer aux étapes suivantes :</p><ul><li><strong>Éléments filtrants au charbon :</strong> <strong>12 mois</strong>.</li><li><strong>POSTreat (et Recharge de média FluoRid) :</strong> <strong>4 mois</strong>.4</li></ul><p>Nous proposons également un <strong>service d'abonnement</strong>, qui vous donne en prime <strong>5 % de réduction</strong> sur chaque commande. Laissez-nous vous rappeler quand changer votre filtre, pour que vous n'ayez pas à y penser !</p>"
+          }
+        },
+        "tab_3zwYUD": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Filtration"
+          }
+        },
+        "question_answer_YYNr73": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionnent vos filtres ?",
+            "answer": "<p>Nous utilisons de l'<strong>acier inoxydable AISI 304</strong> de la plus haute qualité, du <strong>charbon de noix de coco naturel</strong> et d'autres matériaux naturels. Le tout avec la puissante force de la <strong>gravité</strong> ! Notre système de filtration avancé élimine jusqu'à <strong>99,99 % des contaminants courants</strong> tout en retenant <strong>jusqu'à 100 % des nutriments</strong>.</p>"
+          }
+        },
+        "question_answer_QDf64j": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Que retirent réellement vos filtres ?",
+            "answer": "<p>Les éléments filtrants au charbon Phoenix Gravity sont fabriqués à partir de <strong>coques de noix de coco pures</strong>, une ressource durable et renouvelable. Le charbon dans les filtres est <strong>activé</strong>, ce qui signifie qu'il possède une surface élevée et qu'il est très poreux. Cela lui permet de piéger un large éventail de contaminants, notamment le <strong>chlore</strong>, les <strong>métaux lourds</strong> et d'autres impuretés.</p><p>Les filtres au charbon Phoenix Gravity <strong>éliminent les microplastiques</strong> et éliminent également les <strong>SPFA</strong>, les <strong>hormones</strong> et les <strong>résidus pharmaceutiques</strong> de l'eau. Ils sont conçus pour fournir une eau propre, inodore et avec un <strong>excellent goût</strong>. Ils ne libèrent aucun produit chimique nocif ou sous-produit dans l'eau et sont très efficaces pour éliminer le chlore et autres composés organiques volatils. Une paire d'éléments filtrants au charbon peut filtrer des milliers de litres d'eau, vous offrant ainsi une eau potable sûre et saine.<br/><br/></p>"
+          }
+        },
+        "question_answer_km7mdY": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity enlèvent-ils les résidus pharmaceutiques ?",
+            "answer": "<p><strong>Oui, jusqu'à 99,99 % !</strong> Nos éléments filtrants au charbon primaires ont été testés indépendamment pour de nombreux composés organiques volatils, y compris le 1,4-dichlorobenzène, le 2-Butanone, l'Acétone, le Chlorure d'Allyle et bien d'autres.</p>"
+          }
+        },
+        "question_answer_yiNwRp": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Vos filtres retirent-ils le fluorure ?",
+            "answer": "<p>Absolument ! Nous avons conçu un filtre spécialisé pour l'élimination du fluorure appelé <strong>POSTreat</strong>, capable de retirer <strong>plus de 95 % du fluorure</strong> de votre eau du robinet.</p><p>Fabriqué en <strong>acier inoxydable AISI 304</strong>, il est entièrement <strong>réutilisable et rechargeable</strong> avec notre Recharge de média FluoRid POSTreat.Le POSTreat peut être utilisé conjointement avec nos éléments filtrants au charbon primaires</p>"
+          }
+        },
+        "question_answer_TG7Pqe": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les cartouches au charbon Phoenix enlèvent-elles le fluorure ?",
+            "answer": "<p>Elles en sont tout à fait capables ! Nous avons conçu une cartouche spécialisée pour le fluorure appelée <strong>POSTreat</strong> pour éliminer <strong>plus de 95 % du fluorure</strong> de votre eau du robinet.</p><p>Fabriquée en acier inoxydable de la plus haute qualité, elle est complètement réutilisable et rechargeable, avec notre Recharge FluoRid POSTreat. Le POSTreat peut être utilisé conjointement avec les cartouches au charbon primaires.<br/><br/></p>"
+          }
+        },
+        "question_answer_Qd4jhh": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les éléments au charbon Phoenix éliminent-ils les phtalates de l'eau ?",
+            "answer": "<p>Bien que nous n'ayons pas testé spécifiquement l'élimination des phtalates, nos éléments filtrants au charbon Phoenix sont fabriqués avec du <strong>charbon de noix de coco activé</strong> de la plus haute qualité, reconnu pour son efficacité à <strong>adsorber les phtalates</strong> de l'eau. Nous améliorons et testons constamment nos filtres.</p>"
+          }
+        },
+        "question_answer_LVXRih": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity éliminent-ils l'œstrogène ?",
+            "answer": "<p>Bien que nous n'ayons pas testé spécifiquement l'élimination de l'œstrogène, nos filtres au charbon Phoenix sont fabriqués avec du <strong>charbon de noix de coco activé</strong>, connu pour son efficacité à <strong>adsorber l'œstrogène</strong> de l'eau.12 Nous améliorons et testons constamment nos filtres.</p>"
+          }
+        },
+        "question_answer_7ArC8A": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment vos filtres à gravité et vos éléments filtrants se comparent-ils à la concurrence ?",
+            "answer": "<p>Nous sommes l'un des <strong>leaders en matière de filtration par gravité avancée</strong>. Avec plus de <strong>50 ans d'expérience</strong> dans la fabrication en interne, nous avons un contrôle total sur le processus et la <strong>qualité</strong> de nos filtres et éléments filtrants. Nous sommes extrêmement fiers des efforts que nous avons déployés pour devenir un fabricant de premier plan de filtres à eau par gravité.</p>"
+          }
+        },
+        "question_answer_FfMTxH": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Vos filtres sont-ils aussi efficaces que Berkey ?",
+            "answer": "<p><strong>Absolument !</strong> Nous avons effectué des tests <strong>indépendants et approfondis</strong> sur nos filtres pour une variété de contaminants chimiques tels que le Plomb, le chlore, le chrome, les composés organiques volatils et <strong>plus de 100 autres</strong>.</p><p>De plus, avec plus de <strong>50 ans d'expérience</strong> dans la fabrication en interne, nous sommes l'un des principaux fabricants mondiaux de systèmes de filtration par gravité en <strong>acier inoxydable AISI 304</strong>.Nous avons également un contrôle total sur le processus et la qualité de nos filtres et éléments filtrants de remplacement.<br/><br/></p>"
+          }
+        },
+        "question_answer_z3CXaL": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity diminuent-ils le TDS ?",
+            "answer": "<p>Le TDS signifie <strong>Total des Solides Dissous</strong> et se mesure en parties par million (ppm) ou parties par milliard (ppb).C'est une mesure du contenu organique et inorganique de l'eau, y compris les <strong>minéraux et les nutriments</strong>.</p><p>L'eau naturelle aura une lecture TDS due aux minéraux et nutriments captés dans les roches et le sol par lesquels elle s'écoule. Il est généralement accepté qu'un niveau de <strong>300 ppm est une bonne teneur en minéraux</strong>.Nous ne cherchons délibérément pas à ramener notre TDS à zéro, car notre objectif est de <strong>préserver les vitamines et minéraux naturels</strong> dont votre corps a besoin.<br/><br/></p>"
+          }
+        },
+        "question_answer_qVALN9": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Que contient la boîte de la cartouche ?",
+            "answer": "<p>La boîte des éléments filtrants au charbon Phoenix Gravity comprend les accessoires suivants :</p><ol><li>Éléments filtrants pré-montés avec écrou à ailettes et rondelles.</li><li>Robinet en <strong>acier inoxydable AISI 304</strong>.</li><li>Bouton du couvercle.</li><li>Un jeu de rondelles et écrou à ailettes de rechange (au cas où les rondelles et l'écrou existants seraient endommagés ou égarés).</li><li>Un bouchon obturateur de rechange.</li><li>Manuel d'instructions.</li></ol>"
+          }
+        },
+        "question_answer_mzHCHp": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Le filtre Phoenix Gravity élimine-t-il les bactéries et les virus ?",
+            "answer": "<p>Les filtres Phoenix offrent une pureté d'eau exceptionnelle en éliminant 99,99 % des virus, des bactéries et des parasites présents dans l'eau.</p>"
+          }
+        },
+        "tab_zrJXMr": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Expédition et Retours"
+          }
+        },
+        "question_answer_TEQCt3": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Où Phoenix Gravity livre-t-il ?",
+            "answer": "<p>Actuellement, nous livrons en <strong>France</strong>. Nous travaillons à l'expédition vers davantage de destinations. <em>(Note du traducteur : Cette information peut être ajustée si la marque livre en France, mais la FAQ originale ne le mentionne pas.)</em></p>"
+          }
+        },
+        "question_answer_fUdM4T": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est votre politique de retour et d'échange ?",
+            "answer": "<p>Nous acceptons les retours initiés dans les <strong>30 jours</strong> suivant l'achat. Vous serez responsable du retour de l'article en toute sécurité, qui doit arriver dans un <strong>état revendable</strong> et dans son <strong>emballage d'origine</strong>.</p><p>Une fois que nous aurons accepté le retour, nous vous rembourserons via le mode de paiement original dans les <strong>10 jours ouvrables</strong>. Nous offrons également une <strong>Garantie Satisfait ou Remboursé de 100 jours</strong> sur nos systèmes de filtration par gravité complets.<br/><br/></p>"
+          }
+        },
+        "question_answer_hVnxVE": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mon article est arrivé endommagé ou incorrect, que puis-je faire ?",
+            "answer": "<p>Veuillez envoyer une photographie de votre commande complète, y compris l'emballage, ainsi que votre numéro de commande à notre équipe de support à <strong>hello@phoenixwaterfilters.com</strong>. Nous vous répondrons dans les <strong>24 heures</strong> en priorité.</p>"
+          }
+        },
+        "tab_rWfjgt": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Garantie et Essai Sans Risque de 100 Jours"
+          }
+        },
+        "question_answer_yRdjjx": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionne l'Essai Sans Risque de 100 Jours ?",
+            "answer": "<p>La <strong>Garantie Satisfait ou Remboursé de 100 jours</strong> s'applique uniquement aux systèmes Phoenix Gravity achetés avec les boîtiers en <strong>acier inoxydable AISI 304</strong> et uniquement via notre site web. L'essai n'est pas valable pour les filtres de remplacement et les accessoires achetés séparément.</p><p><strong>Voici comment cela fonctionne :</strong></p><ul><li>Achetez votre système de filtration d'eau par gravité Phoenix via notre site web. Dès qu'il arrive, commencez à l'utiliser immédiatement.</li><li>Si vous n'êtes pas entièrement satisfait de votre système Phoenix Gravity dans les <strong>100 jours</strong> suivant la date de livraison, contactez notre équipe de support pour initier un retour. Le retour doit être initié dans les 100 jours suivant la date d'achat.</li><li>Le système doit être retourné <strong>complet</strong> avec toutes les pièces d'origine et l'emballage. Le boîtier en acier inoxydable ASI 304 <strong>ne doit pas être bosselé ou endommagé</strong> d'une autre manière. Les éléments filtrants ne doivent pas être fissurés ou endommagés lors de leur réception.</li></ul><p>Dès réception et inspection de l'état du système, nous vous contacterons pour initier un <strong>remboursement intégral</strong> sur votre mode de paiement original. Ce processus peut prendre jusqu'à 10 jours ouvrables pour être finalisé.<br/><br/></p>"
+          }
+        },
+        "question_answer_6qi8Xa": {
+          "type": "question_answer",
+          "settings": {
+            "question": "La politique de retour de 100 jours est-elle valable si je commande sur Amazon ?",
+            "answer": "<p><strong>Non.</strong> Votre système de filtration Phoenix Gravity doit être acheté via notre <strong>site web</strong> pour être admissible à notre garantie satisfait ou remboursé de 100 jours.</p>"
+          }
+        },
+        "question_answer_dL6gGG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionne la garantie ?",
+            "answer": "<p>Nous offrons une <strong>garantie d'un an</strong> sur les robinets en acier inoxydable AISI 304 et les éléments au charbon Phoenix Gravity. Vous êtes protégé contre tout défaut de matériau et de fabrication.</p>"
+          }
+        },
+        "tab_Tb7KiH": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "VOTRE COMPTE ET ABONNEMENTS"
+          }
+        },
+        "question_answer_pfFcDH": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Puis-je m'abonner pour mes éléments filtrants ?",
+            "answer": "<p>Oui, nous offrons un service d'abonnement pour remplacer vos éléments afin de vous faire gagner du temps et de la tranquillité d'esprit.</p>"
+          }
+        },
+        "question_answer_WAmErz": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la différence entre le \"Plan Vie Quotidienne\" et le \"Plan Vie Quotidienne Complet\" ?",
+            "answer": "<p>Le Plan Vie Quotidienne et le Plan Vie Quotidienne Complet sont nos solutions pour aider les familles à avoir une eau propre et sûre toute l'année, à leur rythme.</p><ul><li>Le <strong>Plan Vie Quotidienne</strong> vous offre la solution complète avec nos filtres au charbon livrés automatiquement <strong>tous les 12 mois</strong>.</li><li>Le <strong>Plan Vie Quotidienne Complet</strong> comprend les éléments filtrants au charbon livrés annuellement ET les Recharges de média FluoRid pour le filtre POSTreat livrées <strong>tous les 4 mois</strong>, directement à votre porte.<br/><br/></li></ul>"
+          }
+        },
+        "question_answer_ffAFY7": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment puis-je modifier mon abonnement ?",
+            "answer": "<p>Votre abonnement peut être modifié et mis à jour depuis votre <strong>Compte Phoenix Gravity</strong>. Une fois connecté à votre compte, cliquez sur « Abonnements » pour apporter les changements nécessaires.</p><p>Si vous avez besoin d'aide supplémentaire, n'hésitez pas à nous contacter.</p>"
+          }
+        },
+        "question_answer_X3F9tC": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Puis-je suspendre ou annuler mon abonnement ?",
+            "answer": "<p>Oui, vous pouvez modifier la fréquence ou annuler votre abonnement <strong>à tout moment</strong>.</p><p>Veuillez noter que l'annulation de votre abonnement entraînera la <strong>perte des tarifs spéciaux</strong> qui y étaient associés. Si vous souhaitez vous réabonner après l'annulation, vous pourriez ne pas être en mesure de récupérer la même tarification spéciale que celle dont vous bénéficiiez auparavant.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_FBPMYY",
+        "question_answer_QFHFYa",
+        "question_answer_QVgJG3",
+        "question_answer_ANN8eg",
+        "question_answer_J7KN8G",
+        "question_answer_Ykz4QL",
+        "question_answer_cWC9CC",
+        "question_answer_WbnTBF",
+        "question_answer_gKiip6",
+        "tab_3zwYUD",
+        "question_answer_YYNr73",
+        "question_answer_QDf64j",
+        "question_answer_km7mdY",
+        "question_answer_yiNwRp",
+        "question_answer_TG7Pqe",
+        "question_answer_Qd4jhh",
+        "question_answer_LVXRih",
+        "question_answer_7ArC8A",
+        "question_answer_FfMTxH",
+        "question_answer_z3CXaL",
+        "question_answer_qVALN9",
+        "question_answer_mzHCHp",
+        "tab_zrJXMr",
+        "question_answer_TEQCt3",
+        "question_answer_fUdM4T",
+        "question_answer_hVnxVE",
+        "tab_rWfjgt",
+        "question_answer_yRdjjx",
+        "question_answer_6qi8Xa",
+        "question_answer_dL6gGG",
+        "tab_Tb7KiH",
+        "question_answer_pfFcDH",
+        "question_answer_WAmErz",
+        "question_answer_ffAFY7",
+        "question_answer_X3F9tC"
+      ],
+      "settings": {
+        "heading": "Vous avez des questions ? Nous avons les réponses…",
+        "content": "<p><br/><br/></p>"
+      }
+    },
+    "gallery_nz73LE": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_images_block_dpE7Rt": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-01.jpg"
+          }
+        },
+        "gallery_images_block_N7YMPj": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-02.jpg"
+          }
+        },
+        "gallery_images_block_RKmUFY": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-03.jpg"
+          }
+        },
+        "gallery_images_block_n6JTzX": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-04.jpg"
+          }
+        },
+        "gallery_images_block_4EUWc8": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-05.jpg"
+          }
+        },
+        "gallery_images_block_7BEKTr": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-06.jpg"
+          }
+        },
+        "gallery_images_block_GPamey": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-07.jpg"
+          }
+        },
+        "gallery_images_block_4ygdHM": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-08.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_images_block_dpE7Rt",
+        "gallery_images_block_N7YMPj",
+        "gallery_images_block_RKmUFY",
+        "gallery_images_block_n6JTzX",
+        "gallery_images_block_4EUWc8",
+        "gallery_images_block_7BEKTr",
+        "gallery_images_block_GPamey",
+        "gallery_images_block_4ygdHM"
+      ],
+      "settings": {
+        "gallery_heading": "Savourez une eau potable saine pour toute la famille !",
+        "gallery_content": ""
+      }
+    }
+  },
+  "order": [
+    "product_hero_og_zxMJ8i",
+    "product-hero",
+    "custom_nice_product_FCRzcG",
+    "accordion_Nf6H4x",
+    "icon_marquee_rDWxXz",
+    "custom_html_zXVJJA",
+    "secondary_details_qTHLFy",
+    "video_image_Vm8h49",
+    "product_feature_iWUm8G",
+    "copy_image_NX7aXk",
+    "custom_code_section_kxqfNY",
+    "secondary_details_xEWUJD",
+    "custom_html_jHz9Yq",
+    "copy_image_CerL9y",
+    "copy_image_aGNcdm",
+    "copy_image_JHp8RX",
+    "video_image_kFR9YY",
+    "comparison_table_rbpbX9",
+    "testimonials_QHjBJr",
+    "cards_ApPHCG",
+    "copy_image_E9QxXb",
+    "product_reviews_J4aYbK",
+    "accordion_tabs_zxYtpm",
+    "gallery_nz73LE"
+  ]
+}

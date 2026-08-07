@@ -1,0 +1,188 @@
+{%- comment -%}
+  perf-delay-thirdparty.liquid
+  Delays heavy third-party scripts (chat, pixels, marketing apps) until the
+  first explicit user interaction. Tracking scripts are released immediately;
+  chat and other non-essential scripts wait for the next idle period so they
+  do not all compete with the interaction that released them.
+
+  ponytail: allowlist-gated script interceptor. Only hosts in DELAY_HOSTS are
+  held; everything Shopify-core loads normally. To exempt an app, remove its
+  host substring. To disable entirely, remove the {% render %} in theme.liquid.
+
+  MUST be included before content_for_header so it patches createElement before
+  any app injects its script element.
+{%- endcomment -%}
+<script>
+(function () {
+  // Script hosts held until first interaction.
+  // Substring match on the URL. Shopify core (cdn.shopify.com, /cdn/wpm/,
+  // monorail, checkout) is intentionally absent -> never delayed.
+  var DELAY_HOSTS = [
+    'tidio.co',
+    'klaviyo.com',
+    'bugherd.com',
+    'secomapp',
+    'hulkapps',
+    'easylocation',
+    'geoproapp.com',
+    'config-security.com',
+    'cdnjs.cloudflare.com',
+    'connect.facebook.net',
+    'facebook.com/tr',
+    'googletagmanager.com',
+    'google-analytics.com',
+    'googleadservices.com',
+    'googlesyndication.com',
+    'doubleclick.net',
+    'snap.licdn.com',
+    'ads.linkedin.com'
+  ];
+
+  var TRACKING_HOSTS = [
+    'connect.facebook.net',
+    'facebook.com/tr',
+    'googletagmanager.com',
+    'google-analytics.com',
+    'googleadservices.com',
+    'googlesyndication.com',
+    'doubleclick.net',
+    'snap.licdn.com',
+    'ads.linkedin.com'
+  ];
+
+  function matchesHost(src, hosts) {
+    for (var i = 0; i < hosts.length; i++) {
+      if (src.indexOf(hosts[i]) !== -1) return true;
+    }
+    return false;
+  }
+
+  function shouldDelay(src) {
+    if (!src) return false;
+    if (src.indexOf('cdnjs.cloudflare.com/ajax/libs/mustache.js/') !== -1) return false;
+    if (trackingReleased && matchesHost(src, TRACKING_HOSTS)) return false;
+    return matchesHost(src, DELAY_HOSTS);
+  }
+
+  var held = [];       // { el, src }
+  var released = false;
+  var trackingReleased = false;
+
+  // Intercept scripts created via document.createElement('script') — the path
+  // Tidio / Klaviyo / FB / GTM-injected tags use to load their heavy chunks.
+  var nativeCreate = document.createElement.bind(document);
+  document.createElement = function (tag) {
+    var el = nativeCreate(tag);
+    if (String(tag).toLowerCase() === 'script') {
+      var pendingSrc = '';
+      var nativeSetAttribute = el.setAttribute.bind(el);
+      var hold = function (src) {
+        pendingSrc = src;
+        for (var i = 0; i < held.length; i++) {
+          if (held[i].el === el) {
+            held[i].src = src;
+            return;
+          }
+        }
+        held.push({ el: el, src: src });
+      };
+
+      el.setAttribute = function (name, value) {
+        if (String(name).toLowerCase() === 'src') {
+          var src = String(value || '');
+          if (!released && shouldDelay(src)) {
+            hold(src);
+            return;
+          }
+          pendingSrc = src;
+        }
+        return nativeSetAttribute(name, value);
+      };
+
+      try {
+        Object.defineProperty(el, 'src', {
+          configurable: true,
+          enumerable: true,
+          get: function () { return pendingSrc; },
+          set: function (v) {
+            var src = String(v || '');
+            if (!released && shouldDelay(src)) {
+              hold(src);
+              return; // hold: don't set the real attribute yet
+            }
+            pendingSrc = src;
+            nativeSetAttribute('src', src);
+          }
+        });
+      } catch (e) { /* if defineProperty fails, setAttribute still covers most apps */ }
+    }
+    return el;
+  };
+
+  function releaseAll() {
+    if (released) return;
+    released = true;
+
+    // stop intercepting new scripts
+    document.createElement = nativeCreate;
+
+    for (var i = 0; i < held.length; i++) {
+      var item = held[i];
+      try {
+        // restore a normal src property, then set it to trigger the load
+        delete item.el.src;
+        item.el.setAttribute('src', item.src);
+      } catch (e) {
+        // fallback: clone into a fresh, un-intercepted element
+        var s = nativeCreate('script');
+        s.src = item.src;
+        s.async = true;
+        (document.head || document.documentElement).appendChild(s);
+      }
+    }
+    held = [];
+
+    if (!document.querySelector('script[src*="code.tidio.co"]')) {
+      var tidio = nativeCreate('script');
+      tidio.src = '//code.tidio.co/3qy36gv7vmmxexcjbdfuzm3mtrqto0z4.js?extensionVersion=1.4.1';
+      tidio.async = true;
+      (document.head || document.documentElement).appendChild(tidio);
+    }
+  }
+
+  function releaseTracking() {
+    if (trackingReleased) return;
+    trackingReleased = true;
+
+    var remaining = [];
+    for (var i = 0; i < held.length; i++) {
+      var item = held[i];
+      if (!matchesHost(item.src, TRACKING_HOSTS)) {
+        remaining.push(item);
+        continue;
+      }
+      try {
+        delete item.el.src;
+        item.el.setAttribute('src', item.src);
+      } catch (e) {
+        var s = nativeCreate('script');
+        s.src = item.src;
+        s.async = true;
+        (document.head || document.documentElement).appendChild(s);
+      }
+    }
+    held = remaining;
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(releaseAll, { timeout: 3000 });
+    } else {
+      window.setTimeout(releaseAll, 1200);
+    }
+  }
+
+  var EVENTS = ['pointerdown', 'touchstart', 'keydown'];
+  for (var j = 0; j < EVENTS.length; j++) {
+    window.addEventListener(EVENTS[j], releaseTracking, { once: true, passive: true, capture: true });
+  }
+})();
+</script>

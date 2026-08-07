@@ -1,0 +1,257 @@
+{% doc %}
+  @prompt
+    Create a custom content section (not a preset) with a clean, minimal layout.
+    
+    Section structure requirements:
+    
+    The section must use a light background color
+    
+    Content should be centered vertically with generous padding
+    
+    No sliders, no multicolumn preset, no Dawn dependencies
+    
+    Blocks required:
+    
+    Heading block
+    
+    Large bold heading
+    
+    Editable font size, font weight, and color
+    
+    Max width so text does not stretch full screen
+    
+    Text block
+    
+    Paragraph text below the heading
+    
+    Smaller font size than heading
+    
+    Editable text color and spacing
+    
+    Layout behavior:
+    
+    Desktop: content stacked vertically (heading on top, text below)
+    
+    Mobile: same vertical layout with reduced padding and font sizes
+    
+    Customization:
+    
+    Allow manual control of:
+    
+    Background color
+    
+    Heading font size and color
+    
+    Text font size and color
+    
+    Section padding (top and bottom)
+    
+    Code quality requirements:
+    
+    Use custom class names (do NOT use multicolumn, image-banner, or Dawn classes)
+    
+    Do NOT reference external CSS files
+    
+    Include scoped CSS inside the section
+    
+    Clean, readable HTML and CSS
+    
+    The result should look professionally hand-coded and easy to maintain., i neeed the full width and and the only left align the content , the maximum widht onthe desctop is 100% and 1440px, the max widht is 1440px 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-custom-content-{{ ai_gen_id }} {
+    display: block;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_top }}px 20px {{ block.settings.padding_bottom }}px;
+    width: 100%;
+  }
+
+  .ai-custom-content__wrapper-{{ ai_gen_id }} {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .ai-custom-content__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_font_size }}px;
+    font-weight: {{ block.settings.heading_font_weight }};
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 {{ block.settings.heading_spacing }}px 0;
+    line-height: 1.2;
+    width: 100%;
+  }
+
+  .ai-custom-content__text-{{ ai_gen_id }} {
+    font-size: {{ block.settings.text_font_size }}px;
+    color: {{ block.settings.text_color }};
+    margin: 0;
+    line-height: 1.6;
+    width: 100%;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-custom-content-{{ ai_gen_id }} {
+      padding: {{ block.settings.padding_top | times: 0.6 }}px 16px {{ block.settings.padding_bottom | times: 0.6 }}px;
+    }
+
+    .ai-custom-content__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_font_size | times: 0.7 }}px;
+      margin-bottom: {{ block.settings.heading_spacing | times: 0.7 }}px;
+    }
+
+    .ai-custom-content__text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_font_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-custom-content-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-custom-content__wrapper-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-custom-content__heading-{{ ai_gen_id }}">
+        {{ block.settings.heading }}
+      </h2>
+    {% endif %}
+
+    {% if block.settings.text != blank %}
+      <div class="ai-custom-content__text-{{ ai_gen_id }}">
+        {{ block.settings.text }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom content",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#f9f9f9"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading text",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "range",
+      "id": "heading_font_size",
+      "label": "Font size",
+      "min": 20,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 48
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Font weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "700"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Bottom spacing",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text content",
+      "default": "<p>Discover our carefully curated collection of premium products designed to enhance your everyday life.</p>"
+    },
+    {
+      "type": "range",
+      "id": "text_font_size",
+      "label": "Font size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Color",
+      "default": "#666666"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom content"
+    }
+  ]
+}
+{% endschema %}

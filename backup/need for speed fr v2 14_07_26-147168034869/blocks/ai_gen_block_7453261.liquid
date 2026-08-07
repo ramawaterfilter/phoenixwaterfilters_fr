@@ -1,0 +1,840 @@
+
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .responsive-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    height: {{ block.settings.section_height_desktop }}px;
+    overflow: hidden;
+    display: block;
+  }
+
+  .responsive__background-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+.responsive__container-{{ ai_gen_id }} {
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.responsive__content-{{ ai_gen_id }} {
+  margin: 0 auto;
+}
+.responsive__video-{{ ai_gen_id }} {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  .responsive__video-{{ ai_gen_id }} {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+
+  .responsive__wistia-container-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .responsive__wistia-container-{{ ai_gen_id }} iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    border: none;
+  }
+
+  .responsive__fallback-image-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .responsive__placeholder-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .responsive__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  .responsive__overlay-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, {{ block.settings.overlay_opacity }}), rgba(0, 0, 0, {{ block.settings.overlay_opacity | times: 0.5 }}));
+    z-index: 2;
+  }
+
+  .responsive__container-{{ ai_gen_id }} {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: {{ block.settings.content_vertical_alignment_desktop }};
+    padding: {{ block.settings.section_padding_desktop }}px 40px;
+  }
+
+  .responsive__content-{{ ai_gen_id }} {
+    max-width: {{ block.settings.content_max_width }}px;
+    width: 100%;
+    text-align: {{ block.settings.text_alignment_desktop }};
+  }
+
+  .responsive__heading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.heading_size_desktop }}px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px;
+  }
+
+  .responsive__subheading-{{ ai_gen_id }} {
+    font-size: {{ block.settings.subheading_size_desktop }}px;
+    line-height: 1.5;
+    color: {{ block.settings.subheading_color }};
+    margin: 0 0 16px;
+  }
+
+  .responsive__rating-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    {% if block.settings.text_alignment_desktop == 'center' %}
+      justify-content: center;
+    {% elsif block.settings.text_alignment_desktop == 'right' %}
+      justify-content: flex-end;
+    {% else %}
+      justify-content: flex-start;
+    {% endif %}
+  }
+
+  .responsive__stars-{{ ai_gen_id }} {
+    display: inline-flex;
+    gap: 2px;
+    font-size: {{ block.settings.rating_size_desktop }}px;
+    line-height: 1;
+  }
+
+  .responsive__star-{{ ai_gen_id }} {
+    position: relative;
+    display: inline-block;
+    color: {{ block.settings.star_empty_color }};
+  }
+
+  .responsive__star-fill-{{ ai_gen_id }} {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: {{ block.settings.star_color }};
+  }
+
+  .responsive__rating-text-{{ ai_gen_id }} {
+    color: {{ block.settings.rating_text_color }};
+    font-size: {{ block.settings.rating_size_desktop }}px;
+    line-height: 1;
+  }
+
+  .responsive__button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: {{ block.settings.button_text_color }};
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: {{ block.settings.button_size_desktop }}px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+    cursor: pointer;
+  }
+
+  .responsive__button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+    border-color: {{ block.settings.button_hover_border_color }};
+  }
+
+  .responsive__video-mobile-{{ ai_gen_id }},
+  .responsive__wistia-mobile-{{ ai_gen_id }} {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .responsive-{{ ai_gen_id }} {
+      height: {{ block.settings.section_height_mobile }}px;
+    }
+
+    .responsive__container-{{ ai_gen_id }} {
+      align-items: {{ block.settings.content_vertical_alignment_mobile }};
+      padding: {{ block.settings.section_padding_mobile }}px 20px;
+    }
+
+    .responsive__content-{{ ai_gen_id }} {
+      text-align: {{ block.settings.text_alignment_mobile }};
+    }
+
+    .responsive__heading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.heading_size_mobile }}px;
+    }
+
+    .responsive__subheading-{{ ai_gen_id }} {
+      font-size: {{ block.settings.subheading_size_mobile }}px;
+    }
+
+    .responsive__stars-{{ ai_gen_id }},
+    .responsive__rating-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.rating_size_mobile }}px;
+    }
+
+    .responsive__button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.button_size_mobile }}px;
+      padding: 14px 32px;
+      border-width: {{ block.settings.button_border_width_mobile }}px;
+    }
+
+    .responsive__rating-{{ ai_gen_id }} {
+      {% if block.settings.text_alignment_mobile == 'center' %}
+        justify-content: center;
+      {% elsif block.settings.text_alignment_mobile == 'right' %}
+        justify-content: flex-end;
+      {% else %}
+        justify-content: flex-start;
+      {% endif %}
+    }
+
+    .responsive__video-{{ ai_gen_id }},
+    .responsive__wistia-container-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .responsive__video-mobile-{{ ai_gen_id }},
+    .responsive__wistia-mobile-{{ ai_gen_id }} {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .responsive__video-mobile-{{ ai_gen_id }} {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    .responsive__wistia-mobile-{{ ai_gen_id }} iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      border: none;
+    }
+  }
+
+  {{ block.settings.custom_css }}
+{% endstyle %}
+
+<video-hero-{{ ai_gen_id }} class="responsive-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="responsive__background-{{ ai_gen_id }}">
+    {% if block.settings.wistia_video_id != blank %}
+      <div class="responsive__wistia-container-{{ ai_gen_id }}">
+        <div class="wistia_embed wistia_async_{{ block.settings.wistia_video_id }} videoFoam=true autoPlay=true muted=true endVideoBehavior=loop" style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
+      </div>
+    {% elsif block.settings.video_url != blank %}
+      <video
+        class="responsive__video-{{ ai_gen_id }}"
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if block.settings.fallback_image %}
+          poster="{{ block.settings.fallback_image | image_url: width: 2000 }}"
+        {% endif %}
+      >
+        <source src="{{ block.settings.video_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+
+    {% if block.settings.wistia_video_id_mobile != blank %}
+      <div class="responsive__wistia-mobile-{{ ai_gen_id }}">
+        <div class="wistia_embed wistia_async_{{ block.settings.wistia_video_id_mobile }} videoFoam=true autoPlay=true muted=true endVideoBehavior=loop" style="position:absolute;top:0;left:0;width:100%;height:100%;"></div>
+      </div>
+    {% elsif block.settings.video_url_mobile != blank %}
+      <video
+        class="responsive__video-mobile-{{ ai_gen_id }}"
+        autoplay
+        muted
+        loop
+        playsinline
+        {% if block.settings.fallback_image %}
+          poster="{{ block.settings.fallback_image | image_url: width: 2000 }}"
+        {% endif %}
+      >
+        <source src="{{ block.settings.video_url_mobile }}" type="video/mp4">
+      </video>
+    {% elsif block.settings.fallback_image %}
+      <img
+        src="{{ block.settings.fallback_image | image_url: width: 2000 }}"
+        alt="{{ block.settings.fallback_image_alt | escape }}"
+        class="responsive__fallback-image-{{ ai_gen_id }}"
+        loading="eager"
+        width="{{ block.settings.fallback_image.width }}"
+        height="{{ block.settings.fallback_image.height }}"
+      >
+    {% endif %}
+
+    {% if block.settings.wistia_video_id == blank and block.settings.video_url == blank and block.settings.wistia_video_id_mobile == blank and block.settings.video_url_mobile == blank and block.settings.fallback_image == blank %}
+      <div class="responsive__placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="responsive__overlay-{{ ai_gen_id }}"></div>
+
+  <div class="responsive__container-{{ ai_gen_id }}">
+    <div class="responsive__content-{{ ai_gen_id }}">
+      {% if block.settings.heading != blank %}
+        <h1 class="responsive__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h1>
+      {% endif %}
+
+      {% if block.settings.subheading != blank %}
+        <p class="responsive__subheading-{{ ai_gen_id }}">{{ block.settings.subheading }}</p>
+      {% endif %}
+
+      {% if block.settings.show_rating %}
+        <div class="responsive__rating-{{ ai_gen_id }}">
+          <div class="responsive__stars-{{ ai_gen_id }}">
+            {% assign rating_percentage = block.settings.rating_percentage %}
+            {% assign full_stars = rating_percentage | divided_by: 20 %}
+            {% assign remainder = rating_percentage | modulo: 20 %}
+            {% assign next_star = full_stars | plus: 1 %}
+            
+            {% for i in (1..5) %}
+              <span class="responsive__star-{{ ai_gen_id }}">
+                ★
+                {% if i <= full_stars %}
+                  <span class="responsive__star-fill-{{ ai_gen_id }}" style="width: 100%;">★</span>
+                {% elsif i == next_star and remainder > 0 %}
+                  {% assign partial_width = remainder | times: 5 %}
+                  <span class="responsive__star-fill-{{ ai_gen_id }}" style="width: {{ partial_width }}%;">★</span>
+                {% endif %}
+              </span>
+            {% endfor %}
+          </div>
+          {% if block.settings.rating_text != blank %}
+            <span class="responsive__rating-text-{{ ai_gen_id }}">{{ block.settings.rating_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.button_text != blank %}
+        <a href="{{ block.settings.button_link }}" class="responsive__button-{{ ai_gen_id }}">
+          {{ block.settings.button_text }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</video-hero-{{ ai_gen_id }}>
+
+{% if block.settings.wistia_video_id != blank or block.settings.wistia_video_id_mobile != blank %}
+  <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+{% endif %}
+
+<script>
+  (function() {
+    class VideoHero{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        const videos = this.querySelectorAll('.responsive__video-{{ ai_gen_id }}, .responsive__video-mobile-{{ ai_gen_id }}');
+        videos.forEach(function(video) {
+          video.play().catch(function(error) {
+            console.log('Video autoplay failed:', error);
+          });
+        });
+      }
+    }
+
+    customElements.define('video-hero-{{ ai_gen_id }}', VideoHero{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Video hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A better way to drink water, naturally."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "No plastic. No electricity. Just Gravity! Trusted by over 800,000 homes"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show rating",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "rating_percentage",
+      "label": "Rating percentage",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "%",
+      "default": 94,
+      "info": "0% = 0 stars, 100% = 5 stars. Example: 94% = 4.7 stars"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating text",
+      "default": "(4.72/5)"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Build your filter system"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Video - Desktop"
+    },
+    {
+      "type": "text",
+      "id": "wistia_video_id",
+      "label": "Wistia video ID (desktop)",
+      "info": "Enter your Wistia video ID (e.g., abc123def4). This takes priority over video URL."
+    },
+    {
+      "type": "text",
+      "id": "video_url",
+      "label": "Video URL (desktop)",
+      "info": "Upload video to Shopify Files and paste URL here. Used if Wistia ID is empty."
+    },
+    {
+      "type": "header",
+      "content": "Video - Mobile"
+    },
+    {
+      "type": "text",
+      "id": "wistia_video_id_mobile",
+      "label": "Wistia video ID (mobile)",
+      "info": "Enter your Wistia video ID for mobile. Leave empty to use desktop video."
+    },
+    {
+      "type": "text",
+      "id": "video_url_mobile",
+      "label": "Video URL (mobile)",
+      "info": "Upload mobile video to Shopify Files. Leave empty to use desktop video."
+    },
+    {
+      "type": "header",
+      "content": "Fallback"
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback image",
+      "info": "Shown if no video is provided or as poster image"
+    },
+    {
+      "type": "text",
+      "id": "fallback_image_alt",
+      "label": "Fallback image alt text"
+    },
+    {
+      "type": "header",
+      "content": "Layout - Desktop"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_desktop",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "content_vertical_alignment_desktop",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "section_height_desktop",
+      "label": "Section height",
+      "min": 400,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "section_padding_desktop",
+      "label": "Padding top & bottom",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "heading_size_desktop",
+      "label": "Heading size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_desktop",
+      "label": "Subheading size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "rating_size_desktop",
+      "label": "Rating size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_size_desktop",
+      "label": "Button size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "header",
+      "content": "Layout - Mobile"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment_mobile",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "content_vertical_alignment_mobile",
+      "label": "Vertical alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Top"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "Bottom"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "section_height_mobile",
+      "label": "Section height",
+      "min": 300,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "default": 600
+    },
+    {
+      "type": "range",
+      "id": "section_padding_mobile",
+      "label": "Padding top & bottom",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "heading_size_mobile",
+      "label": "Heading size",
+      "min": 20,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "subheading_size_mobile",
+      "label": "Subheading size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "rating_size_mobile",
+      "label": "Rating size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "button_size_mobile",
+      "label": "Button size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "label": "Content max width",
+      "min": 400,
+      "max": 900,
+      "step": 50,
+      "unit": "px",
+      "default": 650
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "Overlay opacity",
+      "min": 0,
+      "max": 0.7,
+      "step": 0.1,
+      "default": 0.5
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "star_color",
+      "label": "Star filled color",
+      "default": "#FFC107"
+    },
+    {
+      "type": "color",
+      "id": "star_empty_color",
+      "label": "Star empty color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "rating_text_color",
+      "label": "Rating text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Background",
+      "default": "#1f2a44"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Hover background",
+      "default": "#0f1a34"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "label": "Border width (desktop)",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#1f2a44"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_border_color",
+      "label": "Hover border color",
+      "default": "#0f1a34"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width_mobile",
+      "label": "Border width (mobile)",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Custom CSS"
+    },
+    {
+      "type": "html",
+      "id": "custom_css",
+      "label": "Custom CSS",
+      "info": "Add your custom CSS here. Target elements using classes like .responsive__heading"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video hero"
+    }
+  ]
+}
+{% endschema %}

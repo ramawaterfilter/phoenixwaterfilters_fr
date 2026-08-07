@@ -1,0 +1,43 @@
+/* custom-fonts.css.liquid
+   Declares Value Sans webfonts (uses existing theme assets) and applies site-wide.
+   Adjust filenames below only if your assets use different names.
+*/
+
+/* 1) Load weights from your theme assets */
+@font-face{
+  font-family: "Value Sans";
+  src: url({{ 'ValueSansPro-Regular.woff2' | asset_url }}) format("woff2"),
+       url({{ 'ValueSansPro-Regular.woff' | asset_url }}) format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Value Sans";
+  src: url({{ 'ValueSansPro-Medium.woff2' | asset_url }}) format("woff2"),
+       url({{ 'ValueSansPro-Medium.woff' | asset_url }}) format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Value Sans";
+  src: url({{ 'ValueSansPro-Bold.woff2' | asset_url }}) format("woff2"),
+       url({{ 'ValueSansPro-Bold.woff' | asset_url }}) format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2) Apply Value Sans site-wide (override theme defaults) */
+html, body, :root {
+  font-family: "Value Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* 3) Ensure common elements pick up the font */
+h1, h2, h3, h4, h5, h6,
+p, a, button, input, textarea, label, span {
+  font-family: "Value Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}

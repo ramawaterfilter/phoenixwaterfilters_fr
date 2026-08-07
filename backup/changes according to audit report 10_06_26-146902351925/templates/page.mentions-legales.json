@@ -1,0 +1,50 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17629333877497caaf": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_89ce117_feyHDn": {
+          "type": "ai_gen_block_89ce117",
+          "settings": {
+            "heading_text": "Enregistrement du produit",
+            "background_color": "#94bcd3",
+            "text_color": "#ffffff",
+            "font_size": 22,
+            "banner_height": 105
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_89ce117_feyHDn"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".ai-centered-banner-azxdot3ruoufrwwtwnaigenblock89ce117feyhdn {margin-bottom: 20px;}"
+      ],
+      "settings": {}
+    },
+    "custom_code_section_meYg6w": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<div id=\"ml-wrapper\">\n\n  <h1 id=\"ml-main-title\">Mentions Légales</h1>\n  <p id=\"ml-date-line\">Dernière mise à jour : mai 2026</p>\n\n  <div id=\"ml-section-publisher\" class=\"ml-section\">\n    <h3 class=\"ml-h3\">Ce site est publié par</h3>\n    <p class=\"ml-para\"><span class=\"ml-bold\">PHOENIX WATER FILTERS LTD</span></p>\n    <p class=\"ml-para\">Société enregistrée au Royaume-Uni</p>\n    <br>\n    <p class=\"ml-para\">SIRET: 980 517 692 00011</p>\n    <p class=\"ml-para\">Siège social : Carlton House, Aylmer Road, London E11 3AD, Royaume-Uni</p>\n    <p class=\"ml-para\">Numéro de TVA intracommunautaire : FR 55 9805 17692</p>\n    <br>\n    <p class=\"ml-para\"><span class=\"ml-bold\">Service client</span></p>\n    <p class=\"ml-para\">Vous pouvez nous contacter aux coordonnées suivantes :</p>\n    <p class=\"ml-para\">Email: soutien@phoenixwaterfilters.fr</p>\n    <p class=\"ml-para\">Téléphone : +44 20 8058 5660</p>\n  </div>\n\n  <div id=\"ml-section-hosting\" class=\"ml-section\">\n    <h3 class=\"ml-h3\">Hébergement</h3>\n    <p class=\"ml-para\">Ce site est hébergé par :</p>\n    <p class=\"ml-para\"><span class=\"ml-bold\">Shopify International Ltd</span></p>\n    <p class=\"ml-para\">2nd Floor, 1–2 Victoria Buildings,</p>\n    <p class=\"ml-para\">Haddington Road, Dublin 4, D04 XN32, Irlande</p>\n  </div>\n\n  <div id=\"ml-section-ip\" class=\"ml-section\">\n    <h2 class=\"ml-h2\">Propriété intellectuelle</h2>\n    <p class=\"ml-para\">L'ensemble du contenu de ce site (textes, images, graphismes, logos, vidéos, etc.) est la propriété exclusive de PHOENIX WATER FILTERS LTD ou de ses ayants droit. Toute reproduction, représentation, modification, publication, adaptation ou utilisation, en tout ou partie, des éléments du site, quel que soit le moyen ou le procédé utilisé, est strictement interdite sans autorisation préalable écrite de PHOENIX WATER FILTERS LTD.</p>\n    <br>\n    <p class=\"ml-para\">Le non-respect de cette interdiction constitue un acte de contrefaçon pouvant engager la responsabilité civile et pénale de son auteur (articles L.335-2 et suivants du Code de la propriété intellectuelle).</p>\n    <br>\n    <p class=\"ml-para ml-para-italic\">Les photographies et illustrations présentes sur le site sont non contractuelles.</p>\n  </div>\n\n  <div id=\"ml-section-liability\" class=\"ml-section\">\n    <h2 class=\"ml-h2\">Limitation de responsabilité</h2>\n    <p class=\"ml-para\">PHOENIX WATER FILTERS LTD s'efforce de fournir des informations aussi précises et à jour que possible. Toutefois, elle ne saurait être tenue responsable des omissions, des inexactitudes, des erreurs ou des carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>\n    <br>\n    <p class=\"ml-para\">PHOENIX WATER FILTERS LTD ne pourra être tenue responsable des dommages directs ou indirects liés à l'utilisation du site, y compris en cas de virus, de panne technique ou d'indisponibilité temporaire.</p>\n    <br>\n    <p class=\"ml-para\">Les liens hypertextes présents sur le site et dirigeant vers d'autres sites ne sauraient engager la responsabilité de PHOENIX WATER FILTERS LTD.</p>\n  </div>\n\n  <div id=\"ml-section-law\" class=\"ml-section\">\n    <h2 class=\"ml-h2\">Droit applicable</h2>\n    <p class=\"ml-para\">Le présent site et les présentes mentions légales sont régis par le droit du Royaume-Uni. En cas de litige, les tribunaux du Royaume-Uni seront seuls compétents.</p>\n  </div>\n\n  <div id=\"ml-footer-box\">\n    <p>En accédant et en naviguant sur ce site, vous acceptez pleinement de vous conformer aux présentes mentions légales.</p>\n    <p>Ces mentions peuvent être mises à jour ; nous vous invitons donc à les consulter régulièrement.</p>\n  </div>\n\n</div>",
+        "custom_css": "#ml-wrapper {\n    max-width: 860px;\n    margin: 0 auto;\n    padding: 2.5rem 2rem 3rem;\n    font-family: Arial, sans-serif;\n    color: #333;\n    background-color: #fff;\n  }\n\n  #ml-main-title {\n    font-size: 32px;\n    font-weight: 600;\n    color: #1a3a5c;\n    text-align: center;\n    margin-bottom: 0.4rem;\n  }\n\n  #ml-date-line {\n    text-align: center;\n    font-size: 13px;\n    color: #777;\n    margin-bottom: 2.5rem;\n  }\n\n  .ml-section {\n    margin-bottom: 2rem;\n  }\n\n  .ml-h3 {\n    font-size: 25px;\n    font-weight: 600;\n    color: #2a6496;\n    padding-top: 10px;\n    margin-bottom: 0.8rem;\n  }\n\n  .ml-h2 {\n    font-size: 25px;\n    font-weight: 600;\n    color: #2a6496;\n    padding-top: 10px;\n    margin-bottom: 0.8rem;\n  }\n\n  .ml-para {\n    font-size: 14px;\n    line-height: 1.7;\n    color: #333;\n    margin-bottom: 0.3rem;\n  }\n\n  .ml-para-italic {\n    font-size: 13.5px;\n    font-style: italic;\n    color: #666;\n    margin-top: 0.5rem;\n  }\n\n  .ml-bold {\n    font-weight: 700;\n  }\ndiv#ml-footer-box p {\n    margin: 0px;\n}\n  #ml-footer-box {\n    margin-top: 2.5rem;\n    border: 1px solid #e0e0e0;\n    border-radius: 8px;\n    background-color: #E0F2FE;\n    padding: 1.2rem 2rem;\n    text-align: center;\n    font-size: 13px;\n    color: #555;\n    line-height: 1.7;\n  }",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    }
+  },
+  "order": [
+    "17629333877497caaf",
+    "custom_code_section_meYg6w"
+  ]
+}

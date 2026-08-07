@@ -1,0 +1,1078 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero_og_zxMJ8i": {
+      "type": "product-hero-og",
+      "disabled": true,
+      "settings": {}
+    },
+    "product-hero": {
+      "type": "product-hero",
+      "settings": {
+        "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
+        "countdown_time": "",
+        "countdown_products": [],
+        "product_boost": []
+      }
+    },
+    "9600faf5-31b8-4d01-817d-b44b276a1d60": {
+      "type": "accordion",
+      "blocks": {
+        "text_HMCPT8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "DescripciÃ³n",
+            "answer": "{{ product.description }}"
+          }
+        },
+        "text_VnAqfM": {
+          "type": "text",
+          "settings": {
+            "question": "Contenido de la caja",
+            "answer": "{{ product.metafields.custom.whatthebox | metafield_tag }}"
+          }
+        },
+        "text_DPA6Va": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Garantía",
+            "answer": "<p>Todas las demás piezas y accesorios cuentan con una <strong>garantía de 6 meses.</strong><br/><br/>Estas garantías le protegen frente a cualquier defecto de materiales o fabricación.</p>"
+          }
+        },
+        "text_C9YBez": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Envíos y devoluciones",
+            "answer": "<p><strong>Garantía de devolución del dinero de 100 días :</strong><br/><br/>La garantía de devolución del dinero de 100 días se aplica exclusivamente a los sistemas de filtración comprados directamente en <a href=\"https://phoenixwaterfilters.com/\" target=\"_blank\" title=\"https://phoenixwaterfilters.com/\">https://phoenixwaterfilters.com/</a>.<br/><br/><strong>Proceso de devolución:</strong><br/><br/>Para iniciar una devolución, los clientes deben comunicarse con nuestro equipo de atención al cliente y proporcionar detalles válidos del pedido en el sitio web. Una vez verificado, el equipo de soporte aprobará la devolución y proporcionará instrucciones detalladas sobre cómo y dónde enviar el producto.<br/><br/><strong>Notas importantes:</strong><br/><br/>No se aceptarán productos devueltos sin autorización previa.<br/>Los productos deben devolverse en su embalaje original y sin daños.<br/><br/><strong>Envíos:</strong><br/><br/>La mayoría de los pedidos se procesan y envían en un plazo de 3 a 7 días laborables. Gracias por su paciencia.<br/>Realizamos envíos a todo Estados Unidos.<br/>El envío gratuito se aplica a pedidos nacionales de clientes minoristas por un importe igual o superior a 99,99 $.<br/>Los pedidos suelen enviarse mediante UPS Ground, USPS Priority Mail o USPS First Class Mail.<br/><br/><strong>Tenga en cuenta: </strong>UPS no realiza entregas en apartados de correos ni direcciones militares.<br/><br/><strong>Pedidos y productos dañados:</strong><br/><br/>Si su pedido llega dañado, defectuoso o incorrecto (por ejemplo, con filtros rotos o de un tamaño equivocado), póngase en contacto con Atención al Cliente en los 4 días siguientes a la entrega llamando al 1 (800) 917-0455 o escribiendo a hello@phoenixwaterfilters.com. Haremos todo lo posible por corregir su pedido. Phoenix Gravity cubrirá los gastos de devolución de cualquier artículo incorrecto. Al ponerse en contacto con nosotros, incluya el identificador y la fecha de su pedido.<br/><br/><strong>Política de cancelación:</strong><br/><br/>Los pedidos no se pueden cancelar una vez enviados. La confirmación del envío se remitirá a la dirección de correo electrónico registrada.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_HMCPT8",
+        "text_VnAqfM",
+        "text_DPA6Va",
+        "text_C9YBez"
+      ],
+      "settings": {
+        "heading": "",
+        "content": "",
+        "show_shipping": true,
+        "accordion_styles": "full-width",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "secondary_details_qTHLFy": {
+      "type": "secondary-details",
+      "settings": {
+        "style": "bg-white",
+        "heading": "Tecnología revolucionaria de filtración por nanoadsorción",
+        "content": "<p><br/>Los filtros tradicionales simplemente atrapan los contaminantes no deseados, lo que les permite acumularse y multiplicarse, convirtiéndose en un caldo de cultivo para los contaminantes en tan solo dos semanas, contaminando instantáneamente cualquier agua que pase a través de ellos. Para resolver este problema crucial, hemos desarrollado una revolucionaria tecnología de \"nanoadsorción\". <br/><br/><strong>¿Cómo funciona?</strong><br/><br/>Primero utilizamos carbón activado granular procedente de cáscaras de coco naturales para eliminar sustancias químicas, toxinas y metales pesados como el zinc y el plomo. Después, impregnamos cada filtro con adsorbentes de carbón para impedir el crecimiento de contaminantes en su interior.</p>",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": ""
+      }
+    },
+    "custom_html_JMHGbr": {
+      "type": "custom-html",
+      "custom_css": [
+        "wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none;}"
+      ],
+      "name": "Custom Embed Video",
+      "settings": {
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
+      }
+    },
+    "video_image_Vm8h49": {
+      "type": "video-image",
+      "blocks": {
+        "text_CRLNDC": {
+          "type": "text",
+          "settings": {
+            "video_id": "jr37r9792m"
+          }
+        }
+      },
+      "block_order": [
+        "text_CRLNDC"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "product_feature_ckk7jj": {
+      "type": "product-feature",
+      "blocks": {
+        "text_W8yFr3": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Con el sistema completo, siempre tendrá preparados sus recambios."
+          }
+        },
+        "text_nNPPfk": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Agua potable segura y de excelente sabor todos los días del año."
+          }
+        },
+        "text_PhRqiE": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Perfecto para casas, pisos, oficinas y autocaravanas."
+          }
+        },
+        "text_WG3dke": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Elimina el 99,9 % de las toxinas y los metales pesados del agua."
+          }
+        }
+      },
+      "block_order": [
+        "text_W8yFr3",
+        "text_nNPPfk",
+        "text_PhRqiE",
+        "text_WG3dke"
+      ],
+      "settings": {
+        "style": "bg-light",
+        "heading": "Disfrute de agua potable segura y deliciosa todos los días del año con nuestro plan completo",
+        "content": "<p>Con los filtros de agua Phoenix Gravity puede disfrutar de agua segura y deliciosa todos los días del año sin tener que recordar cuándo sustituir el filtro. Entregaremos los elementos filtrantes de carbón cada año y los recambios del medio FluoRid para los elementos POSTreat cada 4 meses, directamente en su domicilio. Así, su filtro Phoenix Gravity funcionará con la máxima eficacia y sin obstrucciones, eliminando el 99,9 % de las toxinas perjudiciales que podrían poner en riesgo a su familia.</p>",
+        "column_img": "shopify://shop_images/filter_bg.png",
+        "buttonlink": "#addtocart",
+        "buttontext": "AÃ±adir a la cesta",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "e7fc5ca3-7826-4ae3-8fda-deda4cc2fcf9": {
+      "type": "copy-image",
+      "blocks": {
+        "text_Hh7Mbt": {
+          "type": "text",
+          "settings": {
+            "feature_text": "10 años de garantía para el sistema"
+          }
+        },
+        "text_gLW6xT": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Filtra hasta 12 meses de agua antes de sustituirlo"
+          }
+        }
+      },
+      "block_order": [
+        "text_Hh7Mbt",
+        "text_gLW6xT"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Diseñado para durar con materiales de primera calidad",
+        "content": "<p>La mayoría de los filtros están hechos de plástico, que puede filtrar sustancias químicas nocivas al agua potable. Por el contrario, utilizamos filtración de carbón natural en horno procedente de la provincia del sur de España, junto con carbón activado granular derivado de cáscaras de coco naturales, para eliminar impurezas y metales pesados ​​como plomo y zinc. Toda esta filtración natural avanzada está alojada en acero inoxidable AISI 304 de alta calidad apto para uso alimentario. El resultado es un sistema de filtración refinado y duradero que proporciona agua potable limpia y fresca durante muchos años.<br/><br/></p>",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "video_image_BYcqii": {
+      "type": "video-image",
+      "blocks": {
+        "text_t8Q3Ae": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/modern-kitchen.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_t8Q3Ae"
+      ],
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "d978efab-7803-45c3-a62d-eea1576f94a8": {
+      "type": "copy-image",
+      "blocks": {
+        "text_HMm4Qe": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Ahorre miles de dólares en botellas o en un sistema doméstico"
+          }
+        },
+        "text_KdKK6F": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Less than 5 cents per gallon"
+          }
+        },
+        "text_6KYr33": {
+          "type": "text",
+          "settings": {
+            "feature_text": "No plumbing required"
+          }
+        },
+        "text_wfXFK6": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Portátil para llevarlo a cualquier lugar"
+          }
+        }
+      },
+      "block_order": [
+        "text_HMm4Qe",
+        "text_KdKK6F",
+        "text_6KYr33",
+        "text_wfXFK6"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Ahorre miles de dólares en agua embotellada o en un sistema para toda la casa",
+        "content": "<p>El agua embotellada puede ser limpia, pero es cara. Puede costar más de $1,000 por año, generar desechos que dañan el medio ambiente y ocupar un espacio valioso en su hogar. Podría instalar un sistema de filtración en el hogar, pero también es costoso: requiere una inversión inicial sustancial, mantenimiento y reparaciones continuos. Además, no son portátiles si los alquila o decide mudarse.<br/><br/>Los filtros de agua Phoenix Gravity ofrecen una solución más cómoda y asequible: agua filtrada y deliciosa todos los días, sin las molestias ni el coste del agua embotellada o de los grandes sistemas domésticos.</p>",
+        "column_img": "shopify://shop_images/filter-system.png",
+        "video_id": "",
+        "img_width": 0,
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "bottom",
+        "section_randoimg": "shopify://shop_images/water-filter-parts.png"
+      }
+    },
+    "copy_image_DfRFKh": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "ADVERTENCIA: beber agua del grifo enferma cada año a 7,2 millones de estadounidenses",
+        "content": "<p>Cada año, millones de estadounidenses enferman por ingerir sustancias químicas perjudiciales presentes en el agua del grifo. En Baltimore se detectó recientemente un parásito en el agua potable; en el valle de Coachella, California, el agua de surtidores de refrescos de establecimientos de comida rápida dio positivo en salmonela; y en Iowa se encontraron niveles peligrosos de nitratos y alacloro.<br/><br/>Estos contaminantes se han relacionado con una variedad de problemas de salud graves, que incluyen daño hepático y renal, enfermedades de la tiroides, cáncer e incluso el \"síndrome del bebé azul\" en los bebés.<br/><br/>Los filtros de agua Phoenix Gravity utilizan tecnología avanzada de filtración de nanotoxinas para eliminar el 99,9 % de los contaminantes del agua del grifo, lo que la hace segura para beber sin importar dónde viva en los EE. UU.</p>",
+        "video_id": "",
+        "large_image": "img-lrg",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "section_bgimg": "shopify://shop_images/tap-water.jpg",
+        "bg_image_style": "cover",
+        "section_randoimg_position": "top"
+      }
+    },
+    "copy_image_yifhAn": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "¿Por qué arriesgarse a consumir toxinas perjudiciales si puede disfrutar de agua fresca, limpia y completamente segura?",
+        "content": "<p>El agua del grifo podría estar contaminada sin que usted lo supiera. Los gérmenes y las sustancias químicas pueden proceder de explotaciones agrícolas cercanas, desbordamientos de aguas residuales, actividades industriales o aguas pluviales. Sustancias perjudiciales como el plomo, el cobre y los nitratos pueden llegar al agua potable en el origen o incluso después del tratamiento, dentro de la red de distribución.<br/><br/>¿Por qué correr el riesgo cuando no sabes lo que se esconde en el agua? Los filtros de agua Phoenix Gravity eliminan el 99,9 % de los contaminantes al instante, proporcionando agua fresca y de excelente sabor y tranquilidad para toda su familia.</p>",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "#addtocart",
+        "buttontext": "AÃ±adir a la cesta",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "video_image_iLjpka": {
+      "type": "video-image",
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "4f7dacc7-7ed5-4167-a5d6-1a4a8160213c": {
+      "type": "comparison-table",
+      "blocks": {
+        "12071b99-c9cf-44f0-8f90-f17e668827de": {
+          "type": "text",
+          "settings": {
+            "feature": "Affordable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "yes"
+          }
+        },
+        "ff105aa8-88b6-413f-8760-39ae19b9c412": {
+          "type": "text",
+          "settings": {
+            "feature": "Portátil",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "64a5c03c-787f-4ebc-8ed9-74874085b166": {
+          "type": "text",
+          "settings": {
+            "feature": "Acero inoxidable duradero",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "d350ab4a-9aaf-49d4-9384-374210afd2e5": {
+          "type": "text",
+          "settings": {
+            "feature": "100-day Risk-Free Trial",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "30fa03b0-29b6-4d12-afa4-2c65ba827c48": {
+          "type": "text",
+          "settings": {
+            "feature": "Fácil de mantener",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_VbAUDk": {
+          "type": "text",
+          "settings": {
+            "feature": "Large Capacity",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_U7Yanr": {
+          "type": "text",
+          "settings": {
+            "feature": "No Plumbing Required",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        }
+      },
+      "block_order": [
+        "12071b99-c9cf-44f0-8f90-f17e668827de",
+        "ff105aa8-88b6-413f-8760-39ae19b9c412",
+        "64a5c03c-787f-4ebc-8ed9-74874085b166",
+        "d350ab4a-9aaf-49d4-9384-374210afd2e5",
+        "30fa03b0-29b6-4d12-afa4-2c65ba827c48",
+        "text_VbAUDk",
+        "text_U7Yanr"
+      ],
+      "settings": {
+        "heading": "La forma más cómoda y asequible de disfrutar de agua potable pura y limpia en casa",
+        "number_of_comparisons": "3",
+        "style": "style-2",
+        "feature_header": "Features",
+        "company_name": "Filtro de agua Phoenix",
+        "comparison_1": "Sistema doméstico",
+        "comparison_2": "Agua embotellada",
+        "comparison_3": "Pitchers",
+        "buttonlink": "#addtocart",
+        "buttontext": "Añadir a la cesta",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "testimonials_Wxzw4P": {
+      "type": "testimonials",
+      "blocks": {
+        "text_GAWGWC": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Estoy muy satisfecho de haber elegido este sistema después de investigar cómo purificar y destilar el agua. Analicé opciones eléctricas y de vapor natural, pero ambas requerían mucho tiempo y energía, hasta cuatro horas por ciclo, y descubrí que utilizaban materiales de baja calidad.</p>",
+            "reviewer": "Victoria"
+          }
+        },
+        "text_NiFnib": {
+          "type": "text",
+          "settings": {
+            "quote": "",
+            "reviewer": ""
+          }
+        },
+        "text_VmcM3T": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Buscábamos un filtro robusto, fácil de montar y mantener, duradero y eficaz. Cumple todos nuestros requisitos.</p>",
+            "reviewer": "Andrew Narduzzi"
+          }
+        },
+        "text_9jBUht": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Compré uno en Amazon y debo decir que también tenía otro de una marca conocida, pero Phoenix es mejor. La atención al cliente de la otra empresa fue muy deficiente y poco profesional cuando tuve un problema con un pedido que no llegó.</p>",
+            "reviewer": "David"
+          }
+        }
+      },
+      "block_order": [
+        "text_GAWGWC",
+        "text_NiFnib",
+        "text_VmcM3T",
+        "text_9jBUht"
+      ],
+      "settings": {
+        "layout": "style-1",
+        "heading": "🇺🇸 Los estadounidenses confían en nuestros filtros de agua desde hace más de 50 años",
+        "paragraph": "",
+        "sub_header": "Basado en las reseñas de clientes",
+        "button_text": "Ver todas las reseÃ±as",
+        "button_url": "shopify://pages/reviews",
+        "button_aftertext": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "cards_pUAXFa": {
+      "type": "cards",
+      "blocks": {
+        "text_hyBUkK": {
+          "type": "text",
+          "settings": {
+            "heading": "Filtra el 99,9% de los contaminantes",
+            "copy": "<p>El acero inoxidable AISI 304 es liviano, resistente al óxido y duradero.</p>",
+            "icon": "shopify://shop_images/icon-water.svg",
+            "video_id": ""
+          }
+        },
+        "text_4XRwdm": {
+          "type": "text",
+          "settings": {
+            "heading": "Ahorre una fortuna en botellas o en un sistema para toda la casa",
+            "copy": "<p>¿Por qué gastar miles de dólares en agua embotellada o comprar un costoso sistema doméstico cuando puede disfrutar de agua segura y deliciosa por una fracción del precio?</p>",
+            "icon": "shopify://shop_images/icon-bottle_ff07ad97-f9a4-42a8-a9bb-ee0b172d9458.svg",
+            "video_id": ""
+          }
+        },
+        "text_BzeGeE": {
+          "type": "text",
+          "settings": {
+            "heading": "Ligero y fácil de mover o transportar",
+            "copy": "<p>Los filtros de agua Phoenix son ligeros y portátiles: puede llevarlos de casa al trabajo, de acampada y de vuelta.</p>",
+            "icon": "shopify://shop_images/icon-scales_bbf132a3-2ee0-4790-b250-ec80e2bd5d7f.svg",
+            "video_id": ""
+          }
+        },
+        "text_6fa9wW": {
+          "type": "text",
+          "settings": {
+            "heading": "Fabricado para durar 10 años o más",
+            "copy": "<p>Fabricados en acero inoxidable AISI 304 de calidad, los filtros de agua Phoenix Gravity cuentan con una garantía de 10 años para su tranquilidad.</p>",
+            "icon": "shopify://shop_images/icon-time_22302494-3a88-4cf5-b70b-b40949aed71d.svg",
+            "video_id": ""
+          }
+        },
+        "text_bA9cTL": {
+          "type": "text",
+          "settings": {
+            "heading": "Respaldado por más de 50 años de experiencia",
+            "copy": "<p>Llevamos décadas fabricando filtros de agua líderes en el sector y todos nuestros productos están respaldados por miles de horas de investigación y desarrollo.</p>",
+            "icon": "shopify://shop_images/icon-approval.svg",
+            "video_id": ""
+          }
+        },
+        "text_b79geA": {
+          "type": "text",
+          "settings": {
+            "heading": "Disfrute de agua de excelente sabor todos los días",
+            "copy": "<p>¿Está cansado del mal sabor del agua o de que huela a cloro y otras sustancias químicas? Disfrute de un agua pura y tan deliciosa que no querrá beber otra cosa.</p>",
+            "icon": "shopify://shop_images/icon-glass_902848fa-b2f9-4cf7-ac7c-231521a3b76b.svg",
+            "video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_hyBUkK",
+        "text_4XRwdm",
+        "text_BzeGeE",
+        "text_6fa9wW",
+        "text_bA9cTL",
+        "text_b79geA"
+      ],
+      "settings": {
+        "style": "light-cards",
+        "heading": "Nunca había sido tan fácil disfrutar de agua potable segura y deliciosa todos los días del año.",
+        "paragraph": "",
+        "section_bgimg": "shopify://shop_images/filter-background-light.jpg",
+        "buttontext": "",
+        "buttonlink": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "video_image_z693Qz": {
+      "type": "video-image",
+      "blocks": {
+        "text_UVMJ6W": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom1.png"
+          }
+        },
+        "text_CKeELp": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom2.jpg"
+          }
+        },
+        "text_GAE8HA": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom3.png"
+          }
+        },
+        "text_CKky6b": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom4.png"
+          }
+        },
+        "text_6RBiAj": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom_5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_UVMJ6W",
+        "text_CKeELp",
+        "text_GAE8HA",
+        "text_CKky6b",
+        "text_6RBiAj"
+      ],
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "copy_image_JCKnek": {
+      "type": "copy-image",
+      "disabled": true,
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "100-Day Free Trial",
+        "content": "<p>¿Le preocupa que el filtro de agua por gravedad Phoenix sea demasiado bueno para ser verdad? ¿No cree que realmente eliminará tantos contaminantes como prometemos?<br/><br/>Confiamos plenamente en nuestro producto, por eso puede probar el filtro en casa durante 100 días sin riesgo. Si no queda completamente satisfecho con la pureza del agua, devuélvalo en un plazo de 100 días y recibirá un reembolso íntegro, sin preguntas.<br/><br/>*Se aplican términos y condiciones<br/></p>",
+        "column_img": "shopify://shop_images/phoenix-guarantee.svg",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "product_reviews_J4aYbK": {
+      "type": "product-reviews",
+      "custom_css": [
+        "@media (min-width: 786px) {.jdgm-rev-widg__title {margin-top: 0; font-size: 50px; }}"
+      ],
+      "settings": {
+        "section_heading": ""
+      }
+    },
+    "accordion_tabs_kBhDkz": {
+      "type": "accordion-tabs",
+      "blocks": {
+        "tab_HPXac4": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Instalación y mantenimiento"
+          }
+        },
+        "question_answer_K38zCJ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Es imprescindible cebar los elementos filtrantes de carbón?",
+            "answer": "<p>Cebar los elementos filtrantes de carbón es el primer paso para garantizar que los filtros queden totalmente libres de residuos del proceso de fabricación. Estos residuos son completamente normales y seguros, pero pueden enturbiar el agua si los filtros no se ceban correctamente.</p><p>Recomendamos cebar los elementos filtrantes de carbón durante al menos tres minutos. Si no se ceban lo suficiente, las cuatro primeras tandas de agua filtrada pueden contener partículas blancas y turbias; puede desecharlas sin riesgo.</p>"
+          }
+        },
+        "question_answer_YH9Tyg": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Por qué el agua está turbia?",
+            "answer": "<p>No se preocupe: que el agua esté turbia tras la instalación inicial es normal y completamente inocuo. Se trata simplemente de polvo residual seguro procedente del proceso de fabricación. Puede ocurrir si los filtros no se han cebado correctamente; recomendamos cebarlos por completo (véase la información anterior).</p><p>Si no se ha cebado, el agua puede tardar unas cuatro tandas de filtrado en aclararse.</p>"
+          }
+        },
+        "question_answer_jEVb8T": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cuánto duran los elementos filtrantes de carbón?",
+            "answer": "<p>Recomendamos sustituir los elementos filtrantes de carbón cada 12 meses. </p>"
+          }
+        },
+        "question_answer_iD9QdM": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cuánto duran los elementos filtrantes POSTreat para eliminar el fluoruro?",
+            "answer": "<p>Nuestros elementos filtrantes POSTreat para eliminar el fluoruro están fabricados en acero inoxidable AISI 304 y diseñados para durar años; por eso incluimos una garantía de un año.</p><p>El medio filtrante patentado FluoRid dura hasta 1060 galones y debe sustituirse aproximadamente cada 4 meses. </p><p>También ofrecemos una suscripción para los recambios del medio filtrante: le avisaremos cuando corresponda sustituirlo. </p>"
+          }
+        },
+        "question_answer_jQNRA4": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cuánto dura el medio FluoRid del POSTreat?",
+            "answer": "<p>La vida útil de un par de elementos filtrantes POSTreat para eliminar el fluoruro es de hasta 1060 galones. Se recomienda sustituir el \"recambio del medio FluoRid\" cada 4-6 meses.</p>"
+          }
+        },
+        "question_answer_nfPQrG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Podré montar el sistema y cambiar los filtros por mi cuenta?",
+            "answer": "<p>¡Por supuesto! Nuestros sistemas están diseñados para que el montaje sea muy sencillo e incluyen todo lo necesario. Puede hacerlo con sus propias manos, sin herramientas especializadas, fontaneros ni electricistas.</p><p>Cada unidad incluye instrucciones completas y siempre estamos disponibles para ayudarle. </p>"
+          }
+        },
+        "question_answer_X8BdNU": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mi filtro de agua Phoenix Gravity gotea entre la cámara superior y la inferior. ¿Qué significa?",
+            "answer": "<p>Esto se debe a que el sistema de filtración se ha llenado en exceso. Para evitarlo, compruebe cuánta agua hay en la cámara inferior antes de llenar la superior.</p><p>Cuando conozca su ritmo de consumo, rellenarlo le resultará completamente natural.</p><p>También vendemos un grifo de acero inoxidable con indicador de nivel que permite ver el nivel del agua desde el exterior.  </p>"
+          }
+        },
+        "question_answer_UDnhbf": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Con qué frecuencia debo cambiar los filtros?",
+            "answer": "<p>Depende de la frecuencia de uso y de la calidad del agua de entrada. Como orientación, recomendamos sustituirlos en los siguientes plazos:</p><p>Elementos filtrantes de carbón: 12 meses.</p><p>POSTreat (y recambio del medio FluoRid): 4 meses</p><p>También ofrecemos una suscripción con un 5 % de descuento en cada pedido. Nosotros recordaremos cuándo debe cambiar el filtro para que usted no tenga que hacerlo.</p>"
+          }
+        },
+        "tab_WjcFUA": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Filtración"
+          }
+        },
+        "question_answer_yUixgf": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cómo funcionan los filtros?",
+            "answer": "<p>Utilizamos acero inoxidable AISI 304 de la más alta calidad, carbón de coco natural y otros materiales naturales. ¡Además de la poderosa fuerza de la gravedad! Nuestro avanzado sistema de filtración elimina hasta el 99,99 % de los contaminantes habituales y retiene hasta el 100 % de los nutrientes.</p>"
+          }
+        },
+        "question_answer_TwmjtY": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Qué eliminan realmente los filtros?",
+            "answer": "<p>Los elementos filtrantes de carbón Phoenix Gravity están hechos de cáscaras de coco puras, que son un recurso sostenible y renovable. El carbón de los filtros está activado, lo que significa que tiene una gran superficie y es muy poroso. Esto le permite atrapar una amplia gama de contaminantes, incluidos cloro, metales pesados ​​y otras impurezas. </p><p>Los filtros de carbón Phoenix Gravity eliminan microplásticos, PFAS, hormonas y residuos farmacéuticos del agua. Están diseñados para proporcionar agua limpia, sin olores y de excelente sabor. No liberan sustancias químicas ni subproductos perjudiciales y son muy eficaces para eliminar el cloro y otros compuestos orgánicos volátiles. Un par de elementos filtrantes de carbón puede filtrar muchos galones de agua y proporcionar agua potable segura y saludable.</p>"
+          }
+        },
+        "question_answer_9yMg4X": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Eliminan los filtros Phoenix Gravity los residuos farmacéuticos?",
+            "answer": "<p>Sí, hasta un 99,99 %. Nuestros elementos filtrantes de carbón principales se han sometido a pruebas independientes frente a numerosos compuestos orgánicos volátiles, como 1,4-diclorobenceno, 2-butanona, acetona, cloruro de alilo y muchos más.</p>"
+          }
+        },
+        "question_answer_YaqX9K": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Eliminan los filtros el fluoruro?",
+            "answer": "<p>Sí. Hemos diseñado un filtro especializado llamado POSTreat que elimina más del 95 % del fluoruro del agua del grifo.</p><p>Fabricado en acero inoxidable AISI 304, es totalmente reutilizable y rellenable con nuestro recambio del medio POSTreat FluoRid. El POSTreat debe utilizarse junto con los elementos filtrantes de carbón principales.</p>"
+          }
+        },
+        "question_answer_8w4QRz": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Eliminan del agua los elementos de carbón Phoenix los ftalatos?",
+            "answer": "<p>Aunque no hemos realizado pruebas específicas sobre la eliminación de ftalatos, nuestros elementos filtrantes Phoenix están fabricados con carbón de coco activado de la máxima calidad, conocido por su eficacia para adsorber ftalatos del agua. Mejoramos y probamos nuestros filtros continuamente.</p>"
+          }
+        },
+        "question_answer_TYE6gG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Eliminan los filtros Phoenix Gravity los estrógenos?",
+            "answer": "<p>Aunque no hemos realizado pruebas específicas sobre la eliminación de estrógenos, nuestros filtros Phoenix están fabricados con carbón de coco activado, conocido por su eficacia para adsorber estrógenos del agua. Mejoramos y probamos nuestros filtros continuamente.</p>"
+          }
+        },
+        "question_answer_6C7C4q": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cómo se comparan nuestros filtros por gravedad y elementos filtrantes con otros?",
+            "answer": "<p>Somos uno de los líderes en filtración por gravedad avanzada. Con más de 50 años de experiencia en la fabricación interna, tenemos control total sobre el proceso y la calidad de nuestros filtros y elementos filtrantes. Estamos enormemente orgullosos del esfuerzo que nos ha supuesto convertirnos en un fabricante líder de Filtros de Agua por Gravedad.</p>"
+          }
+        },
+        "question_answer_rzDw8m": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Son nuestros filtros tan completos como los de Berkey?",
+            "answer": "<p>¡Absolutamente! Hemos realizado pruebas exhaustivas e independientes en nuestros filtros para detectar una variedad de contaminantes químicos como plomo, cloro, cromo, compuestos orgánicos volátiles y 100 más.</p><p>Es más, con más de 50 años de experiencia en fabricación interna, somos uno de los principales fabricantes mundiales de sistemas de filtración por gravedad de acero inoxidable AISI 304. También tenemos control total sobre el proceso y la calidad de nuestros filtros y elementos filtrantes de repuesto. Estamos enormemente orgullosos del esfuerzo que nos ha supuesto convertirnos en el fabricante líder mundial de filtros de agua por gravedad.</p>"
+          }
+        },
+        "question_answer_XdWRAV": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Reducen los filtros Phoenix Gravity los TDS?",
+            "answer": "<p>TDS significa sólidos disueltos totales y se mide en partes por millón (ppm) o partes por mil millones (ppb). Es una medida del contenido orgánico e inorgánico del agua, incluidos minerales y nutrientes.</p><p>El agua natural presenta una lectura de TDS por los minerales y nutrientes que recoge de las rocas y el suelo por los que fluye. Generalmente se acepta que 300 ppm es un buen contenido mineral. No reducimos deliberadamente los TDS a cero porque queremos conservar las vitaminas y los minerales naturales que el organismo necesita.</p>"
+          }
+        },
+        "question_answer_6UmfCk": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Qué contiene la caja de los elementos filtrantes?",
+            "answer": "<p>Los elementos filtrantes de carbón Phoenix Gravity incluyen los siguientes accesorios: 1) elementos filtrantes con tuercas de mariposa y arandelas premontadas; 2) grifo de acero inoxidable AISI 304; 3) pomo de la tapa; 4) un juego de arandelas y una tuerca de mariposa de repuesto; 5) tapones de orificio de repuesto; y 6) manual de instrucciones.</p>"
+          }
+        },
+        "question_answer_N8dCix": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Eliminan los filtros Phoenix Gravity la dureza del agua?",
+            "answer": "<p>No. Los elementos filtrantes de carbón Phoenix están diseñados para eliminar hasta el 99,99 % del cloro, el plomo y más de 100 sustancias no deseadas del agua potable.</p>"
+          }
+        },
+        "tab_iwXnJF": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Envíos y devoluciones"
+          }
+        },
+        "question_answer_zVFWhQ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Dónde realiza envíos Phoenix Gravity?",
+            "answer": "<p>Actualmente realizamos envíos a Estados Unidos. Estamos trabajando para llegar a más destinos.</p>"
+          }
+        },
+        "question_answer_JTNDKd": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cuál es la política de devoluciones y cambios?",
+            "answer": "<p>Aceptamos devoluciones iniciadas durante los 30 días posteriores a la compra. Usted será responsable de devolver el artículo de forma segura; deberá llegar en condiciones aptas para la reventa y en su embalaje original.</p><p>Una vez aceptada la devolución, efectuaremos el reembolso mediante el método de pago original en un plazo de 10 días laborables. También ofrecemos una garantía de devolución del dinero de 100 días para nuestros sistemas completos de filtración por gravedad.</p>"
+          }
+        },
+        "question_answer_4GFfqF": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mi artículo ha llegado dañado o es incorrecto. ¿Qué puedo hacer?",
+            "answer": "<p>Envíe una fotografía de su pedido completo, incluido el embalaje junto con su número de pedido, a nuestro equipo de soporte en hello@phoenixwaterfilters.com, y nos comunicaremos con usted con prioridad dentro de las 24 horas.</p>"
+          }
+        },
+        "tab_RzNhx4": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Garantía y devolución del dinero durante 100 días"
+          }
+        },
+        "question_answer_Adrh9b": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cómo funciona la garantía de devolución del dinero de 100 días?",
+            "answer": "<p>La garantía de devolución del dinero de 100 días solo se aplica a los sistemas Phoenix Gravity adquiridos en nuestro sitio web. El periodo de prueba no se aplica a filtros de repuesto ni accesorios comprados por separado. </p><p><strong>Así funciona:</strong></p><p>Compre su sistema de filtración de agua Phoenix Gravity en nuestro sitio web. Cuando lo reciba, empiece a utilizarlo de inmediato.</p><p>Si no se enamora de su sistema Phoenix Gravity dentro de los 100 días de uso a partir de la fecha de entrega, comuníquese con nuestro equipo de soporte para iniciar una devolución. La devolución debe iniciarse dentro de los 100 días siguientes a la fecha de compra.</p><p>El sistema debe devolverse completo, con todas sus piezas y el embalaje original. La carcasa de acero inoxidable AISI 304 no debe presentar abolladuras ni otros daños. Los elementos filtrantes no deben estar agrietados ni dañados cuando recibamos la devolución.</p><p>Tras recibir el sistema de forma segura e inspeccionar su estado, nos pondremos en contacto con usted para iniciar el reembolso íntegro mediante el método de pago original. Este proceso puede tardar hasta 10 días laborables.</p><p><a href=\"/pages/contact-us\" title=\"Contacto\">Consúltenos sobre la garantía de devolución del dinero de 100 días.</a></p>"
+          }
+        },
+        "question_answer_Th8mED": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Es válida la política de devolución de 100 días si compro en Amazon?",
+            "answer": "<p>No. Para beneficiarse de la garantía de devolución del dinero de 100 días, debe comprar el sistema de filtración Phoenix Gravity en nuestro sitio web.</p>"
+          }
+        },
+        "question_answer_HFdwpa": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cómo funciona la garantía?",
+            "answer": "<p>Ofrecemos una garantía de un año para los grifos de acero inoxidable AISI 304 y los elementos de carbón Phoenix Gravity. Queda protegido frente a cualquier defecto de materiales o fabricación.</p><p>Ofrecemos una garantía de seis meses para el resto de piezas y accesorios. Queda protegido frente a cualquier defecto de materiales o fabricación.</p>"
+          }
+        },
+        "tab_bXDpWP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Su cuenta y suscripciones"
+          }
+        },
+        "question_answer_GPzrVP": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Puedo suscribirme para recibir mis elementos filtrantes?",
+            "answer": "<p>Sí. Ofrecemos una suscripción para sustituir sus elementos filtrantes y ahorrarle tiempo y preocupaciones.</p>"
+          }
+        },
+        "question_answer_xHrq9N": {
+          "type": "question_answer",
+          "disabled": true,
+          "settings": {
+            "question": "¿Cuál es la diferencia entre el Plan Estilo de Vida y el Plan Estilo de Vida Completo?",
+            "answer": "<p>El Plan Estilo de Vida y el Plan Estilo de Vida Completo ayudan a las familias a disfrutar de agua limpia y segura durante todo el año, a su manera. </p><p>El Plan Estilo de Vida ofrece una solución completa con entrega automática de filtros de carbón cada 12 meses. </p><p>El Plan Estilo de Vida Completo incluye elementos filtrantes de carbón cada año y recambios del medio FluoRid para los elementos POSTreat cada 4 meses, entregados directamente en su domicilio.</p>"
+          }
+        },
+        "question_answer_ENTnPb": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Cómo puedo modificar mi suscripción?",
+            "answer": "<p>Puede modificar y actualizar su suscripción desde su cuenta de Phoenix Gravity. Inicie sesión y seleccione «Suscripciones» para realizar los cambios.</p><p>Si necesita más ayuda, no dude en ponerse en contacto con nosotros.</p>"
+          }
+        },
+        "question_answer_VTzXmQ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "¿Puedo omitir una entrega o cancelar mi suscripción?",
+            "answer": "<p>Sí. Puede cambiar la frecuencia o cancelar la suscripción en cualquier momento.</p><p>Tenga en cuenta que, al cancelar la suscripción, perderá cualquier precio especial asociado. Si vuelve a suscribirse posteriormente, es posible que no pueda recuperar el mismo precio especial.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_HPXac4",
+        "question_answer_K38zCJ",
+        "question_answer_YH9Tyg",
+        "question_answer_jEVb8T",
+        "question_answer_iD9QdM",
+        "question_answer_jQNRA4",
+        "question_answer_nfPQrG",
+        "question_answer_X8BdNU",
+        "question_answer_UDnhbf",
+        "tab_WjcFUA",
+        "question_answer_yUixgf",
+        "question_answer_TwmjtY",
+        "question_answer_9yMg4X",
+        "question_answer_YaqX9K",
+        "question_answer_8w4QRz",
+        "question_answer_TYE6gG",
+        "question_answer_6C7C4q",
+        "question_answer_rzDw8m",
+        "question_answer_XdWRAV",
+        "question_answer_6UmfCk",
+        "question_answer_N8dCix",
+        "tab_iwXnJF",
+        "question_answer_zVFWhQ",
+        "question_answer_JTNDKd",
+        "question_answer_4GFfqF",
+        "tab_RzNhx4",
+        "question_answer_Adrh9b",
+        "question_answer_Th8mED",
+        "question_answer_HFdwpa",
+        "tab_bXDpWP",
+        "question_answer_GPzrVP",
+        "question_answer_xHrq9N",
+        "question_answer_ENTnPb",
+        "question_answer_VTzXmQ"
+      ],
+      "settings": {
+        "heading": "Got Questions? We’ve Got Answers…",
+        "content": ""
+      }
+    },
+    "gallery_9QfaL3": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_images_block_PfRCFJ": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-01.jpg"
+          }
+        },
+        "gallery_images_block_CCJWT7": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-02.jpg"
+          }
+        },
+        "gallery_images_block_qX3Fqd": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-03.jpg"
+          }
+        },
+        "gallery_images_block_w7gYzt": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-04.jpg"
+          }
+        },
+        "gallery_images_block_qRpxPB": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-05.jpg"
+          }
+        },
+        "gallery_images_block_TFAfTb": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-06.jpg"
+          }
+        },
+        "gallery_images_block_AHBK7Y": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-07.jpg"
+          }
+        },
+        "gallery_images_block_TKg4Uz": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-08.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_images_block_PfRCFJ",
+        "gallery_images_block_CCJWT7",
+        "gallery_images_block_qX3Fqd",
+        "gallery_images_block_w7gYzt",
+        "gallery_images_block_qRpxPB",
+        "gallery_images_block_TFAfTb",
+        "gallery_images_block_AHBK7Y",
+        "gallery_images_block_TKg4Uz"
+      ],
+      "settings": {
+        "gallery_heading": "¡Disfrute de agua potable segura para toda la familia!",
+        "gallery_content": ""
+      }
+    },
+    "1756711611db8758ce": {
+      "type": "apps",
+      "blocks": {
+        "appstle_subscription_appstle_subscription_product_page_widget_CtKi4K": {
+          "type": "shopify://apps/appstle-subscription/blocks/appstle-subscription-product-page-widget/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "appstle_subscription_appstle_subscription_product_page_widget_CtKi4K"
+      ],
+      "settings": {}
+    },
+    "1759144100c44877c1": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_a9bec4d_6BK6mL": {
+          "type": "ai_gen_block_a9bec4d",
+          "settings": {
+            "heading": "Historias reales de rendimiento probado",
+            "heading_size": 36,
+            "heading_color": "#000000",
+            "card_background": "#ffffff",
+            "card_border_radius": 12,
+            "text_color": "#333333",
+            "testimonial_size": 14,
+            "caption_size": 14,
+            "dot_active_color": "#000000",
+            "testimonial_1": "Â¡Este producto cambiÃ³ mi vida por completo!",
+            "video_embed_1": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/g40m1aabll.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='g40m1aabll']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/g40m1aabll/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style> <wistia-player media-id=\"g40m1aabll\" aspect=\"0.5625\"></wistia-player>",
+            "product_name_1": "Filtro de agua Phoenix",
+            "product_variant_1": "2.25 Gallon",
+            "instagram_url_1": "",
+            "testimonial_2": "Â¡Este producto cambiÃ³ mi vida por completo!",
+            "video_embed_2": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/osot5mllst.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='osot5mllst']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/osot5mllst/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style> <wistia-player media-id=\"osot5mllst\" aspect=\"0.5625\"></wistia-player>",
+            "product_name_2": "",
+            "product_variant_2": "",
+            "instagram_url_2": "",
+            "testimonial_3": "Â¡Este producto cambiÃ³ mi vida por completo!",
+            "video_embed_3": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/5acadf4z92.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='5acadf4z92']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/5acadf4z92/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style> <wistia-player media-id=\"5acadf4z92\" aspect=\"0.5625\"></wistia-player>",
+            "product_name_3": "",
+            "product_variant_3": "",
+            "instagram_url_3": "",
+            "testimonial_4": "Â¡Este producto cambiÃ³ mi vida por completo!",
+            "video_embed_4": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/y2mdp3k667.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='y2mdp3k667']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/y2mdp3k667/swatch'); display: block; filter: blur(5px); padding-top:177.78%; }</style> <wistia-player media-id=\"y2mdp3k667\" aspect=\"0.5625\"></wistia-player>",
+            "product_name_4": "",
+            "product_variant_4": "",
+            "instagram_url_4": "",
+            "testimonial_5": "",
+            "video_embed_5": "",
+            "product_name_5": "",
+            "product_variant_5": "",
+            "instagram_url_5": "",
+            "testimonial_6": "",
+            "video_embed_6": "",
+            "product_name_6": "",
+            "product_variant_6": "",
+            "instagram_url_6": "",
+            "testimonial_7": "",
+            "video_embed_7": "",
+            "product_name_7": "",
+            "product_variant_7": "",
+            "instagram_url_7": "",
+            "testimonial_8": "",
+            "video_embed_8": "",
+            "product_name_8": "",
+            "product_variant_8": "",
+            "instagram_url_8": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_a9bec4d_6BK6mL"
+      ],
+      "disabled": true,
+      "settings": {}
+    }
+  },
+  "order": [
+    "product_hero_og_zxMJ8i",
+    "product-hero",
+    "9600faf5-31b8-4d01-817d-b44b276a1d60",
+    "secondary_details_qTHLFy",
+    "custom_html_JMHGbr",
+    "video_image_Vm8h49",
+    "product_feature_ckk7jj",
+    "e7fc5ca3-7826-4ae3-8fda-deda4cc2fcf9",
+    "video_image_BYcqii",
+    "d978efab-7803-45c3-a62d-eea1576f94a8",
+    "copy_image_DfRFKh",
+    "copy_image_yifhAn",
+    "video_image_iLjpka",
+    "4f7dacc7-7ed5-4167-a5d6-1a4a8160213c",
+    "testimonials_Wxzw4P",
+    "cards_pUAXFa",
+    "video_image_z693Qz",
+    "copy_image_JCKnek",
+    "product_reviews_J4aYbK",
+    "accordion_tabs_kBhDkz",
+    "gallery_9QfaL3",
+    "1756711611db8758ce",
+    "1759144100c44877c1"
+  ]
+}

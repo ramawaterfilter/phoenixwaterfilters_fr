@@ -1,0 +1,88 @@
+{% schema %}
+{
+  "name": "Custom Embed Video",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "embed_code",
+      "label": "Embed Code",
+      "info": "Paste your full Wistia/YouTube/Vimeo embed code here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Embed Video"
+    }
+  ]
+}
+{% endschema %}
+
+<div class="custom-embed-video-container">
+  <div class="responsive-embed-wrapper">
+    {{
+      section.settings.embed_code
+      | replace: '<script src=', '<script type="application/x-lazy-video-script" data-src='
+      | replace: '<script async src=', '<script type="application/x-lazy-video-script" async data-src='
+      | replace: ' type="module"', ' data-module="true"'
+    }}
+  </div>
+</div>
+
+<script>
+  (() => {
+    const section = document.currentScript.previousElementSibling;
+    const lazyScripts = section.querySelectorAll('script[data-src]');
+
+    if (!lazyScripts.length) return;
+
+    const activate = () => {
+      lazyScripts.forEach((lazyScript) => {
+        const script = document.createElement('script');
+        script.src = lazyScript.dataset.src;
+        script.async = lazyScript.hasAttribute('async');
+        if (lazyScript.dataset.module === 'true') script.type = 'module';
+        lazyScript.replaceWith(script);
+      });
+    };
+
+    if (!('IntersectionObserver' in window)) {
+      activate();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          observer.disconnect();
+          activate();
+        }
+      },
+      { rootMargin: '600px 0px' }
+    );
+
+    observer.observe(section);
+  })();
+</script>
+
+<style>
+.custom-embed-video-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding:0px;
+}
+.responsive-embed-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+.responsive-embed-wrapper iframe,
+.responsive-embed-wrapper .wistia_responsive_wrapper {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+</style>

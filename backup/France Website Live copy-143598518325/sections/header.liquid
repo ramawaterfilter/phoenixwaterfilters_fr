@@ -1,0 +1,813 @@
+<div class="site-header__top">
+	<div class="container">
+		<div class="row d-flex align-items-center justify-content-center">
+			<div class="col-10">
+				{% render 'searchform' %}
+			</div>
+		</div>
+	</div>
+</div>
+			
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+
+			<div class="site-header__main">
+					
+	            {% comment %}
+				This gets a long string of all the menu handles. It's then matched to the hrefs set in the actual menu.
+				If a menu item links to another menu item, then we assume it wants it to act as a mega menu.
+				{% endcomment %}
+
+	            {%- capture allmenus -%}
+	            {%- for linklist in linklists -%}
+	            #{{ linklist.handle }}
+	            {%- endfor -%}
+	            {%- endcapture -%}
+
+				<!-- Mobile Hamburger Button -->
+				<div class="hamburger d-lg-none">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+<div class="site-header__logo">
+  <a href="https://phoenixwaterfilters.fr/">
+    <img 
+      src="https://cdn.shopify.com/s/files/1/0656/9898/8085/files/Logo_with_Register_Mark.png?v=1778673999" 
+      alt="{{ shop.name }}"
+      width="80"
+    >
+  </a>
+</div>
+				
+	      <div class="site-header__nav">
+					
+					<ul>
+					    {% for link in section.settings.sitemenu.links %}
+
+					    	{% assign original_link = link.url | split: '#' %}
+					    	{% assign mega_menu_name = original_link[1] %}
+					    	{% assign original_link = original_link[0] %}
+
+			        		{% if allmenus contains mega_menu_name %}
+						        <li class="{% if original_link == request.path %}active{% endif %}" data-mega-menu="#{{ mega_menu_name }}">
+
+					           	 	{% assign links = linklists[mega_menu_name].links %}
+
+					           	 	<a href="javascript:void(0)" class="mega-menu-trigger" aria-label="Open mega menu">{{ link.title }}
+							            {% if links.size > 0 %}
+						           	 		<span class="sub-menu-trigger"></span>
+						        		{% endif %}
+					           	 	</a>
+
+									{% render 'megamenu', megamenu: mega_menu_name, index: forloop.index %}
+
+				        	{% else %}
+						        <li class="{% if original_link == request.path %}active{% endif %}">
+					           		<a href="{{ original_link }}" target="{{ link.target }}">
+						           		{{ link.title }}
+
+							            {% if link.links.size > 0 %}
+						           	 		<span class="sub-menu-trigger"></span>
+						        		{% endif %}
+						           	</a>
+					           	 	{% assign links = link.links %}
+				        	{% endif %}
+
+					            {% unless allmenus contains mega_menu_name %}
+					            	{% if links.size > 0 %}
+					                <ul class="sub-menu">
+					                    {% for sublink in links %}
+					                    <li class="{% if sublink.url == request.path %}active{% endif %}">
+					                        <a href="{{ sublink.url }}" target="{{ sublink.target }}">
+					                       		{{ sublink.title }}
+					                   		</a>
+					                    </li>
+					                    {% endfor %}
+					                </ul>
+					                {% endif %}
+					            {% endunless %}
+					        </li>
+					    {% endfor %}
+				</ul>
+			</div>
+
+
+
+			
+			
+
+	            <div class="site-header__aux">
+ {% comment %} <div id="lang-switcher" class="lang-switcher">
+  <button class="lang-btn">
+    <img id="active-flag" class="flag" src="{{ 'flag-fr.png' | asset_url }}" alt="">
+    <span id="active-lang">FRA</span>
+    <span class="arrow"></span>
+  </button>
+
+  <div class="lang-menu">
+    <a data-code="fr" data-path="/" class="lang-option">
+      <img src="{{ 'flag-fr.png' | asset_url }}" class="flag"> FRA
+    </a>
+    <a data-code="es" data-path="/es/" class="lang-option">
+      <img src="{{ 'flag-es.png' | asset_url }}" class="flag"> ESP
+    </a>
+    <a data-code="it" data-path="/it/" class="lang-option">
+      <img src="{{ 'flag-it.png' | asset_url }}" class="flag"> ITA
+    </a>
+  </div>
+</div>  {% endcomment %}
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const menu = document.querySelector(".lang-menu");
+  const btn  = document.querySelector(".lang-btn");
+  const activeFlag = document.getElementById("active-flag");
+  const activeLang = document.getElementById("active-lang");
+
+  // Detect saved language
+  let savedCode  = localStorage.getItem("lang-code");
+  let savedPath  = localStorage.getItem("lang-path");
+
+  // Detect current page path
+  let path = window.location.pathname;
+
+  // Apply saved language on every page load
+  if (savedCode && savedPath !== null) {
+
+    // Update UI
+    updateUI(savedCode);
+
+    let currentPrefix = path.split("/")[1];
+
+    // Redirect if prefix doesn't match chosen language
+    if (savedCode === "fr" && (currentPrefix === "es" || currentPrefix === "it")) {
+      window.location.href = path.replace(/^\/(es|it)\//, "/");
+    }
+
+    if ((savedCode === "es" || savedCode === "it") && currentPrefix !== savedCode) {
+      let clean = path.replace(/^\/(es|it)\//, "/");
+      window.location.href = savedPath + clean.substring(1);
+    }
+  }
+
+  // Open dropdown
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("show");
+  });
+
+  // Close dropdown
+  document.addEventListener("click", () => menu.classList.remove("show"));
+
+  // Click language option
+  document.querySelectorAll(".lang-option").forEach(option => {
+    option.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      let code = option.dataset.code;
+      let pathPrefix = option.dataset.path;
+
+      // Save choice
+      localStorage.setItem("lang-code", code);
+      localStorage.setItem("lang-path", pathPrefix);
+
+      updateUI(code);
+
+      // Clean path from old prefix
+      let clean = window.location.pathname.replace(/^\/(es|it)\//, "/");
+
+      // Redirect
+      if (code === "fr") {
+        window.location.href = clean;
+      } else {
+        window.location.href = pathPrefix + clean.substring(1);
+      }
+    });
+  });
+
+  // UI update function
+  function updateUI(code) {
+    if (code === "fr") {
+      activeFlag.src = "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/france.png?v=1765187755";
+      activeLang.textContent = "FRA";
+    }
+    if (code === "es") {
+  activeFlag.src = "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/spain.png?v=1765188000";
+      activeLang.textContent = "ESP";
+    }
+    if (code === "it") {
+      activeFlag.src = "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/italy.png?v=1765188000";
+      activeLang.textContent = "ITA";
+    }
+  }
+
+});
+</script>
+<script>
+  window.developer = atob("S2FsaWVzd2FyYW4gLSBXZWJzaXRlIERldmVsb3Blcg==");
+</script>
+<style>
+
+    .lang-switcher {
+  position: relative;
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+
+ .lang-switcher {
+
+  display:none;
+}
+}
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+
+  padding: 6px 12px;
+ 
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.flag {
+  width: 20px;
+  height: 14px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+.arrow {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #3BA6FF;
+  border-bottom: 2px solid #3BA6FF;
+  transform: rotate(45deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+   border:none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+ 
+  display: none;
+  min-width: 110px;
+  z-index: 9999;
+}
+
+.lang-menu.show {
+  display: block;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  text-decoration: none;
+  font-size: 14px;
+  color: #333;
+}
+
+.lang-option:hover {
+  background: #f3f6fa;
+}
+
+</style>
+
+							<ul class="site-header__top__nav">
+						{% if shop.customer_accounts_enabled %}
+						{% if customer == nil %}
+				            <li>
+				            	<a href="{{ routes.account_login_url }}">
+												<img src="{{ 'icon-account.svg' | asset_url }}" loading="lazy"  title="Login" alt="Login" />
+				            	</a>
+				            </li>
+						{% else %}
+							<li>
+				            	<a href="{{ routes.account_url }}">
+												<span class="d-none d-lg-inline">Welcome {{ customer.first_name }}</span>
+				            	<img src="{{ 'icon-account.svg' | asset_url }}" loading="lazy" class="" alt="Welcome" />
+				            	</a>
+				            </li>
+							<li class="d-none d-lg-block">
+				            	<a href="{{ routes.account_logout_url }}">
+				            		{{ 'customer.log_out' | t }}
+				            	</a>
+				            </li>
+						{% endif %}
+						<li>
+				            	<a href="#" class="search-toggle" aria-label="Open search">
+				            	<img src="{{ 'icon-search.svg' | asset_url }}" loading="lazy" class="" alt="Search" />
+				            	</a>
+				            </li>
+							<li>
+						{% endif %}
+					</ul>
+				            	
+	                <div class="cart-icon">
+	                    <a href="{{ routes.cart_url }}" {% if settings.enable_slide_cart %}data-cartslide{% endif %}>
+													<img src="{{ 'icon-cart.svg' | asset_url }}" loading="lazy" class="" alt="Cart" />
+	                        <span class="count">{{ cart.item_count }}</span>
+	                    </a>
+	                </div>
+	
+
+	            </div>
+				
+            </div>
+
+		</div>
+	</div>
+</div>
+
+<!-- Mega Menu Overlay -->
+<div class="mega-menu-overlay"></div>
+
+<style>
+/* Mobile Hamburger Styles */
+.hamburger {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 24px;
+	cursor: pointer;
+	z-index: 1000;
+	padding: 5px;
+}
+
+.hamburger span {
+	display: block;
+	width: 100%;
+	height: 3px;
+	background-color: #333;
+	transition: all 0.3s ease;
+	border-radius: 2px;
+}
+
+/* Hamburger animation when menu is open */
+.menu-open .hamburger span:nth-child(1) {
+	transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-open .hamburger span:nth-child(2) {
+	opacity: 0;
+}
+
+.menu-open .hamburger span:nth-child(3) {
+	transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mega Menu Overlay */
+.mega-menu-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 998;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mega-menu-overlay.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Mega Menu Styles - Desktop */
+@media (min-width: 992px) {
+	.site-header__nav li[data-mega-menu] {
+		position: relative;
+	}
+
+	.site-header__nav li[data-mega-menu] .megamenu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background: #fff;
+		z-index: 999;
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.3s ease, visibility 0.3s ease;
+		overflow-y: auto;
+		padding: 80px 40px 40px;
+	}
+
+	.site-header__nav li[data-mega-menu].mega-active .megamenu {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.megamenu .megamenu_close {
+		position: absolute;
+		top: 20px;
+		right: 30px;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+		z-index: 1000;
+	}
+
+	.megamenu .megamenu_close::before,
+	.megamenu .megamenu_close::after {
+		content: '';
+		position: absolute;
+		width: 30px;
+		height: 3px;
+		background: #333;
+		top: 50%;
+		left: 50%;
+		transform-origin: center;
+	}
+
+	.megamenu .megamenu_close::before {
+		transform: translate(-50%, -50%) rotate(45deg);
+	}
+
+	.megamenu .megamenu_close::after {
+		transform: translate(-50%, -50%) rotate(-45deg);
+	}
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 991px) {
+	.site-header__nav {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		width: 80%;
+		max-width: 320px;
+		height: 100vh;
+		background: #fff;
+		z-index: 999;
+		overflow-y: auto;
+		transition: left 0.3s ease;
+		padding: 60px 20px 20px 20px;
+		box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+		display: block !important;
+	}
+
+	.menu-open .site-header__nav {
+		left: 0;
+	}
+
+	/* Close button for mobile menu */
+	.site-header__nav::before {
+		display:none;
+		content: '×';
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-size: 40px;
+		line-height: 1;
+		cursor: pointer;
+		color: #333;
+		z-index: 1000;
+	}
+
+	.site-header__nav > ul {
+		display: flex !important;
+		flex-direction: column;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+	.site-header__nav > ul > li {
+		border-bottom: 1px solid #eee;
+		padding: 0;
+		display: block !important;
+	}
+
+	.site-header__nav > ul > li > a {
+		display: block !important;
+		padding: 15px 10px;
+		text-decoration: none;
+		color: #333;
+		font-size: 16px;
+	}
+
+	.site-header__nav .sub-menu {
+		display: none;
+		padding-left: 20px;
+		list-style: none;
+		background: #f9f9f9;
+	}
+
+	.site-header__nav .sub-menu li {
+		display: block !important;
+	}
+
+	.site-header__nav .sub-menu li a {
+		display: block !important;
+		padding: 10px;
+		color: #666;
+		text-decoration: none;
+	}
+
+	.site-header__nav li.active > .sub-menu {
+		display: block !important;
+	}
+
+	.sub-menu-trigger {
+		float: right;
+		width: 20px;
+		height: 20px;
+		position: relative;
+		cursor: pointer;
+		margin-top: 5px;
+	}
+
+	.sub-menu-trigger::before,
+	.sub-menu-trigger::after {
+		content: '';
+		position: absolute;
+		background: #333;
+		transition: transform 0.3s ease;
+	}
+
+	.sub-menu-trigger::before {
+		width: 12px;
+		height: 2px;
+		top: 9px;
+		left: 4px;
+	}
+
+	.sub-menu-trigger::after {
+		width: 2px;
+		height: 12px;
+		top: 4px;
+		left: 9px;
+	}
+
+	li.active .sub-menu-trigger::after {
+		transform: rotate(90deg);
+		opacity: 0;
+	}
+
+	/* Hide mega menu on mobile */
+	.site-header__nav .megamenu {
+		display: none !important;
+	}
+
+	/* Menu overlay for mobile */
+	.menu-open .mega-menu-overlay {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+/* Desktop - hide hamburger */
+@media (min-width: 992px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+
+.language-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.language-btn .arrow {
+    border: solid #3BA6FF; /* arrow color */
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: 0.2s;
+}
+
+/* Dropdown menu */
+.language-dropdown {
+    display: none;
+    position: absolute;
+    top: 32px;
+    left: 0;
+    background: white;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    min-width: 80px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.08);
+    z-index: 9999;
+}
+
+.language-dropdown a {
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+}
+
+.language-dropdown a:hover {
+    background: #f7f9fc;
+    color: #3BA6FF;
+}
+
+@media (max-width: 768px) {
+ .language-selector {
+    display: none;
+}
+}
+
+
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+	
+	// Mobile menu toggle
+	let hamburger = document.querySelector('.hamburger');
+	let overlay = document.querySelector('.mega-menu-overlay');
+
+	if(hamburger){
+		hamburger.addEventListener('click', function(){
+			document.documentElement.classList.toggle('menu-open');
+		});
+
+		// Close menu when clicking overlay
+		if(overlay) {
+			overlay.addEventListener('click', function(){
+				document.documentElement.classList.remove('menu-open');
+				// Also close any open mega menus
+				document.querySelectorAll('.mega-active').forEach(el => {
+					el.classList.remove('mega-active');
+				});
+			});
+		}
+
+		// Close menu when clicking the close button (×)
+		let navMenu = document.querySelector('.site-header__nav');
+		if(navMenu) {
+			navMenu.addEventListener('click', function(e){
+				let rect = this.getBoundingClientRect();
+				if(e.clientX > rect.right - 50 && e.clientY < rect.top + 50) {
+					document.documentElement.classList.remove('menu-open');
+				}
+			});
+		}
+
+		// Prevent body scroll when menu is open
+		const observer = new MutationObserver(function(mutations) {
+			mutations.forEach(function(mutation) {
+				if (mutation.attributeName === 'class') {
+					if(document.documentElement.classList.contains('menu-open')) {
+						document.body.style.overflow = 'hidden';
+					} else {
+						document.body.style.overflow = '';
+					}
+				}
+			});
+		});
+
+		observer.observe(document.documentElement, {
+			attributes: true
+		});
+	}
+
+	// Mega Menu functionality - Desktop
+	let megaMenuTriggers = document.querySelectorAll('.mega-menu-trigger');
+	
+	megaMenuTriggers.forEach(function(trigger) {
+		trigger.addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			
+			let parentLi = this.closest('li[data-mega-menu]');
+			let isActive = parentLi.classList.contains('mega-active');
+			
+			// Close all other mega menus
+			document.querySelectorAll('li[data-mega-menu]').forEach(function(li) {
+				li.classList.remove('mega-active');
+			});
+			
+			// Toggle current mega menu
+			if(!isActive) {
+				parentLi.classList.add('mega-active');
+				overlay.classList.add('active');
+			} else {
+				overlay.classList.remove('active');
+			}
+		});
+	});
+
+	// Close mega menu buttons
+	let closeMegaButtons = document.querySelectorAll('.megamenu_close');
+	
+	closeMegaButtons.forEach(function(closeBtn) {
+		closeBtn.addEventListener('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			
+			document.querySelectorAll('.mega-active').forEach(function(el) {
+				el.classList.remove('mega-active');
+			});
+			overlay.classList.remove('active');
+		});
+	});
+
+	// Mobile sub-menu triggers
+	let subNavTriggers = document.querySelectorAll('.sub-menu-trigger');
+	subNavTriggers.forEach(function(trigger) {
+		trigger.addEventListener('click', function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			trigger.closest('li').classList.toggle('active');
+		});
+	});
+
+	// Mega menu hover effects (for desktop link highlighting)
+	let mmLinks = document.querySelectorAll('.megamenu__links li a');
+	mmLinks.forEach(function(link){
+		link.addEventListener('mouseover', function(){
+			let thisIndex = link.dataset.index;
+			if(!thisIndex) return;
+			
+			let megamenu = link.closest('.megamenu');
+			let relatedLists = megamenu.querySelectorAll('li[data-index="'+thisIndex+'"]');
+			let activeLists = megamenu.querySelectorAll('li.active');
+
+			activeLists.forEach(function(el) {
+				el.classList.remove('active');
+			});
+
+			relatedLists.forEach(function(el) {
+				el.classList.add('active');
+			});
+		});
+	});
+
+	// Close mega menu when clicking outside
+	document.addEventListener('click', function(e) {
+		if(!e.target.closest('.site-header__nav') && 
+		   !e.target.closest('.mega-menu-trigger') &&
+		   !e.target.closest('.megamenu')) {
+			document.querySelectorAll('.mega-active').forEach(function(el) {
+				el.classList.remove('mega-active');
+			});
+			overlay.classList.remove('active');
+		}
+	});
+
+	// Prevent clicks inside megamenu from closing it
+	document.querySelectorAll('.megamenu').forEach(function(megamenu) {
+		megamenu.addEventListener('click', function(e) {
+			e.stopPropagation();
+		});
+	});
+});
+</script>
+
+{% schema %}
+	{
+		"name": "Header",
+		"tag": "div",
+		"class": "site-header__inner",
+		"settings": [
+	        {
+	            "type":"image_picker",
+	            "id":"sitelogo",
+	            "label":"Logo"
+	        },
+	        {
+	            "type":"link_list",
+	            "id":"sitemenu",
+	            "label":"Main Menu"
+	        }
+		],
+		"presets": [
+			{
+				"name": "Header"
+			}
+		],
+	    "enabled_on": {
+	        "groups": ["header"]
+	    }
+	}
+{% endschema %}

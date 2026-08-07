@@ -1,0 +1,590 @@
+<div class="{{ section.settings.custom_class }}" id="{{ section.settings.custom_id }}">
+  <div class="background-image-container {{ section.settings.style }}"></div>
+  <div class="container">
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-md-9 col-lg-10 col-xl-9">
+        <h2 class="text-center" style="font-size: {{ section.settings.heading_font_size }}px;">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    </div>
+
+    {%- comment -%} Build column header labels once for reuse in mobile cards {%- endcomment -%}
+    {%- assign company_label = section.settings.company_name | default: shop.name -%}
+    {%- assign comp1_label   = section.settings.comparison_1 -%}
+    {%- assign comp2_label   = section.settings.comparison_2 -%}
+    {%- assign comp3_label   = section.settings.comparison_3 -%}
+
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 table-wrapper columns-{{ section.settings.number_of_comparisons }}">
+
+        {%- comment -%} ═══════════════════════════════════
+          DESKTOP TABLE — hidden on mobile
+        ════════════════════════════════════ {%- endcomment -%}
+        <div class="ct-desktop-table">
+          <table class="table {{ section.settings.style }}">
+            <tbody>
+              <tr>
+
+                <th class="text-center first-column feature"
+                    style="font-size: {{ section.settings.header_font_size }}px; color: {{ section.settings.feature_header_color }};">
+                  {{ section.settings.feature_header }}
+                </th>
+
+                <th class="text-center active-cell"
+                    style="font-size: {{ section.settings.header_font_size }}px; color: {{ section.settings.company_header_color }};">
+                  <div class="ct-header-cell">
+                    {% if section.settings.company_logo %}
+                      {{ section.settings.company_logo | image_url: width: 400 | image_tag: class: 'img-fluid table-logo ct-header-logo', loading: 'lazy' }}
+                    {% endif %}
+                    <span class="ct-header-text">
+                      {% if section.settings.company_name != blank %}
+                        {{ section.settings.company_name }}
+                      {% else %}
+                        {{ shop.name }}
+                      {% endif %}
+                    </span>
+                  </div>
+                </th>
+
+                <th class="text-center text-capitalize"
+                    style="font-size: {{ section.settings.header_font_size }}px; color: {{ section.settings.comparison_1_color }};">
+                  <div class="ct-header-cell">
+                    {% if section.settings.comparison_1_image %}
+                      {{ section.settings.comparison_1_image | image_url: width: 400 | image_tag: class: 'img-fluid table-logo ct-header-logo', loading: 'lazy' }}
+                    {% endif %}
+                    {% if section.settings.comparison_1 != blank %}
+                      <span class="ct-header-text">{{ section.settings.comparison_1 }}</span>
+                    {% endif %}
+                  </div>
+                </th>
+
+                {% if section.settings.number_of_comparisons != "1" %}
+                  <th class="text-center text-capitalize"
+                      style="font-size: {{ section.settings.header_font_size }}px; color: {{ section.settings.comparison_2_color }};">
+                    <div class="ct-header-cell">
+                      {% if section.settings.comparison_2_image %}
+                        {{ section.settings.comparison_2_image | image_url: width: 400 | image_tag: class: 'img-fluid table-logo ct-header-logo', loading: 'lazy' }}
+                      {% endif %}
+                      {% if section.settings.comparison_2 != blank %}
+                        <span class="ct-header-text">{{ section.settings.comparison_2 }}</span>
+                      {% endif %}
+                    </div>
+                  </th>
+                {% endif %}
+
+                {% if section.settings.number_of_comparisons == "3" %}
+                  <th class="text-center text-capitalize"
+                      style="font-size: {{ section.settings.header_font_size }}px; color: {{ section.settings.comparison_3_color }};">
+                    <div class="ct-header-cell">
+                      {% if section.settings.comparison_3_image %}
+                        {{ section.settings.comparison_3_image | image_url: width: 400 | image_tag: class: 'img-fluid table-logo ct-header-logo', loading: 'lazy' }}
+                      {% endif %}
+                      {% if section.settings.comparison_3 != blank %}
+                        <span class="ct-header-text">{{ section.settings.comparison_3 }}</span>
+                      {% endif %}
+                    </div>
+                  </th>
+                {% endif %}
+
+              </tr>
+
+              {% for block in section.blocks %}
+                <tr>
+                  <td class="text-center first-column feature"
+                      style="font-size: {{ section.settings.cell_font_size }}px;">
+                    {{ block.settings.feature }}
+                  </td>
+                  <td class="text-center active-cell"
+                      style="font-size: {{ section.settings.cell_font_size }}px;">
+                    <p>{{ block.settings.column_1 }}</p>
+                  </td>
+                  <td class="text-center"
+                      style="font-size: {{ section.settings.cell_font_size }}px;">
+                    <p>{{ block.settings.column_2 }}</p>
+                  </td>
+                  {% if section.settings.number_of_comparisons != "1" %}
+                    <td class="text-center"
+                        style="font-size: {{ section.settings.cell_font_size }}px;">
+                      <p>{{ block.settings.column_3 }}</p>
+                    </td>
+                  {% endif %}
+                  {% if section.settings.number_of_comparisons == "3" %}
+                    <td class="text-center"
+                        style="font-size: {{ section.settings.cell_font_size }}px;">
+                      <p>{{ block.settings.column_4 }}</p>
+                    </td>
+                  {% endif %}
+                </tr>
+              {% endfor %}
+
+            </tbody>
+          </table>
+        </div>
+
+        {%- comment -%} ═══════════════════════════════════
+          MOBILE CARDS — hidden on desktop
+          One card per feature row; columns shown as labelled rows inside.
+        ════════════════════════════════════ {%- endcomment -%}
+        <div class="ct-mobile-cards">
+
+          {%- comment -%} Sticky column header bar {%- endcomment -%}
+          <div class="ct-mobile-header">
+            <div class="ct-mobile-header__col ct-mobile-header__col--company"
+                 style="color: {{ section.settings.company_header_color }};">
+              {% if section.settings.company_logo %}
+                {{ section.settings.company_logo | image_url: width: 300 | image_tag: class: 'ct-mobile-logo', loading: 'lazy' }}
+              {% endif %}
+              {% if company_label != blank %}{{ company_label }}{% endif %}
+            </div>
+            <div class="ct-mobile-header__col"
+                 style="color: {{ section.settings.comparison_1_color }};">
+              {% if section.settings.comparison_1_image %}
+                {{ section.settings.comparison_1_image | image_url: width: 300 | image_tag: class: 'ct-mobile-logo', loading: 'lazy' }}
+              {% endif %}
+              {% if comp1_label != blank %}{{ comp1_label }}{% endif %}
+            </div>
+            {% if section.settings.number_of_comparisons != "1" %}
+              <div class="ct-mobile-header__col"
+                   style="color: {{ section.settings.comparison_2_color }};">
+                {% if section.settings.comparison_2_image %}
+                  {{ section.settings.comparison_2_image | image_url: width: 300 | image_tag: class: 'ct-mobile-logo', loading: 'lazy' }}
+                {% endif %}
+                {% if comp2_label != blank %}{{ comp2_label }}{% endif %}
+              </div>
+            {% endif %}
+            {% if section.settings.number_of_comparisons == "3" %}
+              <div class="ct-mobile-header__col"
+                   style="color: {{ section.settings.comparison_3_color }};">
+                {% if section.settings.comparison_3_image %}
+                  {{ section.settings.comparison_3_image | image_url: width: 300 | image_tag: class: 'ct-mobile-logo', loading: 'lazy' }}
+                {% endif %}
+                {% if comp3_label != blank %}{{ comp3_label }}{% endif %}
+              </div>
+            {% endif %}
+          </div>
+
+          {%- comment -%} Feature rows as cards {%- endcomment -%}
+          {% for block in section.blocks %}
+            <div class="ct-mobile-row {% cycle 'ct-mobile-row--light', 'ct-mobile-row--alt' %}">
+              <div class="ct-mobile-row__feature"
+                   style="font-size: {{ section.settings.cell_font_size }}px; color: {{ section.settings.feature_header_color }};">
+                {{ block.settings.feature }}
+              </div>
+              <div class="ct-mobile-row__values">
+                <div class="ct-mobile-row__val ct-mobile-row__val--company"
+                     style="font-size: {{ section.settings.cell_font_size }}px;">
+                  {{ block.settings.column_1 }}
+                </div>
+                <div class="ct-mobile-row__val"
+                     style="font-size: {{ section.settings.cell_font_size }}px;">
+                  {{ block.settings.column_2 }}
+                </div>
+                {% if section.settings.number_of_comparisons != "1" %}
+                  <div class="ct-mobile-row__val"
+                       style="font-size: {{ section.settings.cell_font_size }}px;">
+                    {{ block.settings.column_3 }}
+                  </div>
+                {% endif %}
+                {% if section.settings.number_of_comparisons == "3" %}
+                  <div class="ct-mobile-row__val"
+                       style="font-size: {{ section.settings.cell_font_size }}px;">
+                    {{ block.settings.column_4 }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+
+        </div>{%- comment -%} end .ct-mobile-cards {%- endcomment -%}
+
+      </div>
+    </div>
+
+    {% if section.settings.buttonlink %}
+      <div class="row justify-content-center text-center">
+        <div class="col-12 text-center">
+          {% render 'button', class: 'mx-auto text-center' %}
+        </div>
+      </div>
+    {% endif %}
+
+  </div>
+</div>
+
+<style>
+
+  /* ── Header image + text alignment fixes ── */
+  .ct-header-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .ct-header-text {
+    display: block;
+    text-align: center;
+    line-height: 1.25;
+  }
+
+  .ct-header-logo,
+  .table-logo {
+    display: block;
+    margin: 0 auto;
+    max-height: 120px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .first-column.feature {
+    text-align: center !important;
+    vertical-align: middle;
+  }
+
+  /* ── Show/hide ── */
+  .ct-desktop-table { display: block; }
+  .ct-mobile-cards  { display: none;  }
+
+  /* ── Mobile cards layout ── */
+  .ct-mobile-header {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.number_of_comparisons | plus: 1 }}, 1fr);
+    gap: 0;
+    background: #f0ede7;
+    border-radius: 8px 8px 0 0;
+    padding: 10px 8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .ct-mobile-header__col {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    padding: 4px 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .ct-mobile-header__col--company {
+    background: rgba(255,255,255,0.5);
+    border-radius: 6px;
+  }
+
+  .ct-mobile-logo {
+    max-height: 54px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .ct-mobile-row {
+    border-bottom: 1px solid #ece8e1;
+    padding: 12px 8px;
+  }
+
+  .ct-mobile-row--alt { background: #faf8f5; }
+  .ct-mobile-row--light { background: #fff; }
+
+  .ct-mobile-row__feature {
+    font-weight: 700;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px dashed #e0dbd3;
+  }
+
+  .ct-mobile-row__values {
+    display: grid;
+    grid-template-columns: repeat({{ section.settings.number_of_comparisons | plus: 1 }}, 1fr);
+    gap: 4px;
+    text-align: center;
+  }
+
+  .ct-mobile-row__val {
+    padding: 6px 4px;
+    border-radius: 4px;
+    line-height: 1.3;
+  }
+
+  .ct-mobile-row__val--company {
+    background: #eef4f1;
+    font-weight: 700;
+    border-radius: 4px;
+  }
+
+  /* ── Breakpoint ── */
+  @media screen and (max-width: 749px) {
+    .ct-desktop-table { display: none;  }
+    .ct-mobile-cards  { display: block; }
+
+    .ct-mobile-header {
+      padding: 12px 8px;
+    }
+
+    .ct-mobile-logo {
+      max-height: 62px;
+      min-height: 46px;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Comparison Table",
+    "class": "section-table",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Content"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "radio",
+        "id": "number_of_comparisons",
+        "label": "Number Of Comparisons",
+        "default": "2",
+        "options": [
+          { "value": "1", "label": "1" },
+          { "value": "2", "label": "2" },
+          { "value": "3", "label": "3" }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "style",
+        "label": "Style",
+        "default": "style-1",
+        "options": [
+          { "value": "style-1", "label": "Style 1" },
+          { "value": "style-2", "label": "Style 2" }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Font Sizes"
+      },
+      {
+        "type": "range",
+        "id": "heading_font_size",
+        "label": "Heading Font Size",
+        "min": 16,
+        "max": 60,
+        "step": 1,
+        "unit": "px",
+        "default": 32
+      },
+      {
+        "type": "range",
+        "id": "header_font_size",
+        "label": "Header Row Font Size",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 14
+      },
+      {
+        "type": "range",
+        "id": "cell_font_size",
+        "label": "Cell Text Font Size",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 14
+      },
+      {
+        "type": "header",
+        "content": "Table Header",
+        "info": "The titles of all the columns"
+      },
+      {
+        "type": "text",
+        "id": "feature_header",
+        "label": "Feature Column"
+      },
+      {
+        "type": "color",
+        "id": "feature_header_color",
+        "label": "Feature Column Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Your Company Column"
+      },
+      {
+        "type": "image_picker",
+        "id": "company_logo",
+        "label": "Company Logo"
+      },
+      {
+        "type": "text",
+        "id": "company_name",
+        "label": "Company Name"
+      },
+      {
+        "type": "color",
+        "id": "company_header_color",
+        "label": "Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Comparison 1 Column"
+      },
+      {
+        "type": "text",
+        "id": "comparison_1",
+        "label": "Comparison 1 Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "comparison_1_image",
+        "label": "Comparison 1 Image",
+        "info": "Displayed above the text label"
+      },
+      {
+        "type": "color",
+        "id": "comparison_1_color",
+        "label": "Comparison 1 Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Comparison 2 Column"
+      },
+      {
+        "type": "text",
+        "id": "comparison_2",
+        "label": "Comparison 2 Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "comparison_2_image",
+        "label": "Comparison 2 Image",
+        "info": "Displayed above the text label"
+      },
+      {
+        "type": "color",
+        "id": "comparison_2_color",
+        "label": "Comparison 2 Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Comparison 3 Column"
+      },
+      {
+        "type": "text",
+        "id": "comparison_3",
+        "label": "Comparison 3 Text"
+      },
+      {
+        "type": "image_picker",
+        "id": "comparison_3_image",
+        "label": "Comparison 3 Image",
+        "info": "Displayed above the text label"
+      },
+      {
+        "type": "color",
+        "id": "comparison_3_color",
+        "label": "Comparison 3 Text Colour",
+        "default": "#000000"
+      },
+      {
+        "type": "header",
+        "content": "Button"
+      },
+      {
+        "type": "url",
+        "id": "buttonlink",
+        "label": "Button Link"
+      },
+      {
+        "type": "text",
+        "id": "buttontext",
+        "label": "Button Text"
+      },
+      {
+        "type": "text",
+        "id": "afterbutton",
+        "label": "After Button Text"
+      },
+      {
+        "type": "header",
+        "content": "Custom Code",
+        "info": "Add classes or ID to the section"
+      },
+      {
+        "type": "text",
+        "id": "custom_id",
+        "label": "Custom ID"
+      },
+      {
+        "type": "text",
+        "id": "custom_class",
+        "label": "Custom Class"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Table Row",
+        "settings": [
+          {
+            "type": "text",
+            "id": "feature",
+            "label": "Feature"
+          },
+          {
+            "type": "text",
+            "id": "column_1",
+            "label": "This Company",
+            "default": "Correct"
+          },
+          {
+            "type": "text",
+            "id": "column_2",
+            "label": "Comparison 1",
+            "default": "Correct"
+          },
+          {
+            "type": "text",
+            "id": "column_3",
+            "label": "Comparison 2",
+            "default": "Correct"
+          },
+          {
+            "type": "text",
+            "id": "column_4",
+            "label": "Comparison 3",
+            "default": "Correct"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Comparison Table"
+      }
+    ],
+    "disabled_on": {
+      "groups": ["header"]
+    }
+  }
+{% endschema %}

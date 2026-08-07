@@ -1,0 +1,1029 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "1769170449d6d55086": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4800ee9_4BcbCa": {
+          "type": "ai_gen_block_4800ee9",
+          "disabled": true,
+          "settings": {
+            "desktop_image": "shopify://shop_images/France_New_mobile_size.jpg",
+            "desktop_width": 100,
+            "desktop_height": 80,
+            "mobile_width": 100,
+            "mobile_height": 60,
+            "show_overlay": true,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0.3,
+            "eyebrow_text": "New Collection",
+            "heading": "Pure Water for Your Family",
+            "subheading": "Experience the cleanest, healthiest water with our gravity filtration systems",
+            "button_text": "Shop Now",
+            "button_link": "",
+            "text_alignment": "center",
+            "content_max_width": 800,
+            "text_color": "#ffffff",
+            "eyebrow_size": 14,
+            "heading_size": 56,
+            "subheading_size": 20,
+            "button_bg_color": "#000000",
+            "button_hover_bg_color": "#333333",
+            "button_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_border_radius": 4
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4800ee9_4BcbCa"
+      ],
+      "settings": {}
+    },
+    "177787638213a68afb": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_db25917_zWkXPH": {
+          "type": "ai_gen_block_db25917",
+          "name": "Custom code block (21/05/)",
+          "settings": {
+            "custom_liquid": "",
+            "custom_html": "<section class=\"phxg-hero\" aria-label=\"Hero\">\n\n  <!-- ── VIDEO BACKGROUND ──\n       Replace YOUR_VIDEO_URL_HERE with a direct .mp4 link.\n       To disable video, delete the <video> and <div class=\"phxg-voverlay\"> tags below. -->\n  <video class=\"phxg-video\" src=\"https://cdn.shopify.com/videos/c/o/v/a45ee002798d4e069b28162e1d4b4e87.mp4\" autoplay=\"\" muted=\"\" loop=\"\" playsinline=\"\" aria-hidden=\"true\"></video>\n  <div class=\"phxg-voverlay\" aria-hidden=\"true\"></div>\n\n  <div class=\"phxg-content\">\n\n    <!-- ── EYEBROW ── -->\n    <div class=\"phxg-eyebrow\">Plus de 50 ans d'expertise</div>\n\n    <!-- ── TITLE ── Use <br> for line breaks, <em> for italic accent -->\n    <h1 class=\"phxg-title\">\n      L'eau pure,<br><em>naturellement.</em>\n    </h1>\n\n    <!-- ── SUBTITLE ── -->\n    <p class=\"phxg-sub\">\n      Sans plomberie. Sans électricité.<br>\n      800 000 foyers nous font confiance.\n    </p>\n\n    <!-- ── STAR RATING ──\n         full_stars: repeat the <span class=\"phxg-star\"> block for each full star (max 5)\n         half star:  keep or remove the <span class=\"phxg-starhalf\"> block\n         stars_url:  replace #reviews with your reviews page URL -->\n    <a href=\"https://phoenixwaterfilters.fr/pages/review\" class=\"phxg-stars\" aria-label=\"Customer rating: 4.4/5 · 345 verified reviews. Click to read reviews.\">\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-star\" aria-hidden=\"true\">★</span>\n      <span class=\"phxg-starhalf\" aria-hidden=\"true\"></span>\n      <span class=\"phxg-ratingtxt\">4.62/5  </span>\n    </a>\n\n    <!-- ── PRICE BLOCK ── -->\n    <div class=\"phxg-pricerow\" aria-label=\"Price\">\n      <span class=\"phxg-pricenow\">163,16 €</span>\n      <div class=\"phxg-pricesec\">\n        <span class=\"phxg-pricewas\">217 €</span>\n        <span class=\"phxg-pricettc\">(TTC)</span>\n        <span class=\"phxg-pricebdg\">–25%</span>\n      </div>\n    </div>\n\n    <!-- ── CTA BUTTON ──\n         Replace href=\"#\" with your product or cart URL -->\n    <div class=\"phxg-ctawrap\">\n      <a href=\"https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau\" class=\"phxg-cta\">\n        Commander maintenant\n        <span class=\"phxg-arrow\" aria-hidden=\"true\">→</span>\n      </a>\n    </div>\n\n    <!-- ── REASSURANCE ROW ── -->\n    <div class=\"phxg-reassure\" aria-label=\"Guarantees\">\n      <span><span class=\"phxg-check\" aria-hidden=\"true\">✓</span>  Satisfait ou remboursé 100 jours</span>\n      <span><span class=\"phxg-check\" aria-hidden=\"true\">✓</span>  Certifié NSF</span>\n      <span><span class=\"phxg-check\" aria-hidden=\"true\">✓</span>  Livraison gratuite</span>\n    </div>\n\n  </div>\n</section>",
+            "custom_css": "/* ══ LINK-BLEED RESET ══ */\n    .phxg-content,\n    .phxg-content h1,\n    .phxg-content p,\n    .phxg-content div,\n    .phxg-content span {\n      text-decoration: none !important;\n    }\n    .phxg-content a:not(.phxg-cta):not(.phxg-stars) {\n      text-decoration: none !important;\n      color: inherit !important;\n      pointer-events: none !important;\n      cursor: default !important;\n    }\n@media (min-width: 901px) {\n    .phxg-content {\n        max-width: 100%;\n        left: 10.5vw;\n    }\n}\n\n    /* ══ STRIKETHROUGH EXCEPTION ══ */\n    .phxg-pricerow .phxg-pricewas,\n    .phxg-pricesec .phxg-pricewas,\n    span.phxg-pricewas {\n      text-decoration: line-through !important;\n      -webkit-text-decoration: line-through !important;\n      text-decoration-thickness: 2px !important;\n      text-decoration-color: rgba(21, 58, 91, 1) !important;\n    }\n\n    /* ══ HERO WRAPPER ══ */\n    .phxg-hero {\n      position: relative;\n      min-height: 540px;\n      display: flex;\n      align-items: center;\n      padding: 64px 48px;\n      overflow: hidden;\n      font-family: 'DM Sans', sans-serif;\n    }\n\n    /* ══ VIDEO BACKGROUND ══ */\n    .phxg-video {\n      position: absolute; inset: 0;\n      width: 100%; height: 100%;\n      object-fit: cover;\n      z-index: 0; pointer-events: none;\n    }\n    .phxg-voverlay {\n      position: absolute; inset: 0;\n      background: linear-gradient(53deg,rgba(255, 255, 255, 0.49) 0%,rgba(14, 26, 52, 0) 45%,rgba(14, 26, 52, 0) 100%);\n      z-index: 1; pointer-events: none;\n    }\n\n    /* ══ CONTENT COLUMN ══ */\n    .phxg-content {\n      max-width: 560px;\n      position: relative; z-index: 2;\n    }\n\n    /* ── Eyebrow ── */\n    .phxg-eyebrow {\n      font-size: 11px; font-weight: 600;\n      letter-spacing: .13em; text-transform: uppercase;\n      color: rgba(21, 58, 91, 1);\n      margin-bottom: 14px;\n      display: flex; align-items: center; gap: 8px;\n      pointer-events: none; cursor: default;\n      text-decoration: none !important;\n    }\n    .phxg-eyebrow::before {\n      content: ''; display: block;\n      width: 24px; height: 2px;\n      background: rgba(21, 58, 91, 1); border-radius: 1px; flex-shrink: 0;\n    }\n\n    /* ── Title ── */\n    .phxg-title {\n      font-family: 'DM Serif Display', serif;\n      font-size: clamp(38px,5vw,58px);\n      line-height: 1.08; color: rgba(21, 58, 91, 1);\n      margin-bottom: 14px;\n    \n      pointer-events: none; cursor: default;\n      text-decoration: none !important;\n    }\n    .phxg-title em {\n      font-style: italic;\n      color: rgba(21, 58, 91, 1);\n      text-decoration: none !important;\n    }\n\n    /* ── Subtitle ── */\n    .phxg-sub {\n      font-size: 16px; color: rgba(0, 0, 0, 0.87);\n      line-height: 1.6; margin-bottom: 22px;\n      pointer-events: none; cursor: default;\n      text-decoration: none !important;\n    }\n\n    /* ══ STAR RATING ══ */\n    .phxg-stars {\n      display: inline-flex;\n      align-items: center;\n      gap: 4px;\n      margin-bottom: 18px;\n      text-decoration: none !important;\n      cursor: pointer;\n      pointer-events: auto;\n      transition: opacity .18s ease;\n      width: fit-content;\n    }\n    .phxg-stars:hover { opacity: .8; text-decoration: none !important; }\n    .phxg-stars:hover .phxg-ratingtxt {\n      text-decoration: underline;\n      text-decoration-color: rgba(255,255,255,.5);\n      text-underline-offset: 2px;\n    }\n    .phxg-star {\n      color: #FBBF24;\n      font-size: 22px;\n      line-height: 1;\n      text-decoration: none !important;\n    }\n    .phxg-starhalf {\n      position: relative; display: inline-block;\n      width: 22px; height: 22px;\n      font-size: 22px; line-height: 1;\n    }\n    .phxg-starhalf::before {\n      content: '★'; position: absolute;\n      color: rgba(255,255,255,.25);\n    }\n    .phxg-starhalf::after {\n      content: '★'; position: absolute;\n      color: #FBBF24;\n      clip-path: inset(0 50% 0 0);\n    }\n    .phxg-ratingtxt {\n      font-size: 20px;\n      color: rgba(21, 58, 91, 1);\n      font-weight: 500; margin-left: 4px;\n      font-family: 'DM Sans', sans-serif;\n      text-decoration: none;\n      transition: text-decoration-color .18s;\n    }\n\n    /* ══ PRICE ROW ══ */\n    .phxg-pricerow {\n      display: flex;\n      align-items: center;\n      gap: 12px;\n      margin-bottom: 26px;\n      flex-wrap: wrap;\n      pointer-events: none; cursor: default;\n    }\n    .phxg-pricenow {\n      font-size: clamp(32px,4vw,42px);\n      font-weight: 700; color: rgba(21, 58, 91, 1);\n      letter-spacing: -.01em; line-height: 1;\n      text-decoration: none !important;\n    }\n    .phxg-pricesec {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      gap: 6px; flex-wrap: wrap;\n    }\n    .phxg-pricewas {\n      font-size: 17px;\n      color: rgba(21, 58, 91, 1);\n      line-height: 1.2;\n    }\n    .phxg-pricettc {\n      font-size: 16px; font-weight: 400;\n      letter-spacing: .09em; text-transform: uppercase;\n      color: rgba(0, 0, 0, 1);\n      line-height: 1.2;\n      text-decoration: none !important;\n    }\n    .phxg-pricebdg {\n      background: #EF4444; color: #fff;\n      font-size: 12px; font-weight: 700;\n      padding: 3px 9px; border-radius: 5px;\n      letter-spacing: .03em; line-height: 1.4;\n      white-space: nowrap;\n      text-decoration: none !important;\n    }\n\n    /* ══ CTA BUTTON ══ */\n    .phxg-ctawrap {\n      margin-bottom: 16px;\n      pointer-events: none;\n    }\n    .phxg-cta {\n      display: inline-flex; align-items: center; gap: 10px;\n      background: #fff; color: #1C2A4A;\n      font-size: 15px; font-weight: 700;\n      padding: 15px 32px; border-radius: 50px;\n      text-decoration: none !important;\n      transition: all .2s;\n      box-shadow: 0 4px 24px rgba(0,0,0,.2);\n      font-family: 'DM Sans', sans-serif;\n      pointer-events: auto; cursor: pointer;\n    }\n    .phxg-cta:hover {\n      background: #F8FAFC;\n      transform: translateY(-2px);\n      box-shadow: 0 8px 32px rgba(0,0,0,.25);\n      color: #1C2A4A;\n      text-decoration: none !important;\n    }\n    .phxg-arrow {\n      font-size: 18px; transition: transform .2s; display: inline-block;\n    }\n    .phxg-cta:hover .phxg-arrow { transform: translateX(4px); }\n\n    /* ══ REASSURANCE ROW ══ */\n    .phxg-reassure {\n      display: flex; gap: 18px; flex-wrap: wrap;\n      font-size: 12.5px; color: rgba(21, 58, 91, 1);\n      pointer-events: none; cursor: default;\n    }\n    .phxg-reassure span {\n      display: flex; align-items: center; gap: 5px;\n      text-decoration: none !important;\n    }\n    .phxg-check {\n      color: rgba(21, 58, 91, 1); font-weight: 700;\n      text-decoration: none !important;\n    }\n\n    /* ══ MOBILE TRUST STRIP ══ */\n    .phxg-trust {\n      display: none;\n      background: #F8FAFC; border-bottom: 1px solid #E5EAF0;\n      padding: 14px 20px; justify-content: space-around;\n      font-family: 'DM Sans', sans-serif;\n    }\n    .phxg-trustitem {\n      display: flex; flex-direction: column; align-items: center; gap: 4px;\n      pointer-events: none;\n    }\n    .phxg-ticon { font-size: 20px; }\n    .phxg-tlabel {\n      font-size: 10.5px; color: #64748B;\n      font-weight: 500; text-align: center;\n      text-decoration: none !important;\n    }\n\n    /* ══ RESPONSIVE ══ */\n    @media (max-width: 900px) {\n      .phxg-hero {\n        padding: 44px 20px 48px;\n        min-height: 460px;\n        align-items: flex-end;\n      }\n      .phxg-hero::after { display: none; }\n      .phxg-content    { max-width: 100%; }\n      .phxg-title      { font-size: clamp(32px,9vw,44px); }\n      .phxg-pricenow   { font-size: clamp(28px,8vw,36px); }\n      .phxg-cta        { width: 100%; justify-content: center; font-size: 16px; padding: 16px 24px; }\n      .phxg-reassure   { justify-content: center; gap: 12px; font-size: 12px; }\n      .phxg-trust      { display: flex; }\n    }\n    @media (max-width: 480px) {\n      .phxg-hero          { padding: 36px 16px 40px; min-height: 420px; }\n      .phxg-eyebrow       { font-size: 10px; }\n      .phxg-sub           { font-size: 14.5px; }\n      .phxg-pricerow      { gap: 8px; margin-bottom: 20px; }\n      .phxg-reassure span { font-size: 11.5px; }\n      .phxg-ratingtxt     { font-size: 12px; }\n    }",
+            "custom_js": "",
+            "desktop_width_percent": 100,
+            "container_padding": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_db25917_zWkXPH"
+      ],
+      "name": "Hero Banner",
+      "settings": {}
+    },
+    "09662284-e8a5-4a4d-a1bd-7f26c20ba274": {
+      "type": "copy-image",
+      "custom_css": [
+        ".vtl-pr-review-stars-snippet-container.Vtl-ProductReviewsStars__Wrapper--the-phoenix-gravity-filtre-a-eau {display: none;}",
+        ".btn {padding: 10px;}"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Innovation Pure, Eau Pure",
+        "content": "<p>Entrez dans le futur avec notre technologie de double filtration de pointe. Le Filtre à Eau par Gravité Phoenix n'est pas qu'un produit ; c'est une expérience, fabriqué à partir du meilleur Acier Inoxydable AISI 304, garantissant durabilité et élégance. Chaque goutte d'eau est une symphonie de pureté, filtrée par notre technologie révolutionnaire d'nanobactérien, offrant un goût vif, propre et vivifiant.</p>",
+        "video_id": "",
+        "large_image": "img_standard",
+        "second_content": "",
+        "buttonlink": "/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "COMMANDEZ MAINTENANT ET PROFITEZ DE LA LIVRAISON GRATUITE!",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "17703637597301a4c2": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_bd4f51e_fHKJkf": {
+          "type": "ai_gen_block_bd4f51e",
+          "settings": {
+            "banner_image_1": "shopify://shop_images/water-filter-eCom1_3.webp",
+            "banner_image_2": "shopify://shop_images/water-filter-eCom2_2_cf1aa87d-3a1b-4dc4-b334-78c9ab6e8fa2.webp",
+            "banner_image_3": "shopify://shop_images/water-filter-eCom_5.webp",
+            "banner_image_4": "shopify://shop_images/water-filter-eCom3_2_1.webp",
+            "banner_image_5": "shopify://shop_images/UK_9.jpg",
+            "desktop_width_percent": 100,
+            "slider_height_desktop": 600,
+            "mobile_width_percent": 100,
+            "slider_height_mobile": 300,
+            "image_fit": "cover",
+            "dot_size": 12,
+            "dot_size_mobile": 10,
+            "dot_spacing": 8,
+            "dot_spacing_mobile": 6,
+            "dots_margin_top": 20,
+            "dots_margin_top_mobile": 15,
+            "dot_color": "#cccccc",
+            "dot_hover_color": "#999999",
+            "dot_active_color": "#000000",
+            "enable_autoplay": true,
+            "autoplay_speed": 5
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_bd4f51e_fHKJkf"
+      ],
+      "settings": {}
+    },
+    "pg_eco_impact_20_k_fY68JR": {
+      "type": "pg_eco_impact_20K",
+      "name": "PG Eco Impact 20K",
+      "settings": {
+        "eyebrow": "Impact environnemental",
+        "heading": "Moins de plastique. Plus d’eau pure.",
+        "subheading": "Réduisez votre dépendance aux bouteilles en plastique avec une filtration par gravité élégante, sans électricité et pensée pour durer.",
+        "stat_1_number": "20 000 L",
+        "stat_1_label": "par paire de cartouches",
+        "stat_2_number": "12 mois",
+        "stat_2_label": "remplacement recommandé",
+        "stat_3_number": "0 élec.",
+        "stat_3_label": "sans plomberie ni branchement",
+        "calculator_label": "Combien de personnes dans votre foyer ?",
+        "default_people": 2,
+        "people_suffix": "personnes",
+        "result_1_label": "bouteilles évitées/an",
+        "result_2_label": "kg CO₂ évités/an",
+        "result_3_label": "€ économisés/an",
+        "usage_label": "Usage estimé",
+        "capacity_label": "Capacité Phoenix",
+        "capacity_text": "20 000 L ou 12 mois",
+        "capacity_note": "Une paire filtre jusqu’à 20 000 L au total — soit 10 000 L par cartouche — ou 12 mois. Cette limite protège l’efficacité selon la source d’eau utilisée : robinet, puits, rivière ou lac.",
+        "bottles_per_person": 180,
+        "co2_per_bottle_g": 110,
+        "monthly_saving_per_person": 9,
+        "litres_per_person_per_day": 2,
+        "button_text": "Commander maintenant",
+        "button_link": "shopify://products/the-phoenix-gravity-filtre-a-eau",
+        "trust_text": "Livraison gratuite dès 99 € · Garantie 100 jours · Certifié NSF 42 & 372",
+        "source_text": "Estimations basées sur 180 bouteilles/personne/an, 0,11 kg CO₂/bouteille, 2 L d’eau/personne/jour. La capacité Phoenix est indiquée comme 20 000 L par paire de cartouches, soit 10 000 L par cartouche, ou 12 mois selon la source d’eau.",
+        "background_color": "#f4f1ea",
+        "card_color": "#ffffff",
+        "heading_color": "#1c2554",
+        "accent_color": "#1c2554",
+        "steel_color": "#dce3e7",
+        "text_color": "#000000",
+        "border_color": "#e1ded6",
+        "desktop_padding_y": 38,
+        "tablet_padding_y": 32,
+        "mobile_padding_y": 24,
+        "custom_class": ""
+      }
+    },
+    "video_image_jidGAQ": {
+      "type": "video-image",
+      "blocks": {
+        "text_CE8bgw": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom1.webp"
+          }
+        },
+        "text_R8f6gD": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom2_2.webp"
+          }
+        },
+        "text_WyXWGk": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom3_2.webp"
+          }
+        },
+        "text_AQnemM": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom3_2.webp"
+          }
+        },
+        "text_JGGYME": {
+          "type": "text",
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/water-filter-eCom_5.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "text_CE8bgw",
+        "text_R8f6gD",
+        "text_WyXWGk",
+        "text_AQnemM",
+        "text_JGGYME"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "28959b57-8b54-48fd-8951-7862b83877da": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Technologie de Filtration Révolutionnaire ”Nanobactérien”",
+        "content": "<p>Les filtres traditionnels se contentent de piéger les polluants indésirables, ce qui leur permet de s'accumuler et de se multiplier, les transformant en foyer de contaminants en seulement deux semaines — polluant instantanément toute l'eau qui passe. Pour résoudre ce problème crucial, nous avons développé la technologie révolutionnaire Nanobactérien.</p><p>Comment ça marche ? Tout d'abord, nous utilisons du carbone actif granulaire provenant de coques de noix de coco naturelles pour éliminer les produits chimiques, les toxines et les métaux lourds tels que le zinc et le plomb. Ensuite, nous imprégnons chaque filtre avec des adsorbants de carbone pour empêcher la croissance des contaminants à l'intérieur du filtre lui-même. Ce processus de filtration imite la nature et maintient la teneur en oxygène et en minéraux inchangée, donnant à l'eau une fraîcheur de source et un goût sain inégalé.</p>",
+        "video_id": "",
+        "large_image": "img_standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "custom_html_pHGFHQ": {
+      "type": "custom-html",
+      "custom_css": [
+        "wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none; margin: 0; padding: 0; box-sizing: border-box; overflow: hidden;}"
+      ],
+      "name": "Custom Embed Video",
+      "settings": {
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
+      }
+    },
+    "video_image_YzDWaM": {
+      "type": "video-image",
+      "blocks": {
+        "text_Fw4DmH": {
+          "type": "text",
+          "settings": {
+            "video_id": "jr37r9792m"
+          }
+        }
+      },
+      "block_order": [
+        "text_Fw4DmH"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "7d657438-e0bb-4aaa-b793-a41820ac1ea5": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "D'une Beauté Impressionnante. D'un Prix Incroyablement Abordable",
+        "content": "<p>Les systèmes de filtration pour toute la maison, bien qu'efficaces, sont associés à des coûts initiaux élevés — généralement de 150 € à plus de 500 € — ainsi qu'à des dépenses d'entretien continues. Ils nécessitent également un service professionnel, ce qui ajoute à l'inconvénient. De même, l'eau en bouteille implique des dépenses annuelles importantes et occupe un espace de stockage précieux.</p>",
+        "column_img": "shopify://shop_images/water-filter-home_2.webp",
+        "video_id": "",
+        "img_width": 0,
+        "large_image": "img_standard",
+        "second_content": "<p>Le Filtre à Eau par Phoenix Gravity offre une solution élégante, fournissant une eau propre et délicieuse pour seulement 8 centimes d'euro par litre. Ce filtre convivial est facile à installer, simple à entretenir et permet un remplacement de filtre sans tracas, éliminant le besoin de systèmes coûteux et complexes.</p>",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "copy_image_Ub4PQg": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Simplicité dans la conception, avancée dans la filtration",
+        "content": "<p>Le Filtre à Eau par Phoenix Gravity est plus qu'un simple ustensile — c'est une pièce maîtresse pour votre maison. Son design épuré et minimaliste complète n'importe quel espace, tandis que le système de filtration avancé fonctionne silencieusement pour garantir que chaque verre que vous versez reflète la pureté. L'installation est sans effort, l'entretien est minimal et le goût est véritablement inégalé.</p>",
+        "video_id": "",
+        "large_image": "img_standard",
+        "second_content": "",
+        "buttonlink": "/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "1770364387d5530375": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c85bf07_UkVRT4": {
+          "type": "ai_gen_block_c85bf07",
+          "settings": {
+            "desktop_image": "shopify://shop_images/US_Img_carbon.webp",
+            "mobile_image": "shopify://shop_images/US_Img_carbon.webp",
+            "desktop_width_percent": 100,
+            "border_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c85bf07_UkVRT4"
+      ],
+      "settings": {}
+    },
+    "video_image_hAjiGK": {
+      "type": "video-image",
+      "blocks": {
+        "text_XbKib9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "video_id": ""
+          }
+        },
+        "text_refYgB": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "video_id": "",
+            "banner_image": "shopify://shop_images/US_Img_1a_1_1.webp"
+          }
+        }
+      },
+      "block_order": [
+        "text_XbKib9",
+        "text_refYgB"
+      ],
+      "disabled": true,
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "copy_image_X6LWBa": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Notre Filtre à Eau le Plus Avancé Jamais Conçu",
+        "content": "<p>Le Filtre à Eau par Phoenix Gravity représente le summum de nos 50 années de dévouement à la recherche et au développement. Conçu pour redéfinir votre expérience de l'eau, il incarne à la fois l'élégance et l'efficacité.</p>",
+        "column_img": "shopify://shop_images/LifeStyle.jpg",
+        "video_id": "",
+        "large_image": "img_standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "cards_yt3YmD": {
+      "type": "cards",
+      "blocks": {
+        "text_9GRAe7": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>L'Acier Inoxydable AISI 304 est léger, résistant à la rouille et durable</p>",
+            "icon": "shopify://shop_images/icon-tick-sheild_1.svg",
+            "video_id": ""
+          }
+        },
+        "text_XEBQBh": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>Le double système de filtration filtre jusqu'à 16 litres d'eau par heure</p>",
+            "icon": "shopify://shop_images/icon-clean-water.svg",
+            "video_id": ""
+          }
+        },
+        "text_HHrWik": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>Élimine 99,9 % des contaminants et des métaux lourds</p>",
+            "icon": "shopify://shop_images/icon-bugs.svg",
+            "video_id": ""
+          }
+        },
+        "text_dhXfnP": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>Le robinet en métal anti-goutte distribue une eau au goût délicieux</p>",
+            "icon": "shopify://shop_images/icon-metal-tap.svg",
+            "video_id": ""
+          }
+        },
+        "text_kYG8qy": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>Les filtres durent jusqu'à 50 % plus longtemps que les grandes marques et peuvent purifier jusqu'à 6 mois</p>",
+            "icon": "shopify://shop_images/icon-time.svg",
+            "video_id": ""
+          }
+        },
+        "text_ibmL7H": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "copy": "<p>Le carbone actif granulaire des coques de noix de coco naturelles élimine les PFAS et autres toxines chimiques</p>",
+            "icon": "shopify://shop_images/icon-bacteria.svg",
+            "video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_9GRAe7",
+        "text_XEBQBh",
+        "text_HHrWik",
+        "text_dhXfnP",
+        "text_kYG8qy",
+        "text_ibmL7H"
+      ],
+      "settings": {
+        "style": "light-cards",
+        "heading": "Conçu pour la Perfection",
+        "paragraph": "",
+        "section_bgimg": "shopify://shop_images/filter-background-light_3.jpg",
+        "buttontext": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "buttonlink": "/products/the-phoenix-gravity-filtre-a-eau",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "social_proof_fy7ejQ": {
+      "type": "social-proof",
+      "blocks": {
+        "logo_adEngV": {
+          "type": "logo",
+          "settings": {
+            "title": "LABORATOIRE PFOA PFOS RAPPORT D'ESSAI",
+            "logo": "shopify://shop_images/water_quality_2.png",
+            "link": "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/Phoenix_Gravity__Filtration_Performance__Contaminants_Lab_Reports_August_2024_eb74bd4f-3888-42d8-9a4d-4e9cfd823cbd.pdf?v=1767695645"
+          }
+        },
+        "logo_N3RPRE": {
+          "type": "logo",
+          "settings": {
+            "title": "MÉDICAMENTS RAPPORT D'ESSAI",
+            "logo": "shopify://shop_images/pharma.png",
+            "link": "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/Phoenix_Gravity__Filtration_Performance__Contaminants_Lab_Reports_August_2024_eb74bd4f-3888-42d8-9a4d-4e9cfd823cbd.pdf?v=1767695645"
+          }
+        },
+        "logo_7QmAKP": {
+          "type": "logo",
+          "settings": {
+            "title": "MÉTAUX LOURDSRAPPORT D'ESSAI",
+            "logo": "shopify://shop_images/heavy_metal.png",
+            "link": "https://cdn.shopify.com/s/files/1/0656/9898/8085/files/Phoenix_Gravity__Filtration_Performance__Contaminants_Lab_Reports_August_2024_eb74bd4f-3888-42d8-9a4d-4e9cfd823cbd.pdf?v=1767695645"
+          }
+        }
+      },
+      "block_order": [
+        "logo_adEngV",
+        "logo_N3RPRE",
+        "logo_7QmAKP"
+      ],
+      "custom_css": [
+        "@media (min-width: 786px) {.section-socialproof .social-proof .social-card {width: 250px; }}"
+      ],
+      "settings": {
+        "intro": "Notre eau a été testée par des organismes tiers réputés et a été approuvée haut la main"
+      }
+    },
+    "comparison_table_hhGEed": {
+      "type": "comparison-table",
+      "blocks": {
+        "text_AfqEh7": {
+          "type": "text",
+          "settings": {
+            "feature": "Abordable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "yes"
+          }
+        },
+        "text_tCYjnk": {
+          "type": "text",
+          "settings": {
+            "feature": "Portable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "text_KF9RdL": {
+          "type": "text",
+          "settings": {
+            "feature": "Acier Inoxydable Durable",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_7imQmV": {
+          "type": "text",
+          "settings": {
+            "feature": "Essai Sans Risque de 100 Jours",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_9iNwDV": {
+          "type": "text",
+          "settings": {
+            "feature": "Facile à Entretenir",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "text_naHJTg": {
+          "type": "text",
+          "settings": {
+            "feature": "Grande Capacité",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_pDgX7H": {
+          "type": "text",
+          "settings": {
+            "feature": "Aucune Plomberie Requise",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        }
+      },
+      "block_order": [
+        "text_AfqEh7",
+        "text_tCYjnk",
+        "text_KF9RdL",
+        "text_7imQmV",
+        "text_9iNwDV",
+        "text_naHJTg",
+        "text_pDgX7H"
+      ],
+      "settings": {
+        "heading": "La façon la plus pratique et abordable de profiter d'une potable pure et propre chez vous",
+        "number_of_comparisons": "3",
+        "style": "style-1",
+        "feature_header": "",
+        "company_name": "Filtre à Eau Phoenix",
+        "comparison_1": "Autres systèmes de filtrage",
+        "comparison_2": "Eau en Bouteille",
+        "comparison_3": "Pichets Filtrants",
+        "buttonlink": "/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "COMMANDEZ MAINTENANT ET PROFITEZ DE LALIVRAISON GRATUITE!",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "comparison_table_WtgEQM": {
+      "type": "comparison-table",
+      "blocks": {
+        "text_8EK6V8": {
+          "type": "text",
+          "settings": {
+            "feature": "Abordable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "yes"
+          }
+        },
+        "text_QQyPfN": {
+          "type": "text",
+          "settings": {
+            "feature": "Portable",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "text_YhmcKV": {
+          "type": "text",
+          "settings": {
+            "feature": "Acier Inoxydable Durable",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_A964x4": {
+          "type": "text",
+          "settings": {
+            "feature": "Essai Sans Risque de 100 Jours",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_a6i6Mk": {
+          "type": "text",
+          "settings": {
+            "feature": "Facile à Entretenir",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        },
+        "text_c9eF7k": {
+          "type": "text",
+          "settings": {
+            "feature": "Grande Capacité",
+            "column_1": "yes",
+            "column_2": "yes",
+            "column_3": "no",
+            "column_4": "no"
+          }
+        },
+        "text_PNTxnT": {
+          "type": "text",
+          "settings": {
+            "feature": "Aucune Plomberie Requise",
+            "column_1": "yes",
+            "column_2": "no",
+            "column_3": "yes",
+            "column_4": "yes"
+          }
+        }
+      },
+      "block_order": [
+        "text_8EK6V8",
+        "text_QQyPfN",
+        "text_YhmcKV",
+        "text_A964x4",
+        "text_a6i6Mk",
+        "text_c9eF7k",
+        "text_PNTxnT"
+      ],
+      "disabled": true,
+      "name": "Comparison Table V2",
+      "settings": {
+        "heading": "La façon la plus pratique et abordable de profiter d'une potable pure et propre chez vous",
+        "number_of_comparisons": "3",
+        "style": "style-1",
+        "feature_header": "",
+        "company_name": "Filtre à Eau Phoenix",
+        "comparison_1": "Autres systèmes de filtrage",
+        "comparison_2": "Eau en Bouteille",
+        "comparison_3": "Pichets Filtrants",
+        "buttonlink": "/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "COMMANDEZ MAINTENANT ET PROFITEZ DE LA LIVRAISON GRATUITE!",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "a9f94ca6-ea37-4e60-86af-50e014e0180b": {
+      "type": "steps-section",
+      "blocks": {
+        "dd79e78c-9109-46f1-88d0-fa50384207b5": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-assemble.svg",
+            "heading": "1. Assemblez Votre Filtre",
+            "copy": "<p>Suivez simplement les instructions incluses dans la boîte pour assembler votre filtre — la configuration est super facile et ne prend que 5 minutes.</p>"
+          }
+        },
+        "ae3a8a7c-6589-4a11-9248-ea5265b2025e": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-water-sm.svg",
+            "heading": "2. Ajoutez l'Eau du Robinet",
+            "copy": "<p>Retirez le couvercle et versez l'eau du robinet. Les doubles filtres utilisent la filtration naturelle au carbone provenant de la province du sud de l'Espagne pour éliminer les toxines.</p>"
+          }
+        },
+        "7fcf3a4c-3022-4703-be3e-700c540135a8": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-glass.svg",
+            "heading": "3. C'est Prêt à Boire !",
+            "copy": "<p>Servez-vous un verre — vous remarquerez un goût propre et vif que vous n'obtenez qu'avec de l'eau filtrée dont tous les mauvais contaminants ont été absorbés !</p>"
+          }
+        }
+      },
+      "block_order": [
+        "dd79e78c-9109-46f1-88d0-fa50384207b5",
+        "ae3a8a7c-6589-4a11-9248-ea5265b2025e",
+        "7fcf3a4c-3022-4703-be3e-700c540135a8"
+      ],
+      "settings": {
+        "heading": "Profitez d'une eau cristalline et savoureuse en 3 étapes faciles !",
+        "paragraph": "",
+        "video_id": "nka2th3w5j",
+        "block_direction": "row",
+        "buttontext": "",
+        "buttonlink": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "copy_image_gEH4nM": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "Essai Gratuit de 100 Jours",
+        "content": "<p>Vous craignez que le Filtre à Eau par Gravité Phoenix semble trop beau pour être vrai ? Vous n'êtes pas sûr qu'il éliminera vraiment autant de contaminants que nous le promettons ?</p><p>Nous soutenons notre produit à 100 % — vous pouvez donc l'essayer chez vous pendant 100 jours avec notre garantie de remboursement.</p><p>Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, retournez-le simplement dans les 100 jours pour un remboursement complet, sans poser de questions.</p><p><em>*Voir les conditions générales d'application.</em></p>",
+        "column_img": "shopify://shop_images/phoenix-guarantee.v1_copy_1.webp",
+        "video_id": "",
+        "large_image": "img_standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "copy_image_Ep8Wbz": {
+      "type": "copy-image",
+      "disabled": true,
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy",
+        "vertical_align": "align-items-center",
+        "heading": "100-Day Free Trial",
+        "content": "<p>Worried the Phoenix Gravity Water Filter is too good to be true? Don’t believe it will really remove as many contaminants as we promise?<br/><br/>We stand behind our product 100% – so you can try our filter at home for 100 days, risk-free. If you aren't fully satisfied with the purity of your water, send it back within 100 days for a full refund, no questions asked!<br/><br/>*T&Cs apply<br/></p>",
+        "video_id": "",
+        "large_image": "img_standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "comparison_table_36e4Xb": {
+      "type": "comparison_table",
+      "blocks": {
+        "text_rDCaMR": {
+          "type": "text",
+          "settings": {
+            "feature": "Durée de vie du filtre",
+            "column_1": "20 000 litres par paire",
+            "column_2": "10,000 to 13,000 litres par paire",
+            "column_3": "6,000 to 9,000 litres",
+            "column_4": "Correct"
+          }
+        },
+        "text_B9JEAa": {
+          "type": "text",
+          "settings": {
+            "feature": "Matériau du boîtier",
+            "column_1": "Acier inoxydable 304 AISI",
+            "column_2": "Acier inoxydable",
+            "column_3": "Acier inoxydable (Varie selon le modèle)",
+            "column_4": "Correct"
+          }
+        },
+        "text_GRBf84": {
+          "type": "text",
+          "settings": {
+            "feature": "Certification NSF",
+            "column_1": "NSF 42 & 372",
+            "column_2": "No",
+            "column_3": "No",
+            "column_4": "Correct"
+          }
+        },
+        "text_wnkeUN": {
+          "type": "text",
+          "settings": {
+            "feature": "Filtration du fluor",
+            "column_1": "Filtres à fluor rechargeables POSTreat Steel",
+            "column_2": "Filtres à fluorure en plastique (non rechargeables)",
+            "column_3": "No",
+            "column_4": "Correct"
+          }
+        },
+        "text_eN68Kf": {
+          "type": "text",
+          "settings": {
+            "feature": "Garantie",
+            "column_1": "10 ans sur le boîtier",
+            "column_2": "Garantie limitée",
+            "column_3": "Non précisé clairement",
+            "column_4": "Correct"
+          }
+        }
+      },
+      "block_order": [
+        "text_rDCaMR",
+        "text_B9JEAa",
+        "text_GRBf84",
+        "text_wnkeUN",
+        "text_eN68Kf"
+      ],
+      "disabled": true,
+      "name": "Custom Comparison Table",
+      "settings": {
+        "heading": "",
+        "number_of_comparisons": "2",
+        "style": "style-1",
+        "heading_font_size": 32,
+        "header_font_size": 14,
+        "cell_font_size": 14,
+        "feature_header": "",
+        "feature_header_color": "#000000",
+        "company_logo": "shopify://shop_images/Logo_with_Register_Mark.png",
+        "company_name": "",
+        "company_header_color": "#000000",
+        "comparison_1": "Brand A",
+        "comparison_1_image": "shopify://shop_images/2_1_5b92f812-d653-42a9-b245-eeb4a01a6394.png",
+        "comparison_1_color": "#0b8700",
+        "comparison_2": "Brand B",
+        "comparison_2_image": "shopify://shop_images/4.png",
+        "comparison_2_color": "#dd7405",
+        "comparison_3": "",
+        "comparison_3_color": "#000000",
+        "buttonlink": "shopify://products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "COMMANDEZ MAINTENANT ET PROFITEZ DE LALIVRAISON GRATUITE!",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "f3652b52-770f-47a5-882c-ea56bdea2b10": {
+      "type": "testimonials",
+      "blocks": {
+        "268fbfd8-392e-437f-b2bf-8b826c84550c": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Je suis vraiment contente d'avoir fait ce choix. Après m'être renseignée sur la purification et la distillation de l'eau, j'ai étudié les modèles électriques et à vapeur naturelle et j'ai constaté que les deux options étaient très chronophages et énergivores, nécessitant jusqu'à 4 heures de purification d'affilée. J'ai également appris que les matériaux utilisés étaient de piètre qualité !</p>",
+            "reviewer": "Veronique"
+          }
+        },
+        "38b198d0-82ba-49a6-963f-d5aeea6a39d3": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Nous recherchions un filtre robuste, facile à entretenir, à construire, durable et efficace. Il répond à tous nos critères !</p>",
+            "reviewer": "André"
+          }
+        },
+        "0cc7a6ba-eb83-4ad4-aa8e-a1be39607916": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>J'en ai acheté un sur Amazon et je dois dire que j'en avais un autre, de bonne réputation, d'une autre entreprise, et Phoenix est bien meilleur. L'autre entreprise a un service client déplorable : ils sont impolis et se fichent complètement des problèmes. Par exemple, quand j'ai commandé des articles qui ne sont jamais arrivés, ils ont carrément prétendu que j'avais tort et que j'avais reçu ma commande (ce qui était faux), et ils m'ont même traité de voleur… Un comportement très impoli et non professionnel.</p>",
+            "reviewer": "David"
+          }
+        },
+        "text_H9ycnR": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Excellente qualité du produit et livraison rapide. Le service client a été très réactif pour répondre à mes questions concernant l'installation.</p>",
+            "reviewer": "Sophie"
+          }
+        },
+        "text_7HyQVV": {
+          "type": "text",
+          "settings": {
+            "quote": "<p>Cela a complètement changé notre perception de la filtration de l'eau. Une solution simple, efficace et écologique.</p>",
+            "reviewer": "Michel"
+          }
+        }
+      },
+      "block_order": [
+        "268fbfd8-392e-437f-b2bf-8b826c84550c",
+        "38b198d0-82ba-49a6-963f-d5aeea6a39d3",
+        "0cc7a6ba-eb83-4ad4-aa8e-a1be39607916",
+        "text_H9ycnR",
+        "text_7HyQVV"
+      ],
+      "custom_css": [],
+      "settings": {
+        "layout": "style-1",
+        "heading": "Marque de confiance de filtres à eau par gravité depuis plus de 50 ans",
+        "paragraph": "",
+        "sub_header": "Basé sur 900+ Avis.",
+        "button_text": "Voir Tous les Avis",
+        "button_url": "https://phoenixwaterfilters.fr/pages/review",
+        "button_aftertext": "Review",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "copy_image_Nj3acJ": {
+      "type": "copy-image",
+      "blocks": {
+        "text_NawCmC": {
+          "type": "text",
+          "settings": {
+            "feature_text": "1 x Unité de Boîtier en Acier Inoxydable AISI 304 finition 8K"
+          }
+        },
+        "text_eGeEQM": {
+          "type": "text",
+          "settings": {
+            "feature_text": "2 x Éléments Filtrants au carbone"
+          }
+        },
+        "text_VBUDgx": {
+          "type": "text",
+          "settings": {
+            "feature_text": "1 x Robinet en Acier Inoxydable"
+          }
+        },
+        "text_gNbCt8": {
+          "type": "text",
+          "settings": {
+            "feature_text": "2 x Éléments Filtrants POSTreat pour l'Élimination du Fluorure"
+          }
+        },
+        "text_ArMXrm": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Soutenu par une garantie de 10 ans et une garantie de remboursement de 100 jours !"
+          }
+        }
+      },
+      "block_order": [
+        "text_NawCmC",
+        "text_eGeEQM",
+        "text_VBUDgx",
+        "text_gNbCt8",
+        "text_ArMXrm"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image",
+        "vertical_align": "align-items-end",
+        "heading": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "content": "<p>Nous croyons au pouvoir transformateur du filtre à eau par gravité Phoenix. C'est pourquoi nous vous proposons un essai de 100 jours. Plus qu'un simple produit, c'est un engagement pour votre bien-être et votre satisfaction.</p>",
+        "column_img": "shopify://shop_images/water-filter-warranty_copy_1.webp",
+        "video_id": "",
+        "large_image": "img-lrg",
+        "second_content": "",
+        "buttonlink": "/products/the-phoenix-gravity-filtre-a-eau",
+        "buttontext": "COMMANDEZ MAINTENANT ET PROFITEZ DE LA LIVRAISON GRATUITE!",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    }
+  },
+  "order": [
+    "1769170449d6d55086",
+    "177787638213a68afb",
+    "09662284-e8a5-4a4d-a1bd-7f26c20ba274",
+    "17703637597301a4c2",
+    "pg_eco_impact_20_k_fY68JR",
+    "video_image_jidGAQ",
+    "28959b57-8b54-48fd-8951-7862b83877da",
+    "custom_html_pHGFHQ",
+    "video_image_YzDWaM",
+    "7d657438-e0bb-4aaa-b793-a41820ac1ea5",
+    "copy_image_Ub4PQg",
+    "1770364387d5530375",
+    "video_image_hAjiGK",
+    "copy_image_X6LWBa",
+    "cards_yt3YmD",
+    "social_proof_fy7ejQ",
+    "comparison_table_hhGEed",
+    "comparison_table_WtgEQM",
+    "a9f94ca6-ea37-4e60-86af-50e014e0180b",
+    "copy_image_gEH4nM",
+    "copy_image_Ep8Wbz",
+    "comparison_table_36e4Xb",
+    "f3652b52-770f-47a5-882c-ea56bdea2b10",
+    "copy_image_Nj3acJ"
+  ]
+}

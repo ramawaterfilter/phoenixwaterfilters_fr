@@ -1,0 +1,381 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17629333877497caaf": {
+      "type": "_blocks",
+      "custom_css": [
+        ".ai-centered-banner-azxdot3ruoufrwwtwnaigenblock89ce117feyhdn {margin-bottom: 20px;}"
+      ],
+      "settings": {}
+    },
+    "177028534892dc8326": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_f28fa58_k3AWqe": {
+          "type": "image_banner",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Warranty_banner_bg.webp",
+            "mobile_image": "shopify://shop_images/Warranty_banner_bg.webp",
+            "heading": "<p>A <strong>50-year</strong> legacy of expertise & a commitment to continuous innovation.</p>",
+            "text": "<p>Sustainable Solutions .Smarter Business.</p>",
+            "button_label": "Learn more",
+            "button_link": "",
+            "content_max_width": 1200,
+            "column_gap": 100,
+            "mobile_stack_gap": 10,
+            "text_button_gap": 10,
+            "min_height_desktop": 400,
+            "min_height_mobile": 350,
+            "padding_top_desktop": 80,
+            "padding_bottom_desktop": 80,
+            "padding_top_mobile": 60,
+            "padding_bottom_mobile": 60,
+            "padding_horizontal": 20,
+            "overlay_color": "#000000",
+            "overlay_opacity": 0.2,
+            "heading_color": "#ffffff",
+            "heading_size_desktop": 36,
+            "heading_size_mobile": 32,
+            "text_color": "#ffffff",
+            "text_size_desktop": 21,
+            "text_size_mobile": 14,
+            "button_bg_color": "#fdd835",
+            "button_hover_bg_color": "#fdd835",
+            "button_text_color": "#000000",
+            "button_hover_text_color": "#ffffff",
+            "button_text_size": 17,
+            "button_padding_vertical": 8,
+            "button_padding_horizontal": 20,
+            "button_border_radius": 4,
+            "button_border_color": "#1a73e8",
+            "button_hover_border_color": "#1557b0",
+            "button_border_width": 2
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_f28fa58_k3AWqe"
+      ],
+      "settings": {}
+    },
+    "17702888861596707f": {
+      "type": "_blocks",
+      "settings": {}
+    },
+    "17702924452cf04695": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6c5dab1_LUcNpC": {
+          "type": "ai_gen_block_6c5dab1",
+          "settings": {
+            "background_color": "#f9f9f9",
+            "padding_top": 30,
+            "padding_bottom": 0,
+            "heading": "Phoenix Gravity has been the world's leading manufacturer of high-quality stainless steel gravity-fed water filters.",
+            "heading_font_size": 38,
+            "heading_font_weight": "700",
+            "heading_color": "#000000",
+            "heading_spacing": 10,
+            "text": "<p>At Phoenix Gravity, We treat our clients as family, not just as business partners. We're committed to building strong, lasting relationships based on trust, support, and shared success.</p>",
+            "text_font_size": 20,
+            "text_color": "#666666"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6c5dab1_LUcNpC"
+      ],
+      "settings": {}
+    },
+    "17702953067fa46620": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e1c808a_A8LGq4": {
+          "type": "ai_gen_block_e1c808a",
+          "settings": {
+            "section_heading": "",
+            "heading_font_size": 20,
+            "heading_color": "#000000",
+            "heading_spacing": 10,
+            "background_color": "#f9f9f9",
+            "section_padding_top": 0,
+            "section_padding_bottom": 0,
+            "max_width": 1400,
+            "card_background_color": "#ffffff",
+            "card_border_radius": 12,
+            "card_padding": 30,
+            "card_gap": 30,
+            "card_title_font_size": 20,
+            "card_title_color": "#000000",
+            "card_text_font_size": 15,
+            "card_text_color": "#666666",
+            "card_image_width": 120,
+            "card_image_border_radius": 8,
+            "card_1_heading": "Family Owned",
+            "card_1_description": "In London and Chennai, two soon-to-be fathers sought better water filtration solutions.Recognizing the limitations of existing options, they pioneered innovative approaches. In 2005, their combined expertise led to Phoenix Gravity Water Filters.Today, we are trusted by over 800,000 homes worldwide for pure water.",
+            "card_1_image": "shopify://shop_images/image_4_1.webp",
+            "card_2_heading": "We Are Global",
+            "card_2_description": "With a processing facility in Chennai and presence throughout the world, we are equipped to service the market throughout the world.",
+            "card_2_image": "shopify://shop_images/b2b_map_faec3f42-614a-46b7-9085-39778964b88b.jpg",
+            "cta_text": "",
+            "cta_text_font_size": 14,
+            "cta_text_color": "#333333",
+            "cta_spacing": 20,
+            "cta_button_spacing": 10,
+            "button_label": "SCHEDULE A CALL",
+            "scroll_target_id": "",
+            "button_background_color": "#f5d24f",
+            "button_text_color": "#000000",
+            "button_hover_color": "#fdd835",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 40,
+            "button_border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e1c808a_A8LGq4"
+      ],
+      "settings": {}
+    },
+    "17702906682e7cd285": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_d04a405_iQb9gA": {
+          "type": "ai_gen_block_d04a405",
+          "settings": {
+            "background_image_desktop": "shopify://shop_images/water-filter-blog_2.webp",
+            "background_image_mobile": "shopify://shop_images/Wellness_for_France-_mob_v2.jpg",
+            "show_overlay": true,
+            "overlay_opacity": 0.3,
+            "heading": "Join the Phoenix Gravity Family ",
+            "subheading": "Our Partner Program offers exclusive benefits for Dealers. ",
+            "description": "With Phoenix Gravity, you're not just selling products; you're delivering a superior experience backed by unwavering support.",
+            "text_color": "#ffffff",
+            "text_alignment": "center",
+            "heading_size_desktop": 48,
+            "subheading_size_desktop": 24,
+            "description_size_desktop": 16,
+            "heading_size_mobile": 24,
+            "subheading_size_mobile": 16,
+            "description_size_mobile": 12,
+            "button_label": "Contact Us",
+            "button_link": "",
+            "button_bg_color": "#fdd835",
+            "button_text_color": "#000000",
+            "button_border_radius": 8,
+            "button_padding_vertical": 10,
+            "button_padding_horizontal": 20,
+            "padding_top": 30,
+            "padding_bottom": 25
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_d04a405_iQb9gA"
+      ],
+      "settings": {}
+    },
+    "blocks_73Mn3G": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e1c808a_EmRzPq": {
+          "type": "ai_gen_block_e1c808a",
+          "settings": {
+            "section_heading": "Our Dealer Advantage",
+            "heading_font_size": 28,
+            "heading_color": "#000000",
+            "heading_spacing": 25,
+            "background_color": "#f9f9f9",
+            "section_padding_top": 25,
+            "section_padding_bottom": 25,
+            "max_width": 950,
+            "card_background_color": "#ffffff",
+            "card_border_radius": 30,
+            "card_padding": 25,
+            "card_gap": 30,
+            "card_title_font_size": 20,
+            "card_title_color": "#000000",
+            "card_text_font_size": 15,
+            "card_text_color": "#666666",
+            "card_image_width": 100,
+            "card_image_border_radius": 20,
+            "card_1_heading": "Unmatched Product Quality",
+            "card_1_description": "Our solutions are renowned for their excellence.",
+            "card_1_image": "shopify://shop_images/water-filter-blog_2.webp",
+            "card_2_heading": "Comprehensive Support",
+            "card_2_description": "We're committed to your success.",
+            "card_2_image": "shopify://shop_images/b2b_customer_support.webp",
+            "cta_text": "",
+            "cta_text_font_size": 14,
+            "cta_text_color": "#333333",
+            "cta_spacing": 20,
+            "cta_button_spacing": 10,
+            "button_label": "SCHEDULE A CALL",
+            "scroll_target_id": "",
+            "button_background_color": "#f5d24f",
+            "button_text_color": "#2f2953",
+            "button_hover_color": "#fdd835",
+            "button_font_size": 13,
+            "button_padding_vertical": 10,
+            "button_padding_horizontal": 20,
+            "button_border_radius": 8
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e1c808a_EmRzPq"
+      ],
+      "settings": {}
+    },
+    "1770791924ae6584f3": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_4053a37_xxwkr9": {
+          "type": "ai_gen_block_4053a37",
+          "settings": {
+            "section_heading": "Our features",
+            "heading_alignment": "center",
+            "heading_size": 32,
+            "heading_spacing": 40,
+            "background_color": "#ffffff",
+            "text_color": "#000000",
+            "padding_top": 10,
+            "padding_bottom": 45,
+            "desktop_width_percent": 75,
+            "card_layout": "column",
+            "card_align_items": "flex-start",
+            "card_text_align": "left",
+            "card_background": "#f4f4f4",
+            "card_border_radius": 16,
+            "card_padding": 30,
+            "card_gap": 24,
+            "content_gap": 20,
+            "icon_width": 40,
+            "icon_height": 40,
+            "icon_fit": "contain",
+            "title_size": 18,
+            "description_size": 14,
+            "text_spacing": 10,
+            "button_label": "JOIN US",
+            "button_link": "#shopify-section-template--27534224785792__custom_contact_form_gVbnXg",
+            "icon_1": "shopify://shop_images/medal-star.webp",
+            "title_1": "A 50-Year Legacy",
+            "description_1": "For over half a century, Phoenix Gravity has been at the forefront of clean drinking water solutions, powering many of the industry’s leading brands.",
+            "icon_2": "shopify://shop_images/ranking_1.webp",
+            "title_2": "Powering the World's Top Brands",
+            "description_2": "We proudly supply top-quality water filters to leading brands worldwide, including the biggest names in the UK and US.",
+            "icon_3": "shopify://shop_images/verify.webp",
+            "title_3": "Tested Excellence",
+            "description_3": "Backed by extensive testing, our gravity filter sets the benchmark for performance and reliability.",
+            "icon_4": "shopify://shop_images/3d-rotate.webp",
+            "title_4": "Zero Returns",
+            "description_4": "Trusted by customers worldwide, our water filters have an exceptional track record with almost zero returns, even during our 100-day trial period.",
+            "icon_5": "shopify://shop_images/3d-square.webp",
+            "title_5": "Sustainable Manufacturing",
+            "description_5": "Our production process is entirely powered by 100% solar energy, guaranteeing eco-friendly practices from start to finish.",
+            "icon_6": "shopify://shop_images/discount-shape.webp",
+            "title_6": "Maximize Your ROI",
+            "description_6": "Experience unparalleled returns on investment with our water filtration solutions, delivering the highest ROI and robust profits in the industry.",
+            "icon_7": "shopify://shop_images/coin.webp",
+            "title_7": "Competitive Pricing",
+            "description_7": "As a manufacturer, we deliver unbeatable prices that enable you to achieve higher profit margins. Our direct-to-business model cuts out the middleman.",
+            "icon_8": "shopify://shop_images/people.webp",
+            "title_8": "Join a Dynamic Team",
+            "description_8": "We are on the lookout for lucrative business opportunities to enhance profitability and expand our network of partners."
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_4053a37_xxwkr9"
+      ],
+      "settings": {}
+    },
+    "1770802120c45b3ddf": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e2dda40_TD8AxF": {
+          "type": "ai_gen_block_e2dda40",
+          "settings": {
+            "heading": "Ready to transform your water?",
+            "paragraph": "Join thousands of satisfied customers who have made the switch to cleaner, healthier water with our gravity filtration systems.",
+            "button_label": "Schedule a Call",
+            "button_link": "",
+            "decorative_image": "shopify://shop_images/arrow-left.webp",
+            "background_color": "#f5f5f5",
+            "button_bg_color": "#FFD700",
+            "padding_top": 0,
+            "padding_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e2dda40_TD8AxF"
+      ],
+      "settings": {}
+    },
+    "17707965006dff3c67": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_60bb423_UwrGKq": {
+          "type": "ai_gen_block_60bb423",
+          "settings": {
+            "heading": "Get in touch",
+            "subheading": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
+            "hulk_form_id": "iYECZpQRauVU4cu14YRbIw",
+            "heading_size": 40,
+            "heading_color": "#ffffff",
+            "subheading_size": 16,
+            "subheading_color": "#e0e0e0",
+            "label_color": "#ffffff",
+            "input_background": "#f5f5f5",
+            "input_text_color": "#333333",
+            "input_border_color": "#e0e0e0",
+            "input_focus_border": "#ffd700",
+            "input_border_radius": 12,
+            "button_background": "#ffd700",
+            "button_text_color": "#000000",
+            "button_border_radius": 8,
+            "background_color": "#000000",
+            "padding_top": 60,
+            "padding_bottom": 60,
+            "desktop_width_percent": 100
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_60bb423_UwrGKq"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "17629333877497caaf",
+    "177028534892dc8326",
+    "17702888861596707f",
+    "17702924452cf04695",
+    "17702953067fa46620",
+    "17702906682e7cd285",
+    "blocks_73Mn3G",
+    "1770791924ae6584f3",
+    "1770802120c45b3ddf",
+    "17707965006dff3c67"
+  ]
+}

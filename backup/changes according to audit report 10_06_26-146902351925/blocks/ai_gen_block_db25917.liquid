@@ -1,0 +1,202 @@
+{% doc %}
+  @prompt
+    create the section make that section page the create the block html css and js and liquid cod emake that block i will directy paste the code, i need to page the code directy so only create he custom code block for htm css and js and liquild
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-custom-code-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-custom-code__container-{{ ai_gen_id }} {
+    padding: {{ block.settings.container_padding }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-custom-code-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-custom-code__container-{{ ai_gen_id }} {
+      padding: {{ block.settings.container_padding | times: 0.75 }}px;
+    }
+  }
+{% endstyle %}
+
+<custom-code-block-{{ ai_gen_id }}
+  class="ai-custom-code-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-custom-code__container-{{ ai_gen_id }}">
+    {% if block.settings.custom_liquid != blank %}
+      {{ block.settings.custom_liquid }}
+    {% endif %}
+
+    {% if block.settings.custom_html != blank %}
+      {% liquid
+        assign rendered_custom_html = block.settings.custom_html
+
+        if block.settings.defer_background_video
+          assign video_opening = '<video class="phxg-video" src="'
+          assign optimized_video_opening = '<video class="phxg-video" preload="none" fetchpriority="high" poster="' | append: block.settings.video_poster_url | append: '" data-deferred-background-video data-src="'
+          assign rendered_custom_html = rendered_custom_html | replace: video_opening, optimized_video_opening
+        endif
+      %}
+      {{ rendered_custom_html }}
+    {% endif %}
+  </div>
+</custom-code-block-{{ ai_gen_id }}>
+
+{% if block.settings.custom_css != blank %}
+  <style>
+    {{ block.settings.custom_css }}
+  </style>
+{% endif %}
+
+{% if block.settings.custom_js != blank %}
+  <script>
+    (function() {
+      {{ block.settings.custom_js }}
+    })();
+  </script>
+{% endif %}
+
+{% if block.settings.defer_background_video %}
+  <script>
+    (() => {
+      const root = document.querySelector('custom-code-block-{{ ai_gen_id }}');
+      const video = root?.querySelector('[data-deferred-background-video]');
+
+      if (!video) return;
+
+      video.removeAttribute('autoplay');
+
+      const loadVideo = () => {
+        if (video.src || !video.dataset.src) return;
+        video.src = video.dataset.src;
+        video.addEventListener('canplay', () => video.play().catch(() => {}), { once: true });
+        video.load();
+      };
+
+      const canLoadVideo =
+        !window.matchMedia('(max-width: 749px)').matches &&
+        !window.matchMedia('(prefers-reduced-motion: reduce)').matches &&
+        !navigator.connection?.saveData;
+
+      if (!canLoadVideo) return;
+
+      const scheduleLoad = () => {
+        if ('requestIdleCallback' in window) {
+          window.requestIdleCallback(loadVideo, { timeout: 2500 });
+        } else {
+          window.setTimeout(loadVideo, 1200);
+        }
+      };
+
+      if (document.readyState === 'complete') {
+        scheduleLoad();
+      } else {
+        window.addEventListener('load', scheduleLoad, { once: true });
+      }
+    })();
+  </script>
+{% endif %}
+
+<script>
+  (function() {
+    class CustomCodeBlock{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.initializeCustomCode();
+      }
+
+      initializeCustomCode() {
+        const event = new CustomEvent('customCodeBlockLoaded', {
+          detail: { blockId: '{{ ai_gen_id }}' }
+        });
+        this.dispatchEvent(event);
+      }
+    }
+
+    customElements.define('custom-code-block-{{ ai_gen_id }}', CustomCodeBlock{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom code block",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Custom code"
+    },
+    {
+      "type": "liquid",
+      "id": "custom_liquid",
+      "label": "Liquid code"
+    },
+    {
+      "type": "html",
+      "id": "custom_html",
+      "label": "HTML code"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "CSS code"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_js",
+      "label": "JavaScript code"
+    },
+    {
+      "type": "checkbox",
+      "id": "defer_background_video",
+      "label": "Defer background video",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "video_poster_url",
+      "label": "Background video poster URL"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "container_padding",
+      "label": "Container padding",
+      "min": 0,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom code block"
+    }
+  ]
+}
+{% endschema %}

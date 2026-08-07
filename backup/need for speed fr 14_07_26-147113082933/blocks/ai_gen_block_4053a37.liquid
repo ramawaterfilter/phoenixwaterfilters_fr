@@ -1,0 +1,746 @@
+{% doc %}
+  @prompt
+    Display exactly 8 content cards (not blocks)
+    
+    Card Design:
+    
+    Light grey background
+    
+    Rounded corners (16px border radius)
+    
+    Soft shadow
+    
+    30px padding inside
+    
+    Small icon at top
+    
+    Title below icon
+    
+    Description text under title
+    
+    Subtle hover effect (slight lift or stronger shadow)
+    
+    Important Requirement:
+    
+    Do NOT use blocks
+    
+    All 8 cards must be created using section settings only
+    
+    Each card must have:
+    
+    Icon image upload
+    
+    Title text
+    
+    Description textarea
+    
+    That means 8 separate sets of:
+    
+    icon_1, title_1, description_1
+    
+    icon_2, title_2, description_2
+    
+    Continue until icon_8, title_8, description_8
+    
+    Section Settings:
+    
+    Section heading (text)
+    
+    Background color
+    
+    Text color
+    
+    Top padding (range slider)
+    
+    Bottom padding (range slider)
+    
+    Button label
+    
+    Button link
+    
+    Icon 1–8 (image pickers)
+    
+    Title 1–8 (text)
+    
+    Description 1–8 (textarea), i need 2 cart in row in desctop view and 1 car in row in the mobile view and i need to dont ention the "AI" in code, i need to align manulythe the place of the image nadn content evething i need ti edit th eheight of the image and evteyhng 
+{% enddoc %}
+{% assign block_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .content-cards-{{ block_id }} {
+    display: block;
+    width: 100%;
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+    background-color: {{ block.settings.background_color }};
+    color: {{ block.settings.text_color }};
+  }
+
+  .content-cards__container-{{ block_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .content-cards__heading-{{ block_id }} {
+    text-align: {{ block.settings.heading_alignment }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 {{ block.settings.heading_spacing }}px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .content-cards__grid-{{ block_id }} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: {{ block.settings.card_gap }}px;
+    margin-bottom: 40px;
+  }
+
+  .content-cards__card-{{ block_id }} {
+    background-color: {{ block.settings.card_background }};
+    border-radius: {{ block.settings.card_border_radius }}px;
+    padding: {{ block.settings.card_padding }}px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: {{ block.settings.card_layout }};
+    align-items: {{ block.settings.card_align_items }};
+    text-align: {{ block.settings.card_text_align }};
+    gap: {{ block.settings.content_gap }}px;
+  }
+
+  .content-cards__card-{{ block_id }}:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .content-cards__icon-wrapper-{{ block_id }} {
+    width: {{ block.settings.icon_width }}px;
+    height: {{ block.settings.icon_height }}px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-cards__icon-{{ block_id }} {
+    width: 100%;
+    height: 100%;
+    object-fit: {{ block.settings.icon_fit }};
+  }
+
+  .content-cards__icon-placeholder-{{ block_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-cards__icon-placeholder-{{ block_id }} svg {
+    width: 40px;
+    height: 40px;
+    opacity: 0.3;
+  }
+
+  .content-cards__content-{{ block_id }} {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: {{ block.settings.text_spacing }}px;
+  }
+
+  .content-cards__title-{{ block_id }} {
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 600;
+    margin: 0;
+    color: {{ block.settings.text_color }};
+  }
+
+  .content-cards__description-{{ block_id }} {
+    font-size: {{ block.settings.description_size }}px;
+    line-height: 1.5;
+    margin: 0;
+    color: {{ block.settings.text_color }};
+    opacity: 0.8;
+  }
+
+  .content-cards__button-wrapper-{{ block_id }} {
+    text-align: center;
+  }
+
+  .content-cards__button-{{ block_id }} {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+
+  .content-cards__button-{{ block_id }}:hover {
+    background-color: #333333;
+  }
+
+  @media screen and (max-width: 768px) {
+    .content-cards__grid-{{ block_id }} {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .content-cards__heading-{{ block_id }} {
+      font-size: {{ block.settings.heading_size | times: 0.75 }}px;
+      margin-bottom: {{ block.settings.heading_spacing | times: 0.75 }}px;
+    }
+
+    .content-cards__card-{{ block_id }} {
+      padding: {{ block.settings.card_padding | times: 0.8 }}px;
+    }
+
+    .content-cards__icon-wrapper-{{ block_id }} {
+      width: {{ block.settings.icon_width | times: 0.8 }}px;
+      height: {{ block.settings.icon_height | times: 0.8 }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="content-cards-{{ block_id }}" {{ block.shopify_attributes }}>
+  <div class="content-cards__container-{{ block_id }}">
+    {% if block.settings.section_heading != blank %}
+      <h2 class="content-cards__heading-{{ block_id }}">{{ block.settings.section_heading }}</h2>
+    {% endif %}
+
+    <div class="content-cards__grid-{{ block_id }}">
+      {% for i in (1..8) %}
+        {% liquid
+          assign icon_key = 'icon_' | append: i
+          assign title_key = 'title_' | append: i
+          assign description_key = 'description_' | append: i
+          
+          assign card_icon = block.settings[icon_key]
+          assign card_title = block.settings[title_key]
+          assign card_description = block.settings[description_key]
+        %}
+
+        <div class="content-cards__card-{{ block_id }}">
+          <div class="content-cards__icon-wrapper-{{ block_id }}">
+            {% if card_icon %}
+              <img
+                src="{{ card_icon | image_url: width: 300 }}"
+                alt="{{ card_title | escape }}"
+                class="content-cards__icon-{{ block_id }}"
+                loading="lazy"
+              >
+            {% else %}
+              <div class="content-cards__icon-placeholder-{{ block_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="content-cards__content-{{ block_id }}">
+            {% if card_title != blank %}
+              <h3 class="content-cards__title-{{ block_id }}">{{ card_title }}</h3>
+            {% endif %}
+
+            {% if card_description != blank %}
+              <p class="content-cards__description-{{ block_id }}">{{ card_description }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if block.settings.button_label != blank and block.settings.button_link != blank %}
+      <div class="content-cards__button-wrapper-{{ block_id }}">
+        <a href="{{ block.settings.button_link }}" class="content-cards__button-{{ block_id }}">
+          {{ block.settings.button_label }}
+        </a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Content cards",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section"
+    },
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section heading",
+      "default": "Our features"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "heading_spacing",
+      "label": "Heading spacing",
+      "min": 10,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Card layout"
+    },
+    {
+      "type": "select",
+      "id": "card_layout",
+      "label": "Card layout",
+      "options": [
+        {
+          "value": "column",
+          "label": "Vertical (icon top)"
+        },
+        {
+          "value": "row",
+          "label": "Horizontal (icon left)"
+        },
+        {
+          "value": "row-reverse",
+          "label": "Horizontal (icon right)"
+        },
+        {
+          "value": "column-reverse",
+          "label": "Vertical (icon bottom)"
+        }
+      ],
+      "default": "column"
+    },
+    {
+      "type": "select",
+      "id": "card_align_items",
+      "label": "Card alignment",
+      "options": [
+        {
+          "value": "flex-start",
+          "label": "Start"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "flex-end",
+          "label": "End"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "card_text_align",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card background",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "label": "Card padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap between cards",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "label": "Gap between icon and text",
+      "min": 5,
+      "max": 40,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Icon style"
+    },
+    {
+      "type": "range",
+      "id": "icon_width",
+      "label": "Icon width",
+      "min": 30,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "icon_height",
+      "label": "Icon height",
+      "min": 30,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "select",
+      "id": "icon_fit",
+      "label": "Icon fit",
+      "options": [
+        {
+          "value": "contain",
+          "label": "Contain"
+        },
+        {
+          "value": "cover",
+          "label": "Cover"
+        },
+        {
+          "value": "fill",
+          "label": "Fill"
+        }
+      ],
+      "default": "contain"
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "label": "Title size",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "description_size",
+      "label": "Description size",
+      "min": 10,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_spacing",
+      "label": "Spacing between title and description",
+      "min": 5,
+      "max": 30,
+      "step": 5,
+      "unit": "px",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Card 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_1",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_1",
+      "label": "Title",
+      "default": "Feature 1"
+    },
+    {
+      "type": "textarea",
+      "id": "description_1",
+      "label": "Description",
+      "default": "Describe your first feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_2",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_2",
+      "label": "Title",
+      "default": "Feature 2"
+    },
+    {
+      "type": "textarea",
+      "id": "description_2",
+      "label": "Description",
+      "default": "Describe your second feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_3",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_3",
+      "label": "Title",
+      "default": "Feature 3"
+    },
+    {
+      "type": "textarea",
+      "id": "description_3",
+      "label": "Description",
+      "default": "Describe your third feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_4",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_4",
+      "label": "Title",
+      "default": "Feature 4"
+    },
+    {
+      "type": "textarea",
+      "id": "description_4",
+      "label": "Description",
+      "default": "Describe your fourth feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_5",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_5",
+      "label": "Title",
+      "default": "Feature 5"
+    },
+    {
+      "type": "textarea",
+      "id": "description_5",
+      "label": "Description",
+      "default": "Describe your fifth feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_6",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_6",
+      "label": "Title",
+      "default": "Feature 6"
+    },
+    {
+      "type": "textarea",
+      "id": "description_6",
+      "label": "Description",
+      "default": "Describe your sixth feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 7"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_7",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_7",
+      "label": "Title",
+      "default": "Feature 7"
+    },
+    {
+      "type": "textarea",
+      "id": "description_7",
+      "label": "Description",
+      "default": "Describe your seventh feature here"
+    },
+    {
+      "type": "header",
+      "content": "Card 8"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon_8",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "title_8",
+      "label": "Title",
+      "default": "Feature 8"
+    },
+    {
+      "type": "textarea",
+      "id": "description_8",
+      "label": "Description",
+      "default": "Describe your eighth feature here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content cards"
+    }
+  ]
+}
+{% endschema %}

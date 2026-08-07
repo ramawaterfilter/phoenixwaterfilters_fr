@@ -1,0 +1,87 @@
+{% doc %}
+Loads the shared Wistia runtime when a video approaches the viewport or a user interacts.
+Also handles .wistia-facade elements by loading player.js and replacing with wistia-player.
+
+@example
+{% render 'wistia_lazy_core' %}
+{% enddoc %}
+
+<script>
+  (() => {
+    const playerSelectors = [
+      '[data-wistia-vid-id]',
+      '.wistia_embed',
+      'wistia-player',
+      '.custom-embed-video-container'
+    ].join(',');
+    let requested = false;
+
+    const loadWistia = () => {
+      if (requested || window.Wistia) return;
+      requested = true;
+
+      const script = document.createElement('script');
+      script.src = 'https://fast.wistia.com/assets/external/E-v1.js';
+      script.async = true;
+      document.head.appendChild(script);
+    };
+
+    const activateFacade = (facade) => {
+      if (facade.dataset.loaded) return;
+      const mediaId = facade.dataset.mediaId;
+      if (!mediaId) return;
+      facade.dataset.loaded = '1';
+
+      const script = document.createElement('script');
+      script.src = 'https://fast.wistia.com/player.js';
+      script.async = true;
+      script.onload = () => {
+        const embedScript = document.createElement('script');
+        embedScript.src = 'https://fast.wistia.com/embed/' + mediaId + '.js';
+        embedScript.type = 'module';
+        document.head.appendChild(embedScript);
+      };
+      document.head.appendChild(script);
+
+      const player = document.createElement('wistia-player');
+      player.setAttribute('media-id', mediaId);
+      player.setAttribute('aspect', '1.7777777777777777');
+      player.setAttribute('autoplay', '');
+      facade.replaceWith(player);
+    };
+
+    const targets = document.querySelectorAll(playerSelectors);
+    const facades = document.querySelectorAll('.wistia-facade');
+
+    if ((targets.length || facades.length) && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (entry.target.classList.contains('wistia-facade')) {
+                activateFacade(entry.target);
+              } else {
+                observer.unobserve(entry.target);
+                loadWistia();
+              }
+            }
+          });
+        },
+        { rootMargin: '600px 0px' }
+      );
+
+      targets.forEach((target) => observer.observe(target));
+      facades.forEach((facade) => observer.observe(facade));
+    }
+
+    // Click-to-play: the facade is a play button. Works even in hidden tabs
+    // or below the fold where the IntersectionObserver never fires.
+    facades.forEach((facade) => {
+      facade.addEventListener('click', () => activateFacade(facade));
+    });
+
+    ['pointerdown', 'keydown', 'touchstart'].forEach((eventName) => {
+      window.addEventListener(eventName, loadWistia, { once: true, passive: true });
+    });
+  })();
+</script>

@@ -1,0 +1,232 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "video_image_q3eEBi": {
+      "type": "video-image",
+      "blocks": {
+        "text_7MbTaW": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "video_id": ""
+          }
+        },
+        "text_3qPbkc": {
+          "type": "text",
+          "settings": {
+            "video_id": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_7MbTaW",
+        "text_3qPbkc"
+      ],
+      "settings": {
+        "is_posttreat": false
+      }
+    },
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Tous les Produits",
+        "content": "",
+        "sideimage": "shopify://shop_images/view-products_1.webp",
+        "section_video_bg": "",
+        "buttonlink": "",
+        "buttontext": ""
+      }
+    },
+    "icon_row_jeBNYY": {
+      "type": "icon-row",
+      "blocks": {
+        "text_KnzdQK": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-smiles_1.svg",
+            "heading": "800 000 clients satisfaits"
+          }
+        },
+        "text_RpMJ6z": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-bottle_793c42bd-a6bf-4978-8769-878059d83793_1.svg",
+            "heading": "Des milliers de dollars moins chers que<br>les bouteilles et les systèmes à domicile"
+          }
+        },
+        "text_fMMVyb": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-scales_43cbdd60-fa9d-484a-b138-bd5a62d85515_1.svg",
+            "heading": "Moins de 8 centimes d'euro<br>par litre"
+          }
+        },
+        "text_zjPmEV": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-plumbing.svg",
+            "heading": "Aucune plomberie requise"
+          }
+        },
+        "text_JpwVRy": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-experience_da934c37-aaf4-463e-8ff6-378434b3e1c7_1.svg",
+            "heading": "Plus de 50 ans<br>d'expérience"
+          }
+        }
+      },
+      "block_order": [
+        "text_KnzdQK",
+        "text_RpMJ6z",
+        "text_fMMVyb",
+        "text_zjPmEV",
+        "text_JpwVRy"
+      ],
+      "custom_css": [
+        ".swiper-pagination.mt-lg-3.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {display: none;}"
+      ],
+      "settings": {
+        "style": "none",
+        "styles": "compact",
+        "heading": "",
+        "paragraph": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "product-grid": {
+      "type": "product-grid",
+      "disabled": true,
+      "custom_css": [
+        ".row.justify-content-center.mb-5 {display: none;}"
+      ],
+      "settings": {}
+    },
+    "blocks_RQ4XJV": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6a6f415_xA8dRN": {
+          "type": "ai_gen_block_6a6f415",
+          "settings": {
+            "collection": "all-products",
+            "products_to_show": 50,
+            "show_collection_title": false,
+            "show_collection_description": false,
+            "text_alignment": "center",
+            "columns_desktop": 4,
+            "columns_tablet": 3,
+            "columns_mobile": "2",
+            "container_width": 1200,
+            "grid_gap": 40,
+            "section_padding": 0,
+            "spacing_below_title": 10,
+            "spacing_above_grid": 15,
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "title_size": 32,
+            "description_color": "#666666",
+            "description_size": 16,
+            "image_border_radius": 8,
+            "product_title_color": "#000000",
+            "product_title_size": 16,
+            "product_price_color": "#000000",
+            "product_price_size": 14
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6a6f415_xA8dRN"
+      ],
+      "settings": {}
+    },
+    "gallery_yVRL9J": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_images_block_Tc7FgJ": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-01.jpg"
+          }
+        },
+        "gallery_images_block_KrtwjH": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-02.jpg"
+          }
+        },
+        "gallery_images_block_kki6Mt": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-03.jpg"
+          }
+        },
+        "gallery_images_block_EWekDz": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-04.jpg"
+          }
+        },
+        "gallery_images_block_BwXd4M": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-05.jpg"
+          }
+        },
+        "gallery_images_block_NEb6nU": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-06.jpg"
+          }
+        },
+        "gallery_images_block_BxR7AF": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-07.jpg"
+          }
+        },
+        "gallery_images_block_Xkrq6N": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-08.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_images_block_Tc7FgJ",
+        "gallery_images_block_KrtwjH",
+        "gallery_images_block_kki6Mt",
+        "gallery_images_block_EWekDz",
+        "gallery_images_block_BwXd4M",
+        "gallery_images_block_NEb6nU",
+        "gallery_images_block_BxR7AF",
+        "gallery_images_block_Xkrq6N"
+      ],
+      "custom_css": [
+        ".section-gallery .grid-container {gap: 1rem; }"
+      ],
+      "settings": {
+        "gallery_heading": "",
+        "gallery_content": ""
+      }
+    }
+  },
+  "order": [
+    "video_image_q3eEBi",
+    "hero",
+    "icon_row_jeBNYY",
+    "product-grid",
+    "blocks_RQ4XJV",
+    "gallery_yVRL9J"
+  ]
+}

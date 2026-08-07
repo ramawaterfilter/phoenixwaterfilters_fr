@@ -1,0 +1,70 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "Header",
+  "type": "header",
+  "sections": {
+    "176406828469db2d82": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_15b5b9d_AyMXeR": {
+          "type": "ai_gen_block_15b5b9d",
+          "settings": {
+            "background_color": "#2b2b4e",
+            "text_color": "#ffffff",
+            "arrow_color": "#ffffff",
+            "font_size": 16,
+            "bar_height_desktop": 45,
+            "bar_height_mobile": 50,
+            "enable_autoplay": true,
+            "autoplay_speed": 5000,
+            "custom_css": "@media (min-width: 786px) {\n.ai-announcement-bar-container-amujudxlishhamvg5daigenblock15b5b9daymxer {\n    width: 35%;\n   \n}\n}\n\n.ai-announcement-bar-container-amujudxlishhamvg5daigenblock15b5b9daymxer p:hover {\ncolor: #FFFFFF; \n\n}\n@media screen and (max-width: 749px) {\n    .ai-announcement-bar-arrow-right-amujudxlishhamvg5daigenblock15b5b9daymxer {\n        LEFT: 40%;\n    }\n}\n @media screen and (max-width: 749px) {\n    .ai-announcement-bar-arrow-left-amujudxlishhamvg5daigenblock15b5b9daymxer{\n       LEFT: -40%;\n    }\n}",
+            "link_url_1": "",
+            "link_url_2": "",
+            "link_url_3": "",
+            "link_url_4": "",
+            "link_url_5": "",
+            "link_url_6": "",
+            "link_url_7": "",
+            "link_url_8": "",
+            "link_url_9": "",
+            "link_url_10": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_15b5b9d_AyMXeR"
+      ],
+      "settings": {}
+    },
+    "announcement_bar_wqm6Cp": {
+      "type": "announcement-bar",
+      "disabled": true,
+      "settings": {
+        "announcement_text": "TODAY ONLY! SAVE UP TO $130 ON THE PHOENIX GRAVITY WATER FILTER SYSTEM",
+        "announcement_link": "shopify://products/gravity-water-filter"
+      }
+    },
+    "header_bAcYfA": {
+      "type": "header",
+      "custom_css": [],
+      "settings": {
+        "sitelogo": "shopify://shop_images/PHOENIX_PNG_23d9e357-0a72-4491-939d-3445f597349e.png",
+        "sitemenu": "header-main-menu"
+      }
+    }
+  },
+  "order": [
+    "176406828469db2d82",
+    "announcement_bar_wqm6Cp",
+    "header_bAcYfA"
+  ]
+}

@@ -1,0 +1,560 @@
+{% doc %}
+  @prompt
+    SECTION REQUIREMENTS
+    1. DESKTOP LAYOUT
+    
+    Two columns in one row using flexbox
+    
+    Left side: text content
+    
+    Right side: Wistia video embed
+    
+    Gap between columns (adjustable setting)
+    
+    Ability to reverse layout (video left, content right)
+    
+    2. MOBILE LAYOUT
+    
+    Stack layout: content first, video second
+    
+    Full width
+    
+    Responsive and clean
+    
+    Remove all unnecessary white overlay buttons above the video
+    
+    Ensure video is touch-friendly
+    
+    CONTENT SETTINGS (LEFT SIDE)
+    
+    Add editable fields:
+    
+    Heading (rich text)
+    
+    Subheading (text)
+    
+    Description (rich text)
+    
+    Bullet points (list)
+    
+    Text alignment option: left / center
+    
+    Content width control (slider: 40%–60%)
+    
+    Option to hide/show bullet points
+    
+    Button text + button link (optional)
+    
+    VIDEO SETTINGS (RIGHT SIDE)
+    
+    Add editable fields:
+    
+    Wistia embed code (textarea)
+    
+    Option to choose image instead of video
+    
+    Image picker (if image mode selected)
+    
+    Video border radius
+    
+    Video autoplay toggle
+    
+    Video mute toggle
+    
+    Enable/disable video controls
+    
+    Responsive scaling (16:9 container)
+    
+    LAYOUT & STYLING SETTINGS
+    
+    Add section-level options:
+    
+    Background color picker
+    
+    Padding top & bottom
+    
+    Column gap (slider)
+    
+    Border radius for image/video
+    
+    Enable full-width or container-width mode
+    
+    Reverse layout toggle
+    
+    Desktop should switch columns
+    
+    Mobile always stacks content first then video
+    
+    BEHAVIOR REQUIREMENTS
+    
+    Wistia embed must scale responsively using an aspect-ratio wrapper
+    
+    No autoplay unless merchant enables it
+    
+    Autoplay must always start muted
+    
+    Make the video responsive and remove any default overlay buttons from Wistia
+    
+    Add clean CSS using BEM naming
+    
+    Ensure no global styles interfere
+    
+    CODE REQUIREMENTS
+    
+    Use semantic HTML (h2, p, ul/li)
+    
+    Use Shopify section schema
+    
+    Wrap video in a responsive .aspect-video container
+    
+    Use flex-direction: row-reverse when “Reverse Layout” toggle is ON
+    
+    Mobile breakpoint at 768px
+    
+    EXPECTED OUTPUT
+    
+    Generate:
+    
+    Full Liquid section
+    
+    Complete HTML structure
+    
+    Responsive CSS
+    
+    JavaScript only if needed (for autoplay/mute controls)
+    
+    Full JSON sch, the content will amnually c i gill give the html code also the button point remove that buttot point bar anand , add the custom css bar use the i can madified eveythings css 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-content-video-section-{{ ai_gen_id }} {
+    background-color: {{ block.settings.background_color }};
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-content-video-container-{{ ai_gen_id }} {
+    {% if block.settings.full_width %}
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    {% else %}
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    {% endif %}
+  }
+
+  .ai-content-video-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    gap: {{ block.settings.column_gap }}px;
+    align-items: center;
+    {% if block.settings.reverse_layout %}
+      flex-direction: row-reverse;
+    {% else %}
+      flex-direction: row;
+    {% endif %}
+  }
+
+  .ai-content-video-content-{{ ai_gen_id }} {
+    flex: 0 0 {{ block.settings.content_width }}%;
+    {% if block.settings.text_alignment == 'center' %}
+      text-align: center;
+    {% else %}
+      text-align: left;
+    {% endif %}
+  }
+
+  .ai-content-video-html-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    line-height: 1.6;
+  }
+
+  .ai-content-video-html-{{ ai_gen_id }} h1,
+  .ai-content-video-html-{{ ai_gen_id }} h2,
+  .ai-content-video-html-{{ ai_gen_id }} h3 {
+    color: {{ block.settings.heading_color }};
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .ai-content-video-html-{{ ai_gen_id }} p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .ai-content-video-html-{{ ai_gen_id }} ul,
+  .ai-content-video-html-{{ ai_gen_id }} ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 20px;
+  }
+
+  .ai-content-video-html-{{ ai_gen_id }} li {
+    margin-bottom: 8px;
+  }
+
+  .ai-content-video-media-{{ ai_gen_id }} {
+    flex: 1;
+  }
+
+  .ai-content-video-aspect-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: {{ block.settings.media_border_radius }}px;
+  }
+
+  .ai-content-video-aspect-{{ ai_gen_id }} iframe,
+  .ai-content-video-aspect-{{ ai_gen_id }} img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+  }
+
+  .ai-content-video-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-content-video-placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;
+    max-height: 400px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-content-video-wrapper-{{ ai_gen_id }} {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .ai-content-video-content-{{ ai_gen_id }} {
+      flex: 1;
+      width: 100%;
+    }
+
+    .ai-content-video-media-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-content-video-html-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size | times: 0.9 }}px;
+    }
+  }
+
+  {% if block.settings.custom_css != blank %}
+    {{ block.settings.custom_css }}
+  {% endif %}
+{% endstyle %}
+
+<div
+  class="ai-content-video-section-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-content-video-container-{{ ai_gen_id }}">
+    <div class="ai-content-video-wrapper-{{ ai_gen_id }}">
+      <div class="ai-content-video-content-{{ ai_gen_id }}">
+        {% if block.settings.html_content != blank %}
+          <div class="ai-content-video-html-{{ ai_gen_id }}">
+            {{ block.settings.html_content }}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="ai-content-video-media-{{ ai_gen_id }}">
+        <div class="ai-content-video-aspect-{{ ai_gen_id }}">
+          {% if block.settings.media_type == 'video' %}
+            {% if block.settings.wistia_embed_code != blank %}
+              {{ block.settings.wistia_embed_code }}
+            {% else %}
+              <div class="ai-content-video-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          {% else %}
+            {% if block.settings.image != blank %}
+              <img
+                src="{{ block.settings.image | image_url: width: 1200 }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                loading="lazy"
+                width="{{ block.settings.image.width }}"
+                height="{{ block.settings.image.height }}"
+              >
+            {% else %}
+              <div class="ai-content-video-placeholder-{{ ai_gen_id }}">
+                {{ 'image' | placeholder_svg_tag }}
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% if block.settings.media_type == 'video' and block.settings.wistia_embed_code != blank %}
+  <script>
+    (function() {
+      class WistiaVideoController{{ ai_gen_id }} extends HTMLElement {
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          this.initWistiaVideo();
+        }
+
+        initWistiaVideo() {
+          const iframe = this.querySelector('iframe');
+          if (!iframe) return;
+
+          const autoplay = {{ block.settings.video_autoplay }};
+          const muted = {{ block.settings.video_mute }};
+          const controls = {{ block.settings.video_controls }};
+
+          let src = iframe.src || '';
+
+          if (autoplay && !src.includes('autoPlay=true')) {
+            src += (src.includes('?') ? '&' : '?') + 'autoPlay=true';
+          }
+
+          if (muted && !src.includes('muted=true')) {
+            src += (src.includes('?') ? '&' : '?') + 'muted=true';
+          }
+
+          if (!controls && !src.includes('controlsVisibleOnLoad=false')) {
+            src += (src.includes('?') ? '&' : '?') + 'controlsVisibleOnLoad=false';
+          }
+
+          if (src !== iframe.src) {
+            iframe.src = src;
+          }
+
+          iframe.style.pointerEvents = 'auto';
+        }
+      }
+
+      customElements.define('wistia-video-controller-{{ ai_gen_id }}', WistiaVideoController{{ ai_gen_id }});
+
+      const section = document.querySelector('.ai-content-video-section-{{ ai_gen_id }}');
+      if (section && !section.closest('wistia-video-controller-{{ ai_gen_id }}')) {
+        const wrapper = document.createElement('wistia-video-controller-{{ ai_gen_id }}');
+        section.parentNode.insertBefore(wrapper, section);
+        wrapper.appendChild(section);
+      }
+    })();
+  </script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Content + Video",
+  "tag": null,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "html",
+      "id": "html_content",
+      "label": "HTML content",
+      "info": "Paste your HTML code here"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Media type",
+      "options": [
+        {
+          "value": "video",
+          "label": "Video"
+        },
+        {
+          "value": "image",
+          "label": "Image"
+        }
+      ],
+      "default": "video"
+    },
+    {
+      "type": "html",
+      "id": "wistia_embed_code",
+      "label": "Wistia embed code",
+      "info": "Paste the full Wistia iframe embed code"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "video_autoplay",
+      "label": "Autoplay video",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "video_mute",
+      "label": "Mute video",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "video_controls",
+      "label": "Show video controls",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_layout",
+      "label": "Reverse layout",
+      "info": "Show video on left, content on right (desktop only)",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "min": 40,
+      "max": 60,
+      "step": 5,
+      "unit": "%",
+      "label": "Content width",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "column_gap",
+      "min": 20,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Column gap",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 10,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Style"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#333333"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "media_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Media border radius",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Custom CSS"
+    },
+    {
+      "type": "html",
+      "id": "custom_css",
+      "label": "Custom CSS",
+      "info": "Add your custom CSS here. Use the class names above to target elements."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Content + Video"
+    }
+  ]
+}
+{% endschema %}

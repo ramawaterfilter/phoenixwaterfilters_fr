@@ -1,0 +1,173 @@
+{% doc %}
+  @prompt
+    create teh banner image add i need to add the image in both testtop and mobile view 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-banner-image-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-banner-image__wrapper-{{ ai_gen_id }} {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: {{ block.settings.border_radius }}px;
+  }
+
+  .ai-banner-image__desktop-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .ai-banner-image__mobile-{{ ai_gen_id }} {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .ai-banner-image__placeholder-{{ ai_gen_id }} {
+    background-color: #f4f4f4;
+    width: 100%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .ai-banner-image__placeholder-{{ ai_gen_id }} svg {
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    max-height: 400px;
+  }
+
+  .ai-banner-image__empty-state-{{ ai_gen_id }} {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 20px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-banner-image__desktop-{{ ai_gen_id }} {
+      display: none;
+    }
+
+    .ai-banner-image__mobile-{{ ai_gen_id }} {
+      display: block;
+    }
+
+    .ai-banner-image__placeholder-{{ ai_gen_id }} {
+      min-height: 300px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-banner-image-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-banner-image__wrapper-{{ ai_gen_id }}">
+    {% if block.settings.desktop_image or block.settings.mobile_image %}
+      {% if block.settings.desktop_image %}
+        <img
+          src="{{ block.settings.desktop_image | image_url: width: 2000 }}"
+          alt="{{ block.settings.desktop_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.desktop_image.width }}"
+          height="{{ block.settings.desktop_image.height }}"
+          class="ai-banner-image__desktop-{{ ai_gen_id }}"
+        >
+      {% endif %}
+
+      {% if block.settings.mobile_image %}
+        <img
+          src="{{ block.settings.mobile_image | image_url: width: 1000 }}"
+          alt="{{ block.settings.mobile_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.mobile_image.width }}"
+          height="{{ block.settings.mobile_image.height }}"
+          class="ai-banner-image__mobile-{{ ai_gen_id }}"
+        >
+      {% elsif block.settings.desktop_image %}
+        <img
+          src="{{ block.settings.desktop_image | image_url: width: 1000 }}"
+          alt="{{ block.settings.desktop_image.alt | escape }}"
+          loading="lazy"
+          width="{{ block.settings.desktop_image.width }}"
+          height="{{ block.settings.desktop_image.height }}"
+          class="ai-banner-image__mobile-{{ ai_gen_id }}"
+        >
+      {% endif %}
+    {% else %}
+      <div class="ai-banner-image__placeholder-{{ ai_gen_id }}">
+        {{ 'hero-apparel-1' | placeholder_svg_tag }}
+        <div class="ai-banner-image__empty-state-{{ ai_gen_id }}">
+          Next, add desktop and mobile images
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Banner image",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image",
+      "info": "Displayed on screens wider than 749px"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image",
+      "info": "Displayed on screens 749px and smaller. Falls back to desktop image if not set."
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Border radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Banner image"
+    }
+  ]
+}
+{% endschema %}

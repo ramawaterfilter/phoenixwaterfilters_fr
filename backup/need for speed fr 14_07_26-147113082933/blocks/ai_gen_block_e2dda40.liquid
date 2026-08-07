@@ -1,0 +1,347 @@
+{% doc %}
+  @prompt
+    Create a custom Shopify section named "CTA Split Section" using Liquid, HTML, CSS, and schema.
+    
+    Layout Requirements:
+    
+    Full width section
+    
+    Light grey background color (editable)
+    
+    Max width container 1200px centered
+    
+    Two-column layout:
+    
+    Left side: text content
+    
+    Right side: decorative image (arrow graphic)
+    
+    Stack vertically on mobile (text above image)
+    
+    Left Column:
+    
+    Large bold heading (editable)
+    
+    Paragraph text below heading (editable)
+    
+    Button below paragraph (editable label + link)
+    
+    Button background color editable
+    
+    Button should have rounded corners
+    
+    Clean spacing between elements
+    
+    Right Column:
+    
+    Image upload setting for decorative arrow
+    
+    Image aligned to right side
+    
+    Slight opacity option (optional)
+    
+    Should not overflow container
+    
+    Responsive scaling on mobile
+    
+    Styling Requirements:
+    
+    Heading font size:
+    
+    48px on desktop
+    
+    32px on mobile
+    
+    Paragraph medium size with good line height
+    
+    Button:
+    
+    Yellow background (default)
+    
+    Black text
+    
+    Rounded corners (12–16px)
+    
+    Padding inside
+    
+    Hover effect (slight darken or opacity change)
+    
+    Proper spacing top and bottom
+    
+    Responsive layout
+    
+    CSS must be inside the section file
+    
+    Do not use external libraries
+    
+    Use clean class names
+    
+    Section Settings:
+    
+    Heading (text)
+    
+    Paragraph (textarea)
+    
+    Button label (text)
+    
+    Button link (url)
+    
+    Background color (color picker)
+    
+    Button background color (color picker)
+    
+    Padding top (range slider)
+    
+    Padding bottom (range slider)
+    
+    Decorative image (image picker)
+    
+    Make it fully customizable and merchant-friendly.
+    Code should be clean and production-ready.
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-cta-split-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    background-color: {{ block.settings.background_color }};
+    padding-top: {{ block.settings.padding_top }}px;
+    padding-bottom: {{ block.settings.padding_bottom }}px;
+  }
+
+  .ai-cta-split-container-{{ ai_gen_id }} {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .ai-cta-split-grid-{{ ai_gen_id }} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .ai-cta-split-content-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .ai-cta-split-heading-{{ ai_gen_id }} {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #000000;
+  }
+
+  .ai-cta-split-paragraph-{{ ai_gen_id }} {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    color: #333333;
+  }
+
+  .ai-cta-split-button-{{ ai_gen_id }} {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: {{ block.settings.button_bg_color }};
+    color: #000000;
+    text-decoration: none;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: opacity 0.3s ease;
+    align-self: flex-start;
+  }
+
+  .ai-cta-split-button-{{ ai_gen_id }}:hover {
+    opacity: 0.85;
+  }
+
+  .ai-cta-split-image-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .ai-cta-split-image-{{ ai_gen_id }} {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .ai-cta-split-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+
+  .ai-cta-split-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.3;
+  }
+
+  @media screen and (max-width: 768px) {
+    .ai-cta-split-grid-{{ ai_gen_id }} {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .ai-cta-split-heading-{{ ai_gen_id }} {
+      font-size: 32px;
+    }
+
+    .ai-cta-split-paragraph-{{ ai_gen_id }} {
+      font-size: 16px;
+    }
+
+    .ai-cta-split-image-wrapper-{{ ai_gen_id }} {
+      justify-content: center;
+    }
+
+    .ai-cta-split-button-{{ ai_gen_id }} {
+      padding: 14px 28px;
+      font-size: 15px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-cta-split-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-cta-split-container-{{ ai_gen_id }}">
+    <div class="ai-cta-split-grid-{{ ai_gen_id }}">
+      <div class="ai-cta-split-content-{{ ai_gen_id }}">
+        {% if block.settings.heading != blank %}
+          <h2 class="ai-cta-split-heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+        {% endif %}
+
+        {% if block.settings.paragraph != blank %}
+          <p class="ai-cta-split-paragraph-{{ ai_gen_id }}">{{ block.settings.paragraph }}</p>
+        {% endif %}
+
+        {% if block.settings.button_label != blank %}
+          <a
+            href="{{ block.settings.button_link }}"
+            class="ai-cta-split-button-{{ ai_gen_id }}"
+          >
+            {{ block.settings.button_label }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="ai-cta-split-image-wrapper-{{ ai_gen_id }}">
+        {% if block.settings.decorative_image %}
+          <img
+            src="{{ block.settings.decorative_image | image_url: width: 600 }}"
+            alt="{{ block.settings.decorative_image.alt | escape }}"
+            class="ai-cta-split-image-{{ ai_gen_id }}"
+            loading="lazy"
+            width="{{ block.settings.decorative_image.width }}"
+            height="{{ block.settings.decorative_image.height }}"
+          >
+        {% else %}
+          <div class="ai-cta-split-image-placeholder-{{ ai_gen_id }}">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CTA split section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to transform your water?"
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph",
+      "default": "Join thousands of satisfied customers who have made the switch to cleaner, healthier water with our gravity filtration systems."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "decorative_image",
+      "label": "Decorative image"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f5f5f5"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button background",
+      "default": "#FFD700"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "CTA split section"
+    }
+  ]
+}
+{% endschema %}

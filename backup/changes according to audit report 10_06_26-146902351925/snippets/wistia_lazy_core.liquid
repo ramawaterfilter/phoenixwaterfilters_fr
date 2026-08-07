@@ -1,0 +1,48 @@
+{% doc %}
+Loads the shared Wistia runtime when a video approaches the viewport or a user interacts.
+
+@example
+{% render 'wistia_lazy_core' %}
+{% enddoc %}
+
+<script>
+  (() => {
+    const selectors = [
+      '[data-wistia-vid-id]',
+      '.wistia_embed',
+      'wistia-player',
+      '.custom-embed-video-container'
+    ].join(',');
+    let requested = false;
+
+    const loadWistia = () => {
+      if (requested || window.Wistia) return;
+      requested = true;
+
+      const script = document.createElement('script');
+      script.src = 'https://fast.wistia.com/assets/external/E-v1.js';
+      script.async = true;
+      document.head.appendChild(script);
+    };
+
+    const targets = document.querySelectorAll(selectors);
+
+    if (targets.length && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            observer.disconnect();
+            loadWistia();
+          }
+        },
+        { rootMargin: '600px 0px' }
+      );
+
+      targets.forEach((target) => observer.observe(target));
+    }
+
+    ['pointerdown', 'keydown', 'touchstart'].forEach((eventName) => {
+      window.addEventListener(eventName, loadWistia, { once: true, passive: true });
+    });
+  })();
+</script>

@@ -1,0 +1,161 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17629333877497caaf": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_89ce117_feyHDn": {
+          "type": "ai_gen_block_89ce117",
+          "settings": {
+            "heading_text": "Enregistrement du produit",
+            "background_color": "#94bcd3",
+            "text_color": "#ffffff",
+            "font_size": 22,
+            "banner_height": 105
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_89ce117_feyHDn"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".ai-centered-banner-azxdot3ruoufrwwtwnaigenblock89ce117feyhdn {margin-bottom: 20px;}"
+      ],
+      "settings": {}
+    },
+    "copy_image_rUyHJ6": {
+      "type": "copy-image",
+      "disabled": true,
+      "name": "Copy Image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "centered-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "content": "",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "support_cNgXx8": {
+      "type": "support",
+      "disabled": true,
+      "name": "Support Section",
+      "settings": {
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "button_link": "shopify://pages/warranty-registration",
+        "button_text": "Register Here"
+      }
+    },
+    "1746437444c5b604dc": {
+      "type": "apps",
+      "blocks": {
+        "my_product_cares_registration_form_gDkEG3": {
+          "type": "shopify://apps/my-product-cares/blocks/registration-form/fd762697-cd8b-4acd-bd03-03c62edf58c9",
+          "settings": {
+            "slug": "product-registration",
+            "mode": "normal",
+            "openRegisteredEntities": false
+          }
+        }
+      },
+      "block_order": [
+        "my_product_cares_registration_form_gDkEG3"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "custom_code_section_meYg6w": {
+      "type": "custom-code-section",
+      "disabled": true,
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<section class=\"privacy-policy-section\">\n  <div class=\"privacy-policy-container\">\n    <h3><strong>Phoenix Water Filters Ltd prend très au sérieux la confidentialité de vos informations.</strong></h3>\n    <p>Nous nous engageons à protéger votre vie privée. Cette politique de confidentialité s'applique entre vous, l'utilisateur de ce site Web, et Phoenix Water Filters Ltd, propriétaire et fournisseur de ce site Web. Elle ne s'étend pas aux sites Web auxquels vous pouvez accéder depuis ce site, y compris, mais sans s'y limiter, aux liens que nous pouvons fournir vers des sites de réseaux sociaux.</p>\n    <p>En utilisant ce site Web, vous êtes réputé avoir lu et accepté les termes et conditions suivants :</p>\n\n    <hr>\n\n    <h4><strong>Données collectées</strong></h4>\n    <p>Nous pouvons collecter les données suivantes, y compris des données personnelles, vous concernant :</p>\n    <ul>\n      <li>Nom ;</li>\n      <li>Coordonnées telles que les adresses e-mail et numéros de téléphone ;</li>\n      <li>Informations démographiques telles que le code postal, les préférences et les intérêts ;</li>\n      <li>Adresse IP (collectée automatiquement) ;</li>\n      <li>Type et version du navigateur Web (collectés automatiquement) ;</li>\n      <li>Système d'exploitation (collecté automatiquement) ;</li>\n      <li>Une liste des URL, à commencer par un site référent, votre activité sur ce site Web et le site que vous quittez (collectée automatiquement).</li>\n    </ul>\n    <p>Dans chaque cas, conformément à cette politique de confidentialité.</p>\n\n    <hr>\n\n    <h4><strong>Collecte des données</strong></h4>\n    <p>Nous collectons des données des manières suivantes :</p>\n    <ul>\n      <li>Les données nous sont fournies par vous ;</li>\n      <li>Les données nous proviennent d'autres sources ;</li>\n      <li>Les données sont collectées automatiquement.</li>\n    </ul>\n\n    <p><strong>Données fournies par vous</strong></p>\n    <ul>\n      <li>Lorsque vous nous contactez via le site Web, par téléphone, courrier, e-mail ou tout autre moyen ;</li>\n      <li>Lorsque vous vous inscrivez chez nous et créez un compte pour recevoir nos produits/services ;</li>\n      <li>Lorsque vous remplissez des enquêtes que nous utilisons à des fins de recherche ;</li>\n      <li>Lorsque vous participez à un concours ou à une promotion via un canal de réseaux sociaux ;</li>\n      <li>Lorsque vous effectuez des paiements via ce site Web ou par d'autres moyens ;</li>\n      <li>Lorsque vous choisissez de recevoir nos communications marketing ;</li>\n      <li>Lorsque vous utilisez nos services.</li>\n    </ul>\n\n    <p><strong>Données provenant de sources tierces disponibles publiquement</strong></p>\n    <ul>\n      <li>Réseaux sociaux ;</li>\n      <li>Moteurs de recherche.</li>\n    </ul>\n\n    <p><strong>Données collectées automatiquement</strong><br>\n      Nous collectons automatiquement certaines informations sur votre visite sur le site Web. Cela nous aide à améliorer le contenu du site et la navigation, et inclut votre adresse IP, les dates, heures et fréquences d'accès au site, ainsi que la manière dont vous interagissez avec son contenu.\n      <br>Nous collectons vos données via des cookies, conformément aux paramètres de cookies de votre navigateur. Pour plus d'informations sur les cookies et leur utilisation sur ce site, consultez la section ci-dessous intitulée « Cookies ».\n    </p>\n\n    <hr>\n\n    <h4><strong>Utilisation de vos données</strong></h4>\n    <p>Toutes les données ci-dessus peuvent nous être nécessaires de temps à autre pour :</p>\n    <ul>\n      <li>Tenir des registres internes ;</li>\n      <li>Améliorer nos produits/services ;</li>\n      <li>Vous transmettre par e-mail des supports marketing susceptibles de vous intéresser ;</li>\n      <li>Vous contacter pour des recherches de marché via e-mail, téléphone, fax ou courrier ;</li>\n      <li>Personnaliser ou mettre à jour le site Web.</li>\n    </ul>\n\n    <hr>\n\n    <h4><strong>Vos droits</strong></h4>\n    <p>Vous disposez des droits suivants concernant vos données :</p>\n    <ul>\n      <li>\n<strong>Droit d'accès</strong> : demander des copies des informations que nous détenons à votre sujet.</li>\n      <li>\n<strong>Droit de rectification</strong> : corriger vos données si elles sont inexactes ou incomplètes.</li>\n      <li>\n<strong>Droit d'effacement</strong> : demander la suppression de vos données.</li>\n      <li>\n<strong>Droit de limiter le traitement</strong> : bloquer ou limiter l'utilisation de vos données.</li>\n    </ul>\n    <p>Pour toute demande ou pour exercer vos droits, contactez-nous à l’adresse suivante : <strong>soutien@phoenixwaterfilters.fr</strong></p>\n\n    <hr>\n\n    <h4><strong>Modifications de cette politique</strong></h4>\n    <p>Phoenix Water Filters Ltd se réserve le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera immédiatement publiée sur ce site Web.</p>\n\n    <hr>\n\n    <p>Pour toute question ou clarification, contactez <strong>soutien@phoenixwaterfilters.fr</strong>.</p>\n    <p>© Phoenix Water Filters Ltd 2023 Tous droits réservés.</p>\n  </div>\n</section>",
+        "custom_css": ".privacy-policy-section {\n  padding: 50px 20px;\n  background-color: #fff;\n  color: #333;\n}\n\n.privacy-policy-container {\n  max-width: 900px;\n  margin: 0 auto;\n  line-height: 1.7;\n}\n\n.privacy-policy-container h3,\n.privacy-policy-container h4 {\n  color: #222;\n  margin-bottom: 10px;\n}\n\n.privacy-policy-container h3 {\n  font-size: 1.6rem;\n  text-align: center;\n  margin-bottom: 20px;\n}\n\n.privacy-policy-container h4 {\n  font-size: 1.2rem;\n  margin-top: 25px;\n}\n\n.privacy-policy-container p {\n  margin-bottom: 15px;\n  text-align: justify;\n}\n\n.privacy-policy-container ul {\n  margin: 10px 0 20px 25px;\n}\n\n.privacy-policy-container ul li {\n  margin-bottom: 5px;\n}\n\n.privacy-policy-container hr {\n  border: 0;\n  border-top: 1px solid #e0e0e0;\n  margin: 25px 0;\n}\n\n/* Responsive styles */\n@media (max-width: 768px) {\n  .privacy-policy-section {\n    padding: 30px 15px;\n  }\n  .privacy-policy-container h3 {\n    font-size: 1.4rem;\n  }\n  .privacy-policy-container h4 {\n    font-size: 1.1rem;\n  }\n  .privacy-policy-container p,\n  .privacy-policy-container li {\n    font-size: 0.95rem;\n  }\n}",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    },
+    "177987726011c320ae": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_da382ea_KPUYLp": {
+          "type": "ai_gen_block_da382ea",
+          "settings": {
+            "heading": "Choose Your Region",
+            "subheading": "Select your country to continue shopping in your local store.",
+            "heading_size": 42,
+            "subheading_size": 18,
+            "heading_color": "#000000",
+            "subheading_color": "#4a4a4a",
+            "bg_gradient_start": "#f8f9fa",
+            "bg_gradient_end": "#e9ecef",
+            "card_bg_color": "#ffffff",
+            "card_border_color": "#e5e5e5",
+            "card_hover_border_color": "#000000",
+            "card_border_radius": 20,
+            "country_name_size": 18,
+            "country_name_color": "#000000",
+            "currency_text_size": 16,
+            "currency_text_color": "#6a6a6a",
+            "arrow_bg_color": "#f0f0f0",
+            "arrow_hover_bg_color": "#000000",
+            "arrow_color": "#1a1a1a",
+            "badge_text": "Recommended",
+            "badge_bg_color": "#000000",
+            "badge_text_color": "#ffffff",
+            "country_1_name": "United States",
+            "country_1_flag": "shopify://shop_images/flag-Stars-and-Stripes-May-1-1795.webp",
+            "country_1_currency": "",
+            "country_1_url": "",
+            "country_1_show_badge": false,
+            "country_2_name": "United Kingdom",
+            "country_2_flag": "shopify://shop_images/360_F_62198244_HcI4q6pS86tREeUYuseBfTzPP7nLaSPi.jpg",
+            "country_2_currency": "",
+            "country_2_url": "",
+            "country_2_show_badge": false,
+            "country_3_name": "European Union",
+            "country_3_flag": "shopify://shop_images/Flag_of_Europe_svg.webp",
+            "country_3_currency": "",
+            "country_3_url": "",
+            "country_3_show_badge": false,
+            "country_4_name": "",
+            "country_4_currency": "",
+            "country_4_url": "",
+            "country_4_show_badge": false
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_da382ea_KPUYLp"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "17629333877497caaf",
+    "copy_image_rUyHJ6",
+    "support_cNgXx8",
+    "1746437444c5b604dc",
+    "custom_code_section_meYg6w",
+    "177987726011c320ae"
+  ]
+}

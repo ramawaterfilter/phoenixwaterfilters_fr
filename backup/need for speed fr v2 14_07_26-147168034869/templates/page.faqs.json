@@ -1,0 +1,407 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_rQPxAA": {
+      "type": "hero",
+      "custom_css": [
+        ".background-image-container.bg-light {background: white;}"
+      ],
+      "settings": {
+        "eyebrow": "",
+        "heading": "Des questions ? Nous avons les réponses…",
+        "content": "",
+        "section_video_bg": "",
+        "buttonlink": "",
+        "buttontext": ""
+      }
+    },
+    "accordion_tabs_tea8F9": {
+      "type": "accordion-tabs",
+      "blocks": {
+        "tab_rdDjWK": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "INSTALLATION ET ENTRETIEN"
+          }
+        },
+        "question_answer_PxJkNn": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Faut-il amorcer les éléments filtrants au charbon ?",
+            "answer": "<p>Oui, c'est <strong>essentiel</strong> ! L'amorçage des éléments filtrants au charbon est la première étape pour s'assurer que vos filtres sont parfaitement <strong>libres de tout résidu</strong> du processus de fabrication. Ces résidus sont tout à fait normaux et sans danger, mais ils peuvent rendre l'eau trouble si les filtres ne sont pas correctement amorcés.</p><p>Nous vous recommandons d'amorcer vos éléments filtrants au charbon pendant au moins <strong>trois minutes</strong>. S'ils ne sont pas suffisamment amorcés, les quatre premières rondes d'eau filtrée pourraient présenter de légères particules blanches troubles, que vous pouvez simplement jeter en toute sécurité.<br/><br/></p>"
+          }
+        },
+        "question_answer_NQMaDp": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Pourquoi mon eau est-elle trouble ?",
+            "answer": "<p>Pas d'inquiétude, une eau trouble juste après l'installation initiale est <strong>normale et totalement inoffensive</strong>.Il s'agit simplement de la <strong>poussière résiduelle</strong> du processus de fabrication, qui est sans danger. Cela se produit si les filtres n'ont pas été amorcés correctement – nous recommandons donc de les amorcer complètement (voir ci-dessus).</p><p>Si vous ne les amorcez pas, il faudra environ <strong>quatre rondes</strong> d'eau filtrée pour que la turbidité disparaisse complètement.<br/><br/></p>"
+          }
+        },
+        "question_answer_r4VQbB": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la durée de vie de mes éléments filtrants au charbon ?",
+            "answer": "<p>Nous vous conseillons de remplacer vos éléments filtrants au charbon tous les <strong>12 mois</strong>.</p>"
+          }
+        },
+        "question_answer_dWUCtF": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la durée de vie des éléments filtrants POSTreat pour l'élimination du fluorure ?",
+            "answer": "<p>Nos éléments filtrants POSTreat pour l'élimination du fluorure sont fabriqués en <strong>acier inoxydable AISI 304</strong> et sont conçus pour durer des années C'est pourquoi ils bénéficient d'une <strong>garantie d'un an</strong> sur nos produits.</p><p>Cependant, le média filtrant propriétaire <strong>FluoRid</strong> a une durée de vie limitée à <strong>1060 gallons</strong> (environ 4000 litres) et doit être remplacé environ tous les <strong>4 mois</strong>.</p><p>Nous proposons également un service d'abonnement pour le média de remplacement — nous vous rappelons quand ils sont dus, pour vous libérer l'esprit !</p>"
+          }
+        },
+        "question_answer_By9e3Y": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Combien de temps dure le média FluoRid dans le POSTreat ?",
+            "answer": "<p>La durée de vie d'une paire d'éléments filtrants POSTreat pour l'élimination du fluorure est de jusqu'à <strong>1060 gallons</strong> (environ 4000 litres). Il est recommandé de remplacer la \"Recharge de média FluoRid\" <strong>tous les 4 à 6 mois</strong>.</p>"
+          }
+        },
+        "question_answer_y6WgdG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Serai-je capable d'assembler mon système et de changer mes filtres moi-même ?",
+            "answer": "<p>Absolument ! Nos systèmes sont conçus pour être <strong>extrêmement faciles à assembler</strong>. Tout ce dont vous avez besoin est inclus. Vous pouvez le faire vous-même <strong>simplement avec vos mains</strong> — aucun outil spécialisé, plombier ou électricien n'est requis.</p><p>Nous incluons des <strong>instructions complètes</strong> avec chaque unité et nous sommes toujours là pour vous aider en cas de besoin.</p>"
+          }
+        },
+        "question_answer_UPGVCG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mon filtre à eau par gravité Phoenix fuit entre les chambres supérieure et inférieure, qu'est-ce que cela signifie ?",
+            "answer": "<p>Cela est dû à un <strong>remplissage excessif</strong> du système de filtration. Une utilisation attentive peut aider à prévenir le débordement : vérifiez toujours le niveau d'eau dans la chambre inférieure avant de remplir la chambre supérieure.</p><p>Une fois que vous connaîtrez vos taux d'utilisation, le processus de remplissage deviendra une seconde nature !</p><p>Nous vendons également un <strong>robinet en acier inoxydable avec jauge de niveau d'eau</strong> qui vous permet de voir le niveau d'eau de l'extérieur.<br/><br/></p>"
+          }
+        },
+        "question_answer_Afkh7P": {
+          "type": "question_answer",
+          "settings": {
+            "question": "À quelle fréquence dois-je changer mes filtres ?",
+            "answer": "<p>Cela dépend de votre fréquence d'utilisation et de la qualité de votre eau d'entrée. À titre indicatif, nous vous recommandons de les remplacer aux étapes suivantes :</p><ul><li><strong>Éléments filtrants au charbon :</strong> <strong>12 mois</strong>.</li><li><strong>POSTreat (et Recharge de média FluoRid) :</strong> <strong>4 mois</strong>.4</li></ul><p>Nous proposons également un <strong>service d'abonnement</strong>, qui vous donne en prime <strong>5 % de réduction</strong> sur chaque commande. Laissez-nous vous rappeler quand changer votre filtre, pour que vous n'ayez pas à y penser !</p>"
+          }
+        },
+        "tab_RktPCU": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Filtration"
+          }
+        },
+        "question_answer_kqrrCB": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionnent vos filtres ?",
+            "answer": "<p>Nous utilisons de l'<strong>acier inoxydable AISI 304</strong> de la plus haute qualité, du <strong>charbon de noix de coco naturel</strong> et d'autres matériaux naturels. Le tout avec la puissante force de la <strong>gravité</strong> ! Notre système de filtration avancé élimine jusqu'à <strong>99,99 % des contaminants courants</strong> tout en retenant <strong>jusqu'à 100 % des nutriments</strong>.</p>"
+          }
+        },
+        "question_answer_D4LPd8": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Que retirent réellement vos filtres ?",
+            "answer": "<p>Les éléments filtrants au charbon Phoenix Gravity sont fabriqués à partir de <strong>coques de noix de coco pures</strong>, une ressource durable et renouvelable. Le charbon dans les filtres est <strong>activé</strong>, ce qui signifie qu'il possède une surface élevée et qu'il est très poreux. Cela lui permet de piéger un large éventail de contaminants, notamment le <strong>chlore</strong>, les <strong>métaux lourds</strong> et d'autres impuretés.</p><p>Les filtres au charbon Phoenix Gravity <strong>éliminent les microplastiques</strong> et éliminent également les <strong>SPFA</strong>, les <strong>hormones</strong> et les <strong>résidus pharmaceutiques</strong> de l'eau. Ils sont conçus pour fournir une eau propre, inodore et avec un <strong>excellent goût</strong>. Ils ne libèrent aucun produit chimique nocif ou sous-produit dans l'eau et sont très efficaces pour éliminer le chlore et autres composés organiques volatils. Une paire d'éléments filtrants au charbon peut filtrer des milliers de litres d'eau, vous offrant ainsi une eau potable sûre et saine.<br/><br/></p>"
+          }
+        },
+        "question_answer_LcPgwY": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Le filtre Phoenix Gravity élimine-t-il les bactéries et les virus ?",
+            "answer": "<p>Les filtres Phoenix offrent une pureté d'eau exceptionnelle en éliminant 99,99 % des virus, des bactéries et des parasites présents dans l'eau.</p>"
+          }
+        },
+        "question_answer_QAqKKE": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity enlèvent-ils les résidus pharmaceutiques ?",
+            "answer": "<p><strong>Oui, jusqu'à 99,99 % !</strong> Nos éléments filtrants au charbon primaires ont été testés indépendamment pour de nombreux composés organiques volatils, y compris le 1,4-dichlorobenzène, le 2-Butanone, l'Acétone, le Chlorure d'Allyle et bien d'autres.</p>"
+          }
+        },
+        "question_answer_Wx7VKn": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Vos filtres retirent-ils le fluorure ?",
+            "answer": "<p>Absolument ! Nous avons conçu un filtre spécialisé pour l'élimination du fluorure appelé <strong>POSTreat</strong>, capable de retirer <strong>plus de 95 % du fluorure</strong> de votre eau du robinet.</p><p>Fabriqué en <strong>acier inoxydable AISI 304</strong>, il est entièrement <strong>réutilisable et rechargeable</strong> avec notre Recharge de média FluoRid POSTreat.Le POSTreat peut être utilisé conjointement avec nos éléments filtrants au charbon primaires</p>"
+          }
+        },
+        "question_answer_niCRpw": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les cartouches au charbon Phoenix enlèvent-elles le fluorure ?",
+            "answer": "<p>Elles en sont tout à fait capables ! Nous avons conçu une cartouche spécialisée pour le fluorure appelée <strong>POSTreat</strong> pour éliminer <strong>plus de 95 % du fluorure</strong> de votre eau du robinet.</p><p>Fabriquée en acier inoxydable de la plus haute qualité, elle est complètement réutilisable et rechargeable, avec notre Recharge FluoRid POSTreat. Le POSTreat peut être utilisé conjointement avec les cartouches au charbon primaires.<br/><br/></p>"
+          }
+        },
+        "question_answer_yrQRHk": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les éléments au charbon Phoenix éliminent-ils les phtalates de l'eau ?",
+            "answer": "<p>Bien que nous n'ayons pas testé spécifiquement l'élimination des phtalates, nos éléments filtrants au charbon Phoenix sont fabriqués avec du <strong>charbon de noix de coco activé</strong> de la plus haute qualité, reconnu pour son efficacité à <strong>adsorber les phtalates</strong> de l'eau. Nous améliorons et testons constamment nos filtres.</p>"
+          }
+        },
+        "question_answer_EepQmY": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity éliminent-ils l'œstrogène ?",
+            "answer": "<p>Bien que nous n'ayons pas testé spécifiquement l'élimination de l'œstrogène, nos filtres au charbon Phoenix sont fabriqués avec du <strong>charbon de noix de coco activé</strong>, connu pour son efficacité à <strong>adsorber l'œstrogène</strong> de l'eau.12 Nous améliorons et testons constamment nos filtres.</p>"
+          }
+        },
+        "question_answer_THQQic": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment vos filtres à gravité et vos éléments filtrants se comparent-ils à la concurrence ?",
+            "answer": "<p>Nous sommes l'un des <strong>leaders en matière de filtration par gravité avancée</strong>. Avec plus de <strong>50 ans d'expérience</strong> dans la fabrication en interne, nous avons un contrôle total sur le processus et la <strong>qualité</strong> de nos filtres et éléments filtrants. Nous sommes extrêmement fiers des efforts que nous avons déployés pour devenir un fabricant de premier plan de filtres à eau par gravité.</p>"
+          }
+        },
+        "question_answer_7hctbq": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Vos filtres sont-ils aussi efficaces que Berkey ?",
+            "answer": "<p><strong>Absolument !</strong> Nous avons effectué des tests <strong>indépendants et approfondis</strong> sur nos filtres pour une variété de contaminants chimiques tels que le Plomb, le chlore, le chrome, les composés organiques volatils et <strong>plus de 100 autres</strong>.</p><p>De plus, avec plus de <strong>50 ans d'expérience</strong> dans la fabrication en interne, nous sommes l'un des principaux fabricants mondiaux de systèmes de filtration par gravité en <strong>acier inoxydable AISI 304</strong>.Nous avons également un contrôle total sur le processus et la qualité de nos filtres et éléments filtrants de remplacement.<br/><br/></p>"
+          }
+        },
+        "question_answer_PcjJqC": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity diminuent-ils le TDS ?",
+            "answer": "<p>Le TDS signifie <strong>Total des Solides Dissous</strong> et se mesure en parties par million (ppm) ou parties par milliard (ppb).C'est une mesure du contenu organique et inorganique de l'eau, y compris les <strong>minéraux et les nutriments</strong>.</p><p>L'eau naturelle aura une lecture TDS due aux minéraux et nutriments captés dans les roches et le sol par lesquels elle s'écoule. Il est généralement accepté qu'un niveau de <strong>300 ppm est une bonne teneur en minéraux</strong>.Nous ne cherchons délibérément pas à ramener notre TDS à zéro, car notre objectif est de <strong>préserver les vitamines et minéraux naturels</strong> dont votre corps a besoin.<br/><br/></p>"
+          }
+        },
+        "question_answer_EcgMwg": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Que contient la boîte de la cartouche ?",
+            "answer": "<p>La boîte des éléments filtrants au charbon Phoenix Gravity comprend les accessoires suivants :</p><ol><li>Éléments filtrants pré-montés avec écrou à ailettes et rondelles.</li><li>Robinet en <strong>acier inoxydable AISI 304</strong>.</li><li>Bouton du couvercle.</li><li>Un jeu de rondelles et écrou à ailettes de rechange (au cas où les rondelles et l'écrou existants seraient endommagés ou égarés).</li><li>Un bouchon obturateur de rechange.</li><li>Manuel d'instructions.</li></ol>"
+          }
+        },
+        "question_answer_KU4nXr": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity élimineront-ils la dureté de l'eau ?",
+            "answer": "<p><strong>Non.</strong> Les éléments filtrants au charbon Phoenix sont conçus pour éliminer jusqu'à <strong>99,99 % du chlore, du plomb</strong> et plus de <strong>100 autres substances indésirables</strong> de votre eau potable.</p>"
+          }
+        },
+        "tab_ejnxJV": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Expédition et Retours"
+          }
+        },
+        "question_answer_Y8kDmm": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Dans quels pays Phoenix Gravity livre-t-il ses produits ?",
+            "answer": "<p>Nous livrons actuellement dans la majorité des pays de l'Union européenne et poursuivons progressivement l'extension de notre réseau de livraison vers de nouvelles destinations.Veuillez noter que nous n'effectuons pas de livraisons aux États-Unis.</p>"
+          }
+        },
+        "question_answer_rtXedr": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est votre politique de retour et d'échange ?",
+            "answer": "<p>Nous acceptons les retours initiés dans les <strong>30 jours</strong> suivant l'achat. Vous serez responsable du retour de l'article en toute sécurité, qui doit arriver dans un <strong>état revendable</strong> et dans son <strong>emballage d'origine</strong>.</p><p>Une fois que nous aurons accepté le retour, nous vous rembourserons via le mode de paiement original dans les <strong>10 jours ouvrables</strong>. Nous offrons également une <strong>Garantie Satisfait ou Remboursé de 100 jours</strong> sur nos systèmes de filtration par gravité complets.<br/><br/></p>"
+          }
+        },
+        "question_answer_TWHetG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mon article est arrivé endommagé ou incorrect, que puis-je faire ?",
+            "answer": "<p>Veuillez envoyer une photographie de votre commande complète, y compris l'emballage, ainsi que votre numéro de commande à notre équipe de support à <strong>hello@phoenixwaterfilters.com</strong>. Nous vous répondrons dans les <strong>24 heures</strong> en priorité.</p>"
+          }
+        },
+        "tab_FeUypw": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Garantie et Essai Sans Risque de 100 Jours"
+          }
+        },
+        "question_answer_AUfyKY": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionne l'Essai Sans Risque de 100 Jours ?",
+            "answer": "<p>La <strong>Garantie Satisfait ou Remboursé de 100 jours</strong> s'applique uniquement aux systèmes Phoenix Gravity achetés avec les boîtiers en <strong>acier inoxydable AISI 304</strong> et uniquement via notre site web. L'essai n'est pas valable pour les filtres de remplacement et les accessoires achetés séparément.</p><p><strong>Voici comment cela fonctionne :</strong></p><ul><li>Achetez votre système de filtration d'eau par gravité Phoenix via notre site web. Dès qu'il arrive, commencez à l'utiliser immédiatement.</li><li>Si vous n'êtes pas entièrement satisfait de votre système Phoenix Gravity dans les <strong>100 jours</strong> suivant la date de livraison, contactez notre équipe de support pour initier un retour. Le retour doit être initié dans les 100 jours suivant la date d'achat.</li><li>Le système doit être retourné <strong>complet</strong> avec toutes les pièces d'origine et l'emballage. Le boîtier en acier inoxydable ASI 304 <strong>ne doit pas être bosselé ou endommagé</strong> d'une autre manière. Les éléments filtrants ne doivent pas être fissurés ou endommagés lors de leur réception.</li></ul><p>Dès réception et inspection de l'état du système, nous vous contacterons pour initier un <strong>remboursement intégral</strong> sur votre mode de paiement original. Ce processus peut prendre jusqu'à 10 jours ouvrables pour être finalisé.<br/><br/></p>"
+          }
+        },
+        "question_answer_GM9RwT": {
+          "type": "question_answer",
+          "settings": {
+            "question": "La politique de retour de 100 jours est-elle valable si je commande sur Amazon ?",
+            "answer": "<p><strong>Non.</strong> Votre système de filtration Phoenix Gravity doit être acheté via notre <strong>site web</strong> pour être admissible à notre garantie satisfait ou remboursé de 100 jours.</p>"
+          }
+        },
+        "question_answer_tFLrV3": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionne la garantie ?",
+            "answer": "<p>Nous offrons une <strong>garantie d'un an</strong> sur les robinets en acier inoxydable AISI 304 et les éléments au charbon Phoenix Gravity. Vous êtes protégé contre tout défaut de matériau et de fabrication.</p>"
+          }
+        },
+        "tab_yhreXM": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "VOTRE COMPTE ET ABONNEMENTS"
+          }
+        },
+        "question_answer_4rUdn7": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Puis-je m'abonner pour mes éléments filtrants ?",
+            "answer": "<p>Oui, nous offrons un service d'abonnement pour remplacer vos éléments afin de vous faire gagner du temps et de la tranquillité d'esprit.</p>"
+          }
+        },
+        "question_answer_VchfNK": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la différence entre le \"Plan Vie Quotidienne\" et le \"Plan Vie Quotidienne Complet\" ?",
+            "answer": "<p>Le Plan Vie Quotidienne et le Plan Vie Quotidienne Complet sont nos solutions pour aider les familles à avoir une eau propre et sûre toute l'année, à leur rythme.</p><ul><li>Le <strong>Plan Vie Quotidienne</strong> vous offre la solution complète avec nos filtres au charbon livrés automatiquement <strong>tous les 12 mois</strong>.</li><li>Le <strong>Plan Vie Quotidienne Complet</strong> comprend les éléments filtrants au charbon livrés annuellement ET les Recharges de média FluoRid pour le filtre POSTreat livrées <strong>tous les 4 mois</strong>, directement à votre porte.<br/><br/></li></ul>"
+          }
+        },
+        "question_answer_WKTqFB": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment puis-je modifier mon abonnement ?",
+            "answer": "<p>Votre abonnement peut être modifié et mis à jour depuis votre <strong>Compte Phoenix Gravity</strong>. Une fois connecté à votre compte, cliquez sur « Abonnements » pour apporter les changements nécessaires.</p><p>Si vous avez besoin d'aide supplémentaire, n'hésitez pas à nous contacter.</p>"
+          }
+        },
+        "question_answer_FCQpPQ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Puis-je suspendre ou annuler mon abonnement ?",
+            "answer": "<p>Oui, vous pouvez modifier la fréquence ou annuler votre abonnement <strong>à tout moment</strong>.</p><p>Veuillez noter que l'annulation de votre abonnement entraînera la <strong>perte des tarifs spéciaux</strong> qui y étaient associés. Si vous souhaitez vous réabonner après l'annulation, vous pourriez ne pas être en mesure de récupérer la même tarification spéciale que celle dont vous bénéficiiez auparavant.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_rdDjWK",
+        "question_answer_PxJkNn",
+        "question_answer_NQMaDp",
+        "question_answer_r4VQbB",
+        "question_answer_dWUCtF",
+        "question_answer_By9e3Y",
+        "question_answer_y6WgdG",
+        "question_answer_UPGVCG",
+        "question_answer_Afkh7P",
+        "tab_RktPCU",
+        "question_answer_kqrrCB",
+        "question_answer_D4LPd8",
+        "question_answer_LcPgwY",
+        "question_answer_QAqKKE",
+        "question_answer_Wx7VKn",
+        "question_answer_niCRpw",
+        "question_answer_yrQRHk",
+        "question_answer_EepQmY",
+        "question_answer_THQQic",
+        "question_answer_7hctbq",
+        "question_answer_PcjJqC",
+        "question_answer_EcgMwg",
+        "question_answer_KU4nXr",
+        "tab_ejnxJV",
+        "question_answer_Y8kDmm",
+        "question_answer_rtXedr",
+        "question_answer_TWHetG",
+        "tab_FeUypw",
+        "question_answer_AUfyKY",
+        "question_answer_GM9RwT",
+        "question_answer_tFLrV3",
+        "tab_yhreXM",
+        "question_answer_4rUdn7",
+        "question_answer_VchfNK",
+        "question_answer_WKTqFB",
+        "question_answer_FCQpPQ"
+      ],
+      "settings": {
+        "heading": "",
+        "content": ""
+      }
+    },
+    "gallery_T3kMUn": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_images_block_PfRCFJ": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-01.jpg"
+          }
+        },
+        "gallery_images_block_CCJWT7": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-02.jpg"
+          }
+        },
+        "gallery_images_block_qX3Fqd": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-03.jpg"
+          }
+        },
+        "gallery_images_block_w7gYzt": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-04.jpg"
+          }
+        },
+        "gallery_images_block_qRpxPB": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-05.jpg"
+          }
+        },
+        "gallery_images_block_TFAfTb": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-06.jpg"
+          }
+        },
+        "gallery_images_block_AHBK7Y": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-07.jpg"
+          }
+        },
+        "gallery_images_block_TKg4Uz": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-08.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_images_block_PfRCFJ",
+        "gallery_images_block_CCJWT7",
+        "gallery_images_block_qX3Fqd",
+        "gallery_images_block_w7gYzt",
+        "gallery_images_block_qRpxPB",
+        "gallery_images_block_TFAfTb",
+        "gallery_images_block_AHBK7Y",
+        "gallery_images_block_TKg4Uz"
+      ],
+      "settings": {
+        "gallery_heading": "Profitez d'une eau potable sûre pour toute la famille !",
+        "gallery_content": ""
+      }
+    },
+    "hero_eJLX9p": {
+      "type": "hero",
+      "disabled": true,
+      "name": "Hero",
+      "settings": {
+        "eyebrow": "",
+        "heading": "",
+        "content": "",
+        "section_video_bg": "jr37r9792m",
+        "buttonlink": "",
+        "buttontext": ""
+      }
+    }
+  },
+  "order": [
+    "hero_rQPxAA",
+    "accordion_tabs_tea8F9",
+    "gallery_T3kMUn",
+    "hero_eJLX9p"
+  ]
+}

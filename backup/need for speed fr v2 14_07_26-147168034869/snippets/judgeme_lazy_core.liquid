@@ -1,0 +1,87 @@
+{% doc %}
+Loads Judge.me assets when a full review widget approaches the viewport.
+
+@example
+{% render 'judgeme_lazy_core' %}
+{% enddoc %}
+
+{% # theme-check-disable RemoteAsset %}
+<link rel="dns-prefetch" href="https://cdn.judge.me/">
+<template id="judgeme-core-template">
+  {{ shop.metafields.judgeme.settings }}
+  {% for count in (0..5) %}
+    {% assign metafield_key = 'html_miracle_' | append: count %}
+    {% assign current_metafield = shop.metafields.judgeme[metafield_key] %}
+    {% unless current_metafield %}
+      {% break %}
+    {% endunless %}
+    {{ current_metafield }}
+  {% endfor %}
+</template>
+
+<script data-cfasync="false" class="jdgm-script">
+  (() => {
+    const widgetSelector =
+      '.jdgm-review-widget, .jdgm-all-reviews-widget, .jdgm-all-reviews-page, ' +
+      '.jdgm-carousel-wrapper, .jdgm-ugc-media-wrapper, .jdgm-revs-tab';
+    let requested = false;
+
+    const loadJudgeMe = () => {
+      if (requested) return;
+      requested = true;
+
+      const template = document.getElementById('judgeme-core-template');
+      if (!template) return;
+
+      const fragment = template.content.cloneNode(true);
+      const scripts = Array.from(fragment.querySelectorAll('script'));
+      scripts.forEach((script) => script.remove());
+      document.head.appendChild(fragment);
+
+      scripts.forEach((source) => {
+        const script = document.createElement('script');
+        Array.from(source.attributes).forEach((attribute) => {
+          script.setAttribute(attribute.name, attribute.value);
+        });
+        script.textContent = source.textContent;
+        document.head.appendChild(script);
+      });
+
+      template.remove();
+    };
+
+    const observeWidgets = () => {
+      const widgets = document.querySelectorAll(widgetSelector);
+
+      if (!widgets.length || !('IntersectionObserver' in window)) return false;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((entry) => entry.isIntersecting)) {
+            observer.disconnect();
+            loadJudgeMe();
+          }
+        },
+        { rootMargin: '600px 0px' }
+      );
+
+      widgets.forEach((widget) => observer.observe(widget));
+      return true;
+    };
+
+    const start = () => {
+      observeWidgets();
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', start, { once: true });
+    } else {
+      start();
+    }
+  })();
+</script>
+
+<noscript>
+  <link rel="stylesheet" href="https://cdn.judge.me/shopify_v2.css">
+</noscript>
+{% # theme-check-enable RemoteAsset %}

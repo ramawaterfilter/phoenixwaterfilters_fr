@@ -1,0 +1,58 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "17629333877497caaf": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_89ce117_feyHDn": {
+          "type": "ai_gen_block_89ce117",
+          "settings": {
+            "heading_text": "Registro de producto",
+            "background_color": "#94bcd3",
+            "text_color": "#ffffff",
+            "font_size": 22,
+            "banner_height": 105
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_89ce117_feyHDn"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".ai-centered-banner-azxdot3ruoufrwwtwnaigenblock89ce117feyhdn {margin-bottom: 20px;}"
+      ],
+      "settings": {}
+    },
+    "1775216017f20606d0": {
+      "type": "apps",
+      "blocks": {
+        "uppromote_affiliate_customer_referral_landing_yDGR7p": {
+          "type": "shopify://apps/uppromote-affiliate/blocks/customer-referral-landing/64c32457-930d-4cb9-9641-e24c0d9cf1f4",
+          "settings": {
+            "section_corners": 0,
+            "section_top_margin": 47,
+            "section_bottom_margin": 44
+          }
+        }
+      },
+      "block_order": [
+        "uppromote_affiliate_customer_referral_landing_yDGR7p"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "17629333877497caaf",
+    "1775216017f20606d0"
+  ]
+}

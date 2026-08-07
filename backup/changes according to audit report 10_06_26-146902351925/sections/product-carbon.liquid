@@ -1,0 +1,478 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+
+<div class="container">
+  <div class="row justify-content-center jk">
+    <div class="col-11 col-lg-6">
+      <div class="position-relative {% if product.images.size <= 0 %}h-100{% endif %}">
+        {% render 'product-badge', product: product %}
+
+        {% if product.images.size > 1 %}
+          <div class="swiper-container swiper" data-slidestoshow="1" id="product-slider">
+            <div class="swiper-wrapper">
+              {% for media in product.media %}
+                {% assign thisVariantID = "" %}
+                {% for variant in product.variants %}
+                  {% if variant.featured_image == media.src %}
+                    {% assign thisVariantID = variant.id %}
+                  {% endif %}
+                {% endfor %}
+
+                {% if media.media_type == "image" %}
+                  <div class="swiper-slide" data-variant-id="{{ thisVariantID }}" data-slide-index="{{ forloop.index }}">
+                    <a data-fancybox="gallery" href="{{ media | image_url: width: 2560 }}" class="product-image d-block">
+                      {{ media | image_url: width: 1200 | image_tag }}
+                    </a>
+                  </div>
+                {% elsif media.media_type == "external_video" %}
+                  <div class="swiper-slide" data-variant-id="{{ thisVariantID }}" data-slide-index="{{ forloop.index }}">
+                    <a data-fancybox="gallery" href="{{ media | external_video_url: autoplay: 'true' }}" class="product-image product-image--video d-block">
+                      {{ media.preview_image | image_url: width: 1200 | image_tag }}
+                    </a>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="swiper-container swiper control {% if product.media.size == 3 %} control-three {% endif %} {% if product.media.size == 5 %}control-five{% endif %}" id="product-slider-nav">
+            <div class="swiper-wrapper {% if product.media.size == 3 or product.media.size == 5 %}wide{% endif %}">
+              {% for media in product.media %}
+                {% if media.media_type == "external_video" %}
+                  <div class="swiper-slide">
+                    {{ media.preview_image | image_url: width: 600 | image_tag }}
+                  </div>
+                {% elsif media.media_type == "image" %}
+                  <div class="swiper-slide">
+                    {{ media | image_url: width: 1200 | image_tag }}
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="swiper-nav">
+            <div class="swiper-button-prev swiper-prev"></div>
+            <div class="swiper-button-next swiper-next"></div>
+          </div>
+        {% elsif product.featured_image %}
+          <a data-fancybox="gallery" href="{{ product.featured_image | image_url: width: 2560 }}" class="product-image d-block">
+            {{ product.featured_image | image_url: width: 1200 | image_tag }}
+          </a>
+        {% else %}
+          <div class="placeholder">
+            {{ 'image' | placeholder_svg_tag }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col-11 col-lg-6 mt-3 mt-lg-0">
+      <h1>{{ product.title }}</h1>
+
+      <div class="product-rating">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when '@app' %}
+              {% render block %}
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+      {% if product.description != blank or product.metafields.custom.product_usps.value.size > 0 %}
+        <div class="product-description">
+          {{ product.description }}
+          {% if product.metafields.custom.product_usps.value.size > 0 %}
+            <ul class="product-description__usps">
+              {% for usp in product.metafields.custom.product_usps.value %}
+                <li>{{ usp }}</li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      <!-- BEGIN FORM -->
+      <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart" data-min="{{ settings.min_buy_qty | default: 1 }}" data-max="{{ settings.max_buy_qty }}">
+        <input type="hidden" name="id" id="product-variant-id" value="{{ current_variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+
+        {% if product.available and product.variants.size > 1 %}
+          <div id="product-variants" class="d-flex flex-column justify-content-start align-items-start">
+            {% for option in product.options_with_values %}
+              <div class="step step-{{ option.name }}">
+                <div class="step-number">{{ forloop.index }}</div>
+                <div class="step-title">Select {{ option.name }} -
+                  {% for value in option.values %}
+                    <span class="{{ value | escape }}" style="display:{% if forloop.first %}unset;{% else %} none;{% endif %}">
+                      {% if option.name == 'Size' %}
+                        {% capture size_for_key %}size_for_{{ forloop.index }}{% endcapture %}
+                        {{ settings[size_for_key] }}
+                      {% else %}
+                        {{ value }}
+                      {% endif %}
+                    </span>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div id="{{ option.name | downcase | replace: ' ', '-' }}-options" class="info-field-container d-flex flex-row radio-selectors" data-option-position="{{ option.position }}">
+                {% for value in option.values %}
+                  <div class="radio-option d-flex">
+                    <input
+                      type="radio"
+                      class="variant-radio"
+                      id="option-{{ option.position }}-{{ forloop.index }}"
+                      name="radio-option{{ option.position }}"
+                      value="{{ value | escape }}"
+                      data-option-position="{{ option.position }}"
+                      {% if forloop.first %}checked{% endif %}>
+                    <label for="option-{{ option.position }}-{{ forloop.index }}">
+                      {% if option.name == 'Filter' %}
+                        {% capture filter_image_key %}filter_image_{{ forloop.index }}{% endcapture %}
+                        <div class="details product-image">
+                          <img src="{{ settings[filter_image_key] | image_url: width: 180 }}" alt="filter {{ forloop.index }}" class="size-icon" />
+                        </div>
+                      {% elsif option.name == 'Size' %}
+                        {% capture size_icon_key %}size_icon_{{ forloop.index }}{% endcapture %}
+                        {% capture size_content_key %}size_content_{{ forloop.index }}{% endcapture %}
+                        {% capture size_for_key %}size_for_{{ forloop.index }}{% endcapture %}
+                        <div class="details h-100">
+                          <div class="product-icon">
+                            <img src="{{ settings[size_icon_key] | image_url: width: 40 }}" alt="size {{ forloop.index }}" class="size-icon" />
+                          </div>
+                          <p><strong>{{ settings[size_for_key] }}</strong></p>
+                          {{ settings[size_content_key] }}
+                        </div>
+                      {% else %}
+                        <div class="details">
+                          <p><strong>{{ value }}</strong></p>
+                        </div>
+                      {% endif %}
+                    </label>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when '@app' %}
+              {% render block %}
+          {% endcase %}
+        {% endfor %}
+
+        {% if product.selling_plan_groups.size > 0 %}
+          <div class="subscriptions">
+            <!-- keep existing selling plan markup -->
+            {% for group in product.selling_plan_groups %}
+              <div class="subscriptions__group sr-only" data-group-name="{{ group.name }}" data-sub-id="{{ group.id }}">
+                <!-- simplified: show first selling_plan label and price (detailed markup in original file) -->
+                {% for selling_plan in group.selling_plans %}
+                  <div class="d-flex justify-content-between align-items-center mb-2">
+                    <label>
+                      <input type="radio" name="selling_plan" value="{{ selling_plan.id }}" {% if forloop.parentloop.index == 1 and forloop.index == 1 %}checked{% endif %}>
+                      {{ selling_plan.name }}
+                    </label>
+                    <div>{{ selling_plan.price | money }}</div>
+                  </div>
+                {% endfor %}
+              </div>
+            {% endfor %}
+            <div class="one-time-option mb-3">
+              <label>
+                <input type="radio" id="plan-none" name="selling_plan" value="" checked>
+                {{ 'products.product.no_selling_plan' | t }}
+              </label>
+            </div>
+          </div>
+        {% endif %}
+
+       
+
+        {% if product.available %}
+          {% if current_variant.inventory_quantity > 0 or current_variant.inventory_management == null %}
+            <button class="btn btn-secondary btn-product d-flex flex-row justify-content-center align-items-center" type="submit" name="add" id="product-add-to-cart">
+              {{ 'products.product.add_to_cart' | t }} &nbsp;
+              <div class="sub-price">
+                <span data-price toggle-price>{{ current_variant.price | money }}</span>
+                <span get-data-price-discount toggle-discount class="sr-only"></span>
+              </div>
+            </button>
+          {% elsif current_variant.inventory_policy == "continue" %}
+            <button class="btn btn-primary btn-product" type="submit" name="add" id="product-add-to-cart">
+              {{ 'products.product.pre_order' | t }}
+            </button>
+          {% endif %}
+
+          {% comment %} <div class="trust-badge mt-3">
+            <!-- trust badge text -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+              <path d="M22.5 0.5H2.5C1.96957 0.5 1.46086 0.710714 1.08579 1.08579C0.710714 1.46086 0.5 1.96957 0.5 2.5V9.5C0.5 16.09 3.69 20.0837 6.36625 22.2738C9.24875 24.6313 12.1163 25.4312 12.2413 25.465C12.4131 25.5118 12.5944 25.5118 12.7663 25.465C12.8913 25.4312 15.755 24.6313 18.6413 22.2738C21.31 20.0837 24.5 16.09 24.5 9.5V2.5C24.5 1.96957 24.2893 1.46086 23.9142 1.08579C23.5391 0.710714 23.0304 0.5 22.5 0.5ZM18.21 9.2075L11.21 16.2075C11.1171 16.3005 11.0068 16.3742 10.8854 16.4246C10.764 16.4749 10.6339 16.5008 10.5025 16.5008C10.3711 16.5008 10.241 16.4749 10.1196 16.4246C9.99816 16.3742 9.88787 16.3005 9.795 16.2075L6.795 13.2075C6.60736 13.0199 6.50194 12.7654 6.50194 12.5C6.50194 12.2346 6.60736 11.9801 6.795 11.7925C6.98264 11.6049 7.23714 11.4994 7.5025 11.4994C7.76786 11.4994 8.02236 11.6049 8.21 11.7925L10.5 14.0863L16.7925 7.7925C16.8854 7.69959 16.9957 7.62589 17.1171 7.57561C17.2385 7.52532 17.3686 7.49944 17.5 7.49944C17.6314 7.49944 17.7615 7.52532 17.8829 7.57561C18.0043 7.62589 18.1146 7.69959 18.2075 7.7925C18.3004 7.88541 18.3741 7.99571 18.4244 8.1171C18.4747 8.2385 18.5006 8.36861 18.5006 8.5C18.5006 8.6314 18.4747 8.7615 18.4244 8.8829C18.3741 9.00429 18.3004 9.11459 18.2075 9.2075H18.21Z" fill="#153A5B"/>
+            </svg>
+            Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours
+          </div> {% endcomment %}
+
+          <!-- PAYMENT ICONS (using reliable public URLs so you can verify immediately) -->
+          <div class="payment-icons d-flex justify-content-center align-items-center gap-3 mt-3" role="img" aria-label="Payment methods">
+            <!-- Visa -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" class="trust-img" />
+            <!-- Mastercard -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" class="trust-img" />
+            <!-- PayPal -->
+            <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_111x69.jpg" alt="PayPal" class="trust-img" />
+            <!-- Amex -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/American_Express_logo_%282018%29.svg" alt="Amex" class="trust-img" />
+            <!-- Shop Pay (Shopify hosted) -->
+            <img src="https://cdn.shopify.com/shopifycloud/shopify/assets/shop-pay/logo.svg" alt="Shop Pay" class="trust-img" />
+          </div>
+
+          <!-- FEATURE / TRUST ICONS: try asset first, fallback to public URLs -->
+          <div class="below-atc-icons mt-3">
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+              {% assign truck_icon = 'icon-truck.png' | asset_url %}
+              {% if truck_icon contains 'icon-truck.png' %}
+                <div class="trust-feature">
+                  <img src="{{ truck_icon }}" alt="truck" class="feature-img" />
+                  <span>LIVRAISON GRATUITE DANS TOUTE L'EUROPE</span>
+                </div>
+              {% else %}
+                <div class="trust-feature">
+                  <img src="https://cdn-icons-png.flaticon.com/512/34/34568.png" alt="truck" class="feature-img" />
+                  <span>LIVRAISON GRATUITE DANS TOUTE L'EUROPE</span>
+                </div>
+              {% endif %}
+
+              {% assign tag_icon = 'icon-tag.png' | asset_url %}
+              {% if tag_icon contains 'icon-tag.png' %}
+                <div class="trust-feature">
+                  <img src="{{ tag_icon }}" alt="tag" class="feature-img" />
+                  <span>Essai de 100 jours</span>
+                </div>
+              {% else %}
+                <div class="trust-feature">
+                  <img src="https://cdn-icons-png.flaticon.com/512/61/61112.png" alt="tag" class="feature-img" />
+                  <span>Essai de 100 jours</span>
+                </div>
+              {% endif %}
+
+              {% assign award_icon = 'icon-award.png' | asset_url %}
+              {% if award_icon contains 'icon-award.png' %}
+                <div class="trust-feature">
+                  <img src="{{ award_icon }}" alt="award" class="feature-img" />
+                  <span>Garantie de 10 ans</span>
+                </div>
+              {% else %}
+                <div class="trust-feature">
+                  <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="award" class="feature-img" />
+                  <span>Garantie de 10 ans</span>
+                </div>
+              {% endif %}
+
+              {% assign headset_icon = 'icon-headset.png' | asset_url %}
+              {% if headset_icon contains 'icon-headset.png' %}
+                <div class="trust-feature">
+                  <img src="{{ headset_icon }}" alt="support" class="feature-img" />
+                  <span>Support client</span>
+                </div>
+              {% else %}
+                <div class="trust-feature">
+                  <img src="https://cdn-icons-png.flaticon.com/512/15/15874.png" alt="support" class="feature-img" />
+                  <span>Support client</span>
+                </div>
+              {% endif %}
+
+              <div class="trust-feature">
+                <!-- warehouse fallback (you already used a CDN URL earlier) -->
+                <img src="https://cdn.shopify.com/s/files/1/2644/2852/files/product_warehouse.png" alt="warehouse" class="feature-img" />
+                <span>Expédition depuis un entrepôt basé en France</span>
+              </div>
+
+              <div class="trust-feature">
+                <img src="https://cdn.shopify.com/s/files/1/2644/2852/files/nsf-01.png?v=1751276325" alt="nsf" class="feature-img" />
+                <span>Certifié NSF 372, ANSI 42</span>
+              </div>
+            </div>
+          </div>
+
+        {% else %}
+          <button class="btn btn-primary btn-product" name="add" disabled type="submit">
+            {{ 'products.product.sold_out' | t }}
+          </button>
+        {% endif %}
+      </form>
+      <!-- END FORM -->
+    </div>
+  </div>
+</div>
+
+{% render 'sticky-add-to-cart' %}
+
+{% unless product == empty %}
+<script>
+(function() {
+  'use strict';
+  const productData = {{ product | json }};
+  document.addEventListener('DOMContentLoaded', function() {
+    const variantIdInput = document.getElementById('product-variant-id');
+    const addToCartButton = document.getElementById('product-add-to-cart');
+    const addToCartForm = document.getElementById('add-to-cart');
+
+    if (!variantIdInput || !productData || !productData.variants) {
+      console.error('Required elements not found');
+      return;
+    }
+
+    // Build variant lookup (include all variants)
+    const variantLookup = {};
+    productData.variants.forEach(variant => {
+      const key = [
+        variant.option1 || '',
+        variant.option2 || '',
+        variant.option3 || ''
+      ].filter(Boolean).join('|||');
+      variantLookup[key] = variant;
+    });
+
+    function getSelectedOptions() {
+      const options = [];
+      for (let i = 1; i <= 3; i++) {
+        const checked = document.querySelector(`input[name="radio-option${i}"]:checked`);
+        if (checked) options.push(checked.value);
+      }
+      return options;
+    }
+
+    function findVariant(options) {
+      const key = options.join('|||');
+      return variantLookup[key] || null;
+    }
+
+    function formatMoney(cents) {
+      if (cents == null) return '';
+      const value = (cents / 100).toFixed(2);
+      return '$' + value;
+    }
+
+    function updateVariant() {
+      const selected = getSelectedOptions();
+      const variant = findVariant(selected);
+      if (variant) {
+        variantIdInput.value = variant.id;
+        document.querySelectorAll('[toggle-price], [data-price]').forEach(el => {
+          if (!el.closest('.subscriptions__group.sr-only')) {
+            el.textContent = formatMoney(variant.price);
+          }
+        });
+        if (addToCartButton) addToCartButton.disabled = false;
+      } else {
+        if (addToCartButton) addToCartButton.disabled = true;
+      }
+    }
+
+    // Wire radio inputs
+    document.querySelectorAll('.variant-radio').forEach(radio => {
+      radio.addEventListener('change', function() {
+        updateVariant();
+
+        // update text display: safe attribute selector to find the span with matching class or value
+        const pos = this.getAttribute('data-option-position');
+        if (!pos) return;
+        const optName = productData.options[pos - 1];
+        if (!optName) return;
+
+        // hide all spans under the step
+        document.querySelectorAll('.step.step-' + CSS.escape ? '.step.step-' + optName + ' span' : '.step.step-' + optName + ' span').forEach(s => {
+          try { s.style.display = 'none'; } catch(e) {}
+        });
+
+        // find span by attribute matching the exact text/value using an attribute selector (safer)
+        const rawVal = this.value;
+        // escape double quotes in value
+        const attrVal = rawVal.replace(/"/g, '\\"');
+        const selector = '.step.step-' + optName + ' span[class="' + attrVal + '"]';
+        const selectedSpan = document.querySelector(selector);
+        if (selectedSpan) {
+          selectedSpan.style.display = 'unset';
+        } else {
+          // fallback: reveal first span
+          const firstSpan = document.querySelector('.step.step-' + optName + ' span');
+          if (firstSpan) firstSpan.style.display = 'unset';
+        }
+      });
+    });
+
+    // Form validation on submit
+    if (addToCartForm) {
+      addToCartForm.addEventListener('submit', function(e) {
+        const variantId = variantIdInput.value;
+        if (!variantId || variantId === '' || variantId === 'null') {
+          e.preventDefault();
+          alert('Please select all product options before adding to cart.');
+          return false;
+        }
+      });
+    }
+
+    // Initialize
+    updateVariant();
+  });
+})();
+</script>
+{% endunless %}
+
+<!-- STYLES -->
+<style>
+.payment-icons {
+  gap: 12px;
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.payment-icons .trust-img {
+  height: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  object-fit: contain;
+  opacity: 1 !important;
+}
+
+/* below-atc icons */
+.below-atc-icons .trust-feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  color: #153A5B;
+  font-size: 13px;
+  max-width: 320px;
+}
+.feature-img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+/* Ensure visibility */
+.trust-badge,
+.payment-icons,
+.below-atc-icons {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* responsive */
+@media (max-width: 767px) {
+  .below-atc-icons .trust-feature { width: 48%; }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .below-atc-icons .trust-feature { width: 31%; }
+}
+@media (min-width: 992px) {
+  .below-atc-icons .trust-feature { width: 16%; }
+}
+</style>

@@ -1,0 +1,691 @@
+{% doc %}
+  @prompt
+    Create a custom Marquee Carousel section.
+    Features needed:
+    
+    Full-width horizontal marquee bar
+    
+    Smooth infinite scrolling (continuous, no stopping)
+    
+    Background color: I will change manually
+    
+    Inside the marquee, allow multiple items
+    
+    Each item will contain:
+    
+    1 icon/image (I will upload manually)
+    
+    1 line of text (editable from theme editor)
+    
+    Items should repeat smoothly to create the infinite effect
+    
+    Padding top & bottom small
+    
+    Desktop and mobile responsive
+    
+    Option to control scrolling speed
+    
+    Option to add/remove items
+    
+    Option to change background color and text color
+    
+    No gap/space on left & right edges
+    
+    Goal: I want the section to look exactly like a top info bar with icons and messages scrolling continuously, similar to my screenshot.
+    Use clean HTML, CSS, and minimal JavaScript for the marquee effect., i will add the icon but the is now space there between the privose content and icon, the icon will be add ith other content i need to give some game i need more gab between the itams  and less gab between the icon and content in same itams, the gap between the icon to showts , give some gab between the iteams , give the gap better the indial item s that will give it manully, add the css section to if i want to i can customize 
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-marquee-container-{{ ai_gen_id }} {
+    width: 100%;
+    overflow: hidden;
+    background-color: {{ block.settings.background_color }};
+    padding: {{ block.settings.padding_vertical }}px 0;
+    margin: 0;
+  }
+
+  .ai-marquee-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    width: fit-content;
+    animation: ai-marquee-scroll-{{ ai_gen_id }} {{ block.settings.scroll_speed }}s linear infinite;
+  }
+
+  .ai-marquee-track-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .ai-marquee-item-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    gap: {{ block.settings.icon_text_gap }}px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 0 {{ block.settings.item_spacing }}px;
+  }
+
+  .ai-marquee-item-{{ ai_gen_id }}:not(:last-child) {
+    border-right: {{ block.settings.separator_width }}px {{ block.settings.separator_style }} {{ block.settings.separator_color }};
+  }
+
+  .ai-marquee-icon-{{ ai_gen_id }} {
+    width: {{ block.settings.icon_size }}px;
+    height: {{ block.settings.icon_size }}px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-marquee-icon-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .ai-marquee-text-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: {{ block.settings.text_weight }};
+    line-height: 1.2;
+  }
+
+  @keyframes ai-marquee-scroll-{{ ai_gen_id }} {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .ai-marquee-wrapper-{{ ai_gen_id }}:hover {
+    animation-play-state: {{ block.settings.pause_on_hover }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-marquee-icon-{{ ai_gen_id }} {
+      width: {{ block.settings.icon_size_mobile }}px;
+      height: {{ block.settings.icon_size_mobile }}px;
+    }
+
+    .ai-marquee-text-{{ ai_gen_id }} {
+      font-size: {{ block.settings.text_size_mobile }}px;
+    }
+
+    .ai-marquee-item-{{ ai_gen_id }} {
+      gap: {{ block.settings.icon_text_gap_mobile }}px;
+      padding: 0 {{ block.settings.item_spacing_mobile }}px;
+    }
+  }
+
+  {% if block.settings.custom_css != blank %}
+    {{ block.settings.custom_css }}
+  {% endif %}
+{% endstyle %}
+
+<div class="ai-marquee-container-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-marquee-wrapper-{{ ai_gen_id }}">
+    <div class="ai-marquee-track-{{ ai_gen_id }}">
+      {% if block.settings.item_1_text != blank or block.settings.item_1_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_1_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_1_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_1_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_1_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_1_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_2_text != blank or block.settings.item_2_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_2_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_2_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_2_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_2_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_2_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_3_text != blank or block.settings.item_3_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_3_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_3_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_3_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_3_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_3_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_4_text != blank or block.settings.item_4_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_4_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_4_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_4_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_4_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_4_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_5_text != blank or block.settings.item_5_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_5_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_5_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_5_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_5_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_5_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_6_text != blank or block.settings.item_6_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_6_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_6_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_6_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_6_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_6_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="ai-marquee-track-{{ ai_gen_id }}" aria-hidden="true">
+      {% if block.settings.item_1_text != blank or block.settings.item_1_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_1_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_1_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_1_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_1_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_1_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_2_text != blank or block.settings.item_2_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_2_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_2_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_2_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_2_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_2_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_3_text != blank or block.settings.item_3_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_3_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_3_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_3_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_3_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_3_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_4_text != blank or block.settings.item_4_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_4_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_4_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_4_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_4_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_4_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_5_text != blank or block.settings.item_5_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_5_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_5_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_5_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_5_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_5_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+
+      {% if block.settings.item_6_text != blank or block.settings.item_6_icon %}
+        <div class="ai-marquee-item-{{ ai_gen_id }}">
+          {% if block.settings.item_6_icon %}
+            <div class="ai-marquee-icon-{{ ai_gen_id }}">
+              <img
+                src="{{ block.settings.item_6_icon | image_url: width: 100 }}"
+                alt="{{ block.settings.item_6_text | escape }}"
+                loading="lazy"
+                width="100"
+                height="100"
+              >
+            </div>
+          {% endif %}
+          {% if block.settings.item_6_text != blank %}
+            <span class="ai-marquee-text-{{ ai_gen_id }}">{{ block.settings.item_6_text }}</span>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Marquee carousel",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_vertical",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Padding top and bottom",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "text_size_mobile",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Size on mobile",
+      "default": 12
+    },
+    {
+      "type": "select",
+      "id": "text_weight",
+      "label": "Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Normal"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semi bold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "header",
+      "content": "Icon style"
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Size",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "icon_size_mobile",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Size on mobile",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "icon_text_gap",
+      "min": 4,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon to text gap",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "icon_text_gap_mobile",
+      "min": 4,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Icon to text gap on mobile",
+      "default": 4
+    },
+    {
+      "type": "range",
+      "id": "item_spacing",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Item spacing",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "item_spacing_mobile",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Item spacing on mobile",
+      "default": 40
+    },
+    {
+      "type": "header",
+      "content": "Separator"
+    },
+    {
+      "type": "range",
+      "id": "separator_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "label": "Width",
+      "default": 1,
+      "info": "Set to 0 to hide"
+    },
+    {
+      "type": "select",
+      "id": "separator_style",
+      "label": "Style",
+      "options": [
+        {
+          "value": "solid",
+          "label": "Solid"
+        },
+        {
+          "value": "dashed",
+          "label": "Dashed"
+        },
+        {
+          "value": "dotted",
+          "label": "Dotted"
+        }
+      ],
+      "default": "solid"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Animation"
+    },
+    {
+      "type": "range",
+      "id": "scroll_speed",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "s",
+      "label": "Scroll speed",
+      "default": 30,
+      "info": "Lower is faster"
+    },
+    {
+      "type": "select",
+      "id": "pause_on_hover",
+      "label": "Pause on hover",
+      "options": [
+        {
+          "value": "running",
+          "label": "No"
+        },
+        {
+          "value": "paused",
+          "label": "Yes"
+        }
+      ],
+      "default": "running"
+    },
+    {
+      "type": "header",
+      "content": "Custom CSS"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS",
+      "info": "Add your own CSS styles here to customize the marquee"
+    },
+    {
+      "type": "header",
+      "content": "Item 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_1_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "item_1_text",
+      "label": "Text",
+      "default": "Free shipping on orders over €96"
+    },
+    {
+      "type": "header",
+      "content": "Item 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_2_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "item_2_text",
+      "label": "Text",
+      "default": "Filtra el 99,9% de los contaminantes."
+    },
+    {
+      "type": "header",
+      "content": "Item 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_3_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "item_3_text",
+      "label": "Text",
+      "default": "Over 50 years of experience"
+    },
+    {
+      "type": "header",
+      "content": "Item 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_4_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "item_4_text",
+      "label": "Text",
+      "default": "1,298+ satisfied customers"
+    },
+    {
+      "type": "header",
+      "content": "Item 5"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_5_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "item_5_text",
+      "label": "Text"
+    },
+    {
+      "type": "header",
+      "content": "Item 6"
+    },
+    {
+      "type": "image_picker",
+      "id": "item_6_icon",
+      "label": "Icon"
+    },
+    {
+      "type": "text",
+      "id": "item_6_text",
+      "label": "Text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee carousel"
+    }
+  ]
+}
+{% endschema %}

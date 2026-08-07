@@ -1,0 +1,78 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "brand_information_UcaYLz": {
+          "type": "brand_information",
+          "settings": {
+            "show_social": true,
+            "p1": "<p>Le moyen le plus simple, le plus sûr et le plus abordable de profiter d’une eau potable pure, exempte de contaminants à 99 %.</p><p><a href=\"mailto:soutien@phoenixwaterfilters.fr\">soutien@phoenixwaterfilters.fr</a></p>",
+            "p2": "<p><a href=\"tel:+442080585660\" target=\"_blank\" title=\"tel:+442080585660\">+4420 8058 5660</a></p>"
+          }
+        },
+        "link_list_HchFjM": {
+          "type": "text",
+          "settings": {
+            "heading": "Navigation",
+            "subtext": "<p><a href=\"/products/the-phoenix-gravity-filtre-a-eau\">Boutique</a></p><p><a href=\"/pages/comment-ca-marche\">Comment ça marche</a></p><p><a href=\"/pages/about-us\">À propos de nous</a></p><p><a href=\"/pages/nous-contacter\">Contactez-nous</a></p><p><a href=\"/pages/faq\">FAQ</a></p>"
+          }
+        },
+        "link_list_6TmK8C": {
+          "type": "text",
+          "settings": {
+            "heading": "Liens utiles",
+            "subtext": "<p><a href=\"/pages/livraisons-et-retours\">Livraison et retours</a></p><p><a href=\"/pages/politique-de-confidentialite\">Politique de confidentialité</a></p><p><a href=\"/pages/conditions-generales\">Conditions générales</a></p><p><a href=\"/pages/enregistrement-des-produits\">Enregistrez votre produit</a></p><p><a href=\"/pages/mentions-legales\">Mentions légales</a></p>"
+          }
+        },
+        "text_kEVfwh": {
+          "type": "text",
+          "settings": {
+            "heading": "Soyez les premiers informés",
+            "subtext": "<p>Inscrivez-vous pour recevoir nos offres exclusives et nos actualités santé.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "brand_information_UcaYLz",
+        "link_list_HchFjM",
+        "link_list_6TmK8C",
+        "text_kEVfwh"
+      ],
+      "custom_css": [
+        ".footer__content-bottom.scroll-trigger {display: none;}",
+        "a {color: white; text-decoration: none;}"
+      ],
+      "settings": {
+        "color_scheme": "scheme-5",
+        "newsletter_enable": false,
+        "newsletter_heading": "",
+        "enable_follow_on_shop": false,
+        "show_social": false,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "p3": "<p>Phoenix Gravity est conçu et fabriqué exclusivement par Rama, un fabricant mondial de systèmes avancés de filtration d’eau par gravité.</p>",
+        "p4": "<p>Fabriqué de manière responsable en Inde et expédié avec soin à l’international. © Copyright 2026 Phoenix Gravity Water Filters</p>",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

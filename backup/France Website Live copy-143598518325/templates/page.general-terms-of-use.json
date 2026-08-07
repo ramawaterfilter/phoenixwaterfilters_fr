@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "copy_image_rUyHJ6": {
+      "type": "copy-image",
+      "disabled": true,
+      "name": "Copy Image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "centered-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "content": "",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "support_cNgXx8": {
+      "type": "support",
+      "disabled": true,
+      "name": "Support Section",
+      "settings": {
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "button_link": "shopify://pages/warranty-registration",
+        "button_text": "Register Here"
+      }
+    },
+    "1746437444c5b604dc": {
+      "type": "apps",
+      "settings": {}
+    },
+    "custom_code_section_meYg6w": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<div class=\"terms-policy\">\n\n<p></p>\n<h1><strong>APERÇU</strong></h1>\n<br>Ce site Web est exploité par <strong>Phoenix Gravity Water Filters</strong>. Sur l’ensemble du site, les termes « nous », « notre » et « nos » font référence à Phoenix Gravity Water Filters. Phoenix Gravity Water Filters offre ce site Web, y compris toutes les informations, outils et services disponibles sur ce site, à vous, l’utilisateur, sous réserve de votre acceptation de tous les termes, conditions, politiques et avis énoncés ici.\n<p>En visitant notre site et/ou en achetant quelque chose chez nous, vous participez à notre « Service » et acceptez d’être lié(e) par les termes et conditions suivants (« Conditions Générales d’Utilisation », « Conditions »), y compris les termes, conditions et politiques supplémentaires référencés ici et/ou disponibles par hyperlien. Ces Conditions Générales d’Utilisation s’appliquent à tous les utilisateurs du site, y compris, sans s’y limiter, les utilisateurs qui naviguent, les vendeurs, les clients, les marchands et/ou les contributeurs de contenu.</p>\n<p>Veuillez lire attentivement ces Conditions Générales d’Utilisation avant d’accéder ou d’utiliser notre site Web. En accédant ou en utilisant une partie du site, vous acceptez d’être lié(e) par ces Conditions Générales d’Utilisation. Si vous n’acceptez pas l’intégralité des termes et conditions de cet accord, vous ne pouvez pas accéder au site Web ni utiliser ses services. Si ces Conditions Générales d’Utilisation sont considérées comme une offre, l’acceptation est expressément limitée à ces Conditions Générales d’Utilisation.</p>\n<p>Toutes nouvelles fonctionnalités ou tous nouveaux outils ajoutés au magasin actuel seront également soumis aux Conditions Générales d’Utilisation. Vous pouvez consulter la version la plus récente des Conditions Générales d’Utilisation à tout moment sur cette page. Nous nous réservons le droit de mettre à jour, de modifier ou de remplacer toute partie de ces Conditions Générales d’Utilisation en publiant des mises à jour et/ou des modifications sur notre site Web. Il est de votre responsabilité de vérifier cette page périodiquement pour prendre connaissance des modifications. Votre utilisation continue ou votre accès au site Web après la publication de toute modification constitue une acceptation de ces changements.</p>\n<p>Notre boutique est hébergée sur Shopify Inc. Ils nous fournissent la plateforme de commerce électronique en ligne qui nous permet de vendre nos produits et services.</p>\n<hr>\n<h3><strong>SECTION 1 - CONDITIONS D'UTILISATION DE LA BOUTIQUE EN LIGNE</strong></h3>\n<p>En acceptant ces Conditions Générales d’Utilisation, vous déclarez que vous avez au moins l’âge de la majorité dans votre état ou province de résidence, ou que vous avez l’âge de la majorité dans votre état ou province de résidence et que vous nous avez donné votre consentement pour permettre à vos mineurs à charge d’utiliser ce site.<br>Vous ne pouvez pas utiliser nos produits à des fins illégales ou non autorisées, ni, dans le cadre de l’utilisation du Service, violer les lois de votre juridiction (y compris, mais sans s’y limiter, les lois sur les droits d’auteur).<br>Vous ne devez pas transmettre de vers, virus ou code de nature destructrice.<br>Tout manquement ou toute violation des Conditions entraînera la résiliation immédiate de vos Services.</p>\n<hr>\n<h3><strong>SECTION 2 - CONDITIONS GÉNÉRALES</strong></h3>\n<p>Nous nous réservons le droit de refuser le Service à toute personne, pour quelque raison que ce soit et à tout moment.<br>Vous comprenez que votre contenu (à l’exception des informations relatives aux cartes de crédit) peut être transféré non crypté et impliquer (a) des transmissions sur divers réseaux ; et (b) des modifications pour se conformer et s’adapter aux exigences techniques de connexion des réseaux ou des appareils. Les informations relatives aux cartes de crédit sont toujours cryptées lors des transferts sur les réseaux.<br>Vous acceptez de ne pas reproduire, dupliquer, copier, vendre, revendre ou exploiter une quelconque partie du Service, une quelconque utilisation du Service ou un quelconque accès au Service ou à un contact sur le site Web à travers lequel le Service est fourni, sans autorisation écrite expresse de notre part.</p>\n<hr>\n<h3><strong>SECTION 3 - EXACTITUDE, EXHAUSTIVITÉ ET ACTUALITÉ DES INFORMATIONS</strong></h3>\n<p>Nous ne sommes pas responsables si les informations mises à disposition sur ce site ne sont pas exactes, complètes ou à jour. Le matériel sur ce site est fourni à titre d’information générale uniquement et ne doit pas être invoqué ou utilisé comme seule base pour prendre des décisions sans consulter des sources d’information primaires, plus précises, plus complètes ou plus récentes. Toute confiance dans le matériel de ce site est à vos propres risques.</p>\n<hr>\n<h3><strong>SECTION 4 - MODIFICATIONS DU SERVICE ET DES PRIX</strong></h3>\n<p>Les prix de nos produits peuvent être modifiés sans préavis.<br>Nous nous réservons le droit à tout moment de modifier ou d’interrompre le Service (ou toute partie ou contenu de celui-ci) sans préavis à tout moment.</p>\n<hr>\n<h3><strong>SECTION 5 - PRODUITS OU SERVICES (LE CAS ÉCHÉANT)</strong></h3>\n<p>Certains produits ou services peuvent être disponibles exclusivement en ligne via le site Web. Ces produits ou services peuvent être en quantités limitées et sont soumis à un retour ou échange uniquement selon notre Politique de Remboursement.<br>Nous avons fait tous les efforts pour afficher aussi précisément que possible les couleurs et les images de nos produits apparaissant dans la boutique. Nous ne pouvons garantir que l’affichage des couleurs par l’écran de votre ordinateur sera précis.</p>\n<hr>\n<h3><strong>SECTION 6 - EXACTITUDE DES INFORMATIONS DE FACTURATION ET DE COMPTE</strong></h3>\n<p>Nous nous réservons le droit de refuser toute commande passée chez nous. Nous pouvons, à notre seule discrétion, limiter ou annuler les quantités achetées par personne, par foyer ou par commande.</p>\n<hr>\n<h3><strong>SECTION 7 - OUTILS OPTIONNELS</strong></h3>\n<p>Nous pouvons vous fournir l’accès à des outils tiers sur lesquels nous n’exerçons ni contrôle ni supervision. Vous reconnaissez et acceptez que nous fournissions l’accès à ces outils « en l’état » et « selon disponibilité ».</p>\n<hr>\n<h3><strong>SECTION 8 - LIENS DE TIERS</strong></h3>\n<p>Certaines informations, produits et services disponibles via notre Service peuvent inclure des éléments provenant de tiers.<br>Nous ne sommes pas responsables de l’examen ou de l’évaluation du contenu ou de l’exactitude et nous ne garantissons ni n’aurons aucune responsabilité pour tout contenu ou matériel tiers.</p>\n<hr>\n<h3><strong>SECTION 9 - COMMENTAIRES, RETOURS ET AUTRES SOUMISSIONS D'UTILISATEURS</strong></h3>\n<p>Vous acceptez que nous puissions, sans restriction, modifier, copier, publier, distribuer, traduire et utiliser de toute autre manière dans tout média tout commentaire que vous nous envoyez.</p>\n<hr>\n<h3><strong>SECTION 10 - POLITIQUE DE RETOUR</strong></h3>\n<p>Conformément à l'article L221-18 du Code de la consommation, vous disposez d'un droit de rétractation de 14 jours à compter de la réception de votre commande, sans avoir à justifier de motifs. Pour exercer ce droit, contactez-nous à l'adresse suivante: <strong>soutien@phoenixwaterfilters.fr</strong>. <br><strong>Essai de 100 jours pour les systèmes de filtres à eau</strong><br>Nous offrons également un essai de 100 jours à l'achat de nos systèmes de filtration d'eau en acier inoxydable. Les articles doivent être retournés dans leur emballage d'origine et non endommagés.<br><strong>Période de retour de 30 jours pour les autres produits</strong><br>Pour tous les autres produits, notre politique standard de retour de 30 jours s’applique.</p>\n<hr>\n<h3><strong>SECTION 11 - INFORMATIONS DE CONTACT</strong></h3>\n<p>Pour toute question relative aux Conditions Générales d’Utilisation, contactez-nous à <span>..<strong>soutien@phoenixwaterfilters.fr</strong></span>.<br>Entreprise enregistrée : <strong>Phoenix Water Filters LTD</strong>,</p>\n\n\n</div>",
+        "custom_css": ".terms-policy {\n  max-width: 1200px;\n  margin: 40px auto;\n  padding: 25px 35px;\n  font-family: \"Value Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.7;\n  color: #222;\n}\n\n.terms-policy p {\n  margin-bottom: 18px;\n  text-align: justify;\n}\n\n.terms-policy strong {\n  font-weight: 600;\n}\n\n.terms-policy h3 {\n  margin-top: 35px;\n  margin-bottom: 15px;\n  font-size: 20px;\n  font-weight: 700;\n  text-transform: uppercase;\n}\n\n.terms-policy hr {\n  border: none;\n  border-top: 1px solid #ccc;\n  margin: 35px 0;\n}\n\n.terms-policy span {\n  font-weight: 500;\n}\n\n@media (max-width: 768px) {\n  .terms-policy {\n    padding: 15px 20px;\n    font-size: 15px;\n  }\n\n  .terms-policy h3 {\n    font-size: 18px;\n    margin-top: 25px;\n  }\n}",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    }
+  },
+  "order": [
+    "copy_image_rUyHJ6",
+    "support_cNgXx8",
+    "1746437444c5b604dc",
+    "custom_code_section_meYg6w"
+  ]
+}

@@ -1,0 +1,549 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_hero_video_tBifU8": {
+      "type": "custom_hero_video",
+      "name": "Custom Hero video",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/f9237ad841934f5a9d2be962c3febda4.mp4",
+        "lazy_load": true,
+        "hide_video_mobile": false,
+        "section_height": "custom",
+        "custom_height": 600,
+        "custom_height_mobile": 500,
+        "mobile_height": 70,
+        "heading": "A better way to drink water, naturally.",
+        "subheading": "No plastic. No electricity. Just gravity! Trusted by over 800,000 homes",
+        "button_label": "Build your filter system",
+        "button_link": "",
+        "show_badge": false,
+        "badge_text": "",
+        "badge_bg_color": "#f5d24f",
+        "badge_text_color": "#121212",
+        "badge_radius": 4,
+        "badge_size": 14,
+        "show_reviews": false,
+        "reviews_text": " (4.74/5)",
+        "rating": 47,
+        "reviews_size": 14,
+        "content_alignment_desktop": "center",
+        "content_max_width": 800,
+        "content_alignment_mobile": "center",
+        "overlay_color": "#000000",
+        "overlay_opacity": 50,
+        "overlay_opacity_mobile": 60,
+        "text_color": "#ffffff",
+        "heading_size_desktop": 48,
+        "heading_size_mobile": 32,
+        "text_size_desktop": 18,
+        "text_size_mobile": 16,
+        "button_bg_color": "#f5d24f",
+        "button_text_color": "#121212",
+        "button_hover_bg_color": "#121212",
+        "button_hover_text_color": "#ffffff",
+        "button_radius": 0,
+        "button_size_desktop": 16,
+        "button_size_mobile": 14
+      }
+    },
+    "intro": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Innovation pure, eau pure",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Entrez dans le futur avec notre technologie de double filtration de pointe. Le filtre à eau par gravité Phoenix associe l’acier inoxydable AISI 304 à une filtration avancée pour offrir une eau pure au goût frais.</p>"
+          }
+        },
+        "button_zieKDY": {
+          "type": "button",
+          "settings": {
+            "button_label": "COMMANDEZ MAINTENANT ET PROFITEZ DE LA LIVRAISON GRATUITE!",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button_zieKDY"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "filtration": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Technologie de filtration révolutionnaire Nanobactérien",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le carbone actif granulaire issu de coques de noix de coco aide à éliminer les produits chimiques, les toxines et les métaux lourds. Des adsorbants de carbone limitent ensuite la croissance des contaminants à l’intérieur du filtre, tout en préservant l’oxygène et les minéraux de l’eau.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "page_width": 120,
+        "image": "shopify://shop_images/water-filter-eCom1.webp",
+        "custom_text": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-2",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "affordable": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "D’une beauté impressionnante. D’un prix incroyablement abordable",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le filtre Phoenix Gravity offre une solution élégante, facile à installer et simple à entretenir. Il fournit une eau propre et délicieuse sans plomberie, sans électricité et sans système complexe.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Commander maintenant",
+            "button_link": "shopify://products/the-phoenix-gravity-filtre-a-eau",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "page_width": 120,
+        "image": "shopify://shop_images/water-filter-home_2.webp",
+        "custom_text": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "benefits": {
+      "type": "multicolumn",
+      "blocks": {
+        "benefit_1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-tick-sheild_1.svg",
+            "title": "Acier inoxydable AISI 304",
+            "sub_title": "",
+            "text": "<p>Léger, résistant à la rouille et conçu pour durer.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-clean-water.svg",
+            "title": "Filtration rapide",
+            "sub_title": "",
+            "text": "<p>Le double système peut filtrer jusqu’à 16 litres d’eau par heure.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-bugs.svg",
+            "title": "Filtration avancée",
+            "sub_title": "",
+            "text": "<p>Élimine jusqu’à 99,9 % des contaminants et métaux lourds.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-metal-tap.svg",
+            "title": "Robinet anti-goutte",
+            "sub_title": "",
+            "text": "<p>Un robinet en métal pour une utilisation simple au quotidien.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_5": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-time.svg",
+            "title": "Grande autonomie",
+            "sub_title": "",
+            "text": "<p>Une paire de cartouches filtre jusqu’à 20 000 litres ou pendant 12 mois.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "benefit_6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-bacteria.svg",
+            "title": "Carbone naturel",
+            "sub_title": "",
+            "text": "<p>Le carbone actif de noix de coco aide à éliminer les PFAS et autres toxines.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_1",
+        "benefit_2",
+        "benefit_3",
+        "benefit_4",
+        "benefit_5",
+        "benefit_6"
+      ],
+      "settings": {
+        "page_width": 120,
+        "title": "Conçu pour la perfection",
+        "sub_title": "",
+        "w1": 24,
+        "w2": 18,
+        "p1": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "text_layout": "below",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "cs1": ""
+      }
+    },
+    "products": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all-products",
+        "products_to_show": 4,
+        "title": "Nos systèmes de filtration",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "advanced": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Notre filtre à eau le plus avancé jamais conçu",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Le filtre Phoenix Gravity représente le résultat de plus de 50 années consacrées à la recherche et au développement. Conçu pour redéfinir votre expérience de l’eau, il associe élégance, efficacité et simplicité.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "page_width": 120,
+        "image": "shopify://shop_images/LifeStyle.jpg",
+        "custom_text": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "steps": {
+      "type": "multicolumn",
+      "blocks": {
+        "step_1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-assemble.svg",
+            "title": "1. Assemblez votre filtre",
+            "sub_title": "",
+            "text": "<p>Suivez les instructions incluses dans la boîte. L’installation prend environ cinq minutes.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step_2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-water-sm.svg",
+            "title": "2. Ajoutez l’eau du robinet",
+            "sub_title": "",
+            "text": "<p>Versez simplement l’eau dans la cuve supérieure et laissez la filtration naturelle agir.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step_3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/icon-glass.svg",
+            "title": "3. C’est prêt à boire",
+            "sub_title": "",
+            "text": "<p>Servez-vous une eau au goût propre et frais directement depuis le robinet du filtre.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "page_width": 120,
+        "title": "Une eau cristalline en trois étapes faciles",
+        "sub_title": "",
+        "w1": 24,
+        "w2": 18,
+        "p1": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "text_layout": "below",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "cs1": ""
+      }
+    },
+    "testimonials": {
+      "type": "multicolumn",
+      "blocks": {
+        "review_1": {
+          "type": "column",
+          "settings": {
+            "title": "Véronique",
+            "sub_title": "",
+            "text": "<p>Je suis vraiment contente d’avoir fait ce choix. Le système est simple à utiliser et l’eau a un goût excellent.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "review_2": {
+          "type": "column",
+          "settings": {
+            "title": "André",
+            "sub_title": "",
+            "text": "<p>Nous recherchions un filtre robuste, facile à entretenir, durable et efficace. Il répond à tous nos critères.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "review_3": {
+          "type": "column",
+          "settings": {
+            "title": "Sophie",
+            "sub_title": "",
+            "text": "<p>Excellente qualité du produit et livraison rapide. Le service client a été très réactif.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "review_3"
+      ],
+      "settings": {
+        "page_width": 120,
+        "title": "Une marque de confiance depuis plus de 50 ans",
+        "sub_title": "",
+        "w1": 24,
+        "w2": 18,
+        "p1": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "text_layout": "below",
+        "button_label": "Voir tous les avis",
+        "button_link": "shopify://pages/review",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "cs1": ""
+      }
+    },
+    "guarantee": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Essai gratuit de 100 jours",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Essayez le filtre Phoenix Gravity chez vous pendant 100 jours. Si vous n’êtes pas entièrement satisfait de la pureté de votre eau, retournez-le dans les conditions prévues pour obtenir un remboursement.</p>",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Commander maintenant",
+            "button_link": "shopify://products/the-phoenix-gravity-filtre-a-eau",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "page_width": 120,
+        "image": "shopify://shop_images/phoenix-guarantee.v1_copy_1.webp",
+        "custom_text": "",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "scheme-1",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    }
+  },
+  "order": [
+    "custom_hero_video_tBifU8",
+    "intro",
+    "filtration",
+    "affordable",
+    "benefits",
+    "products",
+    "advanced",
+    "steps",
+    "testimonials",
+    "guarantee"
+  ]
+}

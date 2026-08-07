@@ -1,0 +1,140 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_jweG6c": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "",
+        "heading": "Collections",
+        "content": "",
+        "sideimage": "shopify://shop_images/view-products_1.webp",
+        "section_video_bg": "",
+        "buttonlink": "",
+        "buttontext": ""
+      }
+    },
+    "icon_row_qgDTD3": {
+      "type": "icon-row",
+      "blocks": {
+        "text_cfambk": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-smiles_1.svg",
+            "heading": "800 000 clients satisfaits"
+          }
+        },
+        "text_DdXmNF": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-bottle_793c42bd-a6bf-4978-8769-878059d83793_1.svg",
+            "heading": "Des milliers de dollars moins chers queles bouteilles et les systèmes à domicile"
+          }
+        },
+        "text_NHE43F": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-scales_43cbdd60-fa9d-484a-b138-bd5a62d85515_1.svg",
+            "heading": "Moins de 8 centimes d'europar litre"
+          }
+        },
+        "text_qNKYbq": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-plumbing.svg",
+            "heading": "Aucune plomberie requise"
+          }
+        },
+        "text_czCWRj": {
+          "type": "text",
+          "settings": {
+            "icon": "shopify://shop_images/icon-experience_da934c37-aaf4-463e-8ff6-378434b3e1c7_1.svg",
+            "heading": "Plus de 50 ansd'expérience"
+          }
+        }
+      },
+      "block_order": [
+        "text_cfambk",
+        "text_DdXmNF",
+        "text_NHE43F",
+        "text_qNKYbq",
+        "text_czCWRj"
+      ],
+      "custom_css": [
+        "@media (min-width: 1200px) {section.section-icon-row .container.extended, section.section-icon-row .extended.shopify-policy__body {max-width: 1200px !important; }}"
+      ],
+      "name": "Icon Row Section",
+      "settings": {
+        "style": "bg-white",
+        "styles": "compact",
+        "heading": "",
+        "paragraph": "",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "17624098034e37101a": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_6a6f415_dLpHMg": {
+          "type": "ai_gen_block_6a6f415",
+          "settings": {
+            "collection": "all-products",
+            "products_to_show": 50,
+            "show_collection_title": true,
+            "show_collection_description": false,
+            "text_alignment": "center",
+            "columns_desktop": 3,
+            "columns_tablet": 3,
+            "columns_mobile": "2",
+            "container_width": 1200,
+            "grid_gap": 40,
+            "section_padding": 0,
+            "spacing_below_title": 10,
+            "spacing_above_grid": 25,
+            "background_color": "#ffffff",
+            "title_color": "#000000",
+            "title_size": 32,
+            "description_color": "#666666",
+            "description_size": 16,
+            "image_border_radius": 8,
+            "product_title_color": "#000000",
+            "product_title_size": 16,
+            "product_price_color": "#000000",
+            "product_price_size": 14
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_6a6f415_dLpHMg"
+      ],
+      "custom_css": [
+        "h2.ai-collection-grid__title-ate1tmfh1zytrlzjokaigenblock6a6f415dlphmg {display: none;}"
+      ],
+      "settings": {}
+    },
+    "collection-grid": {
+      "type": "collection-grid",
+      "disabled": true,
+      "settings": {
+        "exclude_collections": [
+          "new-collection"
+        ]
+      }
+    }
+  },
+  "order": [
+    "hero_jweG6c",
+    "icon_row_qgDTD3",
+    "17624098034e37101a",
+    "collection-grid"
+  ]
+}

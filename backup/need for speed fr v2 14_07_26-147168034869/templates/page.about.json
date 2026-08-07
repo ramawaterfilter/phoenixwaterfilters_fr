@@ -1,0 +1,153 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_fGiC9Y": {
+      "type": "hero",
+      "settings": {
+        "eyebrow": "",
+        "heading": "À propos de nous",
+        "content": "",
+        "sideimage": "shopify://shop_images/about-phoenix-water-filters_3.webp",
+        "section_video_bg": "",
+        "buttonlink": "",
+        "buttontext": ""
+      }
+    },
+    "article_callout_66xp3E": {
+      "type": "article-callout",
+      "settings": {
+        "style": "style-2",
+        "reducepadding": true,
+        "heading": "Notre histoire",
+        "content": ""
+      }
+    },
+    "copy_image_VPPNeV": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Tout a commencé à Londres dans les années 1970.",
+        "content": "<p>À l'époque, un jeune père de famille s'inquiétait de plus en plus de la qualité de l'eau du robinet. Les solutions disponibles étaient souvent coûteuses, complexes et ne garantissaient pas une filtration réellement efficace. Déterminé à trouver une meilleure alternative, il a développé et fabriqué au Royaume-Uni des éléments filtrants en céramique de haute qualité, conçus pour offrir une eau plus pure tout en limitant les déchets.<br/><br/>À la même période, à Chennai, en Inde, un autre entrepreneur partageait la même vision : rendre l'accès à une eau de qualité plus simple et plus durable. Il a créé une usine spécialisée dans la fabrication de systèmes de filtration en acier inoxydable haut de gamme. Alimentée exclusivement par l'énergie solaire, cette usine est rapidement devenue une référence mondiale dans la production de boîtiers de filtres à eau en acier inoxydable 304.<br/><br/>Au début des années 2000, ces deux parcours se sont rencontrés autour d'une ambition commune : associer une technologie de filtration performante à un savoir-faire industriel d'excellence. Cette collaboration a donné naissance, en 2005, à une approche unique réunissant des composants de filtration de haute qualité et une fabrication durable.<br/><br/>Aujourd'hui, la nouvelle génération poursuit cette aventure. Ayant grandi au cœur de l'univers de la filtration de l'eau, les enfants des fondateurs ont choisi de mettre leur expérience au service de leur passion pour la santé, le bien-être et la durabilité.<br/><br/>C'est cette vision qui continue d'inspirer chaque filtre à eau Phoenix Gravity que nous concevons aujourd'hui.<br/><br/></p>",
+        "column_img": "shopify://shop_images/water-filter-eCom1.webp",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "<p>Chez Phoenix Gravity, nous concevons des filtres à eau par gravité en acier inoxydable d'une qualité exceptionnelle, alliant performance, durabilité et simplicité.<br/><br/>Aujourd'hui, plus de 800 000 foyers dans le monde nous font confiance pour retrouver une eau pure, au goût authentique et riche en minéraux essentiels. Une eau au plus proche de ce que la nature a prévu.<br/></p>",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "bottom"
+      }
+    },
+    "copy_image_EF7HdE": {
+      "type": "copy-image",
+      "custom_css": [
+        "@media (max-width: 768px) {h2 {font-size: 20px; }}"
+      ],
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Une technologie de pointe, un objectif plus ambitieux",
+        "content": "<p>Depuis plus de 50 ans, nous mettons notre passion, notre précision et un objectif clair dans chaque goutte de notre travail. Au cœur de nos filtres à eau par gravité se trouve un équilibre essentiel : des matériaux soigneusement sélectionnés, un design réfléchi et une technologie conçue pour durer.</p><p>Nous sommes convaincus que la véritable innovation ne réside pas uniquement dans les matériaux qui composent nos filtres, mais aussi dans les personnes qui les imaginent et les développent. Des esprits innovants, animés par la recherche de solutions et engagés pour la santé et la préservation de la planète.<br/><br/>Ensemble, nous avons construit un héritage fondé sur la confiance, en transformant l’eau du quotidien en une eau plus pure, plus sûre et simplement meilleure.<br/></p>",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "bottom"
+      }
+    },
+    "gallery_NqrkDB": {
+      "type": "gallery",
+      "blocks": {
+        "gallery_images_block_PfRCFJ": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-01_600x_4a44a777-dc95-45d3-a246-18981631f9eb.webp"
+          }
+        },
+        "gallery_images_block_CCJWT7": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-07_600x_e0d45e92-697e-4d9f-8f4c-871ebb703c36.webp"
+          }
+        },
+        "gallery_images_block_qX3Fqd": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-02_600x_2eef5357-f10d-44c8-aa81-0e6840c0e353.webp"
+          }
+        },
+        "gallery_images_block_w7gYzt": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-04_600x_94260ba3-89af-4969-8e11-a5acb03934c2.webp"
+          }
+        },
+        "gallery_images_block_qRpxPB": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-08_600x_1b7d053b-0a24-479c-b029-60f1f6d0e9bb.webp"
+          }
+        },
+        "gallery_images_block_TFAfTb": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-05_600x_5458878f-f777-43e6-a1f9-cf48f2244418.webp"
+          }
+        },
+        "gallery_images_block_AHBK7Y": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-03_600x_e949a05c-9315-4f6e-a792-7f6a06f3e13f.webp"
+          }
+        },
+        "gallery_images_block_TKg4Uz": {
+          "type": "gallery_images_block",
+          "settings": {
+            "gallery_image": "shopify://shop_images/water-filter-06_600x_8ad0ae1f-8b15-4d07-85b3-2f21d5817f9c.webp"
+          }
+        }
+      },
+      "block_order": [
+        "gallery_images_block_PfRCFJ",
+        "gallery_images_block_CCJWT7",
+        "gallery_images_block_qX3Fqd",
+        "gallery_images_block_w7gYzt",
+        "gallery_images_block_qRpxPB",
+        "gallery_images_block_TFAfTb",
+        "gallery_images_block_AHBK7Y",
+        "gallery_images_block_TKg4Uz"
+      ],
+      "custom_css": [],
+      "settings": {
+        "gallery_heading": "",
+        "gallery_content": ""
+      }
+    }
+  },
+  "order": [
+    "hero_fGiC9Y",
+    "article_callout_66xp3E",
+    "copy_image_VPPNeV",
+    "copy_image_EF7HdE",
+    "gallery_NqrkDB"
+  ]
+}

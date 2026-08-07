@@ -1,0 +1,37 @@
+{% comment %}
+  Snippet: snippets/ct-cell-render.liquid
+  ────────────────────────────────────────
+  Variables expected (passed via render tag):
+    val         — the plain text value (used when type = 'text')
+    type        — 'yes' | 'no' | 'text'
+    tick_color  — hex colour for the yes state
+    cross_color — hex colour for the no state
+    tick_label  — label shown next to ✓  (default "Yes")
+    cross_label — label shown next to ✗  (default "No")
+{% endcomment %}
+
+{%- liquid
+  assign _tick_label  = tick_label  | default: 'Yes'
+  assign _cross_label = cross_label | default: 'No'
+-%}
+
+{%- if type == 'yes' -%}
+
+  <span class="ct-cell-yes" style="color:{{ tick_color }};">
+    <i class="ct-cell-icon" aria-hidden="true">✓</i>
+    <span>{{ _tick_label }}</span>
+  </span>
+
+{%- elsif type == 'no' -%}
+
+  <span class="ct-cell-no" style="color:{{ cross_color }};">
+    <i class="ct-cell-icon" aria-hidden="true">✗</i>
+    <span>{{ _cross_label }}</span>
+  </span>
+
+{%- else -%}
+
+  {%- comment -%} Plain text mode — render whatever is in val {%- endcomment -%}
+  <p>{{ val }}</p>
+
+{%- endif -%}

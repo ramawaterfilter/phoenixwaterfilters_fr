@@ -1,0 +1,338 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "wisita_videos_zzNRLP": {
+      "type": "wisita-videos",
+      "blocks": {
+        "video_pfqBQN": {
+          "type": "video",
+          "name": "Video",
+          "settings": {
+            "title": "How to set up your Phoenix Gravity System?",
+            "wistia_id": "nka2th3w5j"
+          }
+        },
+        "video_9hXzGk": {
+          "type": "video",
+          "settings": {
+            "title": "How to set up your Carbon Cartridge Filters?",
+            "wistia_id": "okc20zhlxl"
+          }
+        },
+        "video_jVJmiK": {
+          "type": "video",
+          "settings": {
+            "title": "How to set up your POSTreat filters?",
+            "wistia_id": "4r7y17piui"
+          }
+        },
+        "video_X8DF4c": {
+          "type": "video",
+          "settings": {
+            "title": "How to Prime Your Smart Carbon Cartridges?",
+            "wistia_id": "mg0xm7vkzz"
+          }
+        },
+        "video_cYbf8i": {
+          "type": "video",
+          "settings": {
+            "title": "How to set up your Stainless Steel Tap?",
+            "wistia_id": "7o5r5qwwl9"
+          }
+        }
+      },
+      "block_order": [
+        "video_pfqBQN",
+        "video_9hXzGk",
+        "video_jVJmiK",
+        "video_X8DF4c",
+        "video_cYbf8i"
+      ],
+      "disabled": true,
+      "name": "Wistia Video Grid",
+      "settings": {}
+    },
+    "custom_code_section_3xEePU": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<section class=\"filter-setup\">\n  <div class=\"filter-header\">\n    <h1>Cómo instalar tu filtro</h1>\n  </div>\n\n  <ul class=\"filter-list\">\n    <li><a href=\"#\" data-target=\".ai-embed-section-ad0o4ywvpukdxm05mqaigenblock66d3bc2wgthdr\">Instalación de su sistema de filtración por gravedad Phoenix.</a></li>\n    <li><a href=\"#\" data-target=\".ai-embed-section-ayvevnffnqw1mnmfsnaigenblock66d3bc2bnxhgk\">Cómo instalar sus cartuchos de carbón.</a></li>\n    <li><a href=\"#\" data-target=\".ai-embed-section-aajlqyjdjqwrhuehnsaigenblock66d3bc2twntlj\">Cómo instalar sus cartuchos POSTreat Steel (Reducción de Fluoruro y Arsénico)</a></li>\n    <li><a href=\"#\" data-target=\".ai-embed-section-ats8wzdnhvkyztxbrwaigenblock66d3bc2aegjny\">Instalación de sus cartuchos de Acero al Carbono y POSTreat (Fluoruro y Arsénico)</a></li>\n    <li><a href=\"#\" data-target=\".ai-embed-section-aswvdmwprbenmum9fuaigenblock66d3bc26r97ew\">Cómo cebar sus cartuchos de carbón.</a></li>\n    <li><a href=\"#\" data-target=\".ai-embed-section-ac0oxa281amrsug45raigenblock66d3bc2btmtwb\">Cómo instalar su grifo de acero inoxidable</a></li>\n  </ul>\n</section>",
+        "custom_css": ".filter-setup {\n  padding: 50px 0 20px 0;\n  color: #153A5B;\n  max-width: 1400px;\n  margin: 0 auto;\n  background-color: #fff;\n}\n\n.filter-header {\n  display: flex;\n  align-items: center;\n  gap: 15px;\n  margin-bottom: 25px;\n}\n\n.filter-icon {\n  width: 60px;\n  height: 60px;\n}\n\n.filter-header h2 {\n  font-size: 36px;\n  font-weight: 700;\n  color: #153A5B;\n  margin: 0;\n}\n\n/* List styling */\n.filter-list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.filter-list li {\n  margin: 15px 0;\n}\n\n.filter-list a {\n  text-decoration: none;\n  color: #153A5B;\n  font-size: 18px;\n  transition: color 0.3s ease, text-decoration 0.3s ease;\n}\n\n.filter-list a:hover {\n  color: #0e2d46;\n  text-decoration: underline;\n}\n\n@media (max-width: 768px) {\n  .filter-setup {\n    padding: 30px 20px;\n  }\n\n  .filter-header {\n    flex-direction: row;\n    align-items: center;\n    gap: 10px;\n  }\n\n  .filter-icon {\n    width: 50px;\n    height: 50px;\n  }\n\n  .filter-header h2 {\n    font-size: 26px;\n  }\n\n  .filter-list {\n    margin-top: 15px;\n  }\n\n  .filter-list a {\n    font-size: 16px;\n  }\n}",
+        "custom_js": "document.addEventListener(\"DOMContentLoaded\", () => {\n  document.querySelectorAll(\".filter-list a\").forEach(link => {\n    link.addEventListener(\"click\", e => {\n      e.preventDefault();\n      const targetSelector = link.getAttribute(\"data-target\");\n      const targetElement = document.querySelector(targetSelector);\n\n      if (targetElement) {\n        const yOffset = -100; // adjust if you have a sticky header\n        const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;\n        window.scrollTo({ top: y, behavior: \"smooth\" });\n      }\n    });\n  });\n});"
+      }
+    },
+    "1764057142fc44b54a": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_66d3bc2_WGtHDR": {
+          "type": "ai_gen_block_66d3bc2",
+          "settings": {
+            "heading": "Instalación completa de su Sistema de Filtración Phoenix Gravity",
+            "heading_font_size": 32,
+            "heading_color": "#132455",
+            "heading_alignment": "left",
+            "heading_padding_top": 0,
+            "heading_padding_bottom": 0,
+            "heading_padding_left": 0,
+            "heading_padding_right": 0,
+            "heading_margin_top": 0,
+            "heading_margin_bottom": 0,
+            "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/nka2th3w5j.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='nka2th3w5j']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nka2th3w5j/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"nka2th3w5j\" aspect=\"1.7777777777777777\"></wistia-player>",
+            "video_width": 1400,
+            "video_height": 800,
+            "section_margin_top": 0,
+            "section_margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_66d3bc2_WGtHDR"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.ai-embed-heading-ad0o4ywvpukdxm05mqaigenblock66d3bc2wgthdr {width: 1400px; max-width: 100%; margin: 20px auto; margin-top: 50px; padding-bottom: 10px; }}",
+        "@media (max-width: 786px) {.ai-embed-heading-ad0o4ywvpukdxm05mqaigenblock66d3bc2wgthdr {margin-top: 0px; margin-bottom: 10px; margin-left: 0px; padding-left: 20px; font-size: 18px; }}",
+        "@media (max-width: 786px) {.ai-embed-section-ad0o4ywvpukdxm05mqaigenblock66d3bc2wgthdr {height: 260px; }}"
+      ],
+      "settings": {}
+    },
+    "custom_code_section_CbTaxk": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<section class=\"manual-download\">\n  <p>\n   Téléchargez le manuel d'instructions \n    <a href=\"https://cdn.shopify.com/s/files/1/2644/2852/files/Instruction_Manual_V7.pdf?v=1761721766\" ici>\n      <span class=\"highlight-text\">ici</span>\n    </a>.\n  </p>\n</section>",
+        "custom_css": ".manual-download a {\n  color: #007bff !important; /* link blue color */\n  font-weight: 900 !important;\n\n}\n\n.manual-download a:hover {\n  color: #0056b3 !important; /* hover blue */\n\n}\n\n.highlight-text {\n  color: #FFD700 !important; /* yellow for 'here' */\n  font-weight: 900 !important;\n\n}\n\n/* Desktop view (786px and above) */\n@media (min-width: 786px) {\n  .manual-download {\n  width: 1400px;\n    max-width: 100%;\nfont-size:30px;\n    margin: 0 auto;\n  }\n}\n\n/* Mobile view */\n@media (max-width: 785px) {\n  .manual-download {\n    margin-left: 4% !important;\n        margin-top: 40px;\n    padding: 2px 0 0 0 !important;\n  }\n}",
+        "custom_js": ""
+      }
+    },
+    "blocks_dqeFLd": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_66d3bc2_bNxhgK": {
+          "type": "ai_gen_block_66d3bc2",
+          "settings": {
+            "heading": "Instalación de sus elementos filtrantes de carbón",
+            "heading_font_size": 32,
+            "heading_color": "#132455",
+            "heading_alignment": "left",
+            "heading_padding_top": 0,
+            "heading_padding_bottom": 0,
+            "heading_padding_left": 0,
+            "heading_padding_right": 0,
+            "heading_margin_top": 0,
+            "heading_margin_bottom": 0,
+            "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/okc20zhlxl.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='okc20zhlxl']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/okc20zhlxl/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"okc20zhlxl\" aspect=\"1.7777777777777777\"></wistia-player>",
+            "video_width": 1400,
+            "video_height": 800,
+            "section_margin_top": 0,
+            "section_margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_66d3bc2_bNxhgK"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.ai-embed-heading-ayvevnffnqw1mnmfsnaigenblock66d3bc2bnxhgk {width: 1400px; max-width: 100%; margin: 20px auto; margin-top: 50px; padding-bottom: 10px; }}",
+        "@media (max-width: 786px) {.ai-embed-heading-ayvevnffnqw1mnmfsnaigenblock66d3bc2bnxhgk {margin-top: 0px; margin-bottom: 10px; margin-left: 0px; padding-left: 20px; font-size: 18px; }}",
+        "@media (max-width: 786px) {.ai-embed-section-ayvevnffnqw1mnmfsnaigenblock66d3bc2bnxhgk {height: 260px; }}"
+      ],
+      "settings": {}
+    },
+    "custom_code_section_ymnKpp": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<section class=\"manual-download\">\n  <p>\n   Téléchargez le manuel d'instructions \n    <a href=\"https://cdn.shopify.com/s/files/1/2644/2852/files/Instruction_Manual_V7.pdf?v=1761721766\" download>\n      <span class=\"highlight-text\"> ici</span>\n    </a>.\n  </p>\n</section>",
+        "custom_css": ".manual-download a {\n  color: #007bff !important; /* link blue color */\n  font-weight: 900 !important;\n\n}\n\n.manual-download a:hover {\n  color: #0056b3 !important; /* hover blue */\n\n}\n\n.highlight-text {\n  color: #FFD700 !important; /* yellow for 'here' */\n  font-weight: 900 !important;\n\n}\n\n/* Desktop view (786px and above) */\n@media (min-width: 786px) {\n  .manual-download {\n  width: 1400px;\n    max-width: 100%;\nfont-size:30px;\n    margin: 0 auto;\n  }\n}\n\n/* Mobile view */\n@media (max-width: 785px) {\n  .manual-download {\n    margin-left: 4% !important;\n        margin-top: 40px;\n    padding: 2px 0 0 0 !important;\n  }\n}",
+        "custom_js": ""
+      }
+    },
+    "blocks_m8EkfY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_66d3bc2_TwntLJ": {
+          "type": "ai_gen_block_66d3bc2",
+          "settings": {
+            "heading": "Instalación de sus elementos filtrantes de acero POSTreat (fluoruro y arsénico)",
+            "heading_font_size": 32,
+            "heading_color": "#132455",
+            "heading_alignment": "left",
+            "heading_padding_top": 0,
+            "heading_padding_bottom": 0,
+            "heading_padding_left": 0,
+            "heading_padding_right": 0,
+            "heading_margin_top": 0,
+            "heading_margin_bottom": 0,
+            "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/4r7y17piui.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='4r7y17piui']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/4r7y17piui/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"4r7y17piui\" aspect=\"1.7777777777777777\"></wistia-player>",
+            "video_width": 1400,
+            "video_height": 800,
+            "section_margin_top": 0,
+            "section_margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_66d3bc2_TwntLJ"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.ai-embed-heading-aajlqyjdjqwrhuehnsaigenblock66d3bc2twntlj {width: 1400px; max-width: 100%; margin: 20px auto; margin-top: 50px; padding-bottom: 10px; }}",
+        "@media (max-width: 786px) {.ai-embed-heading-aajlqyjdjqwrhuehnsaigenblock66d3bc2twntlj {margin-top: 0px; margin-bottom: 10px; margin-left: 0px; padding-left: 20px; font-size: 18px; }}",
+        "@media (max-width: 786px) {.ai-embed-section-aajlqyjdjqwrhuehnsaigenblock66d3bc2twntlj {height: 260px; }}"
+      ],
+      "settings": {}
+    },
+    "blocks_qh7jLt": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_66d3bc2_aEGjnY": {
+          "type": "ai_gen_block_66d3bc2",
+          "settings": {
+            "heading": "Instalación de elementos filtrantes combinados de acero al carbono y POSTreat",
+            "heading_font_size": 32,
+            "heading_color": "#132455",
+            "heading_alignment": "left",
+            "heading_padding_top": 0,
+            "heading_padding_bottom": 0,
+            "heading_padding_left": 0,
+            "heading_padding_right": 0,
+            "heading_margin_top": 0,
+            "heading_margin_bottom": 0,
+            "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/nh58gudtyp.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='nh58gudtyp']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/nh58gudtyp/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"nh58gudtyp\" aspect=\"1.7777777777777777\"></wistia-player>",
+            "video_width": 1400,
+            "video_height": 800,
+            "section_margin_top": 0,
+            "section_margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_66d3bc2_aEGjnY"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.ai-embed-heading-ats8wzdnhvkyztxbrwaigenblock66d3bc2aegjny {width: 1400px; max-width: 100%; margin: 20px auto; margin-top: 50px; padding-bottom: 10px; }}",
+        "@media (max-width: 786px) {.ai-embed-heading-ats8wzdnhvkyztxbrwaigenblock66d3bc2aegjny {margin-top: 0px; margin-bottom: 10px; margin-left: 0px; padding-left: 20px; font-size: 18px; }}",
+        "@media (max-width: 786px) {.ai-embed-section-ats8wzdnhvkyztxbrwaigenblock66d3bc2aegjny {height: 260px; }}"
+      ],
+      "settings": {}
+    },
+    "blocks_xMkm6m": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_66d3bc2_6r97Ew": {
+          "type": "ai_gen_block_66d3bc2",
+          "settings": {
+            "heading": "Cebado de elementos filtrantes de carbón",
+            "heading_font_size": 32,
+            "heading_color": "#132455",
+            "heading_alignment": "left",
+            "heading_padding_top": 0,
+            "heading_padding_bottom": 0,
+            "heading_padding_left": 0,
+            "heading_padding_right": 0,
+            "heading_margin_top": 0,
+            "heading_margin_bottom": 0,
+            "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/mg0xm7vkzz.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='mg0xm7vkzz']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/mg0xm7vkzz/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"mg0xm7vkzz\" aspect=\"1.7777777777777777\"></wistia-player>",
+            "video_width": 1400,
+            "video_height": 800,
+            "section_margin_top": 0,
+            "section_margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_66d3bc2_6r97Ew"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.ai-embed-heading-aswvdmwprbenmum9fuaigenblock66d3bc26r97ew {width: 1400px; max-width: 100%; margin: 20px auto; margin-top: 50px; padding-bottom: 10px; }}",
+        "@media (max-width: 786px) {.ai-embed-heading-aswvdmwprbenmum9fuaigenblock66d3bc26r97ew {margin-top: 0px; margin-bottom: 10px; margin-left: 0px; padding-left: 20px; font-size: 18px; }}",
+        "@media (max-width: 786px) {.ai-embed-section-aswvdmwprbenmum9fuaigenblock66d3bc26r97ew {height: 260px; }}"
+      ],
+      "settings": {}
+    },
+    "blocks_xjTLBn": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_66d3bc2_BtmTWb": {
+          "type": "ai_gen_block_66d3bc2",
+          "settings": {
+            "heading": "Instalación de su grifo de acero inoxidable",
+            "heading_font_size": 32,
+            "heading_color": "#132455",
+            "heading_alignment": "left",
+            "heading_padding_top": 0,
+            "heading_padding_bottom": 0,
+            "heading_padding_left": 0,
+            "heading_padding_right": 0,
+            "heading_margin_top": 0,
+            "heading_margin_bottom": 0,
+            "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async=\"\"></script><script src=\"https://fast.wistia.com/embed/7o5r5qwwl9.js\" async=\"\" type=\"module\"></script><style>wistia-player[media-id='7o5r5qwwl9']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/7o5r5qwwl9/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"7o5r5qwwl9\" aspect=\"1.7777777777777777\"></wistia-player>",
+            "video_width": 1400,
+            "video_height": 800,
+            "section_margin_top": 0,
+            "section_margin_bottom": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_66d3bc2_BtmTWb"
+      ],
+      "custom_css": [
+        "@media (min-width: 1024px) {.ai-embed-heading-ac0oxa281amrsug45raigenblock66d3bc2btmtwb {width: 1400px; max-width: 100%; margin: 20px auto; margin-top: 50px; padding-bottom: 10px; }}",
+        "@media (max-width: 786px) {.ai-embed-heading-ac0oxa281amrsug45raigenblock66d3bc2btmtwb {margin-top: 0px; margin-bottom: 10px; margin-left: 0px; padding-left: 20px; font-size: 18px; }}",
+        "@media (max-width: 786px) {.ai-embed-section-ac0oxa281amrsug45raigenblock66d3bc2btmtwb {height: 260px; }}"
+      ],
+      "settings": {}
+    },
+    "176406403003bdfc88": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_9b70e5e_zN8EdN": {
+          "type": "ai_gen_block_9b70e5e",
+          "settings": {
+            "heading": "Opta por una hidratación más saludable.",
+            "background_color": "#2b2b4e",
+            "product_1": "el-filtro-de-agua-por-gravedad-phoenix",
+            "product_2": "cartuchos-de-carbono-inteligentes",
+            "product_3": "cartucho-recargable-para-removedor-de-fluor-post-tratamiento-de-filtro-de-agua",
+            "button_text": "Boutique",
+            "button_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_hover_color": "#e6c244"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_9b70e5e_zN8EdN"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "wisita_videos_zzNRLP",
+    "custom_code_section_3xEePU",
+    "1764057142fc44b54a",
+    "custom_code_section_CbTaxk",
+    "blocks_dqeFLd",
+    "custom_code_section_ymnKpp",
+    "blocks_m8EkfY",
+    "blocks_qh7jLt",
+    "blocks_xMkm6m",
+    "blocks_xjTLBn",
+    "176406403003bdfc88"
+  ]
+}

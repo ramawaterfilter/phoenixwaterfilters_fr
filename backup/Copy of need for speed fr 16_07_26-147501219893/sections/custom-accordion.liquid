@@ -1,0 +1,496 @@
+{% liquid
+  assign section_id = 'CustomAccordion-' | append: section.id
+  assign section_width = section.settings.content_width | append: 'px'
+%}
+
+{% style %}
+  #{{ section_id }} {
+    --accordion-background: {{ section.settings.background_color }};
+    --accordion-text: {{ section.settings.text_color }};
+    --accordion-heading: {{ section.settings.heading_color }};
+    --accordion-border: {{ section.settings.border_color }};
+    --accordion-icon: {{ section.settings.icon_color }};
+    --accordion-radius: {{ section.settings.corner_radius }}px;
+    --accordion-gap: {{ section.settings.item_spacing }}px;
+    background: var(--accordion-background);
+    color: var(--accordion-text);
+    padding-block: {{ section.settings.padding_top }}px {{ section.settings.padding_bottom }}px;
+  }
+
+  #{{ section_id }} .custom-accordion__container {
+    width: min(calc(100% - 32px), {{ section_width }});
+    margin-inline: auto;
+  }
+
+  #{{ section_id }} .custom-accordion__header {
+    max-width: {{ section.settings.header_width }}px;
+    margin: 0 auto {{ section.settings.header_spacing }}px;
+    text-align: {{ section.settings.text_alignment }};
+  }
+
+  #{{ section_id }} .custom-accordion__heading {
+    margin: 0;
+    color: var(--accordion-heading);
+    font-size: {{ section.settings.heading_size }}px;
+  }
+
+  #{{ section_id }} .custom-accordion__intro {
+    margin-top: 12px;
+  }
+
+  #{{ section_id }} .custom-accordion__intro > :first-child,
+  #{{ section_id }} .custom-accordion__content > :first-child {
+    margin-top: 0;
+  }
+
+  #{{ section_id }} .custom-accordion__intro > :last-child,
+  #{{ section_id }} .custom-accordion__content > :last-child {
+    margin-bottom: 0;
+  }
+
+  #{{ section_id }} .custom-accordion__list {
+    display: grid;
+    gap: var(--accordion-gap);
+  }
+
+  #{{ section_id }} .custom-accordion__item {
+    border: {{ section.settings.border_width }}px solid var(--accordion-border);
+    border-radius: var(--accordion-radius);
+    background: {{ section.settings.item_background_color }};
+    overflow: hidden;
+  }
+
+  #{{ section_id }} .custom-accordion__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: {{ section.settings.title_padding_vertical }}px {{ section.settings.title_padding_horizontal }}px;
+    color: var(--accordion-heading);
+    cursor: pointer;
+    font-size: {{ section.settings.title_size }}px;
+    font-weight: {{ section.settings.title_weight }};
+    line-height: 1.3;
+    list-style: none;
+  }
+
+  #{{ section_id }} .custom-accordion__summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #{{ section_id }} .custom-accordion__summary:focus-visible {
+    outline: 2px solid var(--accordion-icon);
+    outline-offset: -3px;
+  }
+
+  #{{ section_id }} .custom-accordion__icon {
+    position: relative;
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    flex: 0 0 {{ section.settings.icon_size }}px;
+    color: var(--accordion-icon);
+  }
+
+  #{{ section_id }} .custom-accordion__icon::before,
+  #{{ section_id }} .custom-accordion__icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    content: '';
+    transform: translate(-50%, -50%);
+    transition: transform 180ms ease;
+  }
+
+  #{{ section_id }} .custom-accordion__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  #{{ section_id }} .custom-accordion__item[open] .custom-accordion__icon::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  #{{ section_id }} .custom-accordion__body {
+    max-height: {{ section.settings.content_max_height }}px;
+    overflow-y: auto;
+    padding: 0 {{ section.settings.title_padding_horizontal }}px {{ section.settings.content_padding_bottom }}px;
+  }
+
+  #{{ section_id }} .custom-accordion__body--with-image {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, var(--image-width));
+    align-items: center;
+    gap: 28px;
+  }
+
+  #{{ section_id }} .custom-accordion__body--image-left .custom-accordion__media {
+    order: -1;
+  }
+
+  #{{ section_id }} .custom-accordion__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--accordion-radius) * 0.65);
+  }
+
+  #{{ section_id }} [hidden] {
+    display: none !important;
+  }
+
+  @media (max-width: 749px) {
+    #{{ section_id }} {
+      padding-block: {{ section.settings.padding_top_mobile }}px {{ section.settings.padding_bottom_mobile }}px;
+    }
+
+    #{{ section_id }} .custom-accordion__heading {
+      font-size: {{ section.settings.heading_size_mobile }}px;
+    }
+
+    #{{ section_id }} .custom-accordion__summary {
+      padding: {{ section.settings.title_padding_vertical }}px 18px;
+      font-size: {{ section.settings.title_size_mobile }}px;
+    }
+
+    #{{ section_id }} .custom-accordion__body {
+      max-height: {{ section.settings.content_max_height_mobile }}px;
+      padding: 0 18px {{ section.settings.content_padding_bottom }}px;
+    }
+
+    #{{ section_id }} .custom-accordion__body--with-image {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    #{{ section_id }} .custom-accordion__body--with-image .custom-accordion__media {
+      order: -1;
+    }
+  }
+{% endstyle %}
+
+<div
+  id="{{ section_id }}"
+  class="custom-accordion {{ section.settings.custom_class | escape }}"
+  data-custom-accordion
+  data-single-open="{{ section.settings.single_open }}"
+  {% if section.settings.custom_id != blank %}data-custom-id="{{ section.settings.custom_id | escape }}"{% endif %}
+>
+  <div class="custom-accordion__container">
+    {% if section.settings.heading != blank or section.settings.content != blank %}
+      <div class="custom-accordion__header">
+        {% if section.settings.heading != blank %}
+          <h2 class="custom-accordion__heading">{{ section.settings.heading }}</h2>
+        {% endif %}
+        {% if section.settings.content != blank %}
+          <div class="custom-accordion__intro rte">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="custom-accordion__list">
+      {% for block in section.blocks %}
+        {% liquid
+          assign source = block.settings.content_source
+          assign item_title = block.settings.title
+          assign product_metafield = blank
+          assign product_image = blank
+          assign page_content = blank
+          assign uses_variant_image = false
+          assign metafield_namespace = block.settings.metafield_namespace | strip
+          assign metafield_key = block.settings.metafield_key | strip
+          assign image_metafield_namespace = metafield_namespace
+          assign image_metafield_key = block.settings.variant_image_metafield_key | strip
+
+          if metafield_key contains '.'
+            assign metafield_parts = metafield_key | split: '.'
+            assign metafield_namespace = metafield_parts | first
+            assign metafield_key = metafield_parts | last
+          endif
+
+          if image_metafield_key contains '.'
+            assign image_metafield_parts = image_metafield_key | split: '.'
+            assign image_metafield_namespace = image_metafield_parts | first
+            assign image_metafield_key = image_metafield_parts | last
+          endif
+
+          if source == 'product_description' and item_title == blank
+            assign item_title = 'products.product.description' | t
+          elsif source == 'return_policy' and item_title == blank
+            assign item_title = 'products.product.return_policy' | t
+          elsif source == 'product_metafield' or source == 'variant_metafield'
+            if item_title == blank
+              assign item_title = block.settings.metafield_key | replace: '_', ' ' | capitalize
+            endif
+          elsif source == 'page' and block.settings.page != blank
+            assign page_content = block.settings.page.content
+            if item_title == blank
+              assign item_title = block.settings.page.title
+            endif
+          endif
+
+          if source == 'product_metafield' and product != blank and metafield_namespace != blank and metafield_key != blank
+            assign product_metafield = product.metafields[metafield_namespace][metafield_key]
+          endif
+
+          if source == 'variant_metafield' and product != blank and image_metafield_key != blank
+            assign uses_variant_image = true
+          elsif product != blank and image_metafield_namespace != blank and image_metafield_key != blank
+            assign product_image_metafield = product.metafields[image_metafield_namespace][image_metafield_key]
+            assign product_image = product_image_metafield.value
+          endif
+        %}
+
+        {% if item_title != blank %}
+          <details
+            class="custom-accordion__item"
+            {% if block.settings.open_by_default %}open{% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <summary class="custom-accordion__summary">
+              <span>{{ item_title }}</span>
+              <span class="custom-accordion__icon" aria-hidden="true"></span>
+            </summary>
+
+            <div
+              class="custom-accordion__body{% if block.settings.image != blank or product_image != blank or uses_variant_image %} custom-accordion__body--with-image custom-accordion__body--image-{{ block.settings.image_position }}{% endif %}"
+              style="--image-width: {{ block.settings.image_width }}%;"
+            >
+              <div class="custom-accordion__content rte">
+                {% case source %}
+                  {% when 'custom_liquid' %}
+                    {{ block.settings.custom_liquid }}
+                  {% when 'product_description' %}
+                    {% if product != blank %}{{ product.description }}{% else %}{{ block.settings.answer }}{% endif %}
+                  {% when 'product_metafield' %}
+                    {% if product_metafield != blank %}{{ product_metafield | metafield_tag }}{% else %}{{ block.settings.answer }}{% endif %}
+                  {% when 'variant_metafield' %}
+                    {% if product != blank and metafield_namespace != blank and metafield_key != blank %}
+                      {% for variant in product.variants %}
+                        {% assign variant_metafield = variant.metafields[metafield_namespace][metafield_key] %}
+                        <div
+                          data-variant-panel
+                          data-variant-id="{{ variant.id }}"
+                          {% unless variant.id == product.selected_or_first_available_variant.id %}hidden{% endunless %}
+                        >
+                          {% if variant_metafield != blank %}{{ variant_metafield | metafield_tag }}{% else %}{{ block.settings.answer }}{% endif %}
+                        </div>
+                      {% endfor %}
+                    {% else %}
+                      {{ block.settings.answer }}
+                    {% endif %}
+                  {% when 'return_policy' %}
+                    {% if shop.refund_policy.body != blank %}{{ shop.refund_policy.body }}{% else %}{{ block.settings.answer }}{% endif %}
+                  {% when 'page' %}
+                    {% if page_content != blank %}{{ page_content }}{% else %}{{ block.settings.answer }}{% endif %}
+                  {% else %}
+                    {{ block.settings.answer }}
+                {% endcase %}
+              </div>
+
+              {% if uses_variant_image %}
+                <div class="custom-accordion__media">
+                  {% for variant in product.variants %}
+                    {% assign variant_image_metafield = variant.metafields[image_metafield_namespace][image_metafield_key] %}
+                    {% assign variant_image = variant_image_metafield.value %}
+                    <div
+                      data-variant-panel
+                      data-variant-id="{{ variant.id }}"
+                      {% unless variant.id == product.selected_or_first_available_variant.id %}hidden{% endunless %}
+                    >
+                      {% if variant_image != blank %}
+                        {{ variant_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 750px) 40vw, 100vw' }}
+                      {% elsif block.settings.image != blank %}
+                        {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 750px) 40vw, 100vw' }}
+                      {% endif %}
+                    </div>
+                  {% endfor %}
+                </div>
+              {% elsif product_image != blank %}
+                <div class="custom-accordion__media">
+                  {{ product_image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 750px) 40vw, 100vw' }}
+                </div>
+              {% elsif block.settings.image != blank %}
+                <div class="custom-accordion__media">
+                  {{ block.settings.image | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '320, 480, 720, 960, 1200', sizes: '(min-width: 750px) 40vw, 100vw' }}
+                </div>
+              {% endif %}
+            </div>
+          </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<script>
+  (() => {
+    const section = document.getElementById({{ section_id | json }});
+    if (!section || section.dataset.initialized === 'true') return;
+    section.dataset.initialized = 'true';
+
+    if (section.dataset.singleOpen === 'true') {
+      section.addEventListener('toggle', (event) => {
+        if (!event.target.matches('.custom-accordion__item') || !event.target.open) return;
+        section.querySelectorAll('.custom-accordion__item[open]').forEach((item) => {
+          if (item !== event.target) item.removeAttribute('open');
+        });
+      }, true);
+    }
+
+    const showVariant = (variantId) => {
+      if (!variantId) return;
+      section.querySelectorAll('[data-variant-panel]').forEach((panel) => {
+        panel.hidden = panel.dataset.variantId !== String(variantId);
+      });
+    };
+
+    const selectedVariant = document.querySelector('form[action*="/cart/add"] [name="id"]:checked, form[action*="/cart/add"] select[name="id"], form[action*="/cart/add"] input[name="id"]');
+    showVariant(selectedVariant && selectedVariant.value);
+
+    document.addEventListener('change', (event) => {
+      if (event.target.matches('form[action*="/cart/add"] [name="id"], [data-variant-id]')) {
+        showVariant(event.target.dataset.variantId || event.target.value);
+      }
+    });
+
+    ['variant:change', 'product:variant-change'].forEach((eventName) => {
+      document.addEventListener(eventName, (event) => {
+        const variant = event.detail && (event.detail.variant || event.detail);
+        showVariant(variant && variant.id);
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom accordion",
+  "tag": "section",
+  "class": "section-custom-accordion",
+  "settings": [
+    { "type": "header", "content": "Content" },
+    { "type": "inline_richtext", "id": "heading", "label": "Heading", "default": "Frequently asked questions" },
+    { "type": "richtext", "id": "content", "label": "Introduction" },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Header alignment",
+      "default": "center",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ]
+    },
+    { "type": "range", "id": "header_width", "label": "Header width", "min": 400, "max": 1000, "step": 20, "unit": "px", "default": 720 },
+    { "type": "range", "id": "header_spacing", "label": "Space below header", "min": 0, "max": 80, "step": 4, "unit": "px", "default": 32 },
+    { "type": "checkbox", "id": "single_open", "label": "Only allow one open item", "default": true },
+
+    { "type": "header", "content": "Layout" },
+    { "type": "range", "id": "content_width", "label": "Content width", "min": 600, "max": 1600, "step": 20, "unit": "px", "default": 1000 },
+    { "type": "range", "id": "item_spacing", "label": "Space between items", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 12 },
+    { "type": "range", "id": "corner_radius", "label": "Corner radius", "min": 0, "max": 32, "step": 2, "unit": "px", "default": 8 },
+    { "type": "range", "id": "border_width", "label": "Border width", "min": 0, "max": 4, "step": 1, "unit": "px", "default": 1 },
+    { "type": "range", "id": "title_padding_vertical", "label": "Title vertical padding", "min": 12, "max": 36, "step": 2, "unit": "px", "default": 20 },
+    { "type": "range", "id": "title_padding_horizontal", "label": "Title horizontal padding", "min": 12, "max": 48, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "content_padding_bottom", "label": "Content bottom padding", "min": 12, "max": 48, "step": 2, "unit": "px", "default": 24 },
+    { "type": "range", "id": "content_max_height", "label": "Content maximum height", "min": 200, "max": 800, "step": 20, "unit": "px", "default": 400 },
+    { "type": "range", "id": "content_max_height_mobile", "label": "Content maximum height on mobile", "min": 160, "max": 600, "step": 20, "unit": "px", "default": 320 },
+
+    { "type": "header", "content": "Typography" },
+    { "type": "range", "id": "heading_size", "label": "Heading size", "min": 24, "max": 64, "step": 2, "unit": "px", "default": 40 },
+    { "type": "range", "id": "heading_size_mobile", "label": "Mobile heading size", "min": 20, "max": 44, "step": 2, "unit": "px", "default": 30 },
+    { "type": "range", "id": "title_size", "label": "Item title size", "min": 14, "max": 28, "step": 1, "unit": "px", "default": 18 },
+    { "type": "range", "id": "title_size_mobile", "label": "Mobile item title size", "min": 14, "max": 24, "step": 1, "unit": "px", "default": 17 },
+    {
+      "type": "select",
+      "id": "title_weight",
+      "label": "Item title weight",
+      "default": "600",
+      "options": [
+        { "value": "400", "label": "Regular" },
+        { "value": "500", "label": "Medium" },
+        { "value": "600", "label": "Semibold" },
+        { "value": "700", "label": "Bold" }
+      ]
+    },
+    { "type": "range", "id": "icon_size", "label": "Icon size", "min": 12, "max": 28, "step": 2, "unit": "px", "default": 18 },
+
+    { "type": "header", "content": "Colors" },
+    { "type": "color", "id": "background_color", "label": "Section background", "default": "#ffffff" },
+    { "type": "color", "id": "item_background_color", "label": "Item background", "default": "#ffffff" },
+    { "type": "color", "id": "heading_color", "label": "Headings", "default": "#111111" },
+    { "type": "color", "id": "text_color", "label": "Text", "default": "#333333" },
+    { "type": "color", "id": "border_color", "label": "Borders", "default": "#dddddd" },
+    { "type": "color", "id": "icon_color", "label": "Icons", "default": "#111111" },
+
+    { "type": "header", "content": "Section spacing" },
+    { "type": "range", "id": "padding_top", "label": "Top padding", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding_bottom", "label": "Bottom padding", "min": 0, "max": 160, "step": 4, "unit": "px", "default": 64 },
+    { "type": "range", "id": "padding_top_mobile", "label": "Mobile top padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 40 },
+    { "type": "range", "id": "padding_bottom_mobile", "label": "Mobile bottom padding", "min": 0, "max": 100, "step": 4, "unit": "px", "default": 40 },
+
+    { "type": "header", "content": "Advanced" },
+    { "type": "text", "id": "custom_id", "label": "Custom reference ID", "info": "Added as data-custom-id for scripts and tracking." },
+    { "type": "text", "id": "custom_class", "label": "Custom CSS class" }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Accordion item",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title", "default": "Accordion item" },
+        {
+          "type": "select",
+          "id": "content_source",
+          "label": "Content source",
+          "default": "custom",
+          "options": [
+            { "value": "custom", "label": "Custom content" },
+            { "value": "custom_liquid", "label": "Custom Liquid" },
+            { "value": "product_description", "label": "Product description" },
+            { "value": "product_metafield", "label": "Product metafield" },
+            { "value": "variant_metafield", "label": "Variant metafields (content + image)" },
+            { "value": "return_policy", "label": "Return policy" },
+            { "value": "page", "label": "Page content" }
+          ]
+        },
+        { "type": "richtext", "id": "answer", "label": "Content or fallback", "default": "<p>Add your content here.</p>" },
+        { "type": "liquid", "id": "custom_liquid", "label": "Custom Liquid", "info": "Used when Content source is Custom Liquid. Add Liquid, HTML, or app embed code." },
+        { "type": "page", "id": "page", "label": "Page" },
+        { "type": "text", "id": "metafield_namespace", "label": "Metafield namespace", "default": "custom", "info": "Used for product and variant metafield sources." },
+        { "type": "text", "id": "metafield_key", "label": "Metafield key", "info": "Example: specifications or custom.specifications" },
+        { "type": "text", "id": "variant_image_metafield_key", "label": "Image metafield", "info": "Example: custom.single_image. Uses a product metafield, or a variant metafield when the content source is Variant metafields." },
+        { "type": "checkbox", "id": "open_by_default", "label": "Open by default", "default": false },
+        { "type": "image_picker", "id": "image", "label": "Optional image" },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "default": "right",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ]
+        },
+        { "type": "range", "id": "image_width", "label": "Image width", "min": 20, "max": 50, "step": 5, "unit": "%", "default": 35 }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom accordion",
+      "category": "Custom",
+      "blocks": [
+        { "type": "item" },
+        { "type": "item" },
+        { "type": "item" }
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
+}
+{% endschema %}

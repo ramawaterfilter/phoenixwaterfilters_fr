@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "copy_image_rUyHJ6": {
+      "type": "copy-image",
+      "disabled": true,
+      "name": "Copy Image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "centered-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "content": "",
+        "video_id": "",
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "top"
+      }
+    },
+    "support_cNgXx8": {
+      "type": "support",
+      "disabled": true,
+      "name": "Support Section",
+      "settings": {
+        "heading": "Register your product now and activate the 10-year warranty on your stainless steel system.",
+        "button_link": "shopify://pages/warranty-registration",
+        "button_text": "Register Here"
+      }
+    },
+    "1746437444c5b604dc": {
+      "type": "apps",
+      "settings": {}
+    },
+    "custom_code_section_meYg6w": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<div class=\"return-policy\">\n\n<h1>\n<strong>Remboursements (le cas échéant)</strong> </h1>\n<p>Ofrecemos una política de devolución de 30 días para todos los productos, siempre que no estén utilizados y en condiciones de reventa. Una vez recibida e inspeccionada su devolución, le enviaremos un correo electrónico para confirmar la recepción. También le notificaremos si su reembolso es aprobado o rechazado. Si se aprueba su reembolso, lo procesaremos dentro de los 5 días hábiles y se acreditará automáticamente a su método de pago original dentro de los 10 días hábiles. Para obtener un reembolso completo, devuelva el producto original completo tal como lo compró. Si solo se devuelve una parte del producto, se emitirá un reembolso parcial en función de los artículos recibidos.</p>\n<p><strong>Reembolsos tardíos o faltantes (si corresponde)</strong> </p>\n<p>Si aún no ha recibido un reembolso, verifique su cuenta bancaria nuevamente. A continuación, comuníquese con su banco utilizando la información de transacción proporcionada. Es posible que pase algún tiempo antes de que su reembolso se procese oficialmente. Si ha completado todos estos pasos y aún no ha recibido su reembolso, contáctenos en <strong>soutien@phoenixwaterfilters.fr</strong></p>\n<p><strong>Échanges (le cas échéant)</strong> </p>\n<p>Solo reemplazamos artículos que tienen defectos de material o mano de obra, o si el producto es defectuoso. Para cambiar un artículo por el mismo producto, envíanos un correo electrónico a <strong>soutien@phoenixwaterfilters.fr </strong>y envíe su artículo a: <strong>9 Rue de la Gare, 78640 Villiers-Saint-Frédéric, Isla de Francia, </strong></p>\n<p><strong>Envío</strong></p>\n<p>Para devolver su producto, envíelo a la siguiente dirección: <strong>9 Rue de la Gare, 78640 Villiers-St-Fréderic, Isla de Francia,</strong>  Usted es responsable de los costos de envío para devolver su artículo. Los gastos de envío no son reembolsables. Si no se abonan los gastos de devolución, su importe se descontará de su reembolso.<br>Dependiendo de su ubicación, el tiempo que lleva recibir el producto cambiado puede variar.<br>Para artículos que valen más de <strong>99 €</strong>, recomendamos utilizar un servicio de envío rastreable o adquirir un seguro de envío. No asumimos ninguna responsabilidad por envíos perdidos o mal dirigidos por el transportista.</p>\n<hr>\n<p><strong>prueba de 100 días</strong></p>\n<p>un período de prueba de <strong>100 días</strong> se aplica a compras de sistemas de filtrado de agua (filtros con carcasa de acero inoxidable) realizadas en nuestro sitio web. Para ser elegible para una devolución, los filtros deben estar intactos, en su embalaje original y sin daños ni abolladuras en las carcasas de acero inoxidable. Su solicitud de devolución debe recibirse dentro del período de prueba de 100 días para ser elegible para un reembolso o cambio.</p>\n<p>Para todos los demás productos, un período de devolución estándar de <strong>30 dias</strong> aplica. Después de este período de 30 días después de su compra, lamentablemente no podemos ofrecerle un reembolso o cambio.</p>\n<p>Para realizar una devolución, requerimos un recibo o comprobante de compra realizada en nuestro sitio web. Siempre puede contactarnos con cualquier pregunta sobre devoluciones en <strong>soutien@phoenixwaterfilters.fr</strong></p>\n<p>Para iniciar una devolución, contáctenos en <strong>soutien@phoenixwaterfilters.fr</strong>Si se acepta su devolución, le proporcionaremos instrucciones sobre cómo y dónde enviar su paquete. No se aceptarán artículos enviados sin solicitud previa de devolución.</p>\n\n</div>",
+        "custom_css": ".return-policy {\n  max-width: 1250px;\n  margin: 40px auto;\n  padding: 20px 30px;\n  font-family: \"Value Sans\", Helvetica, Arial, sans-serif;\n  font-size: 16px;\n  line-height: 1.7;\n  color: #222;\n}\n\n.return-policy p {\n  margin-bottom: 16px;\n  text-align: justify;\n}\n\n.return-policy strong {\n  font-weight: 600;\n}\n\n.return-policy p strong:first-child {\n  display: block;\n  font-size: 18px;\n  margin-top: 25px;\n  text-transform: uppercase;\n}\n\n.return-policy hr {\n  border: none;\n  border-top: 1px solid #ccc;\n  margin: 30px 0;\n}\n\n@media (max-width: 768px) {\n  .return-policy {\n    padding: 15px 20px;\n    font-size: 15px;\n  }\n\n  .return-policy p strong:first-child {\n    font-size: 17px;\n    margin-top: 20px;\n  }\n}",
+        "custom_js": "console.log('Custom section loaded');"
+      }
+    }
+  },
+  "order": [
+    "copy_image_rUyHJ6",
+    "support_cNgXx8",
+    "1746437444c5b604dc",
+    "custom_code_section_meYg6w"
+  ]
+}

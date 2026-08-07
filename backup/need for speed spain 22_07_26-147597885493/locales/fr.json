@@ -1,0 +1,19 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "recurring_total_tooltip": "Los cargos recurrentes mostrados son incorrectos. Solo los cartuchos de carbón y los filtros POSTreat (opcionales) están sujetos a cargos recurrentes. El sistema es una compra única.",
+        "recurring_subtotal_label": "."
+      }
+    }
+  }
+}

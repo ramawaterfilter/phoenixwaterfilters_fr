@@ -1,0 +1,231 @@
+{% assign min_buy = settings.min_buy_qty %}
+{% assign max_buy = settings.max_buy_qty %}
+<form
+  action="{{ routes.cart_add_url }}"
+  method="post"
+  enctype="multipart/form-data"
+  data-min="{{ min_buy }}"
+  data-max="{{ max_buy }}"
+  {% if disable_ajax %}class="disable-ajax"{% endif %}>
+
+  <input
+    type="hidden"
+    name="quantity"
+    value="1"
+    min="1"
+    max="{{ max_buy }}">
+
+  <input
+    name="id"
+    value="{{ product.selected_or_first_available_variant.id }}"
+    type="hidden" />
+  <input
+    name="handle"
+    value="{{ product.handle }}"
+    type="hidden" />
+
+  {% if product.selling_plan_groups.size > 0 %}
+    <input
+      type="hidden"
+      class="sub-sticky"
+      name="selling_plan"
+      value="" />
+  {% endif %}
+
+  <button
+    class="btn btn-secondary"
+    type="submit"
+    name="add">
+    {{ 'products.product.add_to_cart' | t }}
+  </button>
+  <div class="trust-badge">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                <path d="M22.5 0.5H2.5C1.96957 0.5 1.46086 0.710714 1.08579 1.08579C0.710714 1.46086 0.5 1.96957 0.5 2.5V9.5C0.5 16.09 3.69 20.0837 6.36625 22.2738C9.24875 24.6313 12.1163 25.4312 12.2413 25.465C12.4131 25.5118 12.5944 25.5118 12.7663 25.465C12.8913 25.4312 15.755 24.6313 18.6413 22.2738C21.31 20.0837 24.5 16.09 24.5 9.5V2.5C24.5 1.96957 24.2893 1.46086 23.9142 1.08579C23.5391 0.710714 23.0304 0.5 22.5 0.5ZM18.21 9.2075L11.21 16.2075C11.1171 16.3005 11.0068 16.3742 10.8854 16.4246C10.764 16.4749 10.6339 16.5008 10.5025 16.5008C10.3711 16.5008 10.241 16.4749 10.1196 16.4246C9.99816 16.3742 9.88787 16.3005 9.795 16.2075L6.795 13.2075C6.60736 13.0199 6.50194 12.7654 6.50194 12.5C6.50194 12.2346 6.60736 11.9801 6.795 11.7925C6.98264 11.6049 7.23714 11.4994 7.5025 11.4994C7.76786 11.4994 8.02236 11.6049 8.21 11.7925L10.5 14.0863L16.7925 7.7925C16.8854 7.69959 16.9957 7.62589 17.1171 7.57561C17.2385 7.52532 17.3686 7.49944 17.5 7.49944C17.6314 7.49944 17.7615 7.52532 17.8829 7.57561C18.0043 7.62589 18.1146 7.69959 18.2075 7.7925C18.3004 7.88541 18.3741 7.99571 18.4244 8.1171C18.4747 8.2385 18.5006 8.36861 18.5006 8.5C18.5006 8.6314 18.4747 8.7615 18.4244 8.8829C18.3741 9.00429 18.3004 9.11459 18.2075 9.2075H18.21Z" fill="#153A5B"/> 
+                
+              </svg>
+      ¡Pruébalo sin riesgos! Garantía de devolución de dinero de 100 días
+       </div>
+</form>
+<script>
+  (function () {
+    if (window.__phoenixVariantCartSync) return;
+    window.__phoenixVariantCartSync = true;
+
+    var _isSyncing = false;
+
+    function normalizeOption(value) {
+      return String(value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function isCartAddForm(form) {
+      var action = form && form.getAttribute('action');
+      return !!action && action.indexOf('/cart/add') !== -1;
+    }
+
+    function isMainProductCartForm(form) {
+      return !!form && (
+        form.id === 'add-to-cart' ||
+        !!form.closest('.sticky-add-to-cart') ||
+        form.classList.contains('pdp-atc-form') ||
+        form.classList.contains('main-add-to-cart')
+      );
+    }
+
+    function getProductVariants() {
+      if (window.product && Array.isArray(window.product.variants)) return window.product.variants;
+      if (Array.isArray(window.productVariants)) return window.productVariants;
+      return [];
+    }
+
+    function getSelectedOptions() {
+      var selectedOptions = [];
+      var optionContainers = document.querySelectorAll('#product-variants .variant-options-grid[data-option-position]');
+
+      optionContainers.forEach(function (container) {
+        var position = parseInt(container.getAttribute('data-option-position'), 10);
+        var checkedRadio = container.querySelector('.variant-radio-input:checked');
+
+        if (!Number.isNaN(position) && checkedRadio) {
+          selectedOptions[position] = normalizeOption(checkedRadio.value);
+        }
+      });
+
+      return selectedOptions;
+    }
+
+    function getVariantOption(variant, index) {
+      if (variant.options && variant.options[index] !== undefined) return variant.options[index];
+      var key = 'option' + (index + 1);
+      return variant[key];
+    }
+
+    function getSelectedVariantFromRadios() {
+      var variants = getProductVariants();
+      var selectedOptions = getSelectedOptions();
+      var expectedOptionCount = window.product && Array.isArray(window.product.options) ? window.product.options.length : selectedOptions.length;
+
+      if (!variants.length || !selectedOptions.length) return null;
+      if (selectedOptions.filter(function (value) { return value != null && value !== ''; }).length < expectedOptionCount) return null;
+
+      return variants.find(function (variant) {
+        return selectedOptions.every(function (value, index) {
+          return value == null || normalizeOption(getVariantOption(variant, index)) === value;
+        });
+      }) || null;
+    }
+
+    function getSelectedVariant() {
+      var variant = getSelectedVariantFromRadios();
+      if (variant) return variant;
+
+      var selectedVariant = document.getElementById('product-selectors');
+      var selectedId = selectedVariant && selectedVariant.value ? String(selectedVariant.value) : '';
+      if (!selectedId) return null;
+
+      return getProductVariants().find(function (candidate) {
+        return String(candidate.id) === selectedId;
+      }) || { id: selectedId };
+    }
+
+    function getVariantImageUrl(variant) {
+      if (!variant || !variant.id) return '';
+
+      var galleries = window.productVariantMetafieldImages || window.customNiceVariantGalleries || {};
+      var gallery = galleries[String(variant.id)] || [];
+      if (gallery.length) return gallery[0].thumb || gallery[0].large || gallery[0].full || '';
+
+      if (variant.featured_image && variant.featured_image.src) return variant.featured_image.src;
+      if (window.product && window.product.featured_image) return window.product.featured_image;
+      return '';
+    }
+
+    function setHiddenInput(form, name, value) {
+      if (!value) return;
+
+      var input = form.querySelector('input[name="' + name + '"]');
+      if (!input) {
+        input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        form.appendChild(input);
+      }
+
+      input.value = value;
+    }
+
+    function setFormVariantId(form, variantId, submitMode) {
+      var variantInput = form.querySelector('input[name="id"]');
+      var variantSelect = form.querySelector('select[name="id"], select[data-phoenix-variant-select]');
+
+      if (!variantInput) {
+        variantInput = document.createElement('input');
+        variantInput.type = 'hidden';
+        variantInput.name = 'id';
+        variantInput.setAttribute('data-phoenix-variant-id', 'true');
+        form.appendChild(variantInput);
+      }
+
+      variantInput.value = variantId;
+      if (!_isSyncing) variantInput.dispatchEvent(new Event('change', { bubbles: true }));
+
+      if (variantSelect) {
+        variantSelect.value = variantId;
+        if (!_isSyncing) variantSelect.dispatchEvent(new Event('change', { bubbles: true }));
+
+        if (submitMode && variantSelect.name === 'id') {
+          variantSelect.setAttribute('data-phoenix-variant-select', 'true');
+          variantSelect.removeAttribute('name');
+
+          window.setTimeout(function () {
+            if (variantSelect.hasAttribute('data-phoenix-variant-select')) {
+              variantSelect.name = 'id';
+            }
+          }, 0);
+        }
+      }
+    }
+
+    function syncFormVariantId(form, submitMode) {
+      if (!form || !isCartAddForm(form) || !isMainProductCartForm(form)) return;
+
+      var variant = getSelectedVariant();
+      if (!variant || !variant.id) return;
+
+      var variantId = String(variant.id);
+      _isSyncing = true;
+      setFormVariantId(form, variantId, submitMode);
+      _isSyncing = false;
+
+      var mainSelector = document.getElementById('product-selectors');
+      if (mainSelector && mainSelector.value !== variantId) {
+        mainSelector.value = variantId;
+        mainSelector.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+
+      setHiddenInput(form, 'properties[_variant_image]', getVariantImageUrl(variant));
+    }
+
+    function syncMainProductForms() {
+      document.querySelectorAll('form[action*="/cart/add"]').forEach(function (form) {
+        syncFormVariantId(form, false);
+      });
+    }
+
+    document.addEventListener('change', function (event) {
+      if (event.target && (event.target.classList.contains('variant-radio-input') || event.target.id === 'product-selectors')) {
+        syncMainProductForms();
+      }
+    }, true);
+
+    document.addEventListener('click', function (event) {
+      var button = event.target && event.target.closest ? event.target.closest('#product-add-to-cart, .sticky-add-to-cart button[name="add"]') : null;
+      if (button) syncFormVariantId(button.closest('form'), false);
+    }, true);
+
+    document.addEventListener('submit', function (event) {
+      syncFormVariantId(event.target, true);
+    }, true);
+
+    document.addEventListener('DOMContentLoaded', syncMainProductForms);
+  })();
+</script>

@@ -1,0 +1,828 @@
+{% comment %}
+  Phoenix Gravity France — Compact Eco Impact + 20,000L Calculator
+  File name suggestion: sections/phoenix-eco-impact-20k.liquid
+  Unique class prefix: pg-fr-eco20-
+
+  Notes:
+  - Calculator uses conservative public-facing assumptions:
+    180 bottles/person/year, 0.11 kg CO2/bottle, 2 L drinking water/person/day.
+  - Phoenix filter logic:
+    20,000 L per pair, 10,000 L per single cartridge, or 12 months depending on water source/quality.
+{% endcomment %}
+
+<section
+  id="pg-fr-eco20-{{ section.id }}"
+  class="pg-fr-eco20 pg-fr-eco20-{{ section.id }} {{ section.settings.custom_class | escape }}"
+  style="
+    --pg-fr-eco20-bg: {{ section.settings.background_color }};
+    --pg-fr-eco20-card: {{ section.settings.card_color }};
+    --pg-fr-eco20-navy: {{ section.settings.heading_color }};
+    --pg-fr-eco20-green: {{ section.settings.accent_color }};
+    --pg-fr-eco20-steel: {{ section.settings.steel_color }};
+    --pg-fr-eco20-text: {{ section.settings.text_color }};
+    --pg-fr-eco20-border: {{ section.settings.border_color }};
+  "
+>
+  <div class="pg-fr-eco20__wrap">
+    <div class="pg-fr-eco20__grid">
+      <div class="pg-fr-eco20__copy">
+        {% if section.settings.eyebrow != blank %}
+          <p class="pg-fr-eco20__eyebrow">{{ section.settings.eyebrow }}</p>
+        {% endif %}
+
+        {% if section.settings.heading != blank %}
+          <h2 class="pg-fr-eco20__title">{{ section.settings.heading }}</h2>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <p class="pg-fr-eco20__subtext">{{ section.settings.subheading }}</p>
+        {% endif %}
+
+        <div class="pg-fr-eco20__proof" aria-label="Points clés Phoenix">
+          <div class="pg-fr-eco20__proof-item">
+            <strong>{{ section.settings.stat_1_number }}</strong>
+            <span>{{ section.settings.stat_1_label }}</span>
+          </div>
+          <div class="pg-fr-eco20__proof-item">
+            <strong>{{ section.settings.stat_2_number }}</strong>
+            <span>{{ section.settings.stat_2_label }}</span>
+          </div>
+          <div class="pg-fr-eco20__proof-item">
+            <strong>{{ section.settings.stat_3_number }}</strong>
+            <span>{{ section.settings.stat_3_label }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pg-fr-eco20__calc" data-pg-fr-eco20-calculator>
+        <div class="pg-fr-eco20__calc-top">
+          <span>{{ section.settings.calculator_label }}</span>
+          <strong><span data-pg-fr-eco20-people>{{ section.settings.default_people }}</span> {{ section.settings.people_suffix }}</strong>
+        </div>
+
+        <input
+          class="pg-fr-eco20__slider"
+          type="range"
+          min="1"
+          max="6"
+          step="1"
+          value="{{ section.settings.default_people }}"
+          aria-label="{{ section.settings.calculator_label | escape }}"
+          data-pg-fr-eco20-slider
+        >
+
+        <div class="pg-fr-eco20__results" aria-label="Résultats estimés">
+          <div class="pg-fr-eco20__result-card">
+            <strong data-pg-fr-eco20-bottles>540</strong>
+            <span>{{ section.settings.result_1_label }}</span>
+          </div>
+          <div class="pg-fr-eco20__result-card">
+            <strong data-pg-fr-eco20-co2>59</strong>
+            <span>{{ section.settings.result_2_label }}</span>
+          </div>
+          <div class="pg-fr-eco20__result-card">
+            <strong data-pg-fr-eco20-euros>324</strong>
+            <span>{{ section.settings.result_3_label }}</span>
+          </div>
+        </div>
+
+        <div class="pg-fr-eco20__capacity" aria-label="Capacidad de filtración">
+          <div>
+            <span>{{ section.settings.usage_label }}</span>
+            <strong><span data-pg-fr-eco20-litres>2 190</span> L/an</strong>
+          </div>
+          <div>
+            <span>{{ section.settings.capacity_label }}</span>
+            <strong>{{ section.settings.capacity_text }}</strong>
+          </div>
+        </div>
+
+        {% if section.settings.capacity_note != blank %}
+          <p class="pg-fr-eco20__note">{{ section.settings.capacity_note }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="pg-fr-eco20__bottom">
+      {% if section.settings.button_text != blank %}
+        <a
+          class="pg-fr-eco20__button"
+          href="{% if section.settings.button_link != blank %}{{ section.settings.button_link }}{% else %}#MainContent{% endif %}"
+          aria-label="{{ section.settings.button_text | escape }}"
+        >
+          <span>{{ section.settings.button_text }}</span>
+        </a>
+      {% endif %}
+
+      {% if section.settings.trust_text != blank %}
+        <p class="pg-fr-eco20__trust">{{ section.settings.trust_text }}</p>
+      {% endif %}
+    </div>
+
+    {% if section.settings.source_text != blank %}
+      <p class="pg-fr-eco20__source">{{ section.settings.source_text }}</p>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  #pg-fr-eco20-{{ section.id }}.pg-fr-eco20 {
+    background:
+      radial-gradient(circle at 12% 15%, rgba(10, 107, 83, 0), transparent 30%),
+      linear-gradient(135deg, var(--pg-fr-eco20-bg), #ffffff 120%);
+    color: var(--pg-fr-eco20-navy);
+    padding: {{ section.settings.desktop_padding_y }}px 20px;
+    overflow: hidden;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__wrap {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.06fr) minmax(360px, .94fr);
+    gap: 18px;
+    align-items: stretch;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__copy,
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__calc {
+    background: rgba(255,255,255,.92);
+    border: 1px solid var(--pg-fr-eco20-border);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(14, 35, 64, .07);
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__copy {
+    padding: 26px;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__eyebrow {
+    margin: 0 0 8px;
+    color: var(--pg-fr-eco20-green);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .13em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__title {
+    margin: 0;
+    color: var(--pg-fr-eco20-navy);
+    font-size: clamp(32px, 3.15vw, 44px);
+    line-height: 1.06;
+    letter-spacing: -.035em;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__subtext {
+    margin: 10px 0 0;
+    max-width: 640px;
+    color: var(--pg-fr-eco20-text);
+    font-size: 15.5px;
+    line-height: 1.55;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 18px;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof-item {
+    min-height: 82px;
+    padding: 12px 10px;
+    border: 1px solid rgba(10, 107, 83, .14);
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(10, 107, 83, .075), rgba(220, 227, 231, .18));
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof-item strong {
+    display: block;
+    color: var(--pg-fr-eco20-green);
+    font-size: 25px;
+    line-height: 1.02;
+    letter-spacing: -.03em;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof-item span {
+    display: block;
+    margin-top: 6px;
+    color: var(--pg-fr-eco20-text);
+    font-size: 12.5px;
+    line-height: 1.32;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__calc {
+    padding: 22px;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__calc-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 13px;
+    color: var(--pg-fr-eco20-text);
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__calc-top strong {
+    color: var(--pg-fr-eco20-green);
+    font-size: 18px;
+    white-space: nowrap;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 999px;
+    outline: none;
+    accent-color: var(--pg-fr-eco20-green);
+    cursor: pointer;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__results {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__result-card {
+    min-height: 82px;
+    padding: 14px 10px;
+    border: 1px solid var(--pg-fr-eco20-border);
+    border-radius: 14px;
+    background: #F8FAF9;
+    text-align: center;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__result-card strong {
+    display: block;
+    color: var(--pg-fr-eco20-navy);
+    font-size: 25px;
+    line-height: 1.02;
+    letter-spacing: -.03em;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__result-card span {
+    display: block;
+    margin-top: 6px;
+    color: var(--pg-fr-eco20-text);
+    font-size: 11.5px;
+    line-height: 1.25;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity > div {
+    padding: 13px 14px;
+    border-radius: 13px;
+    background: linear-gradient(135deg, rgba(14, 35, 64, .055), rgba(220, 227, 231, .28));
+    border: 1px solid var(--pg-fr-eco20-border);
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity span,
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity strong {
+    display: block;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity span {
+    color: var(--pg-fr-eco20-text);
+    font-size: 11.5px;
+    line-height: 1.25;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity strong {
+    margin-top: 4px;
+    color: var(--pg-fr-eco20-navy);
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity strong span {
+    display: inline;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity strong {
+    white-space: nowrap;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__note {
+    margin: 11px 0 0;
+    color: var(--pg-fr-eco20-text);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 16px;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: var(--pg-fr-eco20-navy);
+    color: #ffffff !important;
+    font-size: 14.5px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none !important;
+    transition: transform .2s ease, opacity .2s ease;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__button span {
+    color: inherit !important;
+    display: inline-block;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__button:hover {
+    transform: translateY(-1px);
+    opacity: .92;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__trust {
+    margin: 0;
+    color: var(--pg-fr-eco20-text);
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__source {
+    margin: 10px auto 0;
+    max-width: 920px;
+    color: var(--pg-fr-eco20-text);
+    opacity: .72;
+    font-size: 10.5px;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 989px) {
+    #pg-fr-eco20-{{ section.id }}.pg-fr-eco20 {
+      padding: {{ section.settings.tablet_padding_y }}px 18px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    #pg-fr-eco20-{{ section.id }}.pg-fr-eco20 {
+      padding: {{ section.settings.mobile_padding_y }}px 14px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__copy,
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__calc {
+      border-radius: 16px;
+      padding: 17px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__title {
+      font-size: clamp(27px, 8vw, 34px);
+      line-height: 1.08;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__subtext {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof,
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__results {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 6px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof-item {
+      min-height: 76px;
+      padding: 10px 6px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof-item strong {
+      font-size: 18px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof-item span {
+      font-size: 10.5px;
+      line-height: 1.25;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__result-card {
+      min-height: 72px;
+      padding: 10px 5px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__result-card strong {
+      font-size: 19px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__result-card span {
+      font-size: 10.2px;
+      line-height: 1.25;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity {
+      grid-template-columns: 1fr 1fr;
+      gap: 7px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity > div {
+      padding: 11px 10px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity span {
+      font-size: 10px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity strong {
+      font-size: 12.5px;
+      white-space: nowrap;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__note {
+      font-size: 11px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__button {
+      width: 100%;
+      min-height: 46px;
+      font-size: 14px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__trust {
+      font-size: 11px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__source {
+      display: none;
+    }
+  }
+
+
+  @media screen and (max-width: 390px) {
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__results,
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__proof {
+      gap: 5px;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity {
+      grid-template-columns: 1fr;
+    }
+
+    #pg-fr-eco20-{{ section.id }} .pg-fr-eco20__capacity strong {
+      font-size: 13px;
+    }
+  }
+
+</style>
+
+<script>
+  (function () {
+    var section = document.getElementById('pg-fr-eco20-{{ section.id }}');
+    if (!section) return;
+
+    var slider = section.querySelector('[data-pg-fr-eco20-slider]');
+    var peopleOutput = section.querySelector('[data-pg-fr-eco20-people]');
+    var bottlesOutput = section.querySelector('[data-pg-fr-eco20-bottles]');
+    var co2Output = section.querySelector('[data-pg-fr-eco20-co2]');
+    var eurosOutput = section.querySelector('[data-pg-fr-eco20-euros]');
+    var litresOutput = section.querySelector('[data-pg-fr-eco20-litres]');
+
+    var bottlesPerPerson = {{ section.settings.bottles_per_person | default: 180 }};
+    var co2PerBottleKg = ({{ section.settings.co2_per_bottle_g | default: 110 }} / 1000);
+    var monthlySavingPerPerson = {{ section.settings.monthly_saving_per_person | default: 9 }};
+    var litresPerPersonPerDay = {{ section.settings.litres_per_person_per_day | default: 2 }};
+
+    function formatFr(value) {
+      var rounded = Math.round(value);
+      try {
+        return rounded.toLocaleString('fr-FR');
+      } catch (e) {
+        return String(rounded).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+      }
+    }
+
+    function updateEco20() {
+      if (!slider) return;
+      var people = Number(slider.value || 1);
+      var bottles = people * bottlesPerPerson;
+      var co2 = bottles * co2PerBottleKg;
+      var euros = people * monthlySavingPerPerson * 12;
+      var litres = people * litresPerPersonPerDay * 365;
+
+      if (peopleOutput) peopleOutput.textContent = people;
+      if (bottlesOutput) bottlesOutput.textContent = formatFr(bottles);
+      if (co2Output) co2Output.textContent = formatFr(co2);
+      if (eurosOutput) eurosOutput.textContent = formatFr(euros);
+      if (litresOutput) litresOutput.textContent = formatFr(litres);
+    }
+
+    if (slider) {
+      slider.addEventListener('input', updateEco20);
+      updateEco20();
+    }
+
+    document.addEventListener('shopify:section:load', function (event) {
+      if (event.detail && event.detail.sectionId === '{{ section.id }}') updateEco20();
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "PG Eco Impact 20K",
+  "tag": "section",
+  "class": "section-pg-fr-eco20",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Impact environnemental"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Menos plástico. Agua más pura."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Reduzca su dependencia de las botellas de plástico con una elegante filtración por gravedad sin electricidad diseñada para durar."
+    },
+    {
+      "type": "text",
+      "id": "stat_1_number",
+      "label": "Stat 1 Number",
+      "default": "20 000 L"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_label",
+      "label": "Stat 1 Label",
+      "default": "por par de cartuchos"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_number",
+      "label": "Stat 2 Number",
+      "default": "12 meses"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_label",
+      "label": "Stat 2 Label",
+      "default": "remplacement recommandé"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_number",
+      "label": "Stat 3 Number",
+      "default": "0 élec."
+    },
+    {
+      "type": "text",
+      "id": "stat_3_label",
+      "label": "Stat 3 Label",
+      "default": "sin fontanería ni conexiones"
+    },
+    {
+      "type": "header",
+      "content": "Calculator"
+    },
+    {
+      "type": "text",
+      "id": "calculator_label",
+      "label": "Calculator Label",
+      "default": "¿Cuántas personas en su hogar?"
+    },
+    {
+      "type": "range",
+      "id": "default_people",
+      "label": "Default People",
+      "min": 1,
+      "max": 6,
+      "step": 1,
+      "default": 3
+    },
+    {
+      "type": "text",
+      "id": "people_suffix",
+      "label": "People Suffix",
+      "default": "gente"
+    },
+    {
+      "type": "text",
+      "id": "result_1_label",
+      "label": "Result 1 Label",
+      "default": "bouteilles évitées/an"
+    },
+    {
+      "type": "text",
+      "id": "result_2_label",
+      "label": "Result 2 Label",
+      "default": "kg CO₂ évités/an"
+    },
+    {
+      "type": "text",
+      "id": "result_3_label",
+      "label": "Result 3 Label",
+      "default": "€ économisés/an"
+    },
+    {
+      "type": "text",
+      "id": "usage_label",
+      "label": "Usage Label",
+      "default": "Usage estimé"
+    },
+    {
+      "type": "text",
+      "id": "capacity_label",
+      "label": "Capacity Label",
+      "default": "Capacité Phoenix"
+    },
+    {
+      "type": "text",
+      "id": "capacity_text",
+      "label": "Capacity Text",
+      "default": "20.000 L o 12 meses"
+    },
+    {
+      "type": "textarea",
+      "id": "capacity_note",
+      "label": "Capacity Note",
+      "default": "Un par filtra hasta 20.000 L en total (o 10.000 L por cartucho) o 12 meses. Este límite protege la eficiencia en función de la fuente de agua utilizada: grifo, pozo, río o lago."
+    },
+    {
+      "type": "number",
+      "id": "bottles_per_person",
+      "label": "Bottles Per Person / Year",
+      "default": 180
+    },
+    {
+      "type": "number",
+      "id": "co2_per_bottle_g",
+      "label": "CO2 Per Bottle in Grams",
+      "default": 110
+    },
+    {
+      "type": "number",
+      "id": "monthly_saving_per_person",
+      "label": "Monthly Saving Per Person",
+      "default": 9
+    },
+    {
+      "type": "number",
+      "id": "litres_per_person_per_day",
+      "label": "Litres Per Person Per Day",
+      "default": 2
+    },
+    {
+      "type": "header",
+      "content": "CTA"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Ordene ahora"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "trust_text",
+      "label": "Trust Text",
+      "default": "Envío gratuito a partir de 99 € · Garantía de 100 días · Certificado NSF 42 y 372"
+    },
+    {
+      "type": "textarea",
+      "id": "source_text",
+      "label": "Source Text",
+      "default": "Estimaciones basadas en 180 botellas/persona/año, 0,11 kg CO₂/botella, 2 L de agua/persona/día. La capacidad de Phoenix aparece como 20.000 L por par de cartuchos, o 10.000 L por cartucho, o 12 meses, dependiendo de la fuente de agua."
+    },
+    {
+      "type": "header",
+      "content": "Brand Colours"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Colour",
+      "default": "#F4F1EA"
+    },
+    {
+      "type": "color",
+      "id": "card_color",
+      "label": "Card Colour",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Colour",
+      "default": "#0E2340"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent Colour",
+      "default": "#0A6B53"
+    },
+    {
+      "type": "color",
+      "id": "steel_color",
+      "label": "Steel Colour",
+      "default": "#DCE3E7"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Colour",
+      "default": "#5F6F7E"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border Colour",
+      "default": "#E1DED6"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "desktop_padding_y",
+      "label": "Desktop Top/Bottom Padding",
+      "min": 24,
+      "max": 72,
+      "step": 2,
+      "unit": "px",
+      "default": 38
+    },
+    {
+      "type": "range",
+      "id": "tablet_padding_y",
+      "label": "Tablet Top/Bottom Padding",
+      "min": 22,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_y",
+      "label": "Mobile Top/Bottom Padding",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom Class"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PG Eco Impact 20K"
+    }
+  ]
+}
+{% endschema %}

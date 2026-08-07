@@ -1,0 +1,662 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "product_hero_og_alt_gReXNE": {
+      "type": "custom-stand-product",
+      "blocks": {
+        "judge_me_reviews_preview_badge_xGfTmh": {
+          "type": "shopify://apps/judge-me-reviews/blocks/preview_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_preview_badge_xGfTmh"
+      ],
+      "custom_css": [
+        "#vitals-end-section {max-width: 1200px; display: none; width: 100%; margin: 0 auto;}"
+      ],
+      "settings": {
+        "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
+        "countdown_time": ""
+      }
+    },
+    "9600faf5-31b8-4d01-817d-b44b276a1d60": {
+      "type": "accordion",
+      "blocks": {
+        "text_UhN7bF": {
+          "type": "text",
+          "settings": {
+            "question": "Qu'est-ce qu'il y a dans la boîte",
+            "answer": "{{ product.metafields.custom.whatthebox | metafield_tag }}"
+          }
+        },
+        "text_ydDqwG": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Essai sans risque de 100 jours",
+            "answer": "<p>Vous craignez que le filtre à eau Phoenix par gravité soit trop beau pour être vrai ? Vous n'êtes pas convaincu qu'il éliminera autant de contaminants que promis ?</p><p>Nous garantissons notre produit à 100 % ; vous pouvez donc l'essayer chez vous pendant 100 jours sans risque. Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, retournez-la dans les 100 jours pour un remboursement complet, sans justification !</p><p>*Conditions générales applicables</p>"
+          }
+        },
+        "text_4FizNn": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Garantie",
+            "answer": "<p>Nous offrons une <strong>garantie de 10 ans</strong> sur nos boîtiers de filtre à eau par gravité en acier inoxydable. Conçus pour durer, ils sont entièrement protégés contre les défauts de matériaux et de fabrication. Le robinet en acier inoxydable Phoenix Gravity et les éléments filtrants au charbon <strong>sont garantis 1 an</strong>, couvrant tous les défauts de matériaux et de fabrication. Toutes les autres pièces et accessoires sont couverts par une <strong>garantie de 6 mois</strong>. Vous êtes protégé contre tout défaut de matériaux et de fabrication.</p>"
+          }
+        },
+        "text_yPJN8A": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "question": "Expéditions et Retours",
+            "answer": "<p><strong>Remboursement de 100 jours :</strong></p><p>La garantie de remboursement de 100 jours s’applique exclusivement aux systèmes de filtration achetés directement sur https://phoenixwaterfilters.fr/.</p><p><strong>Procédure de Retour</strong></p><p>Pour initier un retour, les clients doivent contacter notre <strong>équipe de support client</strong> et fournir des <strong>détails valides de la commande du site web</strong>. Une fois les détails validés, l'équipe de support approuvera le retour et partagera des <strong>instructions détaillées</strong> sur la manière et l'endroit où envoyer le produit.</p><p><strong>Notes Importantes :</strong></p><ul><li>Les produits retournés sans <strong>autorisation préalable</strong> ne seront pas acceptés.</li><li>Les produits doivent être retournés dans leur <strong>emballage d'origine</strong> et doivent être <strong>exempts de tout dommage</strong>.</li></ul><p><strong>Expédition</strong></p><p><strong>NOTE :</strong> La plupart des commandes seront traitées et expédiées dans un délai de <strong>3 à 7 jours ouvrables</strong>. Nous apprécions votre patience.</p><p><strong>Nous Expédions Partout !</strong> Aux France. L'offre de <strong>livraison gratuite</strong> de Phoenix Gravity s'applique aux commandes des clients de détail avec un <strong>montant minimum de 15 </strong>€ expédiées au niveau national (à l'intérieur des France). Les commandes sont normalement expédiées via <strong>La Poste, Chronopost</strong>.</p><p><strong>Commandes & Marchandises Endommagées</strong></p><p>Si votre commande a été <strong>endommagée ou défectueuse</strong> lors de la livraison, ou s'il y a eu une <strong>erreur dans votre commande</strong> (par exemple, si les filtres sont cassés ou si la taille du système de filtration est incorrecte), veuillez contacter notre <strong>Service Clientèle</strong> dans les <strong>4 jours suivant la réception de la livraison</strong> au +4420 8058 5660 ou nous envoyer un courriel à <strong>soutien@phoenixwaterfilters.fr</strong>. </p><p>Nous ferons tout notre possible pour corriger votre commande. Si un article incorrect vous a été expédié, Phoenix Gravity paiera pour le retour via l'expédition standard à l'adresse enregistrée. Veuillez vous assurer d'inclure votre <strong>numéro de commande</strong> et la <strong>date de la commande</strong>.</p><p><strong>Politique d'Annulation</strong></p><p>Vous ne pouvez <strong>pas annuler la commande</strong> une fois qu'elle a été <strong>expédiée</strong>. Les commandes expédiées seront notifiées via les adresses e-mail enregistrées.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_UhN7bF",
+        "text_ydDqwG",
+        "text_4FizNn",
+        "text_yPJN8A"
+      ],
+      "custom_css": [
+        "dl.accordion {margin-top: 50px !important;}"
+      ],
+      "settings": {
+        "heading": "",
+        "content": "",
+        "show_shipping": true,
+        "accordion_styles": "full-width",
+        "custom_id": "",
+        "custom_class": ""
+      }
+    },
+    "1763631756f7819ab5": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_Ein8pL": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/A_Premium-Steel-stand_01.jpg",
+            "mobile_image": "shopify://shop_images/A_Premium-Steel-stand_01.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_Ein8pL"
+      ],
+      "settings": {}
+    },
+    "blocks_Td7FJL": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_eEFQQP": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/A_Premium-Steel-stand_02.jpg",
+            "mobile_image": "shopify://shop_images/A_Premium-Steel-stand_02.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_eEFQQP"
+      ],
+      "settings": {}
+    },
+    "blocks_8bzHwy": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_DKUNNm": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/A_Premium-Steel-stand_03.jpg",
+            "mobile_image": "shopify://shop_images/SS-stand_MOb_03.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_DKUNNm"
+      ],
+      "settings": {}
+    },
+    "blocks_QJTqe7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_prxk3C": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/A_Premium-Steel-stand_04.jpg",
+            "mobile_image": "shopify://shop_images/SS-stand_MOb_04.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_prxk3C"
+      ],
+      "settings": {}
+    },
+    "blocks_ttDGj8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_AfKpAw": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/A_Premium-Steel-stand_05.jpg",
+            "mobile_image": "shopify://shop_images/SS-stand_MOb_05.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_AfKpAw"
+      ],
+      "settings": {}
+    },
+    "blocks_Xcq4qF": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_yLqR43": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/A_Premium-Wooden-stand_05.jpg",
+            "mobile_image": "shopify://shop_images/A_Premium-Wooden-stand_Mob_05.jpg",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1300,
+            "section_height_desktop": 600,
+            "section_width_mobile": 350,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_yLqR43"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "accordion_tabs_kBhDkz": {
+      "type": "accordion-tabs",
+      "blocks": {
+        "tab_HPXac4": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "INSTALLATION ET ENTRETIEN"
+          }
+        },
+        "question_answer_K38zCJ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Faut-il amorcer les éléments filtrants au charbon ?",
+            "answer": "<p>Oui, c'est <strong>essentiel</strong> ! L'amorçage des éléments filtrants au charbon est la première étape pour s'assurer que vos filtres sont parfaitement <strong>libres de tout résidu</strong> du processus de fabrication. Ces résidus sont tout à fait normaux et sans danger, mais ils peuvent rendre l'eau trouble si les filtres ne sont pas correctement amorcés.</p><p>Nous vous recommandons d'amorcer vos éléments filtrants au charbon pendant au moins <strong>trois minutes</strong>. S'ils ne sont pas suffisamment amorcés, les quatre premières rondes d'eau filtrée pourraient présenter de légères particules blanches troubles, que vous pouvez simplement jeter en toute sécurité.<br/><br/></p>"
+          }
+        },
+        "question_answer_YH9Tyg": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Pourquoi mon eau est-elle trouble ?",
+            "answer": "<p>Pas d'inquiétude, une eau trouble juste après l'installation initiale est <strong>normale et totalement inoffensive</strong>.Il s'agit simplement de la <strong>poussière résiduelle</strong> du processus de fabrication, qui est sans danger. Cela se produit si les filtres n'ont pas été amorcés correctement – nous recommandons donc de les amorcer complètement (voir ci-dessus).</p><p>Si vous ne les amorcez pas, il faudra environ <strong>quatre rondes</strong> d'eau filtrée pour que la turbidité disparaisse complètement.<br/><br/></p>"
+          }
+        },
+        "question_answer_jEVb8T": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la durée de vie de mes éléments filtrants au charbon ?",
+            "answer": "<p>Nous vous conseillons de remplacer vos éléments filtrants au charbon tous les <strong>12 mois</strong>.</p>"
+          }
+        },
+        "question_answer_iD9QdM": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la durée de vie des éléments filtrants POSTreat pour l'élimination du fluorure ?",
+            "answer": "<p>Nos éléments filtrants POSTreat pour l'élimination du fluorure sont fabriqués en <strong>acier inoxydable AISI 304</strong> et sont conçus pour durer des années C'est pourquoi ils bénéficient d'une <strong>garantie d'un an</strong> sur nos produits.</p><p>Cependant, le média filtrant propriétaire <strong>FluoRid</strong> a une durée de vie limitée à <strong>1060 gallons</strong> (environ 4000 litres) et doit être remplacé environ tous les <strong>4 mois</strong>.</p><p>Nous proposons également un service d'abonnement pour le média de remplacement — nous vous rappelons quand ils sont dus, pour vous libérer l'esprit !</p>"
+          }
+        },
+        "question_answer_jQNRA4": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Combien de temps dure le média FluoRid dans le POSTreat ?",
+            "answer": "<p>La durée de vie d'une paire d'éléments filtrants POSTreat pour l'élimination du fluorure est de jusqu'à environ <strong>4000 litres</strong>. Il est recommandé de remplacer la \"Recharge de média FluoRid\" <strong>tous les 4 à 6 mois</strong>.</p>"
+          }
+        },
+        "question_answer_nfPQrG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Serai-je capable d'assembler mon système et de changer mes filtres moi-même ?",
+            "answer": "<p>Absolument ! Nos systèmes sont conçus pour être <strong>extrêmement faciles à assembler</strong>. Tout ce dont vous avez besoin est inclus. Vous pouvez le faire vous-même <strong>simplement avec vos mains</strong> — aucun outil spécialisé, plombier ou électricien n'est requis.</p><p>Nous incluons des <strong>instructions complètes</strong> avec chaque unité et nous sommes toujours là pour vous aider en cas de besoin.</p>"
+          }
+        },
+        "question_answer_X8BdNU": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mon filtre à eau par gravité Phoenix fuit entre les chambres supérieure et inférieure, qu'est-ce que cela signifie ?",
+            "answer": "<p>Cela est dû à un <strong>remplissage excessif</strong> du système de filtration. Une utilisation attentive peut aider à prévenir le débordement : vérifiez toujours le niveau d'eau dans la chambre inférieure avant de remplir la chambre supérieure.</p><p>Une fois que vous connaîtrez vos taux d'utilisation, le processus de remplissage deviendra une seconde nature !</p><p>Nous vendons également un <strong>robinet en acier inoxydable avec jauge de niveau d'eau</strong> qui vous permet de voir le niveau d'eau de l'extérieur.<br/><br/></p>"
+          }
+        },
+        "question_answer_UDnhbf": {
+          "type": "question_answer",
+          "settings": {
+            "question": "À quelle fréquence dois-je changer mes filtres ?",
+            "answer": "<p>Cela dépend de votre fréquence d'utilisation et de la qualité de votre eau d'entrée. À titre indicatif, nous vous recommandons de les remplacer aux étapes suivantes :</p><ul><li><strong>Éléments filtrants au charbon :</strong> <strong>12 mois</strong>.</li><li><strong>POSTreat (et Recharge de média FluoRid) :</strong> <strong>4 mois</strong>.4</li></ul><p>Nous proposons également un <strong>service d'abonnement</strong>, qui vous donne en prime <strong>5 % de réduction</strong> sur chaque commande. Laissez-nous vous rappeler quand changer votre filtre, pour que vous n'ayez pas à y penser !</p>"
+          }
+        },
+        "tab_WjcFUA": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Filtration"
+          }
+        },
+        "question_answer_yUixgf": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionnent vos filtres ?",
+            "answer": "<p>Nous utilisons de l'<strong>acier inoxydable AISI 304</strong> de la plus haute qualité, du <strong>charbon de noix de coco naturel</strong> et d'autres matériaux naturels. Le tout avec la puissante force de la <strong>gravité</strong> ! Notre système de filtration avancé élimine jusqu'à <strong>99,99 % des contaminants courants</strong> tout en retenant <strong>jusqu'à 100 % des nutriments</strong>.</p>"
+          }
+        },
+        "question_answer_TwmjtY": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Que retirent réellement vos filtres ?",
+            "answer": "<p>Les éléments filtrants au charbon Phoenix Gravity sont fabriqués à partir de <strong>coques de noix de coco pures</strong>, une ressource durable et renouvelable. Le charbon dans les filtres est <strong>activé</strong>, ce qui signifie qu'il possède une surface élevée et qu'il est très poreux. Cela lui permet de piéger un large éventail de contaminants, notamment le <strong>chlore</strong>, les <strong>métaux lourds</strong> et d'autres impuretés.</p><p>Les filtres au charbon Phoenix Gravity <strong>éliminent les microplastiques</strong> et éliminent également les <strong>SPFA</strong>, les <strong>hormones</strong> et les <strong>résidus pharmaceutiques</strong> de l'eau. Ils sont conçus pour fournir une eau propre, inodore et avec un <strong>excellent goût</strong>. Ils ne libèrent aucun produit chimique nocif ou sous-produit dans l'eau et sont très efficaces pour éliminer le chlore et autres composés organiques volatils. Une paire d'éléments filtrants au charbon peut filtrer des milliers de litres d'eau, vous offrant ainsi une eau potable sûre et saine.<br/><br/></p>"
+          }
+        },
+        "question_answer_9yMg4X": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity enlèvent-ils les résidus pharmaceutiques ?",
+            "answer": "<p><strong>Oui, jusqu'à 99,99 % !</strong> Nos éléments filtrants au charbon primaires ont été testés indépendamment pour de nombreux composés organiques volatils, y compris le 1,4-dichlorobenzène, le 2-Butanone, l'Acétone, le Chlorure d'Allyle et bien d'autres.</p>"
+          }
+        },
+        "question_answer_YaqX9K": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Vos filtres retirent-ils le fluorure ?",
+            "answer": "<p>Absolument ! Nous avons conçu un filtre spécialisé pour l'élimination du fluorure appelé <strong>POSTreat</strong>, capable de retirer <strong>plus de 95 % du fluorure</strong> de votre eau du robinet.</p><p>Fabriqué en <strong>acier inoxydable AISI 304</strong>, il est entièrement <strong>réutilisable et rechargeable</strong> avec notre Recharge de média FluoRid POSTreat.Le POSTreat peut être utilisé conjointement avec nos éléments filtrants au charbon primaires</p>"
+          }
+        },
+        "question_answer_tyGX4z": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les cartouches au charbon Phoenix enlèvent-elles le fluorure ?",
+            "answer": "<p>Elles en sont tout à fait capables ! Nous avons conçu une cartouche spécialisée pour le fluorure appelée <strong>POSTreat</strong> pour éliminer <strong>plus de 95 % du fluorure</strong> de votre eau du robinet.</p><p>Fabriquée en acier inoxydable de la plus haute qualité, elle est complètement réutilisable et rechargeable, avec notre Recharge FluoRid POSTreat. Le POSTreat peut être utilisé conjointement avec les cartouches au charbon primaires.<br/><br/></p>"
+          }
+        },
+        "question_answer_8w4QRz": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les éléments au charbon Phoenix éliminent-ils les phtalates de l'eau ?",
+            "answer": "<p>Bien que nous n'ayons pas testé spécifiquement l'élimination des phtalates, nos éléments filtrants au charbon Phoenix sont fabriqués avec du <strong>charbon de noix de coco activé</strong> de la plus haute qualité, reconnu pour son efficacité à <strong>adsorber les phtalates</strong> de l'eau. Nous améliorons et testons constamment nos filtres.</p>"
+          }
+        },
+        "question_answer_TYE6gG": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity éliminent-ils l'œstrogène ?",
+            "answer": "<p>Bien que nous n'ayons pas testé spécifiquement l'élimination de l'œstrogène, nos filtres au charbon Phoenix sont fabriqués avec du <strong>charbon de noix de coco activé</strong>, connu pour son efficacité à <strong>adsorber l'œstrogène</strong> de l'eau.12 Nous améliorons et testons constamment nos filtres.</p>"
+          }
+        },
+        "question_answer_6C7C4q": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment vos filtres à gravité et vos éléments filtrants se comparent-ils à la concurrence ?",
+            "answer": "<p>Nous sommes l'un des <strong>leaders en matière de filtration par gravité avancée</strong>. Avec plus de <strong>50 ans d'expérience</strong> dans la fabrication en interne, nous avons un contrôle total sur le processus et la <strong>qualité</strong> de nos filtres et éléments filtrants. Nous sommes extrêmement fiers des efforts que nous avons déployés pour devenir un fabricant de premier plan de filtres à eau par gravité.</p>"
+          }
+        },
+        "question_answer_rzDw8m": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Vos filtres sont-ils aussi efficaces que Berkey ?",
+            "answer": "<p><strong>Absolument !</strong> Nous avons effectué des tests <strong>indépendants et approfondis</strong> sur nos filtres pour une variété de contaminants chimiques tels que le Plomb, le chlore, le chrome, les composés organiques volatils et <strong>plus de 100 autres</strong>.</p><p>De plus, avec plus de <strong>50 ans d'expérience</strong> dans la fabrication en interne, nous sommes l'un des principaux fabricants mondiaux de systèmes de filtration par gravité en <strong>acier inoxydable AISI 304</strong>.Nous avons également un contrôle total sur le processus et la qualité de nos filtres et éléments filtrants de remplacement.<br/><br/></p>"
+          }
+        },
+        "question_answer_XdWRAV": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Les filtres Phoenix Gravity diminuent-ils le TDS ?",
+            "answer": "<p>Le TDS signifie <strong>Total des Solides Dissous</strong> et se mesure en parties par million (ppm) ou parties par milliard (ppb).C'est une mesure du contenu organique et inorganique de l'eau, y compris les <strong>minéraux et les nutriments</strong>.</p><p>L'eau naturelle aura une lecture TDS due aux minéraux et nutriments captés dans les roches et le sol par lesquels elle s'écoule. Il est généralement accepté qu'un niveau de <strong>300 ppm est une bonne teneur en minéraux</strong>.Nous ne cherchons délibérément pas à ramener notre TDS à zéro, car notre objectif est de <strong>préserver les vitamines et minéraux naturels</strong> dont votre corps a besoin.<br/><br/></p>"
+          }
+        },
+        "question_answer_6UmfCk": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Que contient la boîte de la cartouche ?",
+            "answer": "<p>La boîte des éléments filtrants au charbon Phoenix Gravity comprend les accessoires suivants :</p><ol><li>Éléments filtrants pré-montés avec écrou à ailettes et rondelles.</li><li>Robinet en <strong>acier inoxydable AISI 304</strong>.</li><li>Bouton du couvercle.</li><li>Un jeu de rondelles et écrou à ailettes de rechange (au cas où les rondelles et l'écrou existants seraient endommagés ou égarés).</li><li>Un bouchon obturateur de rechange.</li><li>Manuel d'instructions.</li></ol>"
+          }
+        },
+        "question_answer_JjKHN4": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Le filtre Phoenix Gravity élimine-t-il les bactéries et les virus ?",
+            "answer": "<p>Les filtres Phoenix offrent une pureté d'eau exceptionnelle en éliminant 99,99 % des virus, des bactéries et des parasites présents dans l'eau.</p>"
+          }
+        },
+        "tab_iwXnJF": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Expédition et Retours"
+          }
+        },
+        "question_answer_zVFWhQ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Où Phoenix Gravity livre-t-il ?",
+            "answer": "<p>Actuellement, nous livrons en <strong>France</strong>. Nous travaillons à l'expédition vers davantage de destinations. <em>(Note du traducteur : Cette information peut être ajustée si la marque livre en France, mais la FAQ originale ne le mentionne pas.)</em></p>"
+          }
+        },
+        "question_answer_JTNDKd": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est votre politique de retour et d'échange ?",
+            "answer": "<p>Nous acceptons les retours initiés dans les <strong>30 jours</strong> suivant l'achat. Vous serez responsable du retour de l'article en toute sécurité, qui doit arriver dans un <strong>état revendable</strong> et dans son <strong>emballage d'origine</strong>.</p><p>Une fois que nous aurons accepté le retour, nous vous rembourserons via le mode de paiement original dans les <strong>10 jours ouvrables</strong>. Nous offrons également une <strong>Garantie Satisfait ou Remboursé de 100 jours</strong> sur nos systèmes de filtration par gravité complets.<br/><br/></p>"
+          }
+        },
+        "question_answer_4GFfqF": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Mon article est arrivé endommagé ou incorrect, que puis-je faire ?",
+            "answer": "<p>Veuillez envoyer une photographie de votre commande complète, y compris l'emballage, ainsi que votre numéro de commande à notre équipe de support à <strong>hello@phoenixwaterfilters.com</strong>. Nous vous répondrons dans les <strong>24 heures</strong> en priorité.</p>"
+          }
+        },
+        "tab_RzNhx4": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Garantie et Essai Sans Risque de 100 Jours"
+          }
+        },
+        "question_answer_Adrh9b": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionne l'Essai Sans Risque de 100 Jours ?",
+            "answer": "<p>La <strong>Garantie Satisfait ou Remboursé de 100 jours</strong> s'applique uniquement aux systèmes Phoenix Gravity achetés avec les boîtiers en <strong>acier inoxydable AISI 304</strong> et uniquement via notre site web. L'essai n'est pas valable pour les filtres de remplacement et les accessoires achetés séparément.</p><p><strong>Voici comment cela fonctionne :</strong></p><ul><li>Achetez votre système de filtration d'eau par gravité Phoenix via notre site web. Dès qu'il arrive, commencez à l'utiliser immédiatement.</li><li>Si vous n'êtes pas entièrement satisfait de votre système Phoenix Gravity dans les <strong>100 jours</strong> suivant la date de livraison, contactez notre équipe de support pour initier un retour. Le retour doit être initié dans les 100 jours suivant la date d'achat.</li><li>Le système doit être retourné <strong>complet</strong> avec toutes les pièces d'origine et l'emballage. Le boîtier en acier inoxydable ASI 304 <strong>ne doit pas être bosselé ou endommagé</strong> d'une autre manière. Les éléments filtrants ne doivent pas être fissurés ou endommagés lors de leur réception.</li></ul><p>Dès réception et inspection de l'état du système, nous vous contacterons pour initier un <strong>remboursement intégral</strong> sur votre mode de paiement original. Ce processus peut prendre jusqu'à 10 jours ouvrables pour être finalisé.<br/><br/></p>"
+          }
+        },
+        "question_answer_Th8mED": {
+          "type": "question_answer",
+          "settings": {
+            "question": "La politique de retour de 100 jours est-elle valable si je commande sur Amazon ?",
+            "answer": "<p><strong>Non.</strong> Votre système de filtration Phoenix Gravity doit être acheté via notre <strong>site web</strong> pour être admissible à notre garantie satisfait ou remboursé de 100 jours.</p>"
+          }
+        },
+        "question_answer_HFdwpa": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment fonctionne la garantie ?",
+            "answer": "<p>Nous offrons une <strong>garantie d'un an</strong> sur les robinets en acier inoxydable AISI 304 et les éléments au charbon Phoenix Gravity. Vous êtes protégé contre tout défaut de matériau et de fabrication.</p>"
+          }
+        },
+        "tab_bXDpWP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "VOTRE COMPTE ET ABONNEMENTS"
+          }
+        },
+        "question_answer_GPzrVP": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Puis-je m'abonner pour mes éléments filtrants ?",
+            "answer": "<p>Oui, nous offrons un service d'abonnement pour remplacer vos éléments afin de vous faire gagner du temps et de la tranquillité d'esprit.</p>"
+          }
+        },
+        "question_answer_xHrq9N": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Quelle est la différence entre le \"Plan Vie Quotidienne\" et le \"Plan Vie Quotidienne Complet\" ?",
+            "answer": "<p>Le Plan Vie Quotidienne et le Plan Vie Quotidienne Complet sont nos solutions pour aider les familles à avoir une eau propre et sûre toute l'année, à leur rythme.</p><ul><li>Le <strong>Plan Vie Quotidienne</strong> vous offre la solution complète avec nos filtres au charbon livrés automatiquement <strong>tous les 12 mois</strong>.</li><li>Le <strong>Plan Vie Quotidienne Complet</strong> comprend les éléments filtrants au charbon livrés annuellement ET les Recharges de média FluoRid pour le filtre POSTreat livrées <strong>tous les 4 mois</strong>, directement à votre porte.<br/><br/></li></ul>"
+          }
+        },
+        "question_answer_ENTnPb": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Comment puis-je modifier mon abonnement ?",
+            "answer": "<p>Votre abonnement peut être modifié et mis à jour depuis votre <strong>Compte Phoenix Gravity</strong>. Une fois connecté à votre compte, cliquez sur « Abonnements » pour apporter les changements nécessaires.</p><p>Si vous avez besoin d'aide supplémentaire, n'hésitez pas à nous contacter.</p>"
+          }
+        },
+        "question_answer_VTzXmQ": {
+          "type": "question_answer",
+          "settings": {
+            "question": "Puis-je suspendre ou annuler mon abonnement ?",
+            "answer": "<p>Oui, vous pouvez modifier la fréquence ou annuler votre abonnement <strong>à tout moment</strong>.</p><p>Veuillez noter que l'annulation de votre abonnement entraînera la <strong>perte des tarifs spéciaux</strong> qui y étaient associés. Si vous souhaitez vous réabonner après l'annulation, vous pourriez ne pas être en mesure de récupérer la même tarification spéciale que celle dont vous bénéficiiez auparavant.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tab_HPXac4",
+        "question_answer_K38zCJ",
+        "question_answer_YH9Tyg",
+        "question_answer_jEVb8T",
+        "question_answer_iD9QdM",
+        "question_answer_jQNRA4",
+        "question_answer_nfPQrG",
+        "question_answer_X8BdNU",
+        "question_answer_UDnhbf",
+        "tab_WjcFUA",
+        "question_answer_yUixgf",
+        "question_answer_TwmjtY",
+        "question_answer_9yMg4X",
+        "question_answer_YaqX9K",
+        "question_answer_tyGX4z",
+        "question_answer_8w4QRz",
+        "question_answer_TYE6gG",
+        "question_answer_6C7C4q",
+        "question_answer_rzDw8m",
+        "question_answer_XdWRAV",
+        "question_answer_6UmfCk",
+        "question_answer_JjKHN4",
+        "tab_iwXnJF",
+        "question_answer_zVFWhQ",
+        "question_answer_JTNDKd",
+        "question_answer_4GFfqF",
+        "tab_RzNhx4",
+        "question_answer_Adrh9b",
+        "question_answer_Th8mED",
+        "question_answer_HFdwpa",
+        "tab_bXDpWP",
+        "question_answer_GPzrVP",
+        "question_answer_xHrq9N",
+        "question_answer_ENTnPb",
+        "question_answer_VTzXmQ"
+      ],
+      "settings": {
+        "heading": "Vous avez des questions ? Nous avons les réponses…",
+        "content": "<p><br/><br/></p>"
+      }
+    },
+    "product_reviews_J4aYbK": {
+      "type": "product-reviews",
+      "blocks": {
+        "judge_me_reviews_review_widget_pKa9rm": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_pKa9rm"
+      ],
+      "settings": {
+        "section_heading": ""
+      }
+    }
+  },
+  "order": [
+    "product_hero_og_alt_gReXNE",
+    "9600faf5-31b8-4d01-817d-b44b276a1d60",
+    "1763631756f7819ab5",
+    "blocks_Td7FJL",
+    "blocks_8bzHwy",
+    "blocks_QJTqe7",
+    "blocks_ttDGj8",
+    "blocks_Xcq4qF",
+    "accordion_tabs_kBhDkz",
+    "product_reviews_J4aYbK"
+  ]
+}
