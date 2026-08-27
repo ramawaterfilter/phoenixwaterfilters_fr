@@ -30,41 +30,30 @@
             "answer": "{{ product.description }}"
           }
         },
-        "text_ydDqwG": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "question": "Essai sans risque de 100 jours",
-            "answer": "<p>Vous craignez que le filtre à eau Phoenix par gravité soit trop beau pour être vrai ? Vous n'êtes pas convaincu qu'il éliminera autant de contaminants que promis ?</p><p>Nous garantissons notre produit à 100 % ; vous pouvez donc l'essayer chez vous pendant 100 jours sans risque. Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, retournez-la dans les 100 jours pour un remboursement complet, sans justification !</p><p>*Conditions générales applicables</p>"
-          }
-        },
         "text_yPJN8A": {
           "type": "text",
           "settings": {
             "question": "Qu'est-ce qu'il y a dans la boîte",
-            "answer": "<ul><li>1 x boîtier en acier inoxydable AISI 304 finition 8K.</li><li>1 x élément filtrant à charbon actif.</li><li>1 x bouteille d'eau Phoenix Gravity en acier inoxydable AISI 304.</li><li>1 x pochette de transport</li></ul><p>Le système Phoenix Gravity s'installe facilement sur n'importe quel plan de travail, à la maison ou au bureau ; aucun raccordement à la plomberie ou à l'électricité n'est nécessaire.</p>"
+            "answer": "<ul><li>1 x boîtier en acier inoxydable AISI 304 finition 8K.</li><li>1 x Cartouche Mini KokoCarb</li><li>1 x bouteille d'eau Phoenix Gravity en acier inoxydable AISI 304.</li><li>1 x pochette de transport</li><li>1 x PrimeEasy</li></ul><p>Le système Phoenix Gravity s'installe facilement sur n'importe quel plan de travail, à la maison ou au bureau ; aucun raccordement à la plomberie ou à l'électricité n'est nécessaire.</p>"
           }
         },
-        "text_4FizNn": {
+        "text_GhEMzA": {
           "type": "text",
-          "disabled": true,
           "settings": {
-            "question": "Expéditions et Retours",
-            "answer": "<p><strong>Remboursement de 100 jours :</strong></p><p>La garantie de remboursement de 100 jours s’applique exclusivement aux systèmes de filtration achetés directement sur <a href=\"https://phoenixwaterfilters.fr/\" title=\"https://phoenixwaterfilters.fr/\">https://phoenixwaterfilters.fr/</a>.</p><p><strong>Procédure de Retour</strong></p><p>Pour initier un retour, les clients doivent contacter notre <strong>équipe de support client</strong> et fournir des <strong>détails valides de la commande du site web</strong>. Une fois les détails validés, l'équipe de support approuvera le retour et partagera des <strong>instructions détaillées</strong> sur la manière et l'endroit où envoyer le produit.</p><p><strong>Notes Importantes :</strong></p><ul><li>Les produits retournés sans <strong>autorisation préalable</strong> ne seront pas acceptés.</li><li>Les produits doivent être retournés dans leur <strong>emballage d'origine</strong> et doivent être <strong>exempts de tout dommage</strong>.</li></ul><p><strong>Expédition</strong></p><p><strong>NOTE :</strong> La plupart des commandes seront traitées et expédiées dans un délai de <strong>3 à 7 jours ouvrables</strong>. Nous apprécions votre patience.</p><p><strong>Nous Expédions Partout !</strong> Aux France. L'offre de <strong>livraison gratuite</strong> de Phoenix Gravity s'applique aux commandes des clients de détail avec un <strong>montant minimum de 15 </strong>€ expédiées au niveau national (à l'intérieur des France). Les commandes sont normalement expédiées via <strong>La Poste, Chronopost</strong>.</p><p><strong>Commandes & Marchandises Endommagées</strong></p><p>Si votre commande a été <strong>endommagée ou défectueuse</strong> lors de la livraison, ou s'il y a eu une <strong>erreur dans votre commande</strong> (par exemple, si les filtres sont cassés ou si la taille du système de filtration est incorrecte), veuillez contacter notre <strong>Service Clientèle</strong> dans les <strong>4 jours suivant la réception de la livraison</strong> au +4420 8058 5660 ou nous envoyer un courriel à <strong>soutien@phoenixwaterfilters.fr</strong>. </p><p>Nous ferons tout notre possible pour corriger votre commande. Si un article incorrect vous a été expédié, Phoenix Gravity paiera pour le retour via l'expédition standard à l'adresse enregistrée. Veuillez vous assurer d'inclure votre <strong>numéro de commande</strong> et la <strong>date de la commande</strong>.</p><p><strong>Politique d'Annulation</strong></p><p>Vous ne pouvez <strong>pas annuler la commande</strong> une fois qu'elle a été <strong>expédiée</strong>. Les commandes expédiées seront notifiées via les adresses e-mail enregistrées.<br/><br/></p>"
+            "question": "Spécifications techniques et certifications",
+            "answer": "<ul><li>Capacité du système – 0.9 litre</li><li>Dimensions – Hauteur : 36 cm, Largeur : 8.9 cm</li><li>Durée de vie du filtre – Jusqu'à 4 000 litres</li></ul>"
           }
         }
       },
       "block_order": [
         "text_UhN7bF",
-        "text_ydDqwG",
         "text_yPJN8A",
-        "text_4FizNn"
+        "text_GhEMzA"
       ],
       "custom_css": [],
       "settings": {
         "heading": "",
         "content": "",
-        "show_shipping": true,
         "accordion_styles": "full-width",
         "custom_id": "",
         "custom_class": ""
@@ -271,6 +260,7 @@
         "text_WG3dke",
         "text_wrVk3K"
       ],
+      "disabled": true,
       "settings": {
         "style": "bg-light",
         "heading": "Profitez d'une eau potable saine et délicieuse tous les jours de l'année",
@@ -303,6 +293,8 @@
         "text_Hh7Mbt",
         "text_gLW6xT"
       ],
+      "disabled": true,
+      "name": "10 Yr Warranty & 12 months Replacement",
       "settings": {
         "style": "bg-white",
         "layout": "copy",
@@ -323,7 +315,8 @@
     },
     "custom_code_section_kFnpWQ": {
       "type": "custom-code-section",
-      "name": "Custom Code Section",
+      "disabled": true,
+      "name": "10 year Warranty Strip",
       "settings": {
         "custom_html": "<div class=\"warranty-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/2644/2852/files/10_years_1.png?v=1758890447\" alt=\"10-year warranty icon\">\n  <span>Garantie de 10 ans</span>\n</div>",
         "custom_css": ".warranty-section {\n      background-color: #f5f3f1; /* same pink background */\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      padding: 20px;\n      gap: 10px;\nmargin-bottom: 30px;\n    }\n\n    .warranty-section img {\n      width: 50px; /* adjust size of icon */\n      height: auto;\n    }\n\n    .warranty-section span {\n      font-size: 30px;\n      font-weight: bold;\n      color: #153a5b; /* dark text */\n    }",
@@ -389,6 +382,8 @@
         "text_6KYr33",
         "text_wfXFK6"
       ],
+      "disabled": true,
+      "name": "Savings on water",
       "settings": {
         "style": "bg-white",
         "layout": "copy-image-copy",
@@ -490,6 +485,7 @@
         },
         "d350ab4a-9aaf-49d4-9384-374210afd2e5": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "feature": "Essai Sans Risque de 100 Jours",
             "column_1": "yes",
@@ -510,6 +506,7 @@
         },
         "text_VbAUDk": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "feature": "Grande Capacité",
             "column_1": "yes",
@@ -604,7 +601,7 @@
         "layout": "style-1",
         "heading": "Nous faisons confiance à nos filtres à eau depuis plus de 50 ans",
         "paragraph": "",
-        "sub_header": "Basé sur 7 495 avis",
+        "sub_header": "Basé sur 1000+ avis",
         "button_text": "Voir Tous les Avi",
         "button_url": "shopify://pages/reviews",
         "button_aftertext": "",

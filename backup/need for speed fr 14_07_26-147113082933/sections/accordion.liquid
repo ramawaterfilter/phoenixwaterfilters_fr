@@ -1192,6 +1192,7 @@
             or product.title contains 'Smart Carbon Cartouches'
             or product.title contains "Cartouche filtrante POSTreat™ pour l'élimination des fluorures"
             or product.title contains 'KokoCarb Cartouches'
+            or product.title contains 'Le Phoenix Gravity Mini - 1L'
           %}
             <div class="mb-4 accordion-item">
               <dt>Rapport de Lab</dt>
@@ -1221,6 +1222,8 @@
                     </div>
 
                     <!-- Pharmaceuticals -->
+                    {% unless product.title contains 'Le Phoenix Gravity Mini - 1L' %}
+                      
                     <div class="report-item">
                       <img
                         src="https://cdn.shopify.com/s/files/1/0656/9898/8085/files/nsf-icon.svg?v=1778480924"
@@ -1242,6 +1245,8 @@
                         </a>
                       </div>
                     </div>
+
+                    {% endunless %}
 
                     <!-- Heavy Metals -->
                     <div class="report-item">

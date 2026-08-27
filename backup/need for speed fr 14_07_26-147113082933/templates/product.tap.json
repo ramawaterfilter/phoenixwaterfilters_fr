@@ -210,6 +210,15 @@
         "heading": "Nos filtres éliminent…"
       }
     },
+    "custom_code_section_T4KTVH": {
+      "type": "custom-code-section",
+      "name": "Custom Code Section",
+      "settings": {
+        "custom_html": "<p class=\"marquee-qualification\">\n    <span aria-hidden=\"true\">*</span>Élimination du chlore certifiée selon la norme NSF/ANSI 42. Les performances de filtration des autres contaminants ont été validées par un laboratoire indépendant —<a href=\"https://cdn.shopify.com/s/files/1/2644/2852/files/Phoenix_gravity_contaminants_lab_report_USA_Aug2024.pdf?v=1724757203\" target=\"_tab\">Consultez le rapport complet</a>.\n  </p>",
+        "custom_css": ".marquee-qualification {\n      margin: 6px 12px 0;\n      color: #555;\n      font-size: 17px;\n      line-height: 1.4;\n      text-align: center;\n    }\n\n    .marquee-qualification a {\n      color: inherit;\n      font-weight: 600;\n      text-decoration: underline;\n      text-underline-offset: 2px;\n    }",
+        "custom_js": ""
+      }
+    },
     "custom_html_zXVJJA": {
       "type": "custom-html",
       "name": "Custom Embed Video",
@@ -1129,6 +1138,7 @@
     "custom_nice_product_FCRzcG",
     "accordion_dWmDiL",
     "icon_marquee_rDWxXz",
+    "custom_code_section_T4KTVH",
     "custom_html_zXVJJA",
     "secondary_details_qTHLFy",
     "video_image_Vm8h49",
