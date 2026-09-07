@@ -11,6 +11,7 @@
   "sections": {
     "product_hero_og_alt_gReXNE": {
       "type": "custom-accessories",
+      "disabled": true,
       "custom_css": [
         "#vitals-end-section {max-width: 1200px; display: none; width: 100%; margin: 0 auto;}"
       ],
@@ -18,6 +19,132 @@
         "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
         "countdown_time": "",
         "countdown_products": []
+      }
+    },
+    "custom_nice_product_Deybwy": {
+      "type": "custom-nice-product",
+      "blocks": {
+        "image_gallery_FHqeQF": {
+          "type": "image_gallery",
+          "settings": {
+            "hide_variants": false
+          }
+        },
+        "comparison_table_a9RHLV": {
+          "type": "comparison_table",
+          "disabled": true,
+          "settings": {
+            "col1_title": "Phoenix Gravity",
+            "col2_title": "Filtres RO",
+            "col3_title": "Filtres pour cruches",
+            "feature_1": "Eaux us?es",
+            "col1_row_1": "Pas de gaspillage ?",
+            "col2_row_1": "D?bit ?lev? ?",
+            "col3_row_1": "Pas de gaspillage ?",
+            "feature_2": "Min?raux conserv?s",
+            "col1_row_2": "Conserver les min?raux essentiels ?",
+            "col2_row_2": "?limine tous les min?raux ?",
+            "col3_row_2": "Conserve certains min?raux ?",
+            "feature_3": "Fr?quence d'entretien",
+            "col1_row_3": "Faible (12 mois) ?",
+            "col2_row_3": "?lev? (tous les 3 ? 6 mois) ?",
+            "col3_row_3": "Tr?s ?lev? (1-2 mois) ?",
+            "feature_4": "Rapport co?t-efficacit?",
+            "col1_row_4": "Co?t abordable ?",
+            "col2_row_4": "Co?t annual ?lev? ?",
+            "col3_row_4": "Remplacement fr?quent du filtre ?",
+            "feature_5": "Besoins en ?lectricit?",
+            "col1_row_5": "Pas besoin d'?lectricit? ?",
+            "col2_row_5": "N?cessite de l'?lectricit? ?",
+            "col3_row_5": "Pas besoin d'?lectricit? ?",
+            "feature_6": "Mat?riau Qualit?",
+            "col1_row_6": "Acier inoxydable 304 ?",
+            "col2_row_6": "Variable (souvent le mat?riau standard) ?",
+            "col3_row_6": "Plastique ? faible gradation ?",
+            "feature_7": "Garantie",
+            "col1_row_7": "10 ans ?",
+            "col2_row_7": "6?12 mois ?",
+            "col3_row_7": "Pas de garantie ?",
+            "feature_8": "",
+            "col1_row_8": "",
+            "col2_row_8": "",
+            "col3_row_8": ""
+          }
+        },
+        "countdown_y8qWrz": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {}
+        },
+        "badge_tjtLRV": {
+          "type": "badge",
+          "settings": {
+            "badge_text": "VENTE D'ETE"
+          }
+        },
+        "title_zaPUqQ": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating_JTh8QH": {
+          "type": "rating",
+          "settings": {}
+        },
+        "description_37bGDd": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker_UNwN4d": {
+          "type": "variant_picker",
+          "settings": {}
+        },
+        "price_TakQEx": {
+          "type": "price",
+          "settings": {}
+        },
+        "add_to_cart_xdKdLq": {
+          "type": "add_to_cart",
+          "settings": {}
+        },
+        "payment_icons_YE4LRt": {
+          "type": "payment_icons",
+          "settings": {}
+        },
+        "trust_badges_CMC7WB": {
+          "type": "trust_badges",
+          "settings": {
+            "text_color": "#315879",
+            "icon_size": 34,
+            "badge_1_text": "LIVRAISON GRATUITE DANS TOUTE L'EUROPE",
+            "badge_2_text": "ESSAI DE 100 JOURS",
+            "badge_3_text": "GARANTIE DE 10 ANS",
+            "badge_4_text": "SUPPORT CLIENT",
+            "badge_5_text": "EXP?DITION DEPUIS UN ENTREP?T BAS? EN FRANCE",
+            "badge_6_text": "CERTIFI? NSF 372, ANSI 42"
+          }
+        }
+      },
+      "block_order": [
+        "image_gallery_FHqeQF",
+        "comparison_table_a9RHLV",
+        "countdown_y8qWrz",
+        "badge_tjtLRV",
+        "title_zaPUqQ",
+        "rating_JTh8QH",
+        "description_37bGDd",
+        "variant_picker_UNwN4d",
+        "price_TakQEx",
+        "add_to_cart_xdKdLq",
+        "payment_icons_YE4LRt",
+        "trust_badges_CMC7WB"
+      ],
+      "name": "New Product Section",
+      "settings": {
+        "countdown_text": "",
+        "countdown_time": "",
+        "countdown_products": [],
+        "preselected_variant": "",
+        "size_guide_product_handles": "span.pdp-price__current.appstle_subscription_final_price {\n   font-size: 2.75rem !important;\n}"
       }
     },
     "9600faf5-31b8-4d01-817d-b44b276a1d60": {
@@ -40,8 +167,8 @@
         "text_GhEMzA": {
           "type": "text",
           "settings": {
-            "question": "Spécifications techniques et certifications",
-            "answer": "<ul><li>Capacité du système – 0.9 litre</li><li>Dimensions – Hauteur : 36 cm, Largeur : 8.9 cm</li><li>Durée de vie du filtre – Jusqu'à 4 000 litres</li></ul>"
+            "question": "Spécifications techniques",
+            "answer": "<ul><li>Capacité du système – 1 litre</li><li>Dimensions – Hauteur : 36 cm, Largeur : 8.9 cm</li><li>Durée de vie du filtre – Jusqu'à 4 000 litres</li></ul>"
           }
         }
       },
@@ -169,8 +296,310 @@
         "is_posttreat": false
       }
     },
+    "blocks_XXAw8K": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_tExH8r": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/01.png",
+            "mobile_image": "shopify://shop_images/01_9e43ab7b-dca8-4d53-9840-bdcc56b1ab8a.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_tExH8r"
+      ],
+      "settings": {}
+    },
+    "blocks_LJhXtd": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_MRWr8W": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/02.png",
+            "mobile_image": "shopify://shop_images/02_788776b5-8b16-4a85-8fd8-ad2efee71b3c.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_MRWr8W"
+      ],
+      "settings": {}
+    },
+    "blocks_CnEf6Y": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_mAE9Dn": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/03_1.png",
+            "mobile_image": "shopify://shop_images/03_efc556c2-1080-4ba8-9ab6-e51d53e2aa8d.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_mAE9Dn"
+      ],
+      "settings": {}
+    },
+    "blocks_eNEPkY": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_HNtP7J": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/05.png",
+            "mobile_image": "shopify://shop_images/05_f0d7af89-5eb9-4e48-a526-f160072af952.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_HNtP7J"
+      ],
+      "settings": {}
+    },
+    "blocks_mAM69D": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_bD3eqq": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/06.png",
+            "mobile_image": "shopify://shop_images/06_8e93ffda-326a-406a-84e9-79e6c1400081.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_bD3eqq"
+      ],
+      "settings": {}
+    },
+    "blocks_aWCbAJ": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_tmxm4J": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/07.png",
+            "mobile_image": "shopify://shop_images/07_d660457b-dd60-4fd8-a75c-c17c4c114a3b.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_tmxm4J"
+      ],
+      "settings": {}
+    },
+    "blocks_hHFRzV": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_14d1675_XPAX8J": {
+          "type": "ai_gen_block_14d1675",
+          "settings": {
+            "desktop_image": "shopify://shop_images/08.png",
+            "mobile_image": "shopify://shop_images/08_ec0759c9-0daf-4581-a0b9-25186fca4ada.png",
+            "heading": "",
+            "subheading": "",
+            "button_text": "",
+            "button_link": "",
+            "section_width_desktop": 1450,
+            "section_height_desktop": 600,
+            "section_width_mobile": 400,
+            "section_height_mobile": 300,
+            "text_color": "#ffffff",
+            "heading_size": 48,
+            "subheading_size": 18,
+            "enable_overlay": false,
+            "overlay_color": "rgba(0,0,0,0)",
+            "overlay_opacity": 0,
+            "button_bg_color": "#000000",
+            "button_text_color": "#ffffff",
+            "button_hover_bg_color": "#333333",
+            "button_hover_text_color": "#ffffff",
+            "button_font_size": 16,
+            "button_padding_vertical": 14,
+            "button_padding_horizontal": 32,
+            "button_border_radius": 4,
+            "enable_rounded_corners": false,
+            "corner_radius": 8,
+            "enable_shadow": false,
+            "custom_css": ""
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_14d1675_XPAX8J"
+      ],
+      "settings": {}
+    },
     "custom_html_eqYJTa": {
       "type": "custom-html",
+      "disabled": true,
       "custom_css": [
         "/* Ensure the wistia player fills its container */wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none;}"
       ],
@@ -179,34 +608,9 @@
         "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
       }
     },
-    "video_image_DJWQnw": {
-      "type": "video-image",
-      "blocks": {
-        "text_NXBNaV": {
-          "type": "text",
-          "settings": {
-            "video_id": ""
-          }
-        },
-        "text_TytJEt": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "video_id": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_NXBNaV",
-        "text_TytJEt"
-      ],
-      "disabled": true,
-      "settings": {
-        "is_posttreat": false
-      }
-    },
     "secondary_details_qTHLFy": {
       "type": "secondary-details",
+      "disabled": true,
       "custom_css": [],
       "settings": {
         "style": "bg-white",
@@ -218,193 +622,9 @@
         "custom_id": ""
       }
     },
-    "product_feature_ckk7jj": {
-      "type": "product-feature",
-      "blocks": {
-        "text_W8yFr3": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Avec le système complet, vous pouvez toujours avoir vos remplacements prêts."
-          }
-        },
-        "text_nNPPfk": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Une eau potable sûre et savoureuse tous les jours de l’année."
-          }
-        },
-        "text_PhRqiE": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Idéal pour les maisons, les appartements, les bureaux et les camping-cars."
-          }
-        },
-        "text_WG3dke": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Élimine 99,9 % des toxines et des métaux lourds de votre eau."
-          }
-        },
-        "text_wrVk3K": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "feature_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_W8yFr3",
-        "text_nNPPfk",
-        "text_PhRqiE",
-        "text_WG3dke",
-        "text_wrVk3K"
-      ],
-      "disabled": true,
-      "settings": {
-        "style": "bg-light",
-        "heading": "Profitez d'une eau potable saine et délicieuse tous les jours de l'année",
-        "content": "<p>Le procédé de filtration par Phoenix Gravity imite la nature et préserve l'oxygène et les minéraux, ce qui confère à notre eau une fraîcheur printanière et un goût sain incomparable. Aidez les familles à éliminer 99,9 % des toxines nocives et à boire une eau saine et délicieuse toute l'année !</p>",
-        "column_img": "shopify://shop_images/filter_bg.webp",
-        "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
-        "buttontext": "AJOUTER AU PANIER",
-        "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
-        "custom_id": "",
-        "custom_class": ""
-      }
-    },
-    "e7fc5ca3-7826-4ae3-8fda-deda4cc2fcf9": {
-      "type": "copy-image",
-      "blocks": {
-        "text_Hh7Mbt": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Garantie de 10 ans sur le système de filtration"
-          }
-        },
-        "text_gLW6xT": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Filtre jusqu'à 12 mois d'eau avant remplacement"
-          }
-        }
-      },
-      "block_order": [
-        "text_Hh7Mbt",
-        "text_gLW6xT"
-      ],
-      "disabled": true,
-      "name": "10 Yr Warranty & 12 months Replacement",
-      "settings": {
-        "style": "bg-white",
-        "layout": "copy",
-        "vertical_align": "align-items-center",
-        "heading": "Conçu pour durer en utilisant des matériaux de première qualité",
-        "content": "<p>La plupart des filtres sont en plastique, ce qui peut libérer des produits chimiques nocifs dans votre eau potable. Nous utilisons plutôt un système de filtration au charbon naturel chauffé au four, provenant du sud de l'Espagne, ainsi que du charbon actif granulaire issu de coques de noix de coco naturelles, pour éliminer les impuretés et les métaux lourds comme le plomb et le zinc. Cette filtration naturelle avancée est protégée par de l'acier inoxydable AISI 304 de qualité alimentaire. Résultat : un système de filtration raffiné et durable qui garantit une eau potable pure et limpide pendant des années.<br/><br/></p>",
-        "video_id": "",
-        "large_image": "img-standard",
-        "second_content": "",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "custom_id": "",
-        "custom_class": "",
-        "bg_image_style": "contain",
-        "section_randoimg_position": "top"
-      }
-    },
-    "custom_code_section_kFnpWQ": {
-      "type": "custom-code-section",
-      "disabled": true,
-      "name": "10 year Warranty Strip",
-      "settings": {
-        "custom_html": "<div class=\"warranty-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/2644/2852/files/10_years_1.png?v=1758890447\" alt=\"10-year warranty icon\">\n  <span>Garantie de 10 ans</span>\n</div>",
-        "custom_css": ".warranty-section {\n      background-color: #f5f3f1; /* same pink background */\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      padding: 20px;\n      gap: 10px;\nmargin-bottom: 30px;\n    }\n\n    .warranty-section img {\n      width: 50px; /* adjust size of icon */\n      height: auto;\n    }\n\n    .warranty-section span {\n      font-size: 30px;\n      font-weight: bold;\n      color: #153a5b; /* dark text */\n    }",
-        "custom_js": "console.log('Custom section loaded');"
-      }
-    },
-    "secondary_details_qhCfY7": {
-      "type": "secondary-details",
-      "disabled": true,
-      "name": "Secondary Details",
-      "settings": {
-        "style": "bg-white",
-        "heading": "Élimine > 95 % du fluorure et de l'arsenic grâce à un système de filtration unique en son genre",
-        "content": "<p>La communauté scientifique s'inquiète de plus en plus des risques potentiels d'un excès de fluorure, qui peut être toxique pour le cerveau et même augmenter le risque de développer un cancer rare, l'ostéosarcome*.</p><p>Conçu pour compléter notre système de filtration par gravité, nos scientifiques ont créé un système unique de filtration du fluorure qui élimine plus de 95 % du fluorure de l'eau potable tout en préservant les nutriments essentiels.</p><p>Fabriqués en acier inoxydable AISI 304 résistant à la rouille, les éléments filtrants POSTreat pour l'élimination du fluorure et de l'arsenic ne libèrent pas de polyuréthane ni de microplastiques dans l'eau, contrairement à d'autres systèmes de filtration. Conçus pour résister à un usage quotidien, ils nécessitent un simple remplissage du média filtrant exclusif tous les 4 mois ou jusqu'à 4 200 litres. C'est le système d'élimination du fluorure le plus efficace et le plus durable du marché, contribuant à un mode de vie sain.</p>",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "custom_id": ""
-      }
-    },
-    "custom_html_VVVwEw": {
-      "type": "custom-html",
-      "disabled": true,
-      "custom_css": [
-        "wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none;}"
-      ],
-      "name": "Custom Embed Video",
-      "settings": {
-        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/c3cghpaqz1.js\" async type=\"module\"></script><style>wistia-player[media-id='c3cghpaqz1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c3cghpaqz1/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"c3cghpaqz1\" aspect=\"1.7777777777777777\"></wistia-player>"
-      }
-    },
-    "d978efab-7803-45c3-a62d-eea1576f94a8": {
-      "type": "copy-image",
-      "blocks": {
-        "text_HMm4Qe": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Économisez des milliers d'euros sur des bouteilles ou un système à domicile"
-          }
-        },
-        "text_KdKK6F": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Moins de 8 centimes euros par litre"
-          }
-        },
-        "text_6KYr33": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Aucune plomberie requise"
-          }
-        },
-        "text_wfXFK6": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Portable pour que vous puissiez l'emporter partout !"
-          }
-        }
-      },
-      "block_order": [
-        "text_HMm4Qe",
-        "text_KdKK6F",
-        "text_6KYr33",
-        "text_wfXFK6"
-      ],
-      "disabled": true,
-      "name": "Savings on water",
-      "settings": {
-        "style": "bg-white",
-        "layout": "copy-image-copy",
-        "vertical_align": "align-items-center",
-        "heading": "Économisez des milliers d'euros sur l'eau en bouteille ou un système pour toute la maison",
-        "content": "<p>L'eau en bouteille est peut-être propre, mais elle est aussi coûteuse. Elle vous coûtera plus de 1 000 € par an, générera des déchets, nuira à l'environnement, et prendra énormément de place chez vous.</p><p>Vous pourriez envisager d'installer un système de filtration intégré, mais ces derniers sont chers aussi : l'investissement initial est substantiel, sans compter les frais récurrents d'entretien et de réparations. De plus, il est impossible de l'emporter si vous êtes locataire ou décidez de déménager.</p><p>Les Filtres à Eau par Gravité Phoenix Gravity sont une solution beaucoup plus pratique et abordable, tout en vous donnant accès, chaque jour, à une eau filtrée délicieuse !</p>",
-        "video_id": "",
-        "img_width": 0,
-        "large_image": "img-standard",
-        "second_content": "",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "custom_id": "",
-        "custom_class": "",
-        "bg_image_style": "contain",
-        "section_randoimg_position": "bottom"
-      }
-    },
     "copy_image_qBzGAT": {
       "type": "copy-image",
+      "disabled": true,
       "settings": {
         "style": "bg-light",
         "layout": "image-copy",
@@ -426,6 +646,7 @@
     },
     "copy_image_pWyWak": {
       "type": "copy-image",
+      "disabled": true,
       "settings": {
         "style": "bg-white",
         "layout": "copy",
@@ -446,6 +667,7 @@
     },
     "video_image_iLjpka": {
       "type": "video-image",
+      "disabled": true,
       "settings": {
         "is_posttreat": false
       }
@@ -535,6 +757,7 @@
         "text_VbAUDk",
         "text_U7Yanr"
       ],
+      "disabled": true,
       "settings": {
         "heading": "La façon la plus pratique et abordable de profiter d'une eau potable pure et propre chez vous",
         "number_of_comparisons": "3",
@@ -597,6 +820,7 @@
         "text_3tkb76",
         "text_HrU9ae"
       ],
+      "disabled": true,
       "settings": {
         "layout": "style-1",
         "heading": "Nous faisons confiance à nos filtres à eau depuis plus de 50 ans",
@@ -675,6 +899,7 @@
         "text_bA9cTL",
         "text_b79geA"
       ],
+      "disabled": true,
       "settings": {
         "style": "light-cards",
         "heading": "Il n’a jamais été aussi facile de profiter d’une eau potable saine et délicieuse tous les jours de l’année !",
@@ -685,80 +910,6 @@
         "afterbutton": "",
         "custom_id": "",
         "custom_class": ""
-      }
-    },
-    "video_image_z693Qz": {
-      "type": "video-image",
-      "blocks": {
-        "text_UVMJ6W": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "video_id": "",
-            "banner_image": "shopify://shop_images/water-filter-eCom1.png"
-          }
-        },
-        "text_CKeELp": {
-          "type": "text",
-          "settings": {
-            "video_id": "",
-            "banner_image": "shopify://shop_images/water-filter-eCom2.jpg"
-          }
-        },
-        "text_GAE8HA": {
-          "type": "text",
-          "settings": {
-            "video_id": "",
-            "banner_image": "shopify://shop_images/water-filter-eCom3.png"
-          }
-        },
-        "text_CKky6b": {
-          "type": "text",
-          "settings": {
-            "video_id": "",
-            "banner_image": "shopify://shop_images/water-filter-eCom4.png"
-          }
-        },
-        "text_6RBiAj": {
-          "type": "text",
-          "settings": {
-            "video_id": "",
-            "banner_image": "shopify://shop_images/water-filter-eCom_5.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "text_UVMJ6W",
-        "text_CKeELp",
-        "text_GAE8HA",
-        "text_CKky6b",
-        "text_6RBiAj"
-      ],
-      "disabled": true,
-      "settings": {
-        "is_posttreat": false
-      }
-    },
-    "copy_image_JCKnek": {
-      "type": "copy-image",
-      "disabled": true,
-      "settings": {
-        "style": "bg-white",
-        "layout": "copy",
-        "vertical_align": "align-items-center",
-        "heading": "Essai gratuit de 100 jours",
-        "content": "<p>Vous craignez que le filtre à eau Phoenix par gravité soit trop beau pour être vrai ? Vous n'êtes pas convaincu qu'il élimine autant de contaminants que promis ?</p><p>Nous garantissons notre produit à 100 % : vous pouvez donc l'essayer chez vous pendant 100 jours, sans risque. Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, renvoyez-la dans les 100 jours pour un remboursement complet, sans justification !</p><p>*Conditions générales applicables.</p>",
-        "column_img": "shopify://shop_images/phoenix-guarantee.v1_copy_1.webp",
-        "video_id": "",
-        "large_image": "img-standard",
-        "second_content": "",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "custom_id": "",
-        "custom_class": "",
-        "bg_image_style": "contain",
-        "section_randoimg_position": "top"
       }
     },
     "product_reviews_J4aYbK": {
@@ -1140,26 +1291,25 @@
   },
   "order": [
     "product_hero_og_alt_gReXNE",
+    "custom_nice_product_Deybwy",
     "9600faf5-31b8-4d01-817d-b44b276a1d60",
     "icon-marquee",
     "video_image_VzAYqM",
+    "blocks_XXAw8K",
+    "blocks_LJhXtd",
+    "blocks_CnEf6Y",
+    "blocks_eNEPkY",
+    "blocks_mAM69D",
+    "blocks_aWCbAJ",
+    "blocks_hHFRzV",
     "custom_html_eqYJTa",
-    "video_image_DJWQnw",
     "secondary_details_qTHLFy",
-    "product_feature_ckk7jj",
-    "e7fc5ca3-7826-4ae3-8fda-deda4cc2fcf9",
-    "custom_code_section_kFnpWQ",
-    "secondary_details_qhCfY7",
-    "custom_html_VVVwEw",
-    "d978efab-7803-45c3-a62d-eea1576f94a8",
     "copy_image_qBzGAT",
     "copy_image_pWyWak",
     "video_image_iLjpka",
     "4f7dacc7-7ed5-4167-a5d6-1a4a8160213c",
     "testimonials_Wxzw4P",
     "cards_pUAXFa",
-    "video_image_z693Qz",
-    "copy_image_JCKnek",
     "product_reviews_J4aYbK",
     "accordion_tabs_kBhDkz",
     "gallery_9QfaL3"

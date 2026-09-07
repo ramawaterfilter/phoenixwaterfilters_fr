@@ -298,6 +298,8 @@
         "text_FzHtRU",
         "text_iANgn3"
       ],
+      "disabled": true,
+      "name": "Product Feature (Enjoy healthy water)",
       "settings": {
         "style": "bg-light",
         "heading": "Profitez d'une eau potable saine et délicieuse tous les jours de l'année",
@@ -330,6 +332,8 @@
         "text_eVLyQA",
         "text_pQk9ka"
       ],
+      "disabled": true,
+      "name": "Designed to last Section",
       "settings": {
         "style": "bg-white",
         "layout": "copy",

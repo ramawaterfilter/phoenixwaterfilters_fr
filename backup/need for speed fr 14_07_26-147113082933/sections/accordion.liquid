@@ -1,8 +1,16 @@
 {% assign description = product.metafields.custom.product_description %}
-{% assign specifications = product.metafields.custom.technical_specifications_certifications %}
+{% assign specifications = product.metafields.custom.technical_specifications %}
+{% assign specifications_contains_html = true %}
+{% if specifications == blank %}
+  {% assign specifications = product.metafields.custom.technical_specifications_certifications %}
+  {% assign specifications_contains_html = false %}
+{% endif %}
 {% assign has_variant_specifications = false %}
 {% for product_variant in product.variants %}
-  {% if product_variant.metafields.custom.technical_specifications_certifications != blank %}
+  {% if product_variant.metafields.custom.technical_specifications != blank
+    or product_variant.metafields.custom.technical_specifications_certifications != blank
+    or product_variant.metafields.custom.single_image != blank
+  %}
     {% assign has_variant_specifications = true %}
     {% break %}
   {% endif %}
@@ -2374,24 +2382,50 @@ document.addEventListener('DOMContentLoaded', function() {
                 <div class="accordion-item__inner">
                   {% if has_variant_specifications %}
                     {% for product_variant in product.variants %}
-                      {% assign variant_specifications = product_variant.metafields.custom.technical_specifications_certifications %}
+                      {% assign variant_specifications = product_variant.metafields.custom.technical_specifications %}
+                      {% assign variant_specifications_contains_html = true %}
+                      {% if variant_specifications == blank %}
+                        {% assign variant_specifications = product_variant.metafields.custom.technical_specifications_certifications %}
+                        {% assign variant_specifications_contains_html = false %}
+                      {% endif %}
+                      {% assign variant_specification_image = product_variant.metafields.custom.single_image.value %}
                       {% if variant_specifications == blank %}
                         {% assign variant_specifications = specifications %}
+                        {% assign variant_specifications_contains_html = specifications_contains_html %}
                       {% endif %}
                       <div
                         data-variant-specifications-panel
                         data-variant-id="{{ product_variant.id }}"
+                        class="variant-specifications-panel{% if variant_specifications != blank and variant_specification_image != blank %} variant-specifications-panel--split{% endif %}"
                         {% unless product_variant.id == product.selected_or_first_available_variant.id %}
                           hidden
                         {% endunless %}
                       >
                         {% if variant_specifications != blank %}
-                          {{ variant_specifications | metafield_tag }}
+                          <div class="variant-specifications-panel__content">
+                            {% if variant_specifications_contains_html %}
+                              {{ variant_specifications.value }}
+                            {% else %}
+                              {{ variant_specifications | metafield_tag }}
+                            {% endif %}
+                          </div>
+                        {% endif %}
+                        {% if variant_specification_image != blank %}
+                          <div class="variant-specifications-panel__image">
+                            {{ variant_specification_image
+                              | image_url: width: 1600
+                              | image_tag: loading: 'lazy', widths: '240, 360, 480, 720, 960'
+                            }}
+                          </div>
                         {% endif %}
                       </div>
                     {% endfor %}
                   {% else %}
-                    {{ specifications | metafield_tag }}
+                    {% if specifications_contains_html %}
+                      {{ specifications.value }}
+                    {% else %}
+                      {{ specifications | metafield_tag }}
+                    {% endif %}
                   {% endif %}
                 </div>
               </dd>
@@ -2693,8 +2727,36 @@ document.addEventListener('DOMContentLoaded', function() {
     border-radius: 0;
   }
 
+  [data-variant-specifications] .variant-specifications-panel--split {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+    align-items: center;
+    gap: 32px;
+  }
+
+  [data-variant-specifications] .variant-specifications-panel__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  [data-variant-specifications] .variant-specifications-panel__image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+  }
+
   /* Responsive layout */
   @media (max-width: 768px) {
+    [data-variant-specifications] .variant-specifications-panel--split {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    [data-variant-specifications] .variant-specifications-panel__image img {
+      width: 75%;
+      max-width: 260px;
+    }
+
     .tech-accordion {
       flex-direction: column;
     }
