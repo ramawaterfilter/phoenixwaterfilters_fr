@@ -1,4 +1,13 @@
-<div class="{{ section.settings.custom_class }}" id="{{ section.settings.custom_id }}">
+<variant-visibility-scope current-variant-id="{{ product.selected_or_first_available_variant.id }}">
+  <div
+    class="{{ section.settings.custom_class }}"
+    id="{{ section.settings.custom_id }}"
+    data-variant-visibility-item
+    {% if section.settings.variant_ids != blank %}
+      data-variant-visibility-ids="{{ section.settings.variant_ids | escape }}"
+      hidden
+    {% endif %}
+  >
   <div class="background-image-container {{ section.settings.style }}"></div>
   <div class="container">
     <div class="row justify-content-center mb-5">
@@ -47,10 +56,10 @@
                     {% if block.settings.column_1 == 'yes' %}<img
                         src="{{ 'icon-table-yes.svg' | asset_url }}"
                         loading="lazy" alt="Phoenix Gravity Water Filter"
-                        class="icon" />{% else %}<img
+                        class="icon" width="30" height="30" />{% else %}<img
                         src="{{ 'icon-table-no.svg' | asset_url }}" alt="Phoenix Gravity Water Filter"
                         loading="lazy"
-                        class="icon smaller" />{% endif %}
+                        class="icon smaller" width="22" height="21" />{% endif %}
                   </p>
                 </td>
                 <td class="text-center text-capitalize">
@@ -58,10 +67,10 @@
                     {% if block.settings.column_2 == 'yes' %}<img
                         src="{{ 'icon-table-yes.svg' | asset_url }}"
                         loading="lazy" alt="Phoenix Gravity Water Filter"
-                        class="icon" />{% else %}<img
+                        class="icon" width="30" height="30" />{% else %}<img
                         src="{{ 'icon-table-no.svg' | asset_url }}"
                         loading="lazy" alt="Phoenix Gravity Water Filter"
-                        class="icon smaller" />{% endif %}
+                        class="icon smaller" width="22" height="21" />{% endif %}
                   </p>
                 </td>
                 {% if section.settings.number_of_comparisons != "1" %}
@@ -70,10 +79,10 @@
                       {% if block.settings.column_3 == 'yes' %}<img
                           src="{{ 'icon-table-yes.svg' | asset_url }}"
                           loading="lazy" alt="Phoenix Gravity Water Filter"
-                          class="icon" />{% else %}<img
+                          class="icon" width="30" height="30" />{% else %}<img
                           src="{{ 'icon-table-no.svg' | asset_url }}"
                           loading="lazy" alt="Phoenix Gravity Water Filter"
-                          class="icon smaller" />{% endif %}
+                          class="icon smaller" width="22" height="21" />{% endif %}
                     </p>
                   </td>
                 {% endif %}
@@ -83,10 +92,10 @@
                       {% if block.settings.column_4 == 'yes' %}<img
                           src="{{ 'icon-table-yes.svg' | asset_url }}"
                           loading="lazy" alt="Phoenix Gravity Water Filter"
-                          class="icon" />{% else %}<img
+                          class="icon" width="30" height="30" />{% else %}<img
                           src="{{ 'icon-table-no.svg' | asset_url }}"
                           loading="lazy" alt="Phoenix Gravity Water Filter"
-                          class="icon smaller" />{% endif %}
+                          class="icon smaller" width="22" height="21" />{% endif %}
                     </p>
                   </td>
                 {% endif %}
@@ -108,6 +117,8 @@
     {% endif %}
   </div>
 </div>
+  </variant-visibility-scope>
+  <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
 
 {% schema %}
   {
@@ -197,6 +208,15 @@
         "type": "text",
         "id": "afterbutton",
         "label": "After Button Text"
+      }, {
+        "type": "header",
+        "content": "Variant Visibility",
+        "info": "Show this section only for the selected variant IDs"
+      }, {
+        "type": "textarea",
+        "id": "variant_ids",
+        "label": "Show only for these variant IDs",
+        "info": "Comma-separated, e.g. 123456,789012. Leave empty to always show"
       }, {
         "type": "header",
         "content": "Custom Code",

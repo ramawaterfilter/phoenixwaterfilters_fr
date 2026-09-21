@@ -1,7 +1,16 @@
 {% assign product_feature_title = product.metafields.custom.product_feature_title %}
 {% assign product_feature_contents = product.metafields.custom.featured_contents | metafield_tag %}
 
-<div class="{{ section.settings.custom_class }} layout-copy-image" id="{{ section.settings.custom_id }}">
+<variant-visibility-scope current-variant-id="{{ product.selected_or_first_available_variant.id }}">
+  <div
+    class="{{ section.settings.custom_class }} layout-copy-image"
+    id="{{ section.settings.custom_id }}"
+    data-variant-visibility-item
+    {% if section.settings.variant_ids != blank %}
+      data-variant-visibility-ids="{{ section.settings.variant_ids | escape }}"
+      hidden
+    {% endif %}
+  >
 
   {% assign col_one_class = 'col-11 col-lg-4 order-1 order-lg-2  mo-pad' %}
   {% assign col_two_class = 'col-11 col-lg-8 order-2 order-lg-1 copy-col mo-pad' %}
@@ -23,9 +32,8 @@
           <img
             src="{{ section.settings.column_img | image_url: width: 1920 }}"
             class="{{ img_classes }}" alt="Phoenix Gravity Water Filter"
-            {% if section.settings.img_width %}
-            width="{{ section.settings.img_width }}"
-            {% endif %}
+            width="{{ section.settings.column_img.width }}"
+            height="{{ section.settings.column_img.height }}"
             loading="lazy" />
 
         {% endif %}
@@ -70,6 +78,7 @@
                   <img
                     src="{{ 'icon-features-tick.svg' | asset_url }}"
                     class="img-fluid feature-icon  me-3" alt="Phoenix Gravity Water Filter"
+                    width="64" height="64"
                     loading="lazy" />
 
                 {% endif %}
@@ -92,7 +101,9 @@
     </div>
 
   </div>
-</div>
+  </div>
+  </variant-visibility-scope>
+  <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
 
 {% schema %}
   {
@@ -149,6 +160,15 @@
         "type": "text",
         "id": "afterbutton",
         "label": "After Button Text"
+      }, {
+        "type": "header",
+        "content": "Variant Visibility",
+        "info": "Show this section only for the selected variant IDs"
+      }, {
+        "type": "textarea",
+        "id": "variant_ids",
+        "label": "Show only for these variant IDs",
+        "info": "Comma-separated, e.g. 123456,789012. Leave empty to always show"
       }, {
         "type": "header",
         "content": "Custom Code",

@@ -8,6 +8,29 @@
       "id": "embed_code",
       "label": "Embed Code",
       "info": "Paste your full Wistia/YouTube/Vimeo embed code here"
+    },
+    {
+      "type": "range",
+      "id": "section_height",
+      "min": 30,
+      "max": 56,
+      "step": 1,
+      "unit": "%",
+      "label": "Section height",
+      "default": 43
+    },
+    {
+      "type": "checkbox",
+      "id": "product_pages_only",
+      "label": "Only show on product pages",
+      "default": true,
+      "info": "Uncheck to allow this section on any page type"
+    },
+    {
+      "type": "textarea",
+      "id": "variant_ids",
+      "label": "Show only for these variant IDs",
+      "info": "Comma-separated, e.g. 123456,789012. Leave empty to always show on product pages"
     }
   ],
   "presets": [
@@ -18,31 +41,45 @@
 }
 {% endschema %}
 
-<div class="custom-embed-video-container">
-  <div class="responsive-embed-wrapper">
-    {{ section.settings.embed_code }}
-  </div>
-</div>
+{% if template.name == 'product' or section.settings.product_pages_only == false %}
+  <variant-visibility-scope current-variant-id="{{ product.selected_or_first_available_variant.id }}">
+    <div
+      class="custom-embed-video-container"
+      data-variant-visibility-item
+      {% if section.settings.variant_ids != blank %}
+        data-variant-visibility-ids="{{ section.settings.variant_ids | escape }}"
+        hidden
+      {% endif %}
+    >
+      <div class="responsive-embed-wrapper">
+        {{ section.settings.embed_code }}
+      </div>
+    </div>
+  </variant-visibility-scope>
+  <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
+{% endif %}
 
 <style>
-.custom-embed-video-container {
-  max-width: 100%;
+#shopify-section-{{ section.id }} .custom-embed-video-container {
+  width: 100%;
   margin: 0 auto;
-  padding:0px;
+  padding: 0;
 }
-.responsive-embed-wrapper {
+#shopify-section-{{ section.id }} .responsive-embed-wrapper {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  padding-bottom: {{ section.settings.section_height }}%;
   height: 0;
   overflow: hidden;
 }
-.responsive-embed-wrapper iframe,
-.responsive-embed-wrapper wistia-player,
-.responsive-embed-wrapper .wistia_responsive_wrapper {
+#shopify-section-{{ section.id }} .responsive-embed-wrapper iframe,
+#shopify-section-{{ section.id }} .responsive-embed-wrapper wistia-player,
+#shopify-section-{{ section.id }} .responsive-embed-wrapper .wistia_responsive_wrapper {
   position: absolute !important;
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100% !important;
-  height: 100% !important;
+  height: auto !important;
+  aspect-ratio: 16 / 9;
+  transform: translateY(-50%);
 }
 </style>

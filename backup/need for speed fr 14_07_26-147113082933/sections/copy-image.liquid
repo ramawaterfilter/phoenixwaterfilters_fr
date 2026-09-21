@@ -1,4 +1,13 @@
-<div class="{{ section.settings.custom_class }} layout-{{ section.settings.layout }}" id="{{ section.settings.custom_id }}">
+<variant-visibility-scope current-variant-id="{{ product.selected_or_first_available_variant.id }}">
+  <div
+    class="{{ section.settings.custom_class }} layout-{{ section.settings.layout }}"
+    id="{{ section.settings.custom_id }}"
+    data-variant-visibility-item
+    {% if section.settings.variant_ids != blank %}
+      data-variant-visibility-ids="{{ section.settings.variant_ids | escape }}"
+      hidden
+    {% endif %}
+  >
 
   {% assign col_one_class = 'col-md-10 col-lg-6' %}
   {% assign col_two_class = 'col-11 col-md-10 col-lg-6 copy-col' %}
@@ -91,9 +100,8 @@
             <img
               src="{{ section.settings.column_img | image_url: width: 800 }}"
               class="{{ img_classes }} {{ animation_class }}" alt="Phoenix Gravity Water Filter"
-              {% if section.settings.img_width %}
-              width="{{ section.settings.img_width }}"
-              {% endif %}
+              width="{{ section.settings.column_img.width }}"
+              height="{{ section.settings.column_img.height }}"
               loading="lazy" />
 
               {% elsif section.settings.section_bgimg != blank and section.settings.layout == 'image-copy' %}
@@ -101,9 +109,8 @@
                  <img
               src="{{ section.settings.section_bgimg | image_url: width: 800 }}"
               class="{{ img_classes }} {{ animation_class }} d-lg-none" alt="Phoenix Gravity Water Filter"
-              {% if section.settings.img_width %}
-              width="{{ section.settings.img_width }}"
-              {% endif %}
+              width="{{ section.settings.section_bgimg.width }}"
+              height="{{ section.settings.section_bgimg.height }}"
               loading="lazy" />
 
           {% else %}
@@ -127,7 +134,7 @@
         {% if section.settings.layout == 'copy-image-copy' %}
           {% if section.settings.video_id != blank %}
             <div class="video-preview-container my-5">    
-                <script src="https://fast.wistia.com/embed/medias/{{ section.settings.video_id }}.jsonp" async></script></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ section.settings.video_id }} seo=true videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ section.settings.video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" />
+                <script src="https://fast.wistia.com/embed/medias/{{ section.settings.video_id }}.jsonp" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ section.settings.video_id }} seo=true videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/{{ section.settings.video_id }}/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" width="1280" height="720" />
                 </div></div></div></div>
               </div>
           {% endif %}
@@ -136,9 +143,8 @@
             <img
               src="{{ section.settings.column_img | image_url: width: 1920 }}"
               class="{{ img_classes }} {{ animation_class }}" alt="Phoenix Gravity Water Filter"
-              {% if section.settings.img_width > 0 %}
-              width="{{ section.settings.img_width }}"
-              {% endif %}
+              width="{{ section.settings.column_img.width }}"
+              height="{{ section.settings.column_img.height }}"
               loading="lazy" />
 
           {% else %}
@@ -162,7 +168,7 @@
                     {{ block.settings.feature_icon | image_url: width: 200 | image_tag: class: "img-fluid feature-icon  me-3", loading: "lazy" }}
                   {% else %}
                     
-                      <img src="{{ 'icon-features-tick.svg' | asset_url }}" class="img-fluid feature-icon  me-3" alt="Phoenix Gravity Water Filter" loading="lazy" />
+                      <img src="{{ 'icon-features-tick.svg' | asset_url }}" class="img-fluid feature-icon  me-3" alt="Phoenix Gravity Water Filter" width="64" height="64" loading="lazy" />
                     
                   {% endif %}
 
@@ -192,6 +198,8 @@
 
   </div>
 </div>
+  </variant-visibility-scope>
+  <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
 
 {% schema %}
   {
@@ -314,6 +322,15 @@
         "type": "text",
         "id": "afterbutton",
         "label": "After Button Text"
+      }, {
+        "type": "header",
+        "content": "Variant Visibility",
+        "info": "Show this section only for the selected variant IDs"
+      }, {
+        "type": "textarea",
+        "id": "variant_ids",
+        "label": "Show only for these variant IDs",
+        "info": "Comma-separated, e.g. 123456,789012. Leave empty to always show"
       }, {
         "type": "header",
         "content": "Custom Code",

@@ -8,7 +8,9 @@
   assign current_variant = product.selected_or_first_available_variant
   assign preselected_variant = section.settings.preselected_variant | strip
 
-  if product.selected_variant == blank and preselected_variant != blank
+  if product.selected_variant != blank
+    assign current_variant = product.selected_variant
+  elsif preselected_variant != blank
     for variant in product.variants
       assign variant_id = variant.id | append: ''
       if variant_id == preselected_variant or variant.title == preselected_variant
@@ -47,6 +49,8 @@
         flex: 0 0 50%;
         max-width: 50%;
         min-width: 0;
+        position: sticky;
+        top: 10rem;
       }
       .pdp-layout__right {
         flex: 0 0 50%;
@@ -800,7 +804,14 @@
             </div>
 
           {% when 'title' %}
-            <h1 class="pdp-title" {{ block.shopify_attributes }}>{{ product.title }}</h1>
+            {% assign variant_title = current_variant.metafields.custom.title.value | first %}
+            <h1 class="pdp-title" {{ block.shopify_attributes }}>
+              {% if variant_title != blank %}
+                {{ variant_title }}
+              {% else %}
+                {{ product.title }}
+              {% endif %}
+            </h1>
 
           {% when 'rating' %}
             <div class="pdp-rating" {{ block.shopify_attributes }}>
@@ -825,6 +836,59 @@
                 </ul>
               {% endif %}
             </div>
+
+          {% when 'custom_liquid' %}
+            <div {{ block.shopify_attributes }}>
+              {{ block.settings.custom_liquid }}
+            </div>
+
+          {% when 'four_video_carousel' %}
+            <nice-product-video-carousel
+              class="pdp-videos"
+              style="--pdp-video-desktop-width: {{ block.settings.desktop_card_width | default: 300 }}px; --pdp-video-desktop-height: {{ block.settings.desktop_card_height | default: 500 }}px; --pdp-video-mobile-width: {{ block.settings.mobile_card_width | default: 280 }}px; --pdp-video-mobile-height: {{ block.settings.mobile_card_height | default: 460 }}px; --pdp-video-fit: {{ block.settings.video_fit | default: 'contain' }};"
+              {{ block.shopify_attributes }}
+            >
+              <div class="pdp-videos__header">
+                {% if block.settings.heading != blank %}
+                  <h2 class="pdp-videos__heading">{{ block.settings.heading | escape }}</h2>
+                {% endif %}
+                <div class="pdp-videos__controls" aria-label="Navigation du carrousel">
+                  <button type="button" class="pdp-videos__arrow" data-previous aria-label="Vidéo précédente">&#8249;</button>
+                  <button type="button" class="pdp-videos__arrow" data-next aria-label="Vidéo suivante">&#8250;</button>
+                </div>
+              </div>
+              <div class="pdp-videos__viewport" data-viewport tabindex="0" aria-label="Vidéos produit">
+                <div class="pdp-videos__track">
+                  {% for index in (1..4) %}
+                    {% assign video_key = 'video_' | append: index %}
+                    {% assign card_video = block.settings[video_key] %}
+                    {% if card_video != blank %}
+                      {% assign card_title = card_video.alt | default: product.title %}
+                      <div class="pdp-videos__card" data-card>
+                        <div class="pdp-videos__media">
+                          <video class="pdp-videos__video" data-video preload="none" muted playsinline loop aria-label="{{ card_title | escape }}">
+                            {% for source in card_video.sources %}
+                              <source src="{{ source.url }}" type="{{ source.mime_type }}">
+                            {% endfor %}
+                          </video>
+                          {% if card_video.preview_image != blank %}
+                            {{ card_video.preview_image | image_url: width: 900 | image_tag: class: 'pdp-videos__poster', loading: 'lazy', widths: '300, 600, 900', sizes: '(max-width: 749px) 80vw, 300px', alt: card_title }}
+                          {% endif %}
+                          <button type="button" class="pdp-videos__play" data-play aria-label="Lire la vidéo : {{ card_title | escape }}" data-play-label="Lire la vidéo : {{ card_title | escape }}" data-pause-label="Mettre la vidéo en pause : {{ card_title | escape }}" aria-pressed="false">
+                            <span class="pdp-videos__icon-play" aria-hidden="true">&#9654;</span>
+                            <span class="pdp-videos__icon-pause" aria-hidden="true">&#10074;&#10074;</span>
+                          </button>
+                          <button type="button" class="pdp-videos__sound" data-sound aria-label="Activer le son : {{ card_title | escape }}" data-muted-label="Activer le son : {{ card_title | escape }}" data-unmuted-label="Couper le son : {{ card_title | escape }}" aria-pressed="false">
+                            <span class="pdp-videos__icon-muted" aria-hidden="true">&#128263;</span>
+                            <span class="pdp-videos__icon-unmuted" aria-hidden="true">&#128266;</span>
+                          </button>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </nice-product-video-carousel>
 
           {% when 'variant_picker' %}
             {% if product.variants.size > 1 %}
@@ -873,7 +937,7 @@
 
                           if option_kind == 'filter'
                             assign image_key = 'filter_image_' | append: forloop.index
-                            assign option_image = settings[image_key]
+                            assign option_image = block.settings[image_key] | default: settings[image_key]
                             if forloop.index == 1
                               assign fallback_image_url = 'https://cdn.shopify.com/s/files/1/0656/9898/8085/files/carbon-fr.png?v=1767765891&width=90'
                             elsif forloop.index == 2
@@ -883,7 +947,7 @@
                             assign image_key = 'size_icon_' | append: forloop.index
                             assign primary_key = 'size_for_' | append: forloop.index
                             assign secondary_key = 'size_content_' | append: forloop.index
-                            assign option_image = settings[image_key]
+                            assign option_image = block.settings[image_key] | default: settings[image_key]
                             assign primary = settings[primary_key] | default: value
                             assign secondary = settings[secondary_key]
                             case forloop.index
@@ -896,7 +960,7 @@
                             endcase
                           elsif option_kind == 'stand'
                             assign image_key = 'stand_' | append: forloop.index
-                            assign option_image = settings[image_key]
+                            assign option_image = block.settings[image_key] | default: settings[image_key]
                             case forloop.index
                               when 1
                                 assign fallback_image_url = 'https://cdn.shopify.com/s/files/1/0656/9898/8085/files/pas_de_support_3.png?v=1762956199&width=90'
@@ -1208,6 +1272,7 @@
       "variants": [{% for variant in product.variants %}{
         "id": {{ variant.id }},
         "title": {{ variant.title | json }},
+        "variant_title": {{ variant.metafields.custom.title.value.first | json }},
         "available": {{ variant.available }},
         "price": {{ variant.price }},
         "compare_at_price": {{ variant.compare_at_price | json }},
@@ -1847,6 +1912,7 @@
         var priceElement = root.querySelector('[data-price]');
         var compareElement = root.querySelector('[data-compare]');
         var stockContainer = root.querySelector('#inventory-indicator');
+        var titleElement = root.querySelector('.pdp-title');
         var addButton = root.querySelector('#product-add-to-cart');
         var lastRequestedVariantId = null;
 
@@ -2234,6 +2300,7 @@
         function updateLocalVariantState(variant) {
           var isAvailable = isVariantInStock(variant);
           var isPreorder = variant.inventory_policy === 'continue' && !isAvailable;
+          if (titleElement) titleElement.textContent = variant.variant_title || window.product.title;
 
           var priceCents = priceToCents(variant.price);
           if (priceElement && window.formatMoney) priceElement.textContent = window.formatMoney(priceCents);
@@ -2275,6 +2342,117 @@
     })();
   </script>
 {% endunless %}
+
+<style>
+  .pdp-videos { display: block; width: 100%; min-width: 0; margin: 24px 0; }
+  .pdp-videos__header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+  .pdp-videos__heading { margin: 0; color: #153a5b; font-size: 24px; line-height: 1.25; }
+  .pdp-videos__controls { display: flex; gap: 8px; }
+  .pdp-videos__arrow, .pdp-videos__play, .pdp-videos__sound { display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; color: #153a5b; background: rgba(255,255,255,.92); cursor: pointer; }
+  .pdp-videos__arrow { width: 36px; height: 36px; border: 1px solid #153a5b; font-size: 28px; line-height: 1; }
+  .pdp-videos__arrow:disabled { opacity: .35; cursor: default; }
+  .pdp-videos__viewport { width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scroll-behavior: smooth; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .pdp-videos__viewport::-webkit-scrollbar { display: none; }
+  .pdp-videos__track { display: grid; grid-auto-flow: column; grid-auto-columns: var(--pdp-video-desktop-width); gap: 14px; width: max-content; max-width: none; }
+  .pdp-videos__card { min-width: 0; scroll-snap-align: start; }
+  .pdp-videos__media { position: relative; overflow: hidden; height: var(--pdp-video-desktop-height); border-radius: 18px; background: #153a5b; }
+  .pdp-videos__video, .pdp-videos__poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: var(--pdp-video-fit); }
+  .pdp-videos__poster { z-index: 1; transition: opacity .2s ease; }
+  .pdp-videos__card.is-started .pdp-videos__poster { opacity: 0; pointer-events: none; }
+  .pdp-videos__play { position: absolute; z-index: 2; top: 50%; left: 50%; width: 50px; height: 50px; transform: translate(-50%, -50%); font-size: 20px; }
+  .pdp-videos__sound { position: absolute; z-index: 2; right: 10px; bottom: 10px; width: 38px; height: 38px; font-size: 20px; opacity: 0; pointer-events: none; }
+  .pdp-videos__card.is-playing .pdp-videos__sound { opacity: 1; pointer-events: auto; }
+  .pdp-videos__icon-pause, .pdp-videos__icon-unmuted, .pdp-videos__card.is-playing .pdp-videos__icon-play, .pdp-videos__card.is-unmuted .pdp-videos__icon-muted { display: none; }
+  .pdp-videos__card.is-playing .pdp-videos__icon-pause, .pdp-videos__card.is-unmuted .pdp-videos__icon-unmuted { display: inline; }
+  .pdp-videos__card.is-playing .pdp-videos__play:not(:focus-visible) { opacity: 0; }
+  .pdp-videos__media:hover .pdp-videos__play, .pdp-videos__play:focus-visible { opacity: 1; }
+  .pdp-videos__arrow:focus-visible, .pdp-videos__play:focus-visible, .pdp-videos__sound:focus-visible, .pdp-videos__viewport:focus-visible { outline: 3px solid #1f75fe; outline-offset: 3px; }
+  @media (max-width: 749px) { .pdp-videos__track { grid-auto-columns: min(var(--pdp-video-mobile-width), calc(100vw - 48px)); } .pdp-videos__media { height: var(--pdp-video-mobile-height); } }
+  @media (prefers-reduced-motion: reduce) { .pdp-videos__viewport { scroll-behavior: auto; } .pdp-videos__poster { transition: none; } }
+</style>
+
+<script>
+  if (!customElements.get('nice-product-video-carousel')) {
+    customElements.define('nice-product-video-carousel', class extends HTMLElement {
+      connectedCallback() {
+        if (this.controller) return;
+        this.controller = new AbortController();
+        const signal = this.controller.signal;
+        this.viewport = this.querySelector('[data-viewport]');
+        this.cards = [...this.querySelectorAll('[data-card]')];
+        this.videos = [...this.querySelectorAll('[data-video]')];
+        this.previous = this.querySelector('[data-previous]');
+        this.next = this.querySelector('[data-next]');
+        this.querySelectorAll('[data-play]').forEach(button => button.addEventListener('click', () => {
+          const video = button.closest('[data-card]').querySelector('[data-video]');
+          if (video.paused) { video.muted = true; video.play()?.catch(() => this.update(video)); }
+          else video.pause();
+        }, { signal }));
+        this.querySelectorAll('.pdp-videos__media').forEach(media => media.addEventListener('click', event => {
+          if (event.target.closest('button')) return;
+          const video = media.querySelector('[data-video]');
+          if (video.paused) { video.muted = true; video.play()?.catch(() => this.update(video)); }
+          else video.pause();
+        }, { signal }));
+        this.querySelectorAll('[data-sound]').forEach(button => button.addEventListener('click', () => {
+          const video = button.closest('[data-card]').querySelector('[data-video]');
+          video.muted = !video.muted;
+          this.update(video);
+        }, { signal }));
+        this.videos.forEach(video => {
+          video.addEventListener('play', () => {
+            document.dispatchEvent(new CustomEvent('phoenix:video-play', { detail: video }));
+            this.update(video);
+          }, { signal });
+          video.addEventListener('pause', () => this.update(video), { signal });
+          video.addEventListener('ended', () => this.update(video), { signal });
+          video.addEventListener('volumechange', () => this.update(video), { signal });
+        });
+        document.addEventListener('phoenix:video-play', event => {
+          this.videos.forEach(video => { if (video !== event.detail) video.pause(); });
+        }, { signal });
+        this.previous?.addEventListener('click', () => this.move(-1), { signal });
+        this.next?.addEventListener('click', () => this.move(1), { signal });
+        this.viewport?.addEventListener('scroll', () => this.updateControls(), { signal, passive: true });
+        document.addEventListener('shopify:block:select', event => {
+          if (this === event.target || this.contains(event.target)) this.scrollIntoView({ block: 'nearest' });
+        }, { signal });
+        this.updateControls();
+      }
+      disconnectedCallback() {
+        this.controller?.abort();
+        this.videos?.forEach(video => video.pause());
+        this.controller = null;
+      }
+      update(video) {
+        const card = video.closest('[data-card]');
+        const playing = !video.paused && !video.ended;
+        card.classList.toggle('is-playing', playing);
+        if (playing || video.currentTime > 0) card.classList.add('is-started');
+        card.classList.toggle('is-unmuted', !video.muted);
+        const play = card.querySelector('[data-play]');
+        play.setAttribute('aria-label', playing ? play.dataset.pauseLabel : play.dataset.playLabel);
+        play.setAttribute('aria-pressed', String(playing));
+        const sound = card.querySelector('[data-sound]');
+        sound.setAttribute('aria-label', video.muted ? sound.dataset.mutedLabel : sound.dataset.unmutedLabel);
+        sound.setAttribute('aria-pressed', String(!video.muted));
+      }
+      move(direction) {
+        const card = this.cards[0];
+        if (!card) return;
+        const gap = parseFloat(getComputedStyle(card.parentElement).columnGap) || 0;
+        const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+        this.viewport.scrollBy({ left: direction * (card.offsetWidth + gap), behavior });
+      }
+      updateControls() {
+        if (!this.viewport) return;
+        const max = Math.max(0, this.viewport.scrollWidth - this.viewport.clientWidth);
+        if (this.previous) this.previous.disabled = this.viewport.scrollLeft <= 2;
+        if (this.next) this.next.disabled = this.viewport.scrollLeft >= max - 2;
+      }
+    });
+  }
+</script>
 
 {% schema %}
 {
@@ -2422,9 +2600,53 @@
       "limit": 1
     },
     {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid",
+          "info": "Add app snippets or custom Liquid and HTML."
+        }
+      ]
+    },
+    {
+      "type": "four_video_carousel",
+      "name": "Four-video carousel",
+      "limit": 1,
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Le Phoenix en action" },
+        { "type": "header", "content": "Desktop card dimensions" },
+        { "type": "range", "id": "desktop_card_width", "label": "Card width", "min": 160, "max": 500, "step": 10, "unit": "px", "default": 300 },
+        { "type": "range", "id": "desktop_card_height", "label": "Card height", "min": 200, "max": 800, "step": 20, "unit": "px", "default": 500 },
+        { "type": "header", "content": "Mobile card dimensions" },
+        { "type": "range", "id": "mobile_card_width", "label": "Card width", "min": 160, "max": 400, "step": 10, "unit": "px", "default": 280 },
+        { "type": "range", "id": "mobile_card_height", "label": "Card height", "min": 200, "max": 800, "step": 20, "unit": "px", "default": 460 },
+        { "type": "select", "id": "video_fit", "label": "Video display", "options": [{ "value": "contain", "label": "Show full video" }, { "value": "cover", "label": "Fill card (crop)" }], "default": "contain" },
+        { "type": "video", "id": "video_1", "label": "Video 1" },
+        { "type": "video", "id": "video_2", "label": "Video 2" },
+        { "type": "video", "id": "video_3", "label": "Video 3" },
+        { "type": "video", "id": "video_4", "label": "Video 4" }
+      ]
+    },
+    {
       "type": "variant_picker",
       "name": "Variant Picker",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        { "type": "header", "content": "Size Option Images" },
+        { "type": "image_picker", "id": "size_icon_1", "label": "Size 1 Image" },
+        { "type": "image_picker", "id": "size_icon_2", "label": "Size 2 Image" },
+        { "type": "image_picker", "id": "size_icon_3", "label": "Size 3 Image" },
+        { "type": "header", "content": "Filter Option Images" },
+        { "type": "image_picker", "id": "filter_image_1", "label": "Filter 1 Image" },
+        { "type": "image_picker", "id": "filter_image_2", "label": "Filter 2 Image" },
+        { "type": "header", "content": "Stand Option Images" },
+        { "type": "image_picker", "id": "stand_1", "label": "Stand 1 Image" },
+        { "type": "image_picker", "id": "stand_2", "label": "Stand 2 Image" },
+        { "type": "image_picker", "id": "stand_3", "label": "Stand 3 Image" }
+      ]
     },
     {
       "type": "price",

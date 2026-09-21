@@ -68,6 +68,7 @@
       "block_order": [
         "judge_me_reviews_preview_badge_McQhYb"
       ],
+      "disabled": true,
       "custom_css": [
         "#vitals-end-section {max-width: 1200px; display: none; width: 100%; margin: 0 auto;}",
         ".product-countdown {display: none;}"
@@ -75,6 +76,91 @@
       "settings": {
         "countdown_text": "{{ product.metafields.custom.month_sale.value }}",
         "countdown_time": ""
+      }
+    },
+    "custom_nice_product_ePpUqf": {
+      "type": "custom-nice-product",
+      "blocks": {
+        "image_gallery_cTkCKM": {
+          "type": "image_gallery",
+          "settings": {
+            "hide_variants": false
+          }
+        },
+        "badge_bjgHiU": {
+          "type": "badge",
+          "settings": {
+            "badge_text": "Vente"
+          }
+        },
+        "title_wKdKBU": {
+          "type": "title",
+          "settings": {}
+        },
+        "rating_QaPipF": {
+          "type": "rating",
+          "settings": {}
+        },
+        "description_XgEfQy": {
+          "type": "description",
+          "settings": {}
+        },
+        "variant_picker_MtBEXb": {
+          "type": "variant_picker",
+          "settings": {
+            "filter_image_1": "shopify://shop_images/image-removebg-preview.png"
+          }
+        },
+        "price_37aMVd": {
+          "type": "price",
+          "settings": {}
+        },
+        "add_to_cart_6TYH33": {
+          "type": "add_to_cart",
+          "settings": {}
+        },
+        "payment_icons_qJcrNe": {
+          "type": "payment_icons",
+          "settings": {}
+        },
+        "trust_badges_7VKzYG": {
+          "type": "trust_badges",
+          "settings": {
+            "text_color": "#315879",
+            "icon_size": 34,
+            "badge_1_text": "LIVRAISON GRATUITE DANS TOUTE L'EUROPE",
+            "badge_2_text": "",
+            "badge_3_text": "",
+            "badge_4_text": "SUPPORT CLIENT",
+            "badge_5_text": "EXP?DITION DEPUIS UN ENTREP?T BAS? EN FRANCE",
+            "badge_6_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_gallery_cTkCKM",
+        "badge_bjgHiU",
+        "title_wKdKBU",
+        "rating_QaPipF",
+        "description_XgEfQy",
+        "variant_picker_MtBEXb",
+        "price_37aMVd",
+        "add_to_cart_6TYH33",
+        "payment_icons_qJcrNe",
+        "trust_badges_7VKzYG"
+      ],
+      "custom_css": [
+        "h2.col-10.col-md-12.text-lg-start {margin: 20px 0px 20px 0px;}",
+        "span.step-number {display: none !important;}",
+        ".pdp-price__current {font-size: 2.75rem !important;}"
+      ],
+      "name": "New Product Section",
+      "settings": {
+        "countdown_text": "",
+        "countdown_time": "",
+        "countdown_products": [],
+        "preselected_variant": "",
+        "size_guide_product_handles": ""
       }
     },
     "9600faf5-31b8-4d01-817d-b44b276a1d60": {
@@ -228,23 +314,83 @@
         "heading": "Nos filtres éliminent…"
       }
     },
-    "video_image_VzAYqM": {
-      "type": "video-image",
+    "custom_certificate_info_card_d8rrix": {
+      "type": "custom-certificate-info-card",
       "blocks": {
-        "text_eFgG4X": {
-          "type": "text",
+        "step_UnRbdD": {
+          "type": "step",
           "settings": {
-            "video_id": "b2zso1telk"
+            "step_label": "Étape 01",
+            "badge_text": "01",
+            "icon": "shopify://shop_images/Fill_the_upper_chamber.png",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Remplissez la cuve supérieure",
+            "description": "<p>Versez l’eau du robinet dans la cuve supérieure en acier inoxydable. Aucune électricité ni pression n’est nécessaire — la gravité fait le travail.</p>"
+          }
+        },
+        "step_9Ya43d": {
+          "type": "step",
+          "settings": {
+            "step_label": "Étape 02",
+            "badge_text": "02",
+            "icon": "shopify://shop_images/Carbon_Filtration.png",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Filtration au charbon",
+            "description": "<p>Les éléments en charbon actif de coque de noix de coco éliminent 99,9 % du chlore, des métaux lourds, des microplastiques, des PFAS, des hormones et des résidus pharmaceutiques.</p>"
+          }
+        },
+        "step_N3LPVH": {
+          "type": "step",
+          "settings": {
+            "step_label": "Étape 03",
+            "badge_text": "03",
+            "icon": "shopify://shop_images/POSTreat_Stage_1.png",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Étape de filtration POSTreat Steel",
+            "description": "<p>L’eau préfiltrée traverse notre média exclusif FluoRid à l’intérieur du boîtier en acier AISI 304 — capturant le fluorure et l’arsenic avec une efficacité supérieure à 95 %.</p>"
+          }
+        },
+        "step_nnbT36": {
+          "type": "step",
+          "settings": {
+            "step_label": "Étape 04",
+            "badge_text": "04",
+            "icon": "shopify://shop_images/Pure_water_1.png",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Récupération de l’eau pure",
+            "description": "<p>L’eau riche en minéraux et à teneur réduite en fluorure s’accumule dans la cuve inférieure. Les minéraux bénéfiques sont préservés — seuls les contaminants sont éliminés.</p>"
           }
         }
       },
       "block_order": [
-        "text_eFgG4X"
+        "step_UnRbdD",
+        "step_9Ya43d",
+        "step_N3LPVH",
+        "step_nnbT36"
       ],
       "disabled": true,
-      "name": "Image / Video",
+      "name": "Certificate info card",
       "settings": {
-        "is_posttreat": false
+        "eyebrow": "La science derrière le filtre",
+        "heading": "<strong>Comment </strong><em>POSTreat </em>Steel<strong> filtre votre eau</strong>",
+        "description": "<p>Le filtre POSTreat Steel agit comme un post-filtre de deuxième étape, fixé sous vos éléments filtrants principaux au charbon dans la cuve inférieure — sans plomberie, sans électricité et sans outils spécialisés.</p>",
+        "background_color": "#ffffff",
+        "text_color": "#153a5b",
+        "muted_text_color": "#000000",
+        "line_color": "#153a5b",
+        "accent_color": "#153a5b",
+        "icon_background_color": "#153a5b",
+        "mobile_layout": "card_list",
+        "visibility": "always",
+        "variant_ids": ""
       }
     },
     "custom_html_eqYJTa": {
@@ -252,9 +398,12 @@
       "custom_css": [
         "/* Ensure the wistia player fills its container */wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none;}"
       ],
-      "name": "Custom Embed Video",
+      "name": "Carbon exploded Video (Carbon)",
       "settings": {
-        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>",
+        "section_height": 43,
+        "product_pages_only": true,
+        "variant_ids": "44711953170485"
       }
     },
     "video_image_DJWQnw": {
@@ -288,6 +437,7 @@
       "custom_css": [
         "h2.col-10.col-md-12.text-lg-start {margin: 20px 0px 20px 0px;}"
       ],
+      "name": "Nano Bacteria Sec (Carbon)",
       "settings": {
         "style": "bg-white",
         "heading": "Technologie de Filtration Révolutionnaire ”Nanobactérien”",
@@ -295,61 +445,8 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "44711953170485",
         "custom_id": ""
-      }
-    },
-    "product_feature_ckk7jj": {
-      "type": "product-feature",
-      "blocks": {
-        "text_W8yFr3": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Avec le système complet, vous pouvez toujours avoir vos remplacements prêts."
-          }
-        },
-        "text_nNPPfk": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Une eau potable sûre et savoureuse tous les jours de l’année."
-          }
-        },
-        "text_PhRqiE": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Idéal pour les maisons, les appartements, les bureaux et les camping-cars."
-          }
-        },
-        "text_WG3dke": {
-          "type": "text",
-          "settings": {
-            "feature_text": "Élimine 99,9 % des toxines et des métaux lourds de votre eau."
-          }
-        },
-        "text_wrVk3K": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "feature_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "text_W8yFr3",
-        "text_nNPPfk",
-        "text_PhRqiE",
-        "text_WG3dke",
-        "text_wrVk3K"
-      ],
-      "settings": {
-        "style": "bg-light",
-        "heading": "Profitez d'une eau potable saine et délicieuse tous les jours de l'année",
-        "content": "<p>Le procédé de filtration par Phoenix Gravity imite la nature et préserve l'oxygène et les minéraux, ce qui confère à notre eau une fraîcheur printanière et un goût sain incomparable. Aidez les familles à éliminer 99,9 % des toxines nocives et à boire une eau saine et délicieuse toute l'année !</p>",
-        "column_img": "shopify://shop_images/filter_bg.webp",
-        "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
-        "buttontext": "AJOUTER AU PANIER",
-        "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
-        "custom_id": "",
-        "custom_class": ""
       }
     },
     "e7fc5ca3-7826-4ae3-8fda-deda4cc2fcf9": {
@@ -372,6 +469,8 @@
         "text_Hh7Mbt",
         "text_gLW6xT"
       ],
+      "disabled": true,
+      "name": "Additional Info WFS (Hide)",
       "settings": {
         "style": "bg-white",
         "layout": "copy",
@@ -384,32 +483,11 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
         "section_randoimg_position": "top"
-      }
-    },
-    "custom_code_section_kFnpWQ": {
-      "type": "custom-code-section",
-      "name": "Custom Code Section",
-      "settings": {
-        "custom_html": "<div class=\"warranty-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/2644/2852/files/10_years_1.png?v=1758890447\" alt=\"10-year warranty icon\">\n  <span>Garantie de 10 ans</span>\n</div>",
-        "custom_css": ".warranty-section {\n      background-color: #f5f3f1; /* same pink background */\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      padding: 20px;\n      gap: 10px;\nmargin-bottom: 30px;\n    }\n\n    .warranty-section img {\n      width: 50px; /* adjust size of icon */\n      height: auto;\n    }\n\n    .warranty-section span {\n      font-size: 30px;\n      font-weight: bold;\n      color: #153a5b; /* dark text */\n    }",
-        "custom_js": "console.log('Custom section loaded');"
-      }
-    },
-    "secondary_details_qhCfY7": {
-      "type": "secondary-details",
-      "name": "Secondary Details",
-      "settings": {
-        "style": "bg-white",
-        "heading": "Élimine > 95 % du fluorure et de l'arsenic grâce à un système de filtration unique en son genre",
-        "content": "<p>La communauté scientifique s'inquiète de plus en plus des risques potentiels d'un excès de fluorure, qui peut être toxique pour le cerveau et même augmenter le risque de développer un cancer rare, l'ostéosarcome*.</p><p>Conçu pour compléter notre système de filtration par gravité, nos scientifiques ont créé un système unique de filtration du fluorure qui élimine plus de 95 % du fluorure de l'eau potable tout en préservant les nutriments essentiels.</p><p>Fabriqués en acier inoxydable AISI 304 résistant à la rouille, les éléments filtrants POSTreat pour l'élimination du fluorure et de l'arsenic ne libèrent pas de polyuréthane ni de microplastiques dans l'eau, contrairement à d'autres systèmes de filtration. Conçus pour résister à un usage quotidien, ils nécessitent un simple remplissage du média filtrant exclusif tous les 4 mois ou jusqu'à 4 000 litres. C'est le système d'élimination du fluorure le plus efficace et le plus durable du marché, contribuant à un mode de vie sain.</p>",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "custom_id": ""
       }
     },
     "custom_html_VVVwEw": {
@@ -417,9 +495,26 @@
       "custom_css": [
         "wistia-player {display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background-color: transparent; object-fit: cover; border: none;}"
       ],
-      "name": "Custom Embed Video",
+      "name": "POSTreat Render Video (Both)",
       "settings": {
-        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/c3cghpaqz1.js\" async type=\"module\"></script><style>wistia-player[media-id='c3cghpaqz1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c3cghpaqz1/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"c3cghpaqz1\" aspect=\"1.7777777777777777\"></wistia-player>"
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/c3cghpaqz1.js\" async type=\"module\"></script><style>wistia-player[media-id='c3cghpaqz1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c3cghpaqz1/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"c3cghpaqz1\" aspect=\"1.7777777777777777\"></wistia-player>",
+        "section_height": 43,
+        "product_pages_only": true,
+        "variant_ids": ""
+      }
+    },
+    "secondary_details_qhCfY7": {
+      "type": "secondary-details",
+      "name": ">95% Fluoride Rmv. Section (Both)",
+      "settings": {
+        "style": "bg-white",
+        "heading": "Élimine > 95 % du fluorure et de l'arsenic grâce à un système de filtration unique en son genre",
+        "content": "<p>La communauté scientifique s'inquiète de plus en plus des risques potentiels d'un excès de fluorure, qui peut être toxique pour le cerveau et même augmenter le risque de développer un cancer rare, l'ostéosarcome*.</p><p>Conçu pour compléter notre système de filtration par gravité, nos scientifiques ont créé un système unique de filtration du fluorure qui élimine plus de 95 % du fluorure de l'eau potable tout en préservant les nutriments essentiels.</p><p>Fabriqués en acier inoxydable AISI 304 résistant à la rouille, les éléments filtrants POSTreat pour l'élimination du fluorure et de l'arsenic ne libèrent pas de polyuréthane ni de microplastiques dans l'eau, contrairement à d'autres systèmes de filtration. Conçus pour résister à un usage quotidien, ils nécessitent un simple remplissage du média filtrant exclusif tous les 4 mois ou jusqu'à 4 000 litres. C'est le système d'élimination du fluorure le plus efficace et le plus durable du marché, contribuant à un mode de vie sain.</p>",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "variant_ids": "",
+        "custom_id": ""
       }
     },
     "d978efab-7803-45c3-a62d-eea1576f94a8": {
@@ -456,6 +551,7 @@
         "text_6KYr33",
         "text_wfXFK6"
       ],
+      "name": "Save on bottles (POST)",
       "settings": {
         "style": "bg-white",
         "layout": "copy-image-copy",
@@ -469,6 +565,62 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "44185531777077",
+        "custom_id": "",
+        "custom_class": "",
+        "bg_image_style": "contain",
+        "section_randoimg_position": "bottom"
+      }
+    },
+    "copy_image_3H99Ge": {
+      "type": "copy-image",
+      "blocks": {
+        "text_EWRcLK": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Économisez des milliers d'euros sur des bouteilles ou un système à domicile"
+          }
+        },
+        "text_HxHMAG": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Moins de 8 centimes euros par litre"
+          }
+        },
+        "text_CNKAK4": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Aucune plomberie requise"
+          }
+        },
+        "text_eD7Uii": {
+          "type": "text",
+          "settings": {
+            "feature_text": "Portable pour que vous puissiez l'emporter partout !"
+          }
+        }
+      },
+      "block_order": [
+        "text_EWRcLK",
+        "text_HxHMAG",
+        "text_CNKAK4",
+        "text_eD7Uii"
+      ],
+      "name": "Save on bottles (Carbon)",
+      "settings": {
+        "style": "bg-white",
+        "layout": "copy-image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "Économisez des milliers d'euros sur l'eau en bouteille ou un système pour toute la maison",
+        "content": "<p>L'eau en bouteille est peut-être propre, mais elle est aussi coûteuse. Elle vous coûtera plus de 1 000 € par an, générera des déchets, nuira à l'environnement, et prendra énormément de place chez vous.</p><p>Vous pourriez envisager d'installer un système de filtration intégré, mais ces derniers sont chers aussi : l'investissement initial est substantiel, sans compter les frais récurrents d'entretien et de réparations. De plus, il est impossible de l'emporter si vous êtes locataire ou décidez de déménager.</p><p>Les Filtres à Eau par Gravité Phoenix Gravity sont une solution beaucoup plus pratique et abordable, tout en vous donnant accès, chaque jour, à une eau filtrée délicieuse !</p>",
+        "video_id": "",
+        "img_width": 0,
+        "large_image": "img-standard",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "variant_ids": "44711953170485",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -477,6 +629,7 @@
     },
     "copy_image_gBJ3jU": {
       "type": "copy-image",
+      "name": "PFAS Section (Carbon)",
       "settings": {
         "style": "bg-light",
         "layout": "image-copy",
@@ -489,6 +642,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "44711953170485",
         "custom_id": "",
         "custom_class": "",
         "section_bgimg": "shopify://shop_images/tap-water.jpg",
@@ -498,6 +652,8 @@
     },
     "copy_image_yifhAn": {
       "type": "copy-image",
+      "disabled": true,
+      "name": "Why Risk (Hide)",
       "settings": {
         "style": "bg-white",
         "layout": "copy",
@@ -510,16 +666,11 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
         "section_randoimg_position": "top"
-      }
-    },
-    "video_image_iLjpka": {
-      "type": "video-image",
-      "settings": {
-        "is_posttreat": false
       }
     },
     "4f7dacc7-7ed5-4167-a5d6-1a4a8160213c": {
@@ -605,6 +756,8 @@
         "text_VbAUDk",
         "text_U7Yanr"
       ],
+      "disabled": true,
+      "name": "Comparison Table WFS (Hide)",
       "settings": {
         "heading": "La façon la plus pratique et abordable de profiter d'une eau potable pure et propre chez vous",
         "number_of_comparisons": "3",
@@ -617,6 +770,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": ""
       }
@@ -667,11 +821,12 @@
         "text_3tkb76",
         "text_HrU9ae"
       ],
+      "name": "Testimonial Section (Both)",
       "settings": {
         "layout": "style-1",
         "heading": "Nous faisons confiance à nos filtres à eau depuis plus de 50 ans",
         "paragraph": "",
-        "sub_header": "Basé sur 7 495 avis",
+        "sub_header": "Basé sur 900+ avis",
         "button_text": "Voir Tous les Avi",
         "button_url": "shopify://pages/reviews",
         "button_aftertext": "",
@@ -745,6 +900,8 @@
         "text_bA9cTL",
         "text_b79geA"
       ],
+      "disabled": true,
+      "name": "Cards Section WFS (Hide)",
       "settings": {
         "style": "light-cards",
         "heading": "Il n’a jamais été aussi facile de profiter d’une eau potable saine et délicieuse tous les jours de l’année !",
@@ -755,27 +912,6 @@
         "afterbutton": "",
         "custom_id": "",
         "custom_class": ""
-      }
-    },
-    "copy_image_JCKnek": {
-      "type": "copy-image",
-      "settings": {
-        "style": "bg-white",
-        "layout": "copy",
-        "vertical_align": "align-items-center",
-        "heading": "Essai gratuit de 100 jours",
-        "content": "<p>Vous craignez que le filtre à eau Phoenix par gravité soit trop beau pour être vrai ? Vous n'êtes pas convaincu qu'il élimine autant de contaminants que promis ?</p><p>Nous garantissons notre produit à 100 % : vous pouvez donc l'essayer chez vous pendant 100 jours, sans risque. Si vous n'êtes pas entièrement satisfait de la pureté de votre eau, renvoyez-la dans les 100 jours pour un remboursement complet, sans justification !</p><p>*Conditions générales applicables.</p>",
-        "column_img": "shopify://shop_images/phoenix-guarantee.v1_copy_1.webp",
-        "video_id": "",
-        "large_image": "img-standard",
-        "second_content": "",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "custom_id": "",
-        "custom_class": "",
-        "bg_image_style": "contain",
-        "section_randoimg_position": "top"
       }
     },
     "product_reviews_J4aYbK": {
@@ -1163,25 +1299,23 @@
   "order": [
     "blocks_MFhFmr",
     "product_hero_og_alt_gReXNE",
+    "custom_nice_product_ePpUqf",
     "9600faf5-31b8-4d01-817d-b44b276a1d60",
     "icon-marquee",
-    "video_image_VzAYqM",
+    "custom_certificate_info_card_d8rrix",
     "custom_html_eqYJTa",
     "video_image_DJWQnw",
     "secondary_details_qTHLFy",
-    "product_feature_ckk7jj",
     "e7fc5ca3-7826-4ae3-8fda-deda4cc2fcf9",
-    "custom_code_section_kFnpWQ",
-    "secondary_details_qhCfY7",
     "custom_html_VVVwEw",
+    "secondary_details_qhCfY7",
     "d978efab-7803-45c3-a62d-eea1576f94a8",
+    "copy_image_3H99Ge",
     "copy_image_gBJ3jU",
     "copy_image_yifhAn",
-    "video_image_iLjpka",
     "4f7dacc7-7ed5-4167-a5d6-1a4a8160213c",
     "testimonials_Wxzw4P",
     "cards_pUAXFa",
-    "copy_image_JCKnek",
     "product_reviews_J4aYbK",
     "accordion_tabs_DejHLU",
     "gallery_9QfaL3"

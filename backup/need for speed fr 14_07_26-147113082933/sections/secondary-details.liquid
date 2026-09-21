@@ -3,9 +3,18 @@
 
 {% if product.metafields.custom.show_secondary_panel != false %}
 
-  <div class="background-image-container {{ section.settings.style }}"></div>
+  <variant-visibility-scope current-variant-id="{{ product.selected_or_first_available_variant.id }}">
+    <div
+      class="secondary-details-wrapper"
+      data-variant-visibility-item
+      {% if section.settings.variant_ids != blank %}
+        data-variant-visibility-ids="{{ section.settings.variant_ids | escape }}"
+        hidden
+      {% endif %}
+    >
+      <div class="background-image-container {{ section.settings.style }}"></div>
 
-  <div class="{{ section.settings.custom_class }} layout-copy" id="{{ section.settings.custom_id }}">
+      <div class="{{ section.settings.custom_class }} layout-copy" id="{{ section.settings.custom_id }}">
 
     {% assign col_one_class = 'col-11 col-md-9 col-lg-9' %}
     {% assign col_two_class = 'copy-col col-11 col-md-9 col-lg-9 ' %}
@@ -43,6 +52,9 @@
       </div>
     </div>
   </div>
+    </div>
+  </variant-visibility-scope>
+  <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
 {% endif %}
 
 {% schema %}
@@ -92,6 +104,15 @@
         "type": "text",
         "id": "afterbutton",
         "label": "After Button Text"
+      }, {
+        "type": "header",
+        "content": "Variant Visibility",
+        "info": "Show this section only for the selected variant IDs"
+      }, {
+        "type": "textarea",
+        "id": "variant_ids",
+        "label": "Show only for these variant IDs",
+        "info": "Comma-separated, e.g. 123456,789012. Leave empty to always show"
       }, {
         "type": "header",
         "content": "Custom Code",
