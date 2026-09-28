@@ -223,7 +223,10 @@
       "type": "custom-html",
       "name": "Custom Embed Video",
       "settings": {
-        "embed_code": "<div id=\"wistia-jr37r9792m\" class=\"wistia-facade\" data-media-id=\"jr37r9792m\" style=\"position:relative;width:100%;padding-top:56.25%;background:#f2f4f7;border-radius:8px;overflow:hidden;cursor:pointer;\"><div style=\"position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\"><svg width=\"68\" height=\"48\" viewbox=\"0 0 68 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z\" fill=\"rgba(0,0,0,0.6)\"></path><path d=\"M27 34V14l18 10-18 10z\" fill=\"#fff\"></path></svg></div></div>"
+        "embed_code": "<div id=\"wistia-jr37r9792m\" class=\"wistia-facade\" data-media-id=\"jr37r9792m\" style=\"position:relative;width:100%;padding-top:56.25%;background:#f2f4f7;border-radius:8px;overflow:hidden;cursor:pointer;\"><div style=\"position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\"><svg width=\"68\" height=\"48\" viewbox=\"0 0 68 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z\" fill=\"rgba(0,0,0,0.6)\"></path><path d=\"M27 34V14l18 10-18 10z\" fill=\"#fff\"></path></svg></div></div>",
+        "section_height": 43,
+        "product_pages_only": true,
+        "variant_ids": ""
       }
     },
     "secondary_details_qTHLFy": {
@@ -235,6 +238,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": ""
       }
     },
@@ -308,6 +312,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": ""
       }
@@ -346,6 +351,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -371,6 +377,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": ""
       }
     },
@@ -378,7 +385,10 @@
       "type": "custom-html",
       "name": "Custom Embed Video",
       "settings": {
-        "embed_code": "<div id=\"wistia-c3cghpaqz1\" class=\"wistia-facade\" data-media-id=\"c3cghpaqz1\" style=\"position:relative;width:100%;padding-top:56.25%;background:#f2f4f7;border-radius:8px;overflow:hidden;cursor:pointer;\"><div style=\"position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\"><svg width=\"68\" height=\"48\" viewbox=\"0 0 68 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z\" fill=\"rgba(0,0,0,0.6)\"></path><path d=\"M27 34V14l18 10-18 10z\" fill=\"#fff\"></path></svg></div></div>"
+        "embed_code": "<div id=\"wistia-c3cghpaqz1\" class=\"wistia-facade\" data-media-id=\"c3cghpaqz1\" style=\"position:relative;width:100%;padding-top:56.25%;background:#f2f4f7;border-radius:8px;overflow:hidden;cursor:pointer;\"><div style=\"position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\"><svg width=\"68\" height=\"48\" viewbox=\"0 0 68 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z\" fill=\"rgba(0,0,0,0.6)\"></path><path d=\"M27 34V14l18 10-18 10z\" fill=\"#fff\"></path></svg></div></div>",
+        "section_height": 43,
+        "product_pages_only": true,
+        "variant_ids": ""
       }
     },
     "copy_image_CerL9y": {
@@ -428,6 +438,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -448,6 +459,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "section_bgimg": "shopify://shop_images/tap-water.jpg",
@@ -469,6 +481,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -570,6 +583,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": ""
       }
@@ -725,6 +739,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -1104,12 +1119,14 @@
         },
         "gallery_images_block_7BEKTr": {
           "type": "gallery_images_block",
+          "disabled": true,
           "settings": {
             "gallery_image": "shopify://shop_images/water-filter-06.jpg"
           }
         },
         "gallery_images_block_GPamey": {
           "type": "gallery_images_block",
+          "disabled": true,
           "settings": {
             "gallery_image": "shopify://shop_images/water-filter-07.jpg"
           }
