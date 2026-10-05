@@ -19,16 +19,30 @@
             "background_color": "#94bcd3",
             "text_color": "#ffffff",
             "font_size": 22,
-            "banner_height": 105
+            "banner_height": 50
+          },
+          "blocks": {}
+        },
+        "ai_gen_block_db25917_8ka8i7": {
+          "type": "ai_gen_block_db25917",
+          "name": "Custom code block",
+          "settings": {
+            "custom_liquid": "<div class=\"manufacturer-info\">\n  <p>\n    <strong>Fabriqué pour Phoenix Gravity par :</strong><br>\n    RAMA Pure Water Private Limited,\n    196 Injambakkam,\n    East Coast Road, Chennai – 600041,\n    Tamil Nadu, Inde.\n  </p>\n</div>",
+            "custom_html": "",
+            "custom_css": ".manufacturer-info {\n  width: 100%;\n    margin: 0 auto;\n    padding-top: 5px;\nbackground-color: #94BCD3\n}\n\n.manufacturer-info p {\n  margin: 0;\n  padding-bottom: 10px;\n  font-size: 14px;\n  line-height: 1.6;\n  font-weight: 400;\n  color: #ffffffff;\n  text-align: center;\n}\n\n.manufacturer-info p strong {\n  font-weight: 600;\n  color: #fff;\n}\n  .manufacturer-info p {\n    font-size: 13px;\n    line-height: 1.55;\n  }\n}",
+            "custom_js": "",
+            "desktop_width_percent": 100,
+            "container_padding": 0
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_89ce117_feyHDn"
+        "ai_gen_block_89ce117_feyHDn",
+        "ai_gen_block_db25917_8ka8i7"
       ],
       "custom_css": [
-        ".ai-centered-banner-azxdot3ruoufrwwtwnaigenblock89ce117feyhdn {MARGIN-BOTTOM: 20px;}"
+        ".ai-centered-banner-azxdot3ruoufrwwtwnaigenblock89ce117feyhdn {margin-bottom: 20px;}"
       ],
       "settings": {}
     },
@@ -48,6 +62,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -68,7 +83,7 @@
       "type": "apps",
       "blocks": {
         "my_product_cares_registration_form_gDkEG3": {
-          "type": "shopify://apps/my-product-cares/blocks/registration-form/fd762697-cd8b-4acd-bd03-03c62edf58c9",
+          "type": "shopify://apps/my-product-registration/blocks/registration-form/fd762697-cd8b-4acd-bd03-03c62edf58c9",
           "settings": {
             "slug": "product-registration",
             "mode": "normal",

@@ -14,101 +14,104 @@
       "disabled": true,
       "settings": {}
     },
-    "custom_nice_product_FCRzcG": {
-      "type": "custom-nice-product",
+    "custom_nice_product_hero2_BLHMxE": {
+      "type": "custom-nice-product-hero2",
       "blocks": {
-        "image_gallery_abAVFf": {
+        "image_gallery_Jp3LwX": {
           "type": "image_gallery",
           "settings": {
             "hide_variants": false
           }
         },
-        "badge_X9Vd3L": {
-          "type": "badge",
-          "settings": {
-            "badge_text": "VENTE D'ETE"
-          }
-        },
-        "title_UzMpbG": {
+        "title_zAaqAf": {
           "type": "title",
           "settings": {}
         },
-        "rating_jzQpN6": {
-          "type": "rating",
+        "rating_price_DqP3WV": {
+          "type": "rating_price",
           "settings": {}
         },
-        "description_QjGrDx": {
-          "type": "description",
-          "settings": {}
+        "custom_liquid_bPHAME": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"feature-list\">\n  <div class=\"feature-item\">\n    <span class=\"check-icon\">✓</span>\n    <span>ANSI 304 Stainless Steel</span>\n  </div>\n\n  <div class=\"feature-item\">\n    <span class=\"check-icon\">✓</span>\n    <span>Long-lasting filters</span>\n  </div>\n\n  <div class=\"feature-item\">\n    <span class=\"check-icon\">✓</span>\n    <span>No electricity</span>\n  </div>\n\n  <div class=\"feature-item\">\n    <span class=\"check-icon\">✓</span>\n    <span>Hollow fiber UF</span>\n  </div>\n\n  <div class=\"feature-item\">\n    <span class=\"check-icon\">✓</span>\n    <span>Built to last</span>\n  </div>\n</div>\n<style>\n.feature-list {\n  display: flex;\n  flex-wrap: wrap;\n  gap: 6px 8px;\n  font-family: Arial, sans-serif;\npadding-bottom: 15px;\n}\n\n.feature-item {\n  display: inline-flex;\n  align-items: center;\n  gap: 6px;\n  padding: 5px 8px;\n  background: #f5f5f5;\n  border-radius: 4px;\n  color: #111;\n  font-size: 13px;\n  line-height: 1.2;\n  white-space: nowrap;\n}\n\n.check-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  width: 13px;\n  height: 13px;\n  flex: 0 0 13px;\n  border-radius: 50%;\n  background: #5b8ff9;\n  color: #fff;\n  font-size: 9px;\n  font-weight: 700;\n  line-height: 1;\n}\n</style>"
+          }
         },
-        "variant_picker_3zXpgF": {
-          "type": "variant_picker",
-          "settings": {}
-        },
-        "price_BXjmjg": {
-          "type": "price",
-          "settings": {}
-        },
-        "add_to_cart_DqnfnE": {
+        "add_to_cart_AqEkRb": {
           "type": "add_to_cart",
           "settings": {}
         },
-        "payment_icons_dD7Kr4": {
-          "type": "payment_icons",
-          "settings": {}
-        },
-        "trust_badges_dY7gXm": {
-          "type": "trust_badges",
+        "custom_liquid_i43VaM": {
+          "type": "custom_liquid",
           "settings": {
-            "text_color": "#315879",
-            "icon_size": 48,
-            "badge_1_text": "LIVRAISON GRATUITE DANS TOUTE L'EUROPE",
-            "badge_2_text": "ESSAI DE 100 JOURS",
-            "badge_3_text": "GARANTIE DE 10 ANS",
-            "badge_4_text": "SUPPORT CLIENT",
-            "badge_5_text": "Expédition depuis un entrepôt basé en France",
-            "badge_6_text": " Certifié NSF 372, ANSI 42"
+            "custom_liquid": "<p class=\"custom-nice-product__shipping\">Livraison en 3 à 7 jours ouvrables</p>\n<style>\n.custom-nice-product__shipping {\n    color: #153a5b;\n    font-size: 13px;\n    text-align: center;\npadding-top: 12px;\nfont-weight: bold;\n}\n</style>"
+          }
+        },
+        "four_video_carousel_JPNhMa": {
+          "type": "four_video_carousel",
+          "settings": {
+            "heading": "Le Phoenix en action",
+            "desktop_card_width": 160,
+            "mobile_card_width": 120,
+            "video_fit": "cover",
+            "video_1": "shopify://files/videos/TUMERIC_COMPARISON_USA (1)_10bfab58-1252-4c53-9546-e6632a62c848.mp4",
+            "video_2": "shopify://files/videos/Main PDP Final.mp4",
+            "video_3": "shopify://files/videos/Garden water filter test 8mb.mp4",
+            "video_4": "shopify://files/videos/Fluoride_in_Filters.mp4"
           }
         }
       },
       "block_order": [
-        "image_gallery_abAVFf",
-        "badge_X9Vd3L",
-        "title_UzMpbG",
-        "rating_jzQpN6",
-        "description_QjGrDx",
-        "variant_picker_3zXpgF",
-        "price_BXjmjg",
-        "add_to_cart_DqnfnE",
-        "payment_icons_dD7Kr4",
-        "trust_badges_dY7gXm"
+        "image_gallery_Jp3LwX",
+        "title_zAaqAf",
+        "rating_price_DqP3WV",
+        "custom_liquid_bPHAME",
+        "add_to_cart_AqEkRb",
+        "custom_liquid_i43VaM",
+        "four_video_carousel_JPNhMa"
       ],
-      "custom_css": [
-        ".pdp-price__current {font-size: 2.8rem;}",
-        ".pdp-price__tax {font-size: 16px;}"
-      ],
-      "name": "New Product Section",
+      "name": "custom Product Hero 2",
       "settings": {
-        "countdown_text": "",
-        "countdown_time": "",
-        "countdown_products": [],
-        "preselected_variant": "44185530499125",
+        "show_gallery_arrows": true,
+        "mobile_gallery_height": 350,
+        "purchase_options_heading": "Choisissez votre mode d'achat",
+        "cta_bg_color": "#2b2b4e",
+        "preselected_variant": "",
         "size_guide_product_handles": ""
       }
     },
     "accordion_dWmDiL": {
       "type": "accordion",
       "blocks": {
+        "text_B7E8Px": {
+          "type": "text",
+          "settings": {
+            "question": "100-Day money back guarantee",
+            "answer": ""
+          }
+        },
         "text_AiGw8z": {
           "type": "text",
           "settings": {
             "question": "Garantie",
             "answer": "<p>Le robinet en acier inoxydable Phoenix Gravity est livré avec une garantie de 6 mois, couvrant les dommages survenus pendant le transport.</p>"
           }
+        },
+        "text_zV9VKa": {
+          "type": "text",
+          "settings": {
+            "question": "Shipping and returns",
+            "answer": ""
+          }
         }
       },
       "block_order": [
-        "text_AiGw8z"
+        "text_B7E8Px",
+        "text_AiGw8z",
+        "text_zV9VKa"
+      ],
+      "custom_css": [
+        ".mb-5 {margin-bottom: 0rem !important;}"
       ],
       "name": "Dropdown Accordion",
       "settings": {
@@ -117,6 +120,82 @@
         "accordion_styles": "full-width",
         "custom_id": "",
         "custom_class": ""
+      }
+    },
+    "custom_certificate_info_card_QFRYEC": {
+      "type": "custom-certificate-info-card",
+      "blocks": {
+        "step_q3nhXK": {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 01",
+            "badge_text": "01",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Fill Upper Chamber",
+            "description": "<p>Pour tap water into the upper stainless steel chamber.</p>"
+          }
+        },
+        "step_RrJQpE": {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 02",
+            "badge_text": "02",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Carbon Filtration",
+            "description": "<p>Coconut-shell carbon elements remove 99.9% of chlorine, heavy metals, microplastics & PFAS.</p>"
+          }
+        },
+        "step_kAbVWK": {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 03",
+            "badge_text": "03",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "POSTreat™ Stage",
+            "description": "<p>Water passes through FluoRid media inside AISI 304 steel casings, capturing fluoride efficiently.</p>"
+          }
+        },
+        "step_tAH8BD": {
+          "type": "step",
+          "settings": {
+            "step_label": "Step 04",
+            "badge_text": "04",
+            "icon_alt": "",
+            "visibility": "always",
+            "variant_ids": "",
+            "heading": "Pure Water Collected",
+            "description": "<p>Clean, mineral-rich water collects in the lower chamber - ready to drink.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "step_q3nhXK",
+        "step_RrJQpE",
+        "step_kAbVWK",
+        "step_tAH8BD"
+      ],
+      "disabled": true,
+      "name": "Certificate info card",
+      "settings": {
+        "eyebrow": "The science behind it",
+        "heading": "How POSTreat™ Filters Your Water",
+        "description": "<p>POSTreat™ works as a second-stage post-filter, attached beneath your primary carbon filter elements in the lower chamber — no plumbing, no electricity, no specialist tools.</p>",
+        "background_color": "#f5f8fd",
+        "text_color": "#071733",
+        "muted_text_color": "#697895",
+        "line_color": "#d3d7e2",
+        "accent_color": "#193d65",
+        "icon_background_color": "#ffffff",
+        "mobile_layout": "card_list",
+        "mobile_accordion": true,
+        "visibility": "always",
+        "variant_ids": "@media (max-width: 749px) {\n  .custom-certificate-info-card--mobile-accordion {\n    padding-left: 18px;\n    padding-right: 18px;\n  }\n}"
       }
     },
     "icon_marquee_rDWxXz": {
@@ -1156,8 +1235,9 @@
   },
   "order": [
     "product_hero_og_zxMJ8i",
-    "custom_nice_product_FCRzcG",
+    "custom_nice_product_hero2_BLHMxE",
     "accordion_dWmDiL",
+    "custom_certificate_info_card_QFRYEC",
     "icon_marquee_rDWxXz",
     "custom_code_section_T4KTVH",
     "custom_html_zXVJJA",

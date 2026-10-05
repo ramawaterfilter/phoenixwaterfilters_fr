@@ -178,7 +178,10 @@
       ],
       "name": "Custom Embed Video",
       "settings": {
-        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>"
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/jr37r9792m.js\" async type=\"module\"></script><style>wistia-player[media-id='jr37r9792m']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/jr37r9792m/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"jr37r9792m\" aspect=\"1.7777777777777777\"></wistia-player>",
+        "section_height": 43,
+        "product_pages_only": true,
+        "variant_ids": ""
       }
     },
     "video_image_DJWQnw": {
@@ -219,6 +222,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": ""
       }
     },
@@ -273,6 +277,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": ""
       }
@@ -309,6 +314,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -334,6 +340,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": ""
       }
     },
@@ -344,7 +351,10 @@
       ],
       "name": "Custom Embed Video",
       "settings": {
-        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/c3cghpaqz1.js\" async type=\"module\"></script><style>wistia-player[media-id='c3cghpaqz1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c3cghpaqz1/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"c3cghpaqz1\" aspect=\"1.7777777777777777\"></wistia-player>"
+        "embed_code": "<script src=\"https://fast.wistia.com/player.js\" async></script><script src=\"https://fast.wistia.com/embed/c3cghpaqz1.js\" async type=\"module\"></script><style>wistia-player[media-id='c3cghpaqz1']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c3cghpaqz1/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id=\"c3cghpaqz1\" aspect=\"1.7777777777777777\"></wistia-player>",
+        "section_height": 43,
+        "product_pages_only": true,
+        "variant_ids": ""
       }
     },
     "video_image_BYcqii": {
@@ -412,6 +422,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -432,6 +443,7 @@
         "buttonlink": "",
         "buttontext": "",
         "afterbutton": "",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "section_bgimg": "shopify://shop_images/tap-water.jpg",
@@ -453,6 +465,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "Essayez-le sans risque ! Garantie satisfait ou remboursé de 100 jours",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": "",
         "bg_image_style": "contain",
@@ -560,6 +573,7 @@
         "buttonlink": "https://phoenixwaterfilters.fr/products/the-phoenix-gravity-filtre-a-eau",
         "buttontext": "AJOUTER AU PANIER",
         "afterbutton": "ESSAYEZ-LE AVEC UNE GARANTIE SATISFAIT OU REMBOURSÉ DE 100 JOURS",
+        "variant_ids": "",
         "custom_id": "",
         "custom_class": ""
       }
@@ -616,7 +630,7 @@
         "paragraph": "",
         "sub_header": "Basé sur 7 495 avis",
         "button_text": "Voir Tous les Avi",
-        "button_url": "shopify://pages/reviews",
+        "button_url": "shopify://pages/review",
         "button_aftertext": "",
         "custom_id": "",
         "custom_class": ""

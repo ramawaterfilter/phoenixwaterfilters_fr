@@ -50,7 +50,9 @@
             </div>
           {% endif %}
 
-          {% if product.title contains 'Le filtre à eau par gravité Phoenix' %}
+          {% if product.title contains 'Le filtre à eau par gravité Phoenix'
+                or product.title contains 'Kit de démarrage pour filtre à eau par gravité Phoenix'
+          %}
             <div class="mb-4 accordion-item">
               <dt>Description</dt>
               <dd class="mb-4 accordion-spec">
@@ -521,6 +523,7 @@
             {% if product.title contains "Il filtro dell'acqua di gravità Phoenix"
               or product.title contains 'El filtro de agua por gravedad Phoenix'
               or product.title contains 'Le filtre à eau par gravité Phoenix'
+              or product.title contains 'Kit de démarrage pour filtre à eau par gravité Phoenix'
             %}
               <div class="mb-4 accordion-item">
                 <dt>Spécifications techniques et certifications</dt>
@@ -1201,6 +1204,7 @@
             or product.title contains "Cartouche filtrante POSTreat™ pour l'élimination des fluorures"
             or product.title contains 'KokoCarb Cartouches'
             or product.title contains 'Le Phoenix Gravity Mini - 1L'
+            or product.title contains 'Kit de démarrage pour filtre à eau par gravité Phoenix'
           %}
             <div class="mb-4 accordion-item">
               <dt>Rapport de Lab</dt>
@@ -2018,7 +2022,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           </style>
 
-          {% if product.handle == 'the-phoenix-gravity-filtre-a-eau' %}
+          {% if product.handle == 'the-phoenix-gravity-filtre-a-eau' 
+              or product.handle == 'kit-de-demarrage-pour-filtre-a-eau-par-gravite-phoenix' %}
             <div class="mb-4 accordion-item" id="accordion-what-in-box">
               <dt class="accordion-item__title">Qu'est-ce qu'il y a dans la boîte</dt>
               <dd class="accordion-item__content">

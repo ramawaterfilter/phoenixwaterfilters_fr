@@ -7,7 +7,7 @@
 %}
 <variant-visibility-scope current-variant-id="{{ current_variant.id }}">
 <section
-  class="custom-certificate-info-card custom-certificate-info-card--mobile-{{ section.settings.mobile_layout }}"
+  class="custom-certificate-info-card custom-certificate-info-card--mobile-{{ section.settings.mobile_layout }}{% if section.settings.mobile_accordion %} custom-certificate-info-card--mobile-accordion{% endif %}"
   data-variant-visibility-item
   {% if section_conditional_visibility %}data-variant-visibility-ids="{{ section.settings.variant_ids | escape }}"{% endif %}
   {% if section_conditional_visibility %}
@@ -24,22 +24,45 @@
   "
 >
   <div class="custom-certificate-info-card__container">
-    {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
-      <div class="custom-certificate-info-card__header">
-        {% if section.settings.eyebrow != blank %}
-          <p class="custom-certificate-info-card__eyebrow">{{ section.settings.eyebrow | escape }}</p>
-        {% endif %}
+    {% if section.settings.mobile_accordion %}
+      <details class="custom-certificate-info-card__header custom-certificate-info-card__accordion-header" open>
+        <summary class="custom-certificate-info-card__accordion-summary custom-certificate-info-card__header-summary">
+          {% if section.settings.eyebrow != blank %}
+            <p class="custom-certificate-info-card__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {% endif %}
 
-        {% if section.settings.heading != blank %}
-          <h2 class="custom-certificate-info-card__heading">{{ section.settings.heading }}</h2>
-        {% endif %}
+          {% if section.settings.heading != blank %}
+            <h2 class="custom-certificate-info-card__heading">{{ section.settings.heading }}</h2>
+          {% endif %}
+
+          <span class="custom-certificate-info-card__accordion-icon" aria-hidden="true"></span>
+        </summary>
 
         {% if section.settings.description != blank %}
-          <div class="custom-certificate-info-card__header-description rte">
-            {{ section.settings.description }}
+          <div class="custom-certificate-info-card__accordion-panel">
+            <div class="custom-certificate-info-card__header-description rte">
+              {{ section.settings.description }}
+            </div>
           </div>
         {% endif %}
-      </div>
+    {% else %}
+      {% if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank %}
+        <div class="custom-certificate-info-card__header">
+          {% if section.settings.eyebrow != blank %}
+            <p class="custom-certificate-info-card__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+          {% endif %}
+
+          {% if section.settings.heading != blank %}
+            <h2 class="custom-certificate-info-card__heading">{{ section.settings.heading }}</h2>
+          {% endif %}
+
+          {% if section.settings.description != blank %}
+            <div class="custom-certificate-info-card__header-description rte">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
     {% endif %}
 
     {% if section.blocks.size > 0 %}
@@ -120,6 +143,10 @@
         {% endfor %}
       </ol>
     {% endif %}
+
+    {% if section.settings.mobile_accordion %}
+      </details>
+    {% endif %}
   </div>
 </section>
 </variant-visibility-scope>
@@ -156,7 +183,7 @@
 
   .custom-certificate-info-card__heading {
     margin: 0;
-    color: var(--certificate-text);
+    color: #153a5b;
     font-family: Value Sans Bold, sans-serif;
     font-size: clamp(3.8rem, 4.2vw, 5rem);
     font-weight: 700;
@@ -336,7 +363,7 @@
 
     .custom-certificate-info-card__heading {
       /* font-family: Georgia Pro Bold, Georgia, serif; */
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       letter-spacing: -.04rem;
       line-height: 1.15;
     }
@@ -610,7 +637,149 @@
       margin-top: 0;
     }
   }
+  /* --- Mobile accordion (customizer: "Accordion on mobile") --- */
+  .custom-certificate-info-card__accordion-summary {
+    display: block;
+    list-style: none;
+  }
+
+  .custom-certificate-info-card__accordion-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .custom-certificate-info-card__accordion-icon {
+    display: none;
+  }
+
+  @media (min-width: 750px) {
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-summary {
+      pointer-events: none;
+      cursor: default;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header {
+      max-width: none;
+      margin: 0;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header-summary {
+      max-width: 94rem;
+      margin: 0 auto 8.8rem;
+      text-align: center;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-header:has(> .custom-certificate-info-card__accordion-panel) .custom-certificate-info-card__header-summary {
+      margin-bottom: 0;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-panel {
+      margin-bottom: 8.8rem;
+    }
+  }
+
+  @media (max-width: 749px) {
+    .custom-certificate-info-card--mobile-accordion {
+      padding: .8rem 0 0;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__container {
+      width: min(100% - 5.2rem, 54rem);
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header {
+      max-width: none;
+      margin: 0;
+      text-align: left;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header-summary {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      column-gap: 1.6rem;
+      padding: 2.5rem .6rem 3.6rem;
+      border-top: .1rem solid #c8c8c8;
+      border-radius: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header-summary .custom-certificate-info-card__eyebrow {
+      display: none;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header-summary .custom-certificate-info-card__heading {
+      grid-column: 1;
+      font-size: 1.8rem;
+      letter-spacing: -.02rem;
+      line-height: 1.2;
+      text-align: left;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header-summary .custom-certificate-info-card__accordion-icon {
+      grid-column: 2;
+      margin-left: 0;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-icon {
+      position: relative;
+      display: block;
+      width: 1.4rem;
+      height: 1.4rem;
+      color: #173a5e;
+      opacity: 1;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-icon::before,
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-icon::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 1.2rem;
+      height: .25rem;
+      border-radius: .2rem;
+      background: currentColor;
+      transform: translate(-50%, -50%);
+      transition: transform .2s ease;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-header[open] .custom-certificate-info-card__accordion-icon::after {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__accordion-panel {
+      padding-top: 1.4rem;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__header-description {
+      margin-top: 0;
+    }
+
+    .custom-certificate-info-card--mobile-accordion .custom-certificate-info-card__steps {
+      margin-top: 1.8rem;
+    }
+  }
 {% endstylesheet %}
+
+{% if section.settings.mobile_accordion %}
+  <script>
+    (function () {
+      var mq = window.matchMedia('(min-width: 750px)');
+      function sync() {
+        document
+          .querySelectorAll('.custom-certificate-info-card--mobile-accordion details')
+          .forEach(function (details) { details.open = mq.matches; });
+      }
+      sync();
+      mq.addEventListener('change', sync);
+    })();
+  </script>
+{% endif %}
 
 <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
 
@@ -689,6 +858,13 @@
         }
       ],
       "default": "card_list"
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_accordion",
+      "label": "Accordion on mobile",
+      "default": false,
+      "info": "When enabled, the header and each step collapse into accordion tiles on mobile (749px and below). The heading acts as the tile. Desktop layout is unchanged."
     },
     {
       "type": "select",
