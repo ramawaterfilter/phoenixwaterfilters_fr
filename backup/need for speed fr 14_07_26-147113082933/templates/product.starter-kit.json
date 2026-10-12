@@ -86,22 +86,22 @@
         "text_B7E8Px": {
           "type": "text",
           "settings": {
-            "question": "100-Day money back guarantee",
-            "answer": ""
+            "question": "Garantie satisfait ou remboursé de 100 jours",
+            "answer": "<p>Vous craignez que les promesses du filtre à eau par gravité Phoenix soient trop belles pour être vraies ? Vous doutez qu’il élimine réellement autant de contaminants que nous le promettons ? Nous avons confiance à 100 % en notre produit : c’est pourquoi nous vous proposons de l’essayer chez vous pendant 100 jours.</p><p>Si vous n’êtes pas entièrement satisfait de la pureté de votre eau, il vous suffit de le retourner dans les 100 jours pour obtenir un remboursement intégral, sans avoir à vous justifier !</p>"
           }
         },
         "text_AiGw8z": {
           "type": "text",
           "settings": {
             "question": "Garantie",
-            "answer": "<p>Le robinet en acier inoxydable Phoenix Gravity est livré avec une garantie de 6 mois, couvrant les dommages survenus pendant le transport.</p>"
+            "answer": "<p>Nous nous engageons sur la qualité et le soin apporté à la fabrication de chaque système Phoenix Gravity.</p><ul><li>Corps des filtres à gravité en acier inoxydable : garantie de 10 ans contre les défauts de matériaux et de fabrication.</li><li>Robinet en acier inoxydable : garantie de 1 an contre les défauts de matériaux et de fabrication.</li><li>Cartouches KokoCarb : garantie de 3 mois contre les défauts de matériaux et de fabrication.</li><li>Toutes les autres pièces et tous les accessoires : garantie de 6 mois contre les défauts de matériaux et de fabrication.</li></ul><h3>Dommages pendant le transport ?</h3><p>Si votre commande arrive endommagée, signalez-le dans les 30 jours suivant la livraison et nous procéderons gratuitement à son remplacement.</p><p>Notre garantie vise à renforcer votre confiance dans la qualité, la durabilité et le soin apporté à la fabrication de votre filtre à eau Phoenix Gravity.</p>"
           }
         },
         "text_zV9VKa": {
           "type": "text",
           "settings": {
-            "question": "Shipping and returns",
-            "answer": ""
+            "question": "Livraison et retours",
+            "answer": "<h4><strong>Livraison</strong></h4><p>Nous expédions les commandes en France par l’intermédiaire de nos partenaires de livraison : La Poste, Colissimo et Chronopost.</p><p>Les frais et les délais de livraison dépendent de votre lieu de livraison et sont indiqués lors du passage en caisse.</p><h4>Politique de retour</h4><p>Nous proposons un essai de 100 jours pour les systèmes de filtration d’eau avec cuves en acier inoxydable achetés directement sur notre site. Votre demande de retour doit nous parvenir avant la fin de cette période d’essai.</p><p>Tous les autres produits peuvent être retournés dans les 30 jours suivant l’achat. Au-delà de ce délai, nous ne proposons ni remboursement ni échange.</p><h4>Procédure de retour</h4><p>Pour demander un retour, contactez-nous à <span style=\"text-decoration:underline\"><strong>soutien@phoenixwaterfilters.fr</strong></span> en précisant les détails de votre commande et en joignant votre reçu ou une preuve d’achat sur notre site.</p><p>Une fois votre demande acceptée, notre service client vous communiquera les instructions pour nous retourner votre produit, ainsi que l’adresse de retour. Les produits renvoyés sans demande préalable ne seront pas acceptés.</p><h4>Produits défectueux et échanges</h4><p>Nous proposons un échange pour les produits défectueux ou présentant un défaut de matériaux ou de fabrication. L’échange s’effectue contre un produit identique.</p><p>Pour demander un échange, contactez-nous à <span style=\"text-decoration:underline\"><strong>soutien@phoenixwaterfilters.fr</strong></span> en précisant les détails de votre commande et en décrivant le problème rencontré.</p><h4>Frais de retour</h4><p>Les frais d’expédition du retour sont à votre charge. Les frais de livraison ne sont pas remboursables. Tout montant non réglé au titre des frais de retour sera déduit de votre remboursement.</p><p>Notre adresse de retour est la suivante :</p><p><strong>9 Rue de la Gare<br/>78640 Villiers-Saint-Frédéric<br/>Île-de-France, France</strong></p><p>Veuillez nous contacter avant d’expédier votre retour.</p><p>Pour les articles d’une valeur supérieure à 99 €, nous vous recommandons de choisir un envoi suivi ou de souscrire une assurance transport. Nous déclinons toute responsabilité en cas de perte ou d’erreur d’acheminement du colis de retour par le transporteur.</p><h4>Remboursements</h4><p>Après réception et inspection de votre retour, nous vous enverrons un e-mail confirmant sa réception et vous informant de l’acceptation ou du refus de votre remboursement.</p><p>Les remboursements approuvés sont déclenchés sous 2 jours ouvrés. Le montant est crédité sur le moyen de paiement utilisé lors de l’achat sous 7 jours ouvrés.</p><p>Pour obtenir un remboursement intégral, vous devez retourner le produit complet, tel qu’il a été acheté. Si vous ne retournez qu’une partie de votre achat, le remboursement sera calculé en fonction des articles reçus.</p><h4>Informations importantes</h4><ul><li>Les produits renvoyés sans demande de retour préalable ne seront pas acceptés.</li><li>Les systèmes retournés dans le cadre de l’essai de 100 jours doivent être intacts et dans leur emballage d’origine. Les cuves en acier inoxydable ne doivent présenter aucun dommage ni aucune bosse.</li><li>Un reçu ou une preuve d’achat sur notre site est nécessaire.</li></ul>"
           }
         }
       },
@@ -439,6 +439,7 @@
     },
     "custom_code_section_kxqfNY": {
       "type": "custom-code-section",
+      "disabled": true,
       "name": "Custom Code Section",
       "settings": {
         "custom_html": "<div class=\"warranty-section\">\n  <img src=\"https://cdn.shopify.com/s/files/1/2644/2852/files/10_years_1.png?v=1758890447&width=100\" alt=\"Icône de garantie de 10 ans\" width=\"50\" height=\"50\" loading=\"lazy\" decoding=\"async\">\n  <span>Garantie de 10 ans</span>\n</div>",
@@ -448,6 +449,7 @@
     },
     "secondary_details_xEWUJD": {
       "type": "secondary-details",
+      "disabled": true,
       "name": "Secondary Details",
       "settings": {
         "style": "bg-white",
@@ -462,12 +464,35 @@
     },
     "custom_html_jHz9Yq": {
       "type": "custom-html",
+      "disabled": true,
       "name": "Custom Embed Video",
       "settings": {
         "embed_code": "<div id=\"wistia-c3cghpaqz1\" class=\"wistia-facade\" data-media-id=\"c3cghpaqz1\" style=\"position:relative;width:100%;padding-top:56.25%;background:#f2f4f7;border-radius:8px;overflow:hidden;cursor:pointer;\"><div style=\"position:absolute;inset:0;display:flex;align-items:center;justify-content:center;\"><svg width=\"68\" height=\"48\" viewbox=\"0 0 68 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z\" fill=\"rgba(0,0,0,0.6)\"></path><path d=\"M27 34V14l18 10-18 10z\" fill=\"#fff\"></path></svg></div></div>",
         "section_height": 43,
         "product_pages_only": true,
         "variant_ids": ""
+      }
+    },
+    "copy_image_aGNcdm": {
+      "type": "copy-image",
+      "settings": {
+        "style": "bg-light",
+        "layout": "image-copy",
+        "vertical_align": "align-items-center",
+        "heading": "La crise invisible en France : les PFAS, ces « polluants éternels » qui menacent notre eau",
+        "content": "<p>la contamination de l’eau du robinet et des cours d’eau par les PFAS. Surnommés les « polluants éternels », ces composés per- et polyfluoroalkylés entrent dans la fabrication d’innombrables produits du quotidien, des poêles antiadhésives aux mousses anti-incendie utilisées par l’industrie. Leur particularité ? Ils ne se dégradent pratiquement pas dans l’environnement. Ils s’accumulent progressivement dans les ressources en eau, les sols, la faune… mais aussi dans l’organisme humain, où ils peuvent présenter des risques à long terme pour la santé. Les récentes interdictions de consommation de l’eau du robinet dans certaines communes de l’est de la France, en raison de concentrations particulièrement élevées de PFAS, ont mis en lumière l’ampleur de cette pollution. Leur extrême persistance rend toute dépollution complexe et coûteuse, tout en faisant peser une menace durable sur les écosystèmes.</p>",
+        "video_id": "",
+        "large_image": "img-lrg",
+        "second_content": "",
+        "buttonlink": "",
+        "buttontext": "",
+        "afterbutton": "",
+        "variant_ids": "",
+        "custom_id": "",
+        "custom_class": "",
+        "section_bgimg": "shopify://shop_images/tap-water.jpg",
+        "bg_image_style": "cover",
+        "section_randoimg_position": "top"
       }
     },
     "copy_image_CerL9y": {
@@ -504,6 +529,7 @@
         "text_TUUnKG",
         "text_3zkUpp"
       ],
+      "disabled": true,
       "settings": {
         "style": "bg-white",
         "layout": "copy-image-copy",
@@ -522,28 +548,6 @@
         "custom_class": "",
         "bg_image_style": "contain",
         "section_randoimg_position": "bottom"
-      }
-    },
-    "copy_image_aGNcdm": {
-      "type": "copy-image",
-      "settings": {
-        "style": "bg-light",
-        "layout": "image-copy",
-        "vertical_align": "align-items-center",
-        "heading": "La crise invisible en France : les PFAS, ces « polluants éternels » qui menacent notre eau",
-        "content": "<p>la contamination de l’eau du robinet et des cours d’eau par les PFAS. Surnommés les « polluants éternels », ces composés per- et polyfluoroalkylés entrent dans la fabrication d’innombrables produits du quotidien, des poêles antiadhésives aux mousses anti-incendie utilisées par l’industrie. Leur particularité ? Ils ne se dégradent pratiquement pas dans l’environnement. Ils s’accumulent progressivement dans les ressources en eau, les sols, la faune… mais aussi dans l’organisme humain, où ils peuvent présenter des risques à long terme pour la santé. Les récentes interdictions de consommation de l’eau du robinet dans certaines communes de l’est de la France, en raison de concentrations particulièrement élevées de PFAS, ont mis en lumière l’ampleur de cette pollution. Leur extrême persistance rend toute dépollution complexe et coûteuse, tout en faisant peser une menace durable sur les écosystèmes.</p>",
-        "video_id": "",
-        "large_image": "img-lrg",
-        "second_content": "",
-        "buttonlink": "",
-        "buttontext": "",
-        "afterbutton": "",
-        "variant_ids": "",
-        "custom_id": "",
-        "custom_class": "",
-        "section_bgimg": "shopify://shop_images/tap-water.jpg",
-        "bg_image_style": "cover",
-        "section_randoimg_position": "top"
       }
     },
     "copy_image_JHp8RX": {
@@ -805,6 +809,7 @@
     },
     "copy_image_E9QxXb": {
       "type": "copy-image",
+      "disabled": true,
       "settings": {
         "style": "bg-white",
         "layout": "copy",
@@ -1248,8 +1253,8 @@
     "custom_code_section_kxqfNY",
     "secondary_details_xEWUJD",
     "custom_html_jHz9Yq",
-    "copy_image_CerL9y",
     "copy_image_aGNcdm",
+    "copy_image_CerL9y",
     "copy_image_JHp8RX",
     "comparison_table_rbpbX9",
     "testimonials_QHjBJr",

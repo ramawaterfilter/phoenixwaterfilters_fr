@@ -521,7 +521,7 @@
                       <a data-fancybox="gallery" href="{{ image | image_url: width: 2560 }}" class="pdp-media-item" aria-label="{{ image.alt | default: product.title | escape }}">
                             {{
                               image
-                              | image_url: width: 764
+                              | image_url: width: 1200
                               | image_tag:
                                 loading: image_loading,
                                 fetchpriority: image_fetchpriority,
@@ -566,7 +566,7 @@
                           <a data-fancybox="gallery" href="{{ media | image_url: width: 2560 }}" class="pdp-media-item" aria-label="{{ media.alt | default: product.title | escape }}">
                             {{
                               media
-                              | image_url: width: 764
+                              | image_url: width: 1200
                               | image_tag:
                                 loading: image_loading,
                                 fetchpriority: image_fetchpriority,

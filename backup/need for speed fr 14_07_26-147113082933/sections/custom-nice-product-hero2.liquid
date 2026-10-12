@@ -426,6 +426,15 @@
     color: #153a5b;
     line-height: 1;
   }
+  .hero2-price-current[hidden] {
+    display: none;
+  }
+  .hero2-price-compare {
+    margin-left: 6px;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #9ca3af;
+  }
   .hero2-price-meta {
     font-size: 13px;
     color: #6b7280;
@@ -1040,7 +1049,7 @@
                       data-media-id="{{ media_id }}"
                     >
                       <div class="hero2-media-item">
-                        {{ image | image_url: width: 764 | image_tag: loading: image_loading, fetchpriority: image_fetchpriority, decoding: 'async', width: 600, height: 600, sizes: '(max-width: 749px) calc(100vw - 30px), 600px', widths: '382, 600, 764, 832, 1200, 1600, 1946', alt: image.alt }}
+                        {{ image | image_url: width: 1200 | image_tag: loading: image_loading, fetchpriority: image_fetchpriority, decoding: 'async', width: 600, height: 600, sizes: '(max-width: 749px) calc(100vw - 30px), 600px', widths: '382, 600, 764, 832, 1200, 1600, 1946', alt: image.alt }}
                       </div>
                       <button type="button" class="hero2-gallery-zoom" data-fancybox="hero2-gallery-{{ section.id }}" data-src="{{ image | image_url: width: 2560 }}" aria-label="Agrandir l’image">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path><path d="M11 8v6M8 11h6"></path></svg>
@@ -1076,7 +1085,7 @@
                       >
                         {% if media.media_type == 'image' %}
                           <div class="hero2-media-item">
-                            {{ media | image_url: width: 764 | image_tag: loading: image_loading, fetchpriority: image_fetchpriority, decoding: 'async', width: 600, height: 600, sizes: '(max-width: 749px) calc(100vw - 30px), 600px', widths: '382, 600, 764, 832, 1200, 1600, 1946', alt: media.alt }}
+                            {{ media | image_url: width: 1200 | image_tag: loading: image_loading, fetchpriority: image_fetchpriority, decoding: 'async', width: 600, height: 600, sizes: '(max-width: 749px) calc(100vw - 30px), 600px', widths: '382, 600, 764, 832, 1200, 1600, 1946', alt: media.alt }}
                           </div>
                           <button type="button" class="hero2-gallery-zoom" data-fancybox="hero2-gallery-{{ section.id }}" data-src="{{ media | image_url: width: 2560 }}" aria-label="Agrandir l’image">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path><path d="M11 8v6M8 11h6"></path></svg>
@@ -1223,7 +1232,14 @@
                 </div>
               </div>
               <div class="hero2-price-block">
-                <span data-price class="hero2-price-current">{{ current_variant.price | money }}</span>
+                <span class="hero2-price-current hero2-price--one-time">
+                  <span data-price>{{ current_variant.price | money }}</span>
+                  <span data-compare class="hero2-price-compare">{% if current_variant.compare_at_price and current_variant.compare_at_price > current_variant.price %}<s>{{ current_variant.compare_at_price | money }}</s>{% endif %}</span>
+                </span>
+                <span class="hero2-price-current hero2-price--sub" hidden>
+                  <span data-sub-price></span>
+                  <span data-sub-compare class="hero2-price-compare"></span>
+                </span>
                 <div class="hero2-price-meta">TTC &middot; achat unique</div>
               </div>
             </div>
@@ -1698,6 +1714,12 @@
       return variant && (variant.available === true || variant.available === 'true' || inventory > 0 || variant.inventory_policy === 'continue');
     }
 
+    function hero2CtaPrice(fallback) {
+      var sub = document.querySelector('.hero2-price-block .hero2-price--sub');
+      var subPrice = sub && !sub.hidden ? sub.querySelector('[data-sub-price]') : null;
+      return subPrice && subPrice.textContent ? subPrice.textContent : fallback;
+    }
+
     function hero2RefreshCurrentVariantUI() {
       var select = document.getElementById('hero2-product-selectors');
       if (!select) return;
@@ -1714,6 +1736,21 @@
         el.textContent = formattedPrice;
       });
 
+      /* Struck-through compare price (one-time view) */
+      var formattedCompare = current.compare_at_price && current.compare_at_price > current.price
+        ? window.formatMoney(current.compare_at_price)
+        : '';
+      document.querySelectorAll('.hero2-price-block [data-compare]').forEach(function(el) {
+        if (el.dataset.v === formattedCompare) return;
+        el.dataset.v = formattedCompare;
+        el.textContent = '';
+        if (formattedCompare) {
+          var s = document.createElement('s');
+          s.textContent = formattedCompare;
+          el.appendChild(s);
+        }
+      });
+
       /* Update CTA button text */
       var btn = document.getElementById('hero2-product-add-to-cart');
       if (btn) {
@@ -1721,7 +1758,7 @@
         btn.classList.toggle('hero2-atc-btn--disabled', !isAvailable);
         btn.classList.toggle('hero2-atc-btn--primary', isAvailable);
         if (isAvailable) {
-          btn.innerHTML = (btn.dataset.availableText || 'AJOUTER AU PANIER') + ' &middot; ' + formattedPrice;
+          btn.innerHTML = (btn.dataset.availableText || 'AJOUTER AU PANIER') + ' &middot; ' + hero2CtaPrice(formattedPrice);
         } else {
           btn.textContent = 'Rupture de stock';
         }
@@ -2160,6 +2197,79 @@
         initHero2VariantPicker(root);
       };
       window.initHero2ProductSection(document);
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var block = document.querySelector('.hero2-price-block');
+      if (!block) return;
+      var oneTime = block.querySelector('.hero2-price--one-time');
+      var sub = block.querySelector('.hero2-price--sub');
+      var subAmount = block.querySelector('[data-sub-price]');
+      var subCompare = block.querySelector('[data-sub-compare]');
+      if (!oneTime || !sub || !subAmount) return;
+
+      var lastKey = null;
+      function notify(key) {
+        if (key === lastKey) return;
+        lastKey = key;
+        if (typeof hero2RefreshCurrentVariantUI === 'function') hero2RefreshCurrentVariantUI();
+      }
+
+      function showOneTime() {
+        oneTime.hidden = false;
+        sub.hidden = true;
+        notify('one');
+      }
+      function setText(el, value) {
+        if (el && el.textContent !== value) el.textContent = value;
+      }
+      function setCompare(el, value) {
+        if (!el || el.dataset.v === value) return;
+        el.dataset.v = value;
+        el.textContent = '';
+        if (value) {
+          var s = document.createElement('s');
+          s.textContent = value;
+          el.appendChild(s);
+        }
+      }
+
+      function sync() {
+        var widget = document.querySelector('#hero2-add-to-cart .appstle_sub_widget') || document.querySelector('.appstle_sub_widget');
+        if (!widget) {
+          showOneTime();
+          return;
+        }
+        /* ponytail: mirror Appstle's own amount wrapper so the two prices can never drift */
+        var plan = widget.querySelector('input[name="selling_plan"]:checked');
+        var option = (plan && plan.closest('.appstle_subscription_wrapper_option')) ||
+          widget.querySelector('.appstle_subscription_wrapper_option.appstle-active-option');
+        if (!option || option.querySelector('.appstle_one_time_details_wrapper')) {
+          showOneTime();
+          return;
+        }
+        var wrapper = option.querySelector('.appstle_subscription_amount_wrapper');
+        var amount = wrapper && wrapper.querySelector('.appstle_subscription_amount');
+        if (!amount || !amount.textContent.trim()) {
+          showOneTime();
+          return;
+        }
+        var compare = wrapper.querySelector('.appstle_subscription_compare_amount');
+        var amountText = amount.textContent.trim();
+        setText(subAmount, amountText);
+        setCompare(subCompare, compare ? compare.textContent.trim() : '');
+        oneTime.hidden = true;
+        sub.hidden = false;
+        notify('sub:' + amountText);
+      }
+
+      new MutationObserver(sync).observe(document.body, { childList: true, subtree: true });
+      document.addEventListener('change', sync, true);
+      document.addEventListener('variant:change', sync);
+      window.addEventListener('load', sync);
+      sync();
     })();
   </script>
 {% endunless %}

@@ -202,9 +202,11 @@
   <script src="{{ 'variant-visibility.js' | asset_url }}" defer></script>
 
     <style>
-    img.img-fluid{
-  width: 100%;
-  height: auto;
+@media (max-width: 767px) {
+  img.img-fluid {
+    width: 100%;
+    height: auto;
+  }
 }
   </style>
 
