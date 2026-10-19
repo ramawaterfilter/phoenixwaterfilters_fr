@@ -381,32 +381,7 @@
   }
 </script>
 
-{% if template.name == 'product' %}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "{{ product.title | escape }}",
-  "image": [
-    "{{ product.featured_image | image_url: width: 800 }}"
-  ],
-  "description": "{{ product.description | strip_html | escape }}",
-  "sku": "{{ product.selected_or_first_available_variant.sku }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "{{ product.vendor | escape }}"
-  }
-  {% if product.metafields.reviews.rating.value %}
-  ,
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "{{ product.metafields.reviews.rating.value }}",
-    "reviewCount": "{{ product.metafields.reviews.rating_count }}"
-  }
-  {% endif %}
-}
-</script>
-{% endif %}
+
 
   <!-- Keep preconnects only for first-render origins; use cheaper DNS hints for delayed apps. -->
   <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
